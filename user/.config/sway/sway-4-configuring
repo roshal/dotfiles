@@ -23,9 +23,9 @@ font monospace 9
 ##### 4.6 the floating modifier
 # # # https://i3wm.org/docs/userguide.html#floating_modifier
 
-# floating_modifier $-modifier normal
-# floating_modifier $-modifier inverse
-floating_modifier $-modifier
+# floating_modifier $-key normal
+# floating_modifier $-key inverse
+floating_modifier $-key
 
 ##### 4.7 constraining floating window size
 # # # https://i3wm.org/docs/userguide.html#_constraining_floating_window_size

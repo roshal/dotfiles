@@ -1,9 +1,9 @@
 
-bindsym --whole-window $-modifier+$-mouse-u workspace prev_on_output
-bindsym --whole-window $-modifier+$-mouse-d workspace next_on_output
+bindsym --whole-window $-key+$-mouse-u workspace prev_on_output
+bindsym --whole-window $-key+$-mouse-d workspace next_on_output
 
-bindsym --whole-window --exclude-titlebar $-modifier+$-mouse-u+shift focus $-arrow-l
-bindsym --whole-window --exclude-titlebar $-modifier+$-mouse-d+shift focus $-arrow-r
+bindsym --whole-window --exclude-titlebar $-key+$-mouse-u+shift focus $-arrow-l
+bindsym --whole-window --exclude-titlebar $-key+$-mouse-d+shift focus $-arrow-r
 
-bindsym --whole-window --exclude-titlebar $-modifier+$-mouse-e focus $-arrow-l
-bindsym --whole-window --exclude-titlebar $-modifier+$-mouse-s focus $-arrow-r
+bindsym --whole-window --exclude-titlebar $-key+$-mouse-e focus $-arrow-l
+bindsym --whole-window --exclude-titlebar $-key+$-mouse-s focus $-arrow-r

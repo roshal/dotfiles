@@ -32,19 +32,19 @@ bindsym --to-code XF86AudioStop exec notify-send stop
 
 ### pactl
 
-bindsym --whole-window $-modifier+$-mouse-u+ctrl exec pactl set-sink-volume @DEFAULT_SINK@ +1db && $-pulsemixer-volume > $-path-mako-pulsemixer
-bindsym --whole-window $-modifier+$-mouse-m+ctrl exec pactl set-sink-volume @DEFAULT_SINK@  0db && $-pulsemixer-volume > $-path-mako-pulsemixer
-bindsym --whole-window $-modifier+$-mouse-d+ctrl exec pactl set-sink-volume @DEFAULT_SINK@ -1db && $-pulsemixer-volume > $-path-mako-pulsemixer
+bindsym --whole-window $-key+$-mouse-u+ctrl exec pactl set-sink-volume @DEFAULT_SINK@ +1db && $-pulsemixer-volume > $-path-mako-pulsemixer
+bindsym --whole-window $-key+$-mouse-m+ctrl exec pactl set-sink-volume @DEFAULT_SINK@  0db && $-pulsemixer-volume > $-path-mako-pulsemixer
+bindsym --whole-window $-key+$-mouse-d+ctrl exec pactl set-sink-volume @DEFAULT_SINK@ -1db && $-pulsemixer-volume > $-path-mako-pulsemixer
 
-bindsym --whole-window $-modifier+$-mouse-u+ctrl+$-although exec pactl set-source-mute @DEFAULT_SINK@ off && $-pulsemixer-volume > $-path-mako-pulsemixer
-bindsym --whole-window $-modifier+$-mouse-d+ctrl+$-although exec pactl set-source-mute @DEFAULT_SINK@ on  && $-pulsemixer-volume > $-path-mako-pulsemixer
+bindsym --whole-window $-key+$-mouse-u+ctrl+$-alt exec pactl set-source-mute @DEFAULT_SINK@ off && $-pulsemixer-volume > $-path-mako-pulsemixer
+bindsym --whole-window $-key+$-mouse-d+ctrl+$-alt exec pactl set-source-mute @DEFAULT_SINK@ on  && $-pulsemixer-volume > $-path-mako-pulsemixer
 
-bindsym --whole-window $-modifier+$-mouse-u+ctrl+shift exec pactl set-sink-mute @DEFAULT_SINK@ off && $-pulsemixer-volume > $-path-mako-pulsemixer
-bindsym --whole-window $-modifier+$-mouse-d+ctrl+shift exec pactl set-sink-mute @DEFAULT_SINK@ on  && $-pulsemixer-volume > $-path-mako-pulsemixer
+bindsym --whole-window $-key+$-mouse-u+ctrl+shift exec pactl set-sink-mute @DEFAULT_SINK@ off && $-pulsemixer-volume > $-path-mako-pulsemixer
+bindsym --whole-window $-key+$-mouse-d+ctrl+shift exec pactl set-sink-mute @DEFAULT_SINK@ on  && $-pulsemixer-volume > $-path-mako-pulsemixer
 
 ### playerctl
 
-bindsym --to-code $-modifier+f9  exec playerctl play-pause
-bindsym --to-code $-modifier+f10 exec playerctl stop
-bindsym --to-code $-modifier+f11 exec playerctl previous
-bindsym --to-code $-modifier+f12 exec playerctl next
+bindsym --to-code $-key+f9  exec playerctl play-pause
+bindsym --to-code $-key+f10 exec playerctl stop
+bindsym --to-code $-key+f11 exec playerctl previous
+bindsym --to-code $-key+f12 exec playerctl next

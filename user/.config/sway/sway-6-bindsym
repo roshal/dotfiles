@@ -3,84 +3,84 @@
 
 # # cat /usr/include/xkbcommon/xkbcommon-keysyms.h
 
-bindsym --to-code $-modifier+q       kill
-bindsym --to-code $-modifier+q+shift kill
+bindsym --to-code $-key+q       kill
+bindsym --to-code $-key+q+shift kill
 
 ##### 6.1 executing applications
 # # # https://i3wm.org/docs/userguide.html#exec
 
-bindsym $-modifier+$-special-p       exec $-grim-crop $-grim-path
-bindsym $-modifier+$-special-p+ctrl  exec $-grim-view $-grim-path
-bindsym $-modifier+$-special-p+shift exec $-grim-full $-grim-path
+bindsym $-key+$-special-p       exec sh "${HOME}/.shell/actions.sh" slurp--grim-path
+bindsym $-key+$-special-p+ctrl  exec sh "${HOME}/.shell/actions.sh" swaymsg--node--grim-path
+bindsym $-key+$-special-p+shift exec sh "${HOME}/.shell/actions.sh" grim--output-path
 
-bindsym $-modifier+$-special-s exec $-grim-slurp
+bindsym $-key+$-special-s exec sh "${HOME}/.shell/actions.sh" slurp--notify
 
-bindsym $-modifier+return exec termite
+bindsym $-key+return exec termite
 
-bindsym $-special-p       exec $-grim-crop $-grim-copy
-bindsym $-special-p+ctrl  exec $-grim-view $-grim-copy
-bindsym $-special-p+shift exec $-grim-full $-grim-copy
+bindsym $-special-p       exec sh "${HOME}/.shell/actions.sh" slurp--grim--wl-copy
+bindsym $-special-p+ctrl  exec sh "${HOME}/.shell/actions.sh" swaymsg--node--grim--wl-copy
+bindsym $-special-p+shift exec sh "${HOME}/.shell/actions.sh" grim--output--wl-copy
 
-bindsym --to-code $-modifier+d exec wofi
-bindsym --to-code $-modifier+l exec swaylock --image /-/pictures/waves.jpg
-bindsym --to-code $-modifier+n exec thunar
-bindsym --to-code $-modifier+o exec swaymsg -- output $-echo-output-focused disable \, output $-echo-output-suspend enable
+bindsym --to-code $-key+d exec wofi
+bindsym --to-code $-key+l exec swaylock --image /-/pictures/waves.jpg
+bindsym --to-code $-key+n exec thunar
+bindsym --to-code $-key+o exec sh "${HOME}/.shell/actions.sh" swaymsg--switch
 
-bindsym --to-code $-modifier+i       exec $-shell-exec-nm-applet
-bindsym --to-code $-modifier+i+shift exec $-shell-kill-nm-applet
+bindsym --to-code $-key+i       exec sh "${HOME}/.shell/actions.sh" nm-applet--restart
+bindsym --to-code $-key+i+shift exec sh "${HOME}/.shell/actions.sh" nm-applet--killall
 
-bindsym --to-code $-modifier+shift+d exec wofi --show drun --allow-images --sort-order alphabetical --search --
+bindsym --to-code $-key+shift+d exec wofi --show drun --allow-images --sort-order alphabetical --search --
 
 ##### 6.2 splitting containers
 # # # https://i3wm.org/docs/userguide.html#_splitting_containers
 
-bindsym --to-code $-modifier+shift+e split toggle
+bindsym --to-code $-key+shift+e split toggle
 
-bindsym --to-code $-modifier+shift+h split horizontal
-bindsym --to-code $-modifier+shift+v split vertical
+bindsym --to-code $-key+shift+h split horizontal
+bindsym --to-code $-key+shift+v split vertical
 
 ##### 6.3 manipulating layout
 # # # https://i3wm.org/docs/userguide.html#manipulating_layout
 
 ### does incomprehensibly
-# bindsym --to-code $-modifier+d layout default
+# bindsym --to-code $-key+d layout default
 
-bindsym --to-code $-modifier+e layout toggle
+bindsym --to-code $-key+e layout toggle
 
-bindsym --to-code $-modifier+s layout stacking
-bindsym --to-code $-modifier+t layout tabbed
+bindsym --to-code $-key+s layout stacking
+bindsym --to-code $-key+t layout tabbed
 
-bindsym --to-code $-modifier+f fullscreen
+bindsym --to-code $-key+f fullscreen
 
-bindsym --to-code $-modifier+f+shift floating toggle
+bindsym --to-code $-key+f+shift floating toggle
 
-bindsym --to-code $-modifier+h splith
-bindsym --to-code $-modifier+v splitv
+bindsym --to-code $-key+h splith
+bindsym --to-code $-key+v splitv
 
 ##### 6.4 focusing containers
 # # # https://i3wm.org/docs/userguide.html#_focusing_moving_containers
 
-bindsym $-modifier+$-arrow-u focus $-arrow-u
-bindsym $-modifier+$-arrow-l focus $-arrow-l
-bindsym $-modifier+$-arrow-r focus $-arrow-r
-bindsym $-modifier+$-arrow-d focus $-arrow-d
+bindsym $-key+$-arrow-u focus $-arrow-u
+bindsym $-key+$-arrow-l focus $-arrow-l
+bindsym $-key+$-arrow-r focus $-arrow-r
+bindsym $-key+$-arrow-d focus $-arrow-d
 
-bindsym $-modifier+space focus mode_toggle
+bindsym $-key+space focus mode_toggle
 
-bindsym --to-code $-modifier+a focus parent
-bindsym --to-code $-modifier+c focus child
+bindsym --to-code $-key+a focus parent
+bindsym --to-code $-key+c focus child
 
 ##### 6.5 moving containers
 # # # https://i3wm.org/docs/userguide.html#_moving_containers
 
-bindsym $-modifier+$-arrow-u+shift move $-arrow-u $-step-b
-bindsym $-modifier+$-arrow-l+shift move $-arrow-l $-step-b
-bindsym $-modifier+$-arrow-r+shift move $-arrow-r $-step-b
-bindsym $-modifier+$-arrow-d+shift move $-arrow-d $-step-b
+bindsym $-key+$-arrow-u+shift move $-arrow-u $-step-b
+bindsym $-key+$-arrow-l+shift move $-arrow-l $-step-b
+bindsym $-key+$-arrow-r+shift move $-arrow-r $-step-b
+bindsym $-key+$-arrow-d+shift move $-arrow-d $-step-b
 
-bindsym --to-code $-modifier+mod1+a move absolute position center
-bindsym --to-code $-modifier+mod1+c move position center
-bindsym --to-code $-modifier+mod1+m move position mouse
+bindsym --to-code $-key+mod1+a move absolute position center
+bindsym --to-code $-key+mod1+c move position center
+bindsym --to-code $-key+mod1+m move position mouse
 
 ##### 6.6 swapping containers
 # # # https://i3wm.org/docs/userguide.html#_swapping_containers
@@ -88,71 +88,71 @@ bindsym --to-code $-modifier+mod1+m move position mouse
 ##### 6.7 sticky floating windows
 # # # https://i3wm.org/docs/userguide.html#_sticky_floating_windows
 
-bindsym --to-code $-modifier+shift+s sticky toggle
+bindsym --to-code $-key+shift+s sticky toggle
 
 ##### 6.8 changing workspaces or moving to workspaces
 # # # https://i3wm.org/docs/userguide.html#_changing_named_workspaces_moving_to_workspaces
 
-bindsym $-modifier+$-arrow-u+mod1 move workspace to output $-arrow-u
-bindsym $-modifier+$-arrow-l+mod1 move workspace to output $-arrow-l
-bindsym $-modifier+$-arrow-r+mod1 move workspace to output $-arrow-r
-bindsym $-modifier+$-arrow-d+mod1 move workspace to output $-arrow-d
+bindsym $-key+$-arrow-u+mod1 move workspace to output $-arrow-u
+bindsym $-key+$-arrow-l+mod1 move workspace to output $-arrow-l
+bindsym $-key+$-arrow-r+mod1 move workspace to output $-arrow-r
+bindsym $-key+$-arrow-d+mod1 move workspace to output $-arrow-d
 
-bindsym $-modifier+$-arrow-u+ctrl workspace prev_on_output
-bindsym $-modifier+$-arrow-d+ctrl workspace next_on_output
+bindsym $-key+$-arrow-u+ctrl workspace prev_on_output
+bindsym $-key+$-arrow-d+ctrl workspace next_on_output
 
-bindsym $-modifier+$-arrow-l+ctrl workspace prev
-bindsym $-modifier+$-arrow-r+ctrl workspace next
+bindsym $-key+$-arrow-l+ctrl workspace prev
+bindsym $-key+$-arrow-r+ctrl workspace next
 
-bindsym $-modifier+$-control-i workspace $-workspace-6
-bindsym $-modifier+$-control-h workspace $-workspace-7
-bindsym $-modifier+$-control-d workspace $-workspace-8
-bindsym $-modifier+$-control-e workspace $-workspace-9
+bindsym $-key+$-control-i workspace $-workspace-6
+bindsym $-key+$-control-h workspace $-workspace-7
+bindsym $-key+$-control-d workspace $-workspace-8
+bindsym $-key+$-control-e workspace $-workspace-9
 
-bindsym $-modifier+$-control-i+shift move to workspace $-workspace-6
-bindsym $-modifier+$-control-h+shift move to workspace $-workspace-7
-bindsym $-modifier+$-control-d+shift move to workspace $-workspace-8
-bindsym $-modifier+$-control-e+shift move to workspace $-workspace-9
+bindsym $-key+$-control-i+shift move to workspace $-workspace-6
+bindsym $-key+$-control-h+shift move to workspace $-workspace-7
+bindsym $-key+$-control-d+shift move to workspace $-workspace-8
+bindsym $-key+$-control-e+shift move to workspace $-workspace-9
 
-bindsym $-modifier+$-control-p workspace prev_on_output
-bindsym $-modifier+$-control-n workspace next_on_output
+bindsym $-key+$-control-p workspace prev_on_output
+bindsym $-key+$-control-n workspace next_on_output
 
-bindsym $-modifier+$-control-p+shift move to workspace prev_on_output
-bindsym $-modifier+$-control-n+shift move to workspace next_on_output
+bindsym $-key+$-control-p+shift move to workspace prev_on_output
+bindsym $-key+$-control-n+shift move to workspace next_on_output
 
-bindsym $-modifier+escape workspace --no-auto-back-and-forth $-workspace-escape
+bindsym $-key+escape workspace --no-auto-back-and-forth $-workspace-escape
 
-bindsym $-modifier+escape+shift move to workspace $-workspace-escape
+bindsym $-key+escape+shift move to workspace $-workspace-escape
 
-bindsym $-modifier+tab workspace back_and_forth
+bindsym $-key+tab workspace back_and_forth
 
-bindsym $-modifier+tab+shift move to workspace back_and_forth
+bindsym $-key+tab+shift move to workspace back_and_forth
 
-bindsym --to-code $-modifier+$-key-0 workspace $-workspace-0
-bindsym --to-code $-modifier+$-key-1 workspace $-workspace-1
-bindsym --to-code $-modifier+$-key-2 workspace $-workspace-2
-bindsym --to-code $-modifier+$-key-3 workspace $-workspace-3
-bindsym --to-code $-modifier+$-key-4 workspace $-workspace-4
-bindsym --to-code $-modifier+$-key-5 workspace $-workspace-5
-bindsym --to-code $-modifier+$-key-6 workspace $-workspace-6
-bindsym --to-code $-modifier+$-key-7 workspace $-workspace-7
-bindsym --to-code $-modifier+$-key-8 workspace $-workspace-8
-bindsym --to-code $-modifier+$-key-9 workspace $-workspace-9
+bindsym --to-code $-key+$-key-0 workspace $-workspace-0
+bindsym --to-code $-key+$-key-1 workspace $-workspace-1
+bindsym --to-code $-key+$-key-2 workspace $-workspace-2
+bindsym --to-code $-key+$-key-3 workspace $-workspace-3
+bindsym --to-code $-key+$-key-4 workspace $-workspace-4
+bindsym --to-code $-key+$-key-5 workspace $-workspace-5
+bindsym --to-code $-key+$-key-6 workspace $-workspace-6
+bindsym --to-code $-key+$-key-7 workspace $-workspace-7
+bindsym --to-code $-key+$-key-8 workspace $-workspace-8
+bindsym --to-code $-key+$-key-9 workspace $-workspace-9
 
-bindsym --to-code $-modifier+$-key-0+shift move to workspace $-workspace-0
-bindsym --to-code $-modifier+$-key-1+shift move to workspace $-workspace-1
-bindsym --to-code $-modifier+$-key-2+shift move to workspace $-workspace-2
-bindsym --to-code $-modifier+$-key-3+shift move to workspace $-workspace-3
-bindsym --to-code $-modifier+$-key-4+shift move to workspace $-workspace-4
-bindsym --to-code $-modifier+$-key-5+shift move to workspace $-workspace-5
-bindsym --to-code $-modifier+$-key-6+shift move to workspace $-workspace-6
-bindsym --to-code $-modifier+$-key-7+shift move to workspace $-workspace-7
-bindsym --to-code $-modifier+$-key-8+shift move to workspace $-workspace-8
-bindsym --to-code $-modifier+$-key-9+shift move to workspace $-workspace-9
+bindsym --to-code $-key+$-key-0+shift move to workspace $-workspace-0
+bindsym --to-code $-key+$-key-1+shift move to workspace $-workspace-1
+bindsym --to-code $-key+$-key-2+shift move to workspace $-workspace-2
+bindsym --to-code $-key+$-key-3+shift move to workspace $-workspace-3
+bindsym --to-code $-key+$-key-4+shift move to workspace $-workspace-4
+bindsym --to-code $-key+$-key-5+shift move to workspace $-workspace-5
+bindsym --to-code $-key+$-key-6+shift move to workspace $-workspace-6
+bindsym --to-code $-key+$-key-7+shift move to workspace $-workspace-7
+bindsym --to-code $-key+$-key-8+shift move to workspace $-workspace-8
+bindsym --to-code $-key+$-key-9+shift move to workspace $-workspace-9
 
-# bindsym --to-code $-modifier+caps_lock workspace back_and_forth
+# bindsym --to-code $-key+caps_lock workspace back_and_forth
 
-# bindsym --to-code $-modifier+caps_lock+shift move to workspace back_and_forth
+# bindsym --to-code $-key+caps_lock+shift move to workspace back_and_forth
 
 ##### 6.9 moving workspaces to a different screen
 # # # https://i3wm.org/docs/userguide.html#_moving_workspaces_to_a_different_screen
@@ -178,7 +178,7 @@ bindsym --to-code $-modifier+$-key-9+shift move to workspace $-workspace-9
 ##### 6.16 changing border style
 # # # https://i3wm.org/docs/userguide.html#_changing_border_style
 
-bindsym --to-code $-modifier+shift+b border toggle
+bindsym --to-code $-key+shift+b border toggle
 
 ##### 6.17 enabling shared memory logging
 # # # https://i3wm.org/docs/userguide.html#shmlog
@@ -189,16 +189,16 @@ bindsym --to-code $-modifier+shift+b border toggle
 ##### 6.19 reloading
 # # # https://i3wm.org/docs/userguide.html#_reloading_restarting_exiting
 
-bindsym $-modifier+shift+$-special-b reload
+bindsym $-key+shift+$-special-b reload
 
 ##### 6.20 scratchpad
 # # # https://i3wm.org/docs/userguide.html#_scratchpad
 
-bindsym $-modifier+equal scratchpad show
-bindsym $-modifier+minus move scratchpad
+bindsym $-key+equal scratchpad show
+bindsym $-key+minus move scratchpad
 
-bindsym $-modifier+equal+shift move scratchpad
-bindsym $-modifier+minus+shift scratchpad show
+bindsym $-key+equal+shift move scratchpad
+bindsym $-key+minus+shift scratchpad show
 
 ##### 6.21 nop
 # # # https://i3wm.org/docs/userguide.html#_nop
@@ -209,4 +209,4 @@ bindsym $-modifier+minus+shift scratchpad show
 ##### 6.22 i3bar control
 # # # https://i3wm.org/docs/userguide.html#_i3bar_control
 
-bindsym --to-code $-modifier+b bar mode toggle
+bindsym --to-code $-key+b bar mode toggle

@@ -1,8 +1,8 @@
 
 ##### 4.15 variables
 
-set $-although mod1
-set $-modifier mod4
+set $-alt mod1
+set $-key mod4
 
 ### binding-mode
 
@@ -31,30 +31,6 @@ set $-bluetooth-speaker bluez_card.00_42_79_77_95_54
 
 set $-mac-headset 70:26:05:DD:FD:DD
 set $-mac-speaker 00:42:79:77:95:54
-
-### echo
-
-set $-echo-keyboard-layout $(swaymsg -t get_inputs | jq -r 'max_by(.xkb_active_layout_index).xkb_active_layout_name[0:2] | try ascii_upcase // "--"')
-
-set $-echo-output-focused $(swaymsg -t get_outputs | jq -r '.[] | select(.focused)         | .name')
-set $-echo-output-suspend $(swaymsg -t get_outputs | jq -r '.[] | select(.focused != true) | .name')
-
-set $-echo-date $(date +%y-%m-%d)
-set $-echo-time $(date +%H-%M-%S)
-
-set $-shell-kill-nm-applet 'killall --quiet nm-applet'
-set $-shell-exec-nm-applet 'killall --quiet nm-applet ; nm-applet --indicator'
-
-### grim
-
-set $-grim-crop slurp -b 00000000 -w 1 | grim -g -
-set $-grim-full grim -o $-echo-output-focused
-set $-grim-view swaymsg -t get_tree | jq -r '.. | .nodes? // empty | .[] | if .focused then . else .floating_nodes[] | select(.focused) end | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | grim -g -
-
-set $-grim-copy -t png - | wl-copy --type image/png
-set $-grim-path /-/grim/grim--$-echo-date--$-echo-time.png
-
-set $-grim-slurp slurp -b 00000000 -w 1 -f "$(echo -e 'x %x\ny %y\nw %w\nh %h')" | xargs -0 notify-send
 
 ### idle
 

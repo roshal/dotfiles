@@ -4,20 +4,20 @@
 
 ### binding-modes
 
-bindsym --to-code $-modifier+z mode $-binding-mode
+bindsym --to-code $-key+z mode $-binding-mode
 
-bindsym --to-code $-modifier+ctrl+a mode $-mode-audio
-bindsym --to-code $-modifier+ctrl+b mode $-mode-bluetooth
-bindsym --to-code $-modifier+ctrl+c mode $-mode-cursor
-bindsym --to-code $-modifier+ctrl+k mode $-mode-kill
-bindsym --to-code $-modifier+ctrl+l mode $-mode-lock
-bindsym --to-code $-modifier+ctrl+m mode $-mode-move
-bindsym --to-code $-modifier+ctrl+n mode $-mode-network
-bindsym --to-code $-modifier+ctrl+o mode $-mode-output
-bindsym --to-code $-modifier+ctrl+r mode $-mode-resize
-bindsym --to-code $-modifier+ctrl+s mode $-mode-system
-bindsym --to-code $-modifier+ctrl+v mode $-mode-vpn
-bindsym --to-code $-modifier+ctrl+w mode $-mode-wireguard
+bindsym --to-code $-key+ctrl+a mode $-mode-audio
+bindsym --to-code $-key+ctrl+b mode $-mode-bluetooth
+bindsym --to-code $-key+ctrl+c mode $-mode-cursor
+bindsym --to-code $-key+ctrl+k mode $-mode-kill
+bindsym --to-code $-key+ctrl+l mode $-mode-lock
+bindsym --to-code $-key+ctrl+m mode $-mode-move
+bindsym --to-code $-key+ctrl+n mode $-mode-network
+bindsym --to-code $-key+ctrl+o mode $-mode-output
+bindsym --to-code $-key+ctrl+r mode $-mode-resize
+bindsym --to-code $-key+ctrl+s mode $-mode-system
+bindsym --to-code $-key+ctrl+v mode $-mode-vpn
+bindsym --to-code $-key+ctrl+w mode $-mode-wireguard
 
 ##### modes
 
@@ -162,8 +162,8 @@ mode $-mode-network bindsym --to-code z mode $-mode-default , exec nmcli connect
 mode $-mode-network bindsym --to-code a+shift exec nmcli connection up   ethernet
 mode $-mode-network bindsym --to-code z+shift exec nmcli connection down ethernet
 
-mode $-mode-network bindsym --to-code i       mode $-mode-default , exec $-shell-exec-nm-applet
-mode $-mode-network bindsym --to-code i+shift mode $-mode-default , exec $-shell-kill-nm-applet
+mode $-mode-network bindsym --to-code i       mode $-mode-default , exec sh "${HOME}/.shell/actions.sh" nm-applet--restart
+mode $-mode-network bindsym --to-code i+shift mode $-mode-default , exec sh "${HOME}/.shell/actions.sh" nm-applet--killall
 
 mode $-mode-network bindsym escape mode $-mode-default
 
