@@ -1,5 +1,5 @@
 
-source "${HOME}/.shell/sway-bar-status-lgbt.sh"
+source "${HOME}/.shell/sway-bar--status--lgbt.sh"
 
 echo '{"version": 1}'
 

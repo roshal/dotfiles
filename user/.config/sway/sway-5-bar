@@ -22,7 +22,7 @@ bar wrap_scroll on
 ##### 5.2 configuring i3bar
 # # # https://i3wm.org/docs/userguide.html#status_command
 
-bar status_command sh '${HOME}/.shell/sway-bar-status.sh'
+bar status_command sh '${HOME}/.shell/sway-bar--status.sh'
 
 ##### 5.3 display mode
 # # # https://i3wm.org/docs/userguide.html#_display_mode
