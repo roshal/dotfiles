@@ -1,11 +1,14 @@
 
-echo "{'version': 1}"
+source "${HOME}/.shell/sway-bar-status-byte.sh"
+
+echo '{"version": 1}'
 
 echo '['
 
 while cat << here
 [{
-	'full_text': '$(date +'%j-%U-%w %y-%m-%d %T')',
+	"markup": "pango",
+	"full_text": "$(status)",
 }],
 here
 do usleep $(expr 1000000 - $(date +%N) / 1000)

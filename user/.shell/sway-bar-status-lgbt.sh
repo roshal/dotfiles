@@ -18,6 +18,6 @@ function datetime {
 	date +'%j-%U-%w %y-%m-%d %T'
 }
 
-function line {
+function status {
 	echo "$(rainbow) $(datetime)"
 }
