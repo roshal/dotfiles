@@ -3,6 +3,10 @@ function __path__grim {
 	echo /-/grim/grim--$(date +%y-%m-%d--%H-%M-%S).png
 }
 
+function __swaymsg__keyboard_layout {
+	swaymsg -t get_inputs | jq -r 'max_by(.xkb_active_layout_index).xkb_active_layout_name[0:2] | try ascii_upcase // "--"'
+}
+
 function __swaymsg__node {
 	JQ='..'
 	JQ+=' | .nodes? // empty'
@@ -95,6 +99,8 @@ function call {
 	then __swaymsg__node | __grim__path
 	elif test "${1}" == 'swaymsg--switch'
 	then __swaymsg__switch_output
+	elif test "${1}" == 'swaymsg--keyboard-layout'
+	then __swaymsg__keyboard_layout
 	elif test "${1}" == 'wf-recorder'
 	then __wf_recorder
 	fi
