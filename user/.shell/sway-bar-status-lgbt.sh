@@ -1,23 +1,44 @@
 
-AZ=ABCDEFGHIJKLMNOPQRSTUVWXYZ
-
-function random {
-	echo ${AZ:$((RANDOM % 26)):1}
+function span {
+	echo -n "<span foreground='#${1}'>${2}</span>"
 }
 
-function rainbow {
-	echo -n "<span foreground='#f33'>$(random)</span>"
-	echo -n "<span foreground='#f93'>$(random)</span>"
-	echo -n "<span foreground='#ff3'>$(random)</span>"
-	echo -n "<span foreground='#9f3'>$(random)</span>"
-	echo -n "<span foreground='#39f'>$(random)</span>"
-	echo -n "<span foreground='#f39'>$(random)</span>"
+function j {
+	span c69 ${1}
 }
 
-function datetime {
-	date +'%j-%U-%w %y-%m-%d %T'
+function U {
+	span c96 ${1}
+}
+
+function w {
+	span cc3 ${1}
+}
+
+function y {
+	span 9c6 ${1}
+}
+
+function m {
+	span 6c9 ${1}
+}
+
+function d {
+	span 3cc ${1}
+}
+
+function H {
+	span 69c ${1}
+}
+
+function M {
+	span 96c ${1}
+}
+
+function S {
+	span c3c ${1}
 }
 
 function status {
-	echo "$(rainbow) $(datetime)"
+	date +"$(j %j)-$(U %U)-$(w %w) $(y %y)-$(m %m)-$(d %d) $(H %H):$(M %M):$(S %S)"
 }
