@@ -93,14 +93,14 @@ function call {
 	then __slurp | __grim__path
 	elif test "${1}" == 'slurp--notify'
 	then __slurp__print | __xargs__notify
+	elif test "${1}" == 'swaymsg--keyboard-layout'
+	then __swaymsg__keyboard_layout
 	elif test "${1}" == 'swaymsg--node--grim--wl-copy'
 	then __swaymsg__node | __grim | __wl_copy
 	elif test "${1}" == 'swaymsg--node--grim-path'
 	then __swaymsg__node | __grim__path
 	elif test "${1}" == 'swaymsg--switch'
 	then __swaymsg__switch_output
-	elif test "${1}" == 'swaymsg--keyboard-layout'
-	then __swaymsg__keyboard_layout
 	elif test "${1}" == 'wf-recorder'
 	then __wf_recorder
 	fi
