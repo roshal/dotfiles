@@ -162,8 +162,8 @@ mode $-mode-network bindsym --to-code z mode $-mode-default , exec nmcli connect
 mode $-mode-network bindsym --to-code a+shift exec nmcli connection up   ethernet
 mode $-mode-network bindsym --to-code z+shift exec nmcli connection down ethernet
 
-mode $-mode-network bindsym --to-code i       mode $-mode-default , exec sh "${HOME}/.shell/actions.sh" nm-applet--restart
-mode $-mode-network bindsym --to-code i+shift mode $-mode-default , exec sh "${HOME}/.shell/actions.sh" nm-applet--killall
+mode $-mode-network bindsym --to-code i       mode $-mode-default , exec $-action nm-applet--restart
+mode $-mode-network bindsym --to-code i+shift mode $-mode-default , exec $-action nm-applet--killall
 
 mode $-mode-network bindsym escape mode $-mode-default
 

@@ -9,25 +9,25 @@ bindsym --to-code $-key+q+shift kill
 ##### 6.1 executing applications
 # # # https://i3wm.org/docs/userguide.html#exec
 
-bindsym $-key+$-special-p       exec sh "${HOME}/.shell/actions.sh" slurp--grim-path
-bindsym $-key+$-special-p+ctrl  exec sh "${HOME}/.shell/actions.sh" swaymsg--node--grim-path
-bindsym $-key+$-special-p+shift exec sh "${HOME}/.shell/actions.sh" grim--output-path
+bindsym $-key+$-special-p       exec $-action slurp--grim-path
+bindsym $-key+$-special-p+ctrl  exec $-action swaymsg--node--grim-path
+bindsym $-key+$-special-p+shift exec $-action grim--output-path
 
-bindsym $-key+$-special-s exec sh "${HOME}/.shell/actions.sh" slurp--notify
+bindsym $-key+$-special-s exec $-action slurp--notify
 
 bindsym $-key+return exec termite
 
-bindsym $-special-p       exec sh "${HOME}/.shell/actions.sh" slurp--grim--wl-copy
-bindsym $-special-p+ctrl  exec sh "${HOME}/.shell/actions.sh" swaymsg--node--grim--wl-copy
-bindsym $-special-p+shift exec sh "${HOME}/.shell/actions.sh" grim--output--wl-copy
+bindsym $-special-p       exec $-action slurp--grim--wl-copy
+bindsym $-special-p+ctrl  exec $-action swaymsg--node--grim--wl-copy
+bindsym $-special-p+shift exec $-action grim--output--wl-copy
 
 bindsym --to-code $-key+d exec wofi
 bindsym --to-code $-key+l exec swaylock --image /-/pictures/waves.jpg
 bindsym --to-code $-key+n exec thunar
-bindsym --to-code $-key+o exec sh "${HOME}/.shell/actions.sh" swaymsg--switch
+bindsym --to-code $-key+o exec $-action swaymsg--switch
 
-bindsym --to-code $-key+i       exec sh "${HOME}/.shell/actions.sh" nm-applet--restart
-bindsym --to-code $-key+i+shift exec sh "${HOME}/.shell/actions.sh" nm-applet--killall
+bindsym --to-code $-key+i       exec $-action nm-applet--restart
+bindsym --to-code $-key+i+shift exec $-action nm-applet--killall
 
 bindsym --to-code $-key+shift+d exec wofi --show drun --allow-images --sort-order alphabetical --search --
 

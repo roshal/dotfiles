@@ -4,6 +4,10 @@
 set $-alt mod1
 set $-key mod4
 
+### actions
+
+set $-action sh "${HOME}/.shell/action.sh"
+
 ### binding-mode
 
 set $-binding-mode 'binding-mode'
