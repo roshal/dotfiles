@@ -1,0 +1,9 @@
+
+[Desktop Entry]
+
+# # /var/lib/snapd/desktop/applications/webstorm_webstorm.desktop
+
+Type=Application
+Name=--webstorm
+Icon=/var/lib/snapd/snap/webstorm/169/bin/webstorm.png
+Exec=env STUDIO_JDK=/usr/lib/jvm/java-11-openjdk/ webstorm %f

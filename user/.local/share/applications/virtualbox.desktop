@@ -1,6 +1,8 @@
 
 [Desktop Entry]
 
+# # /usr/share/applications/virtualbox.desktop
+
 Type=Application
 Name=--virtualbox
 Icon=virtualbox

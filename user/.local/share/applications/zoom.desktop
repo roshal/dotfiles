@@ -1,6 +1,8 @@
 
 [Desktop Entry]
 
+# # /usr/share/applications/Zoom.desktop
+
 Type=Application
 Name=--zoom
 Icon=Zoom

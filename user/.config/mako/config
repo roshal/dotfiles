@@ -55,6 +55,4 @@ group-by=app-name
 
 [grouped]
 
-# format=<b>%s</b>\n\n%b\n\n%a %g-%h-%t
-
-format=<b>%s</b>\n\n%b
+format=%a %g\n%h\n<b>%s</b>\n%t\n%b
