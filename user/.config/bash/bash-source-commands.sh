@@ -31,7 +31,11 @@ alias za='echo zyxwvutsrqponmlkjihgfedcba'
 ### sudo
 
 # # https://wiki.archlinux.org/index.php/Sudo#Passing_aliases
-alias sudo='sudo --prompt "$(echo -e - $(tput setaf 3)enter pass for %u$(tput sgr0)\\r)" '
+# # https://wiki.archlinux.org/index.php/Sudo#Reduce_the_number_of_times_you_have_to_type_a_password
+
+alias dosu='sudo --prompt "$(echo -e - $(tput setaf 3)enter pass for %u$(tput sgr0)\\r)" '
+
+alias sudo='dosu --validate ; dosu '
 
 ### termite
 
