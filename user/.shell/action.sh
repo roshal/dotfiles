@@ -4,7 +4,9 @@ function __path__grim {
 }
 
 function __swaymsg__keyboard_layout {
-	swaymsg -t get_inputs | jq -r 'max_by(.xkb_active_layout_index).xkb_active_layout_name[0:2] | try ascii_upcase // "--"'
+	JQ='max_by(.xkb_active_layout_index).xkb_active_layout_name[0:2]'
+	JQ+=' | try ascii_upcase // "--"'
+	swaymsg -t get_inputs | jq -r "${JQ}"
 }
 
 function __swaymsg__node {
@@ -76,36 +78,43 @@ function __xargs__notify {
 	xargs -0 notify-send
 }
 
-function call {
-	if false
-	then true
-	elif test "${1}" == 'grim--output-path'
-	then __grim__output__path
-	elif test "${1}" == 'grim--output--wl-copy'
-	then __grim__output | __wl_copy
-	elif test "${1}" == 'nm-applet--killall'
-	then __nm_applet__killall
-	elif test "${1}" == 'nm-applet--restart'
-	then __nm_applet__restart
-	elif test "${1}" == 'slurp--grim--wl-copy'
-	then __slurp | __grim | __wl_copy
-	elif test "${1}" == 'slurp--grim-path'
-	then __slurp | __grim__path
-	elif test "${1}" == 'slurp--notify'
-	then __slurp__print | __xargs__notify
-	elif test "${1}" == 'swaymsg--keyboard-layout'
-	then __swaymsg__keyboard_layout
-	elif test "${1}" == 'swaymsg--node--grim--wl-copy'
-	then __swaymsg__node | __grim | __wl_copy
-	elif test "${1}" == 'swaymsg--node--grim-path'
-	then __swaymsg__node | __grim__path
-	elif test "${1}" == 'swaymsg--switch'
-	then __swaymsg__switch_output
-	elif test "${1}" == 'wf-recorder'
-	then __wf_recorder
-	fi
-}
+if false
+then true
 
-for VALUE in ${@}
-do call ${VALUE}
-done
+elif test "${1}" == 'grim--output-path'
+then __grim__output__path
+
+elif test "${1}" == 'grim--output--wl-copy'
+then __grim__output | __wl_copy
+
+elif test "${1}" == 'nm-applet--killall'
+then __nm_applet__killall
+
+elif test "${1}" == 'nm-applet--restart'
+then __nm_applet__restart
+
+elif test "${1}" == 'slurp--grim--wl-copy'
+then __slurp | __grim | __wl_copy
+
+elif test "${1}" == 'slurp--grim-path'
+then __slurp | __grim__path
+
+elif test "${1}" == 'slurp--notify'
+then __slurp__print | __xargs__notify
+
+elif test "${1}" == 'swaymsg--keyboard-layout'
+then __swaymsg__keyboard_layout
+
+elif test "${1}" == 'swaymsg--node--grim--wl-copy'
+then __swaymsg__node | __grim | __wl_copy
+
+elif test "${1}" == 'swaymsg--node--grim-path'
+then __swaymsg__node | __grim__path
+
+elif test "${1}" == 'swaymsg--switch'
+then __swaymsg__switch_output
+
+elif test "${1}" == 'wf-recorder'
+then __wf_recorder
+
+fi
