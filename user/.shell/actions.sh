@@ -3,13 +3,13 @@ function __path__grim {
 	echo /-/grim/grim--$(date +%y-%m-%d--%H-%M-%S).png
 }
 
-function __swaymsg__keyboard_layout {
+function __swaymsg__inputs__keyboard_layout {
 	JQ='max_by(.xkb_active_layout_index).xkb_active_layout_name[0:2]'
 	JQ+=' | try ascii_upcase // "--"'
 	swaymsg -t get_inputs | jq -r "${JQ}"
 }
 
-function __swaymsg__node {
+function __swaymsg__tree__node {
 	JQ='..'
 	JQ+=' | .nodes? // empty'
 	JQ+=' | .[]'
@@ -20,14 +20,14 @@ function __swaymsg__node {
 	swaymsg -t get_tree | jq -r "${JQ}"
 }
 
-function __swaymsg__output_focused {
+function __swaymsg__outputs__focused {
 	JQ='.[] '
 	JQ+=' | select(.focused)'
 	JQ+=' | .name'
 	swaymsg -t get_outputs | jq -r "${JQ}"
 }
 
-function __swaymsg__output_suspend {
+function __swaymsg__outputs__suspend {
 	JQ='.[] '
 	JQ+=' | select(.focused != true)'
 	JQ+=' | .name'
@@ -45,11 +45,11 @@ function __grim__path {
 }
 
 function __grim__output {
-	grim -o $(__swaymsg__output_focused) -t png -
+	grim -o $(__swaymsg__outputs__focused) -t png -
 }
 
 function __grim__output_path {
-	grim -o $(__swaymsg__output_focused) -t png $(__path__grim)
+	grim -o $(__swaymsg__outputs__focused) -t png $(__path__grim)
 }
 
 function __nm_applet__killall {
@@ -69,7 +69,8 @@ function __slurp__print {
 }
 
 function __swaymsg__switch_output {
-	swaymsg -- output $(focused) disable , output $(suspend) enable
+	swaymsg -- output $(__swaymsg__outputs__focused) disable
+	swaymsg -- output $(__swaymsg__outputs__suspend) enable
 }
 
 function __wf_recorder {
