@@ -21,15 +21,17 @@ function __swaymsg__node {
 }
 
 function __swaymsg__output_focused {
-	swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name'
+	JQ='.[] '
+	JQ+=' | select(.focused)'
+	JQ+=' | .name'
+	swaymsg -t get_outputs | jq -r "${JQ}"
 }
 
 function __swaymsg__output_suspend {
-	swaymsg -t get_outputs | jq -r '.[] | select(.focused != true) | .name'
-}
-
-function __swaymsg__switch_output {
-	swaymsg -- output $(focused) disable , output $(suspend) enable
+	JQ='.[] '
+	JQ+=' | select(.focused != true)'
+	JQ+=' | .name'
+	swaymsg -t get_outputs | jq -r "${JQ}"
 }
 
 ### actions
@@ -64,6 +66,10 @@ function __slurp {
 
 function __slurp__print {
 	slurp -b 00000000 -w 1 -f "$(echo -e 'x %x\ny %y\nw %w\nh %h')"
+}
+
+function __swaymsg__switch_output {
+	swaymsg -- output $(focused) disable , output $(suspend) enable
 }
 
 function __wf_recorder {
