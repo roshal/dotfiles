@@ -1,2 +1,2 @@
 
-include '~/.config/sway/sway-0-config'
+include '${HOME}/.config/sway/sway-0-config'

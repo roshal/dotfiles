@@ -12,25 +12,25 @@
 
 # # swaymsg -t get_tree
 
-include '~/.config/sway/sway-4-15-variables'
-include '~/.config/sway/sway-4-18-autostart'
-include '~/.config/sway/sway-4-binding-modes'
-include '~/.config/sway/sway-4-configuring'
+include '${HOME}/.config/sway/sway-4-15-variables'
+include '${HOME}/.config/sway/sway-4-18-autostart'
+include '${HOME}/.config/sway/sway-4-binding-modes'
+include '${HOME}/.config/sway/sway-4-configuring'
 
 ##### 5 configuring i3bar
 # # # https://i3wm.org/docs/userguide.html#_configuring_i3bar
 
-include '~/.config/sway/sway-5-bar'
+include '${HOME}/.config/sway/sway-5-bar'
 
 ##### 6 list of commands
 # # # https://i3wm.org/docs/userguide.html#list_of_commands
 
 # # sudo libinput debug-events
 
-include '~/.config/sway/sway-6-bindsym'
-include '~/.config/sway/sway-6-bindsym-audio'
-include '~/.config/sway/sway-6-bindsym-mouse'
-include '~/.config/sway/sway-6-bindsym-other'
+include '${HOME}/.config/sway/sway-6-bindsym'
+include '${HOME}/.config/sway/sway-6-bindsym-audio'
+include '${HOME}/.config/sway/sway-6-bindsym-mouse'
+include '${HOME}/.config/sway/sway-6-bindsym-other'
 
 ##### sway
 # # # https://github.com/swaywm/sway/wiki
@@ -65,4 +65,4 @@ output $-output-2 mode 1920x1200 position 0 0
 
 ### host relative
 
-include '~/.config/sway/sway-$(cat /etc/hostname)'
+include '${HOME}/.config/sway/sway-$(cat /etc/hostname)'
