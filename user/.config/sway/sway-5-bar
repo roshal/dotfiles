@@ -8,13 +8,13 @@
 
 bar height 24
 
-# bar pango_markup enabled
+bar pango_markup no
 
 bar status_edge_padding 6
 
 bar status_padding 0
 
-bar wrap_scroll yes
+bar wrap_scroll on
 
 ##### 5.1 i3bar command
 # # # https://i3wm.org/docs/userguide.html#_i3bar_command
@@ -75,7 +75,7 @@ bar separator_symbol ''
 # # # https://i3wm.org/docs/userguide.html#_workspace_buttons
 
 ### default
-# bar workspace_buttons yes
+# bar workspace_buttons on
 
 ##### 5.13 minimal width for workspace buttons
 # # # https://i3wm.org/docs/userguide.html#_minimal_width_for_workspace_buttons
@@ -86,16 +86,16 @@ bar separator_symbol ''
 ##### 5.14 strip workspace numbers or name
 # # # https://i3wm.org/docs/userguide.html#_strip_workspace_numbers_name
 
-bar strip_workspace_numbers yes
+bar strip_workspace_numbers on
 
 ### default
-# strip_workspace_name no
+# bar strip_workspace_name no
 
 ##### 5.15 binding mode indicator
 # # # https://i3wm.org/docs/userguide.html#_binding_mode_indicator
 
 ### default
-# binding_mode_indicator yes
+# bar binding_mode_indicator on
 
 ##### 5.16 colors
 # # # https://i3wm.org/docs/userguide.html#_colors

@@ -96,6 +96,11 @@ mode $-mode-cursor bindsym $-arrow-l+shift+ctrl seat - cursor move -$-step-d  $-
 mode $-mode-cursor bindsym $-arrow-r+shift+ctrl seat - cursor move  $-step-d  $-step-0
 mode $-mode-cursor bindsym $-arrow-d+shift+ctrl seat - cursor move  $-step-0  $-step-d
 
+mode $-mode-cursor bindsym $-control-p exec tab seat - cursor press $-mouse-u
+mode $-mode-cursor bindsym $-control-n exec tab seat - cursor press $-mouse-d
+
+mode $-mode-cursor bindsym 0 seat - cursor set 960 600
+
 mode $-mode-cursor bindsym escape mode $-mode-default
 
 ### kill

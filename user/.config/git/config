@@ -20,6 +20,10 @@ tool = vscode
 
 tool = vscode
 
+[fetch]
+
+# prune = true
+
 [pager]
 
 # log = false
@@ -27,6 +31,10 @@ tool = vscode
 [rebase]
 
 backend = apply
+
+[remote "origin"]
+
+prune = true
 
 [status]
 
