@@ -57,7 +57,8 @@ function __nm_applet__killall {
 }
 
 function __nm_applet__restart {
-	killall --quiet nm-applet ; nm-applet --indicator
+	__nm_applet__killall
+	nm-applet --indicator
 }
 
 function __slurp {
@@ -69,8 +70,9 @@ function __slurp__print {
 }
 
 function __swaymsg__switch_output {
-	swaymsg -- output $(__swaymsg__outputs__focused) disable
-	swaymsg -- output $(__swaymsg__outputs__suspend) enable
+	FOCUSED=$(__swaymsg__outputs__focused)
+	SUSPEND=$(__swaymsg__outputs__suspend)
+	swaymsg -- output ${FOCUSED} disable , output ${SUSPEND} enable
 }
 
 function __wf_recorder {
