@@ -32,7 +32,7 @@ function __swaymsg__switch_output {
 	swaymsg -- output $(focused) disable , output $(suspend) enable
 }
 
-# actions
+### actions
 
 function __grim {
 	grim -g - -t png -
@@ -46,7 +46,7 @@ function __grim__output {
 	grim -o $(__swaymsg__output_focused) -t png -
 }
 
-function __grim__output__path {
+function __grim__output_path {
 	grim -o $(__swaymsg__output_focused) -t png $(__path__grim)
 }
 
@@ -78,11 +78,13 @@ function __xargs__notify {
 	xargs -0 notify-send
 }
 
+### switch cases
+
 if false
 then true
 
 elif test "${1}" == 'grim--output-path'
-then __grim__output__path
+then __grim__output_path
 
 elif test "${1}" == 'grim--output--wl-copy'
 then __grim__output | __wl_copy
@@ -111,7 +113,7 @@ then __swaymsg__node | __grim | __wl_copy
 elif test "${1}" == 'swaymsg--node--grim-path'
 then __swaymsg__node | __grim__path
 
-elif test "${1}" == 'swaymsg--switch'
+elif test "${1}" == 'swaymsg--switch-output'
 then __swaymsg__switch_output
 
 elif test "${1}" == 'wf-recorder'

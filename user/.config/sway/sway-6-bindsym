@@ -24,7 +24,7 @@ bindsym $-special-p+shift exec $-action grim--output--wl-copy
 bindsym --to-code $-key+d exec wofi
 bindsym --to-code $-key+l exec swaylock --image /-/pictures/waves.jpg
 bindsym --to-code $-key+n exec thunar
-bindsym --to-code $-key+o exec $-action swaymsg--switch
+bindsym --to-code $-key+o exec $-action swaymsg--switch-output
 
 bindsym --to-code $-key+i       exec $-action nm-applet--restart
 bindsym --to-code $-key+i+shift exec $-action nm-applet--killall
