@@ -1,0 +1,36 @@
+
+urxvt.font: xft:monospace:bold:size=9
+
+urxvt.scrollBar: true
+urxvt.scrollTtyKeypress: false
+urxvt.scrollTtyOutput: false
+urxvt.scrollWithBuffer: true
+urxvt.scrollstyle: plain
+
+urxvt......thickness: 8
+urxvt.externalBorder: 8
+urxvt.internalBorder: 8
+
+urxvt.borderColor: #333 // gray20
+urxvt.cursorColor: #fff // gray100
+urxvt.scrollColor: #666 // gray40
+
+urxvt..background: #000 // gray20
+urxvt..foreground: #999 // gray60
+
+urxvt......color0: #333 // black gray20
+urxvt......color1: #f33 // red
+urxvt......color2: #3f3 // green
+urxvt......color3: #ff3 // yellow
+urxvt......color4: #33f // blue
+urxvt......color5: #f3f // magenta
+urxvt......color6: #3ff // cyan
+urxvt......color7: #ccc // white gray80
+urxvt......color8: #666 // black gray40
+urxvt......color9: #f39 // red
+urxvt.....color10: #9f3 // green
+urxvt.....color11: #f93 // yellow
+urxvt.....color12: #39f // blue
+urxvt.....color13: #93f // magenta
+urxvt.....color14: #3f9 // cyan
+urxvt.....color15: #fff // white gray100

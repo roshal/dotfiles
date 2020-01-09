@@ -1,0 +1,289 @@
+
+# # man 5 sway
+# # man 5 sway-bar
+# # man 5 sway-input
+# # man 5 sway-output
+# # man 5 swaynag
+
+set $-mod-1 mod1
+set $-mod-4 mod4
+
+set $-modifier $-mod-4
+
+set $-terminal 'terminator'
+
+set $-output-0 'DP-1'
+set $-output-0 'DP-1'
+set $-output-1 'HDMI-A-2'
+
+set $-way-u up
+set $-way-l left
+set $-way-r right
+set $-way-d down
+
+set $-way-p prior
+set $-way-n next
+
+set $-key-0 grave
+set $-key-1 1
+set $-key-2 2
+set $-key-3 3
+set $-key-4 4
+set $-key-5 5
+set $-key-6 6
+set $-key-7 7
+set $-key-8 8
+set $-key-9 9
+
+set $-workspace-0 '0       '
+set $-workspace-1 '1       '
+set $-workspace-2 '2       '
+set $-workspace-3 '3       '
+set $-workspace-4 '4       '
+set $-workspace-5 '5       '
+set $-workspace-6 '6       '
+set $-workspace-7 '7       '
+set $-workspace-8 '8       '
+set $-workspace-9 '9       '
+
+set $-mode-default 'default'
+set $-mode-resize  'resize'
+
+set $-swaylock swaylock --daemonize --color 000000 --image /-/pictures/waves.jpg --tiling --font monospace --indicator-radius 96 --indicator-thickness 576
+set $-swaylock swaylock --daemonize --color 000000 --tiling --font monospace --indicator-radius 96 --indicator-thickness 576
+
+default_orientation vertical
+
+workspace_layout tabbed
+
+## class border background text indicator child_border
+client.focused          #999999 #999999 #ffffff #ffffff #999999
+client.focused_inactive #666666 #666666 #cccccc #ffffff #666666
+client.unfocused        #333333 #333333 #999999 #ffffff #333333
+client.urgent           #ff6666 #ff6666 #ffffff #ffffff #ff6666
+
+focus_follows_mouse no
+
+floating_minimum_size  256 x 256
+floating_maximum_size 1600 x 1024
+
+assign [instance="^telegram-desktop$"] $-workspace-8
+
+# for_window [instance="^atom$"]
+# for_window [instance="^dolphin$"]
+# for_window [instance="^jetbrains-pycharm-ce$"]
+# for_window [instance="^thunar$"]
+# for_window [instance="^tilix$"]
+
+# for_window [instance="^Navigator$" class="^firefox$"]
+# for_window [instance="^sublime_text$"]
+
+# for_window [window_type=dialog] focus
+# for_window [window_type=dialog] border normal 16
+
+for_window [shell="xwayland"] border normal 0
+
+for_window [instance="^chromium$"] border none
+for_window [instance="^code-oss$"] border none
+for_window [instance="^jetbrains-webstorm$" title="^win0$"] border none; floating enable
+for_window [instance="^telegram-desktop$"] border none
+
+font pango: monospace 9
+
+default_border          none
+default_floating_border none
+
+hide_edge_borders --i3 both
+
+input * xkb_layout us,ru
+input * xkb_options grp:caps_toggle
+
+# floating_modifier $-modifier normal
+# floating_modifier $-modifier inverse
+floating_modifier $-modifier
+
+# # swaymsg -t get_outputs
+
+output * bg /-/pictures/waves.jpg tile
+
+output $-output-0 enable
+output $-output-1 disable
+
+output $-output-0 mode 1920x1200 position 0 0
+output $-output-1 mode 1920x1200 position 0 0
+# output $-output-1 mode 1920x1080 position 0 -1200
+
+bindsym --to-code $-modifier+space focus mode_toggle
+
+bindsym --to-code $-modifier+a focus parent
+bindsym --to-code $-modifier+c focus parent
+
+bindsym --to-code $-modifier+$-way-u      focus $-way-u
+bindsym --to-code $-modifier+$-way-l      focus $-way-l
+bindsym --to-code $-modifier+$-way-r      focus $-way-r
+bindsym --to-code $-modifier+$-way-d      focus $-way-d
+
+bindsym --to-code $-modifier+$-way-u+shift move $-way-u
+bindsym --to-code $-modifier+$-way-l+shift move $-way-l
+bindsym --to-code $-modifier+$-way-r+shift move $-way-r
+bindsym --to-code $-modifier+$-way-d+shift move $-way-d
+
+bindsym --to-code $-modifier+$-way-d+ctrl move workspace to output $-way-d
+bindsym --to-code $-modifier+$-way-d+mod1 move workspace to output $-way-d
+bindsym --to-code $-modifier+$-way-u+ctrl move workspace to output $-way-u
+bindsym --to-code $-modifier+$-way-u+mod1 move workspace to output $-way-u
+
+bindsym --to-code $-modifier+shift+$-key-0 move container to workspace $-workspace-0
+bindsym --to-code $-modifier+shift+$-key-1 move container to workspace $-workspace-1
+bindsym --to-code $-modifier+shift+$-key-2 move container to workspace $-workspace-2
+bindsym --to-code $-modifier+shift+$-key-3 move container to workspace $-workspace-3
+bindsym --to-code $-modifier+shift+$-key-4 move container to workspace $-workspace-4
+bindsym --to-code $-modifier+shift+$-key-5 move container to workspace $-workspace-5
+bindsym --to-code $-modifier+shift+$-key-6 move container to workspace $-workspace-6
+bindsym --to-code $-modifier+shift+$-key-7 move container to workspace $-workspace-7
+bindsym --to-code $-modifier+shift+$-key-8 move container to workspace $-workspace-8
+bindsym --to-code $-modifier+shift+$-key-9 move container to workspace $-workspace-9
+
+bindsym --to-code $-modifier+$-key-0 workspace $-workspace-0
+bindsym --to-code $-modifier+$-key-1 workspace $-workspace-1
+bindsym --to-code $-modifier+$-key-2 workspace $-workspace-2
+bindsym --to-code $-modifier+$-key-3 workspace $-workspace-3
+bindsym --to-code $-modifier+$-key-4 workspace $-workspace-4
+bindsym --to-code $-modifier+$-key-5 workspace $-workspace-5
+bindsym --to-code $-modifier+$-key-6 workspace $-workspace-6
+bindsym --to-code $-modifier+$-key-7 workspace $-workspace-7
+bindsym --to-code $-modifier+$-key-8 workspace $-workspace-8
+bindsym --to-code $-modifier+$-key-9 workspace $-workspace-9
+
+bindsym --to-code $-modifier+tab workspace back_and_forth
+
+bindsym --to-code $-modifier+$-way-n      workspace next_on_output
+bindsym --to-code $-modifier+$-way-r+ctrl workspace next_on_output
+bindsym --to-code $-modifier+$-way-r+mod1 workspace next_on_output
+
+bindsym --to-code $-modifier+$-way-p      workspace prev_on_output
+bindsym --to-code $-modifier+$-way-l+ctrl workspace prev_on_output
+bindsym --to-code $-modifier+$-way-l+mod1 workspace prev_on_output
+
+bindsym --to-code $-modifier+p            scratchpad show
+bindsym --to-code $-modifier+p+shift move scratchpad
+
+bindsym --to-code $-modifier+q       kill
+bindsym --to-code $-modifier+q+shift kill
+
+bindsym --to-code $-modifier+return exec $-terminal
+
+bindsym --to-code $-modifier+shift+c reload
+bindsym --to-code $-modifier+shift+r reload
+
+bindsym --to-code $-modifier+shift+e exec swaynag -t custom -m 'you pressed the exit shortcut - do you really want to exit sway ? - this will end your Wayland session' -b 'yes - exit sway' 'swaymsg exit'
+
+bindsym --to-code $-modifier+g layout default
+bindsym --to-code $-modifier+s layout stacking
+bindsym --to-code $-modifier+t layout tabbed
+
+bindsym --to-code $-modifier+e layout toggle split
+
+bindsym --to-code $-modifier+f fullscreen
+
+bindsym --to-code $-modifier+shift+f     floating toggle
+bindsym --to-code $-modifier+shift+space floating toggle
+
+bindsym --to-code $-modifier+minus scratchpad show
+
+bindsym --to-code $-modifier+d exec rofi -show run | xargs swaymsg exec --
+bindsym --to-code $-modifier+i exec $-swaylock
+bindsym --to-code $-modifier+n exec thunar
+bindsym --to-code $-modifier+u exec swaylock --color ffffff --font monospace --indicator-radius 96 --indicator-thickness 576
+
+bindsym --to-code $-modifier+h split h
+
+bindsym --to-code $-modifier+v split v
+
+bindsym Shift+XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1%
+
+bindsym --to-code $-modifier+r mode $-mode-resize
+
+mode $-mode-resize bindsym --to-code $-way-l resize shrink width  10px
+mode $-mode-resize bindsym --to-code $-way-d resize grow   height 10px
+mode $-mode-resize bindsym --to-code $-way-u resize shrink height 10px
+mode $-mode-resize bindsym --to-code $-way-r resize grow   width  10px
+
+mode $-mode-resize bindsym --to-code return mode $-mode-default
+mode $-mode-resize bindsym --to-code escape mode $-mode-default
+
+bindsym --to-code $-modifier+m bar mode toggle
+
+bar status_command while date +'<span foreground="#fff">%V-%u %y-%m-%d %T</span>'; do sleep 1; done
+bar pango_markup enabled
+## default
+bar position bottom
+## inherited
+# bar font pango:monospace 12px
+## no effect
+bar separator_symbol q
+## default
+bar wrap_scroll no
+## default
+bar mode dock
+## default
+bar hidden_state hide
+## no effect
+bar status_edge_padding 1024
+
+bar tray_padding 0
+
+bar colors background         #000000
+bar colors statusline         #000000
+bar colors separator          #ffffff
+
+bar colors focused_background #000000
+bar colors focused_statusline #ffffff
+bar colors focused_separator  #ffffff
+
+#993366 magenta
+#996633 gold
+#669933 green
+#663399 purple
+#336699 blue
+#336699 green
+
+bar colors focused_workspace  #666666 #666666 #ffffff
+bar colors active_workspace   #666666 #666666 #cccccc
+bar colors inactive_workspace #333333 #333333 #cccccc
+bar colors urgent_workspace   #996633 #996633 #ffffff
+bar colors binding_mode       #993366 #993366 #ffffff
+
+set $-idle-before-sleep before-sleep '$-swaylock'
+set $-idle-timeout-lock timeout 1024 '$-swaylock'
+set $-idle-timeout-dpms timeout 2048 'swaymsg "output * dpms off"'
+set $-idle-resume             resume 'swaymsg "output * dpms on"'
+
+exec swayidle -w $-idle-before-sleep $-idle-timeout-lock $-idle-timeout-dpms $-idle-resume
+
+# # swaymsg -t get_inputs
+
+# set $factor 1
+# bindsym --to-code $-modifier+x set $factor $factor*16; input * scroll_factor $factor
+
+bindsym --to-code $-modifier+x input * scroll_factor 8
+bindsym --to-code $-modifier+z input * scroll_factor 1
+
+set $-echo-output-focused `swaymsg -t get_outputs | jq -r '.[] | select(.focused)       | .name'`
+set $-echo-output-suspend `swaymsg -t get_outputs | jq -r '.[] | select(.active==false) | .name'`
+
+bindsym --to-code $-modifier+o exec swaymsg "output $-echo-output-focused disable; output $-echo-output-suspend enable"
+
+set $-echo-date `date +%y-%m-%d`
+set $-echo-time `date +%H-%M-%S`
+
+set $-grim-crop slurp -b 00000000 -w 1 | grim -g -
+set $-grim-full grim -o $-echo-output-focused
+
+set $-grim-copy -t png - | wl-copy --primary --type image/png
+set $-grim-path /-/grim/grim--$-echo-date--$-echo-time.png
+
+bindsym --to-code            print       exec $-grim-crop $-grim-path
+bindsym --to-code            print+shift exec $-grim-full $-grim-path
+bindsym --to-code $-modifier+print       exec $-grim-crop $-grim-copy
+bindsym --to-code $-modifier+print+shift exec $-grim-full $-grim-copy

@@ -1,0 +1,40 @@
+
+[user]
+
+email = roshal@users.noreply.github.com
+name = roshal
+
+[core]
+
+editor = nano
+
+[alias]
+
+ad = add
+br = branch
+ch = checkout
+cl = clone
+co = commit
+di = diff
+in = init
+me = merge
+re = remote
+st = status
+all = add --all
+cam = commit --allow-empty --allow-empty-message -m '' --amend
+com = commit --allow-empty --allow-empty-message -m ''
+mes = merge --squash
+pgh = push github HEAD
+phh = push heroku HEAD
+poh = push origin HEAD
+rag = remote add github
+rah = remote add heroku
+rao = remote add origin
+rrg = remote remove github
+rrh = remote remove heroku
+rro = remote remove origin
+rev = remote -v
+rrc = rm -r --cached .
+hist = log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
+dump = cat-file -p
+type = cat-file -t
