@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+	<action>
+		<unique-id>1576441797674966-1</unique-id>
+		<name>- open terminator here</name>
+		<icon>utilities-terminal</icon>
+		<command>exo-open --working-directory %f --launch terminator</command>
+		<patterns>*</patterns>
+		<startup-notify/>
+	</action>
+	<action>
+		<unique-id>1577081468257511-1</unique-id>
+		<name>- terminator</name>
+		<icon>terminator</icon>
+		<command>terminator --working-directory=%F</command>
+		<patterns>*</patterns>
+		<directories/>
+	</action>
+</actions>

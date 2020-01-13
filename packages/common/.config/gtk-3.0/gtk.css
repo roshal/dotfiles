@@ -1,5 +1,15 @@
 
-* {
+.thunar {
 	font-family: monospace;
 	font-size: 9pt;
 }
+
+/*
+* {
+	font-family: monospace;
+}
+
+.terminator {
+	font-family: monospace;
+}
+*/

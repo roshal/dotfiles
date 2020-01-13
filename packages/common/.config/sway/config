@@ -12,10 +12,6 @@ set $-modifier $-mod-4
 
 set $-terminal 'terminator'
 
-set $-output-0 'DP-1'
-set $-output-0 'DP-1'
-set $-output-1 'HDMI-A-2'
-
 set $-way-u up
 set $-way-l left
 set $-way-r right
@@ -49,8 +45,23 @@ set $-workspace-9 '9       '
 set $-mode-default 'default'
 set $-mode-resize  'resize'
 
-set $-swaylock swaylock --daemonize --color 000000 --image /-/pictures/waves.jpg --tiling --font monospace --indicator-radius 96 --indicator-thickness 576
 set $-swaylock swaylock --daemonize --color 000000 --tiling --font monospace --indicator-radius 96 --indicator-thickness 576
+set $-swaylock swaylock --daemonize --color 000000 --image /-/pictures/waves.jpg --tiling --font monospace --indicator-radius 96 --indicator-thickness 576
+
+# # swaymsg -t get_outputs
+
+set $-output-0 'DP-1'
+set $-output-1 'HDMI-A-1'
+
+output * bg /-/pictures/waves.jpg tile
+
+output $-output-0 enable
+output $-output-1 disable
+
+output $-output-0 mode 1920x1200 position 0 0
+output $-output-1 mode 1920x1200 position 0 0
+
+# output $-output-1 mode 1920x1080 position 0 -1200
 
 default_orientation vertical
 
@@ -67,16 +78,22 @@ focus_follows_mouse no
 floating_minimum_size  256 x 256
 floating_maximum_size 1600 x 1024
 
-assign [instance="^telegram-desktop$"] $-workspace-8
+# # swaymsg -t get_tree
+
+assign [app_id="^telegramdesktop$"] $-workspace-8
 
 # for_window [instance="^atom$"]
 # for_window [instance="^dolphin$"]
 # for_window [instance="^jetbrains-pycharm-ce$"]
+# for_window [instance="^jetbrains-webstorm$"]
+# for_window [instance="^telegram-desktop$"]
 # for_window [instance="^thunar$"]
 # for_window [instance="^tilix$"]
 
 # for_window [instance="^Navigator$" class="^firefox$"]
 # for_window [instance="^sublime_text$"]
+
+# for_window [app_id="^terminator$"] split horizontal
 
 # for_window [window_type=dialog] focus
 # for_window [window_type=dialog] border normal 16
@@ -85,8 +102,8 @@ for_window [shell="xwayland"] border normal 0
 
 for_window [instance="^chromium$"] border none
 for_window [instance="^code-oss$"] border none
-for_window [instance="^jetbrains-webstorm$" title="^win0$"] border none; floating enable
-for_window [instance="^telegram-desktop$"] border none
+for_window [instance="^jetbrains-webstorm$" title="^win0$"] border none
+for_window [instance="^jetbrains-webstorm$" title="^win0$"] floating enable
 
 font pango: monospace 9
 
@@ -101,17 +118,6 @@ input * xkb_options grp:caps_toggle
 # floating_modifier $-modifier normal
 # floating_modifier $-modifier inverse
 floating_modifier $-modifier
-
-# # swaymsg -t get_outputs
-
-output * bg /-/pictures/waves.jpg tile
-
-output $-output-0 enable
-output $-output-1 disable
-
-output $-output-0 mode 1920x1200 position 0 0
-output $-output-1 mode 1920x1200 position 0 0
-# output $-output-1 mode 1920x1080 position 0 -1200
 
 bindsym --to-code $-modifier+space focus mode_toggle
 
@@ -133,16 +139,16 @@ bindsym --to-code $-modifier+$-way-d+mod1 move workspace to output $-way-d
 bindsym --to-code $-modifier+$-way-u+ctrl move workspace to output $-way-u
 bindsym --to-code $-modifier+$-way-u+mod1 move workspace to output $-way-u
 
-bindsym --to-code $-modifier+shift+$-key-0 move container to workspace $-workspace-0
-bindsym --to-code $-modifier+shift+$-key-1 move container to workspace $-workspace-1
-bindsym --to-code $-modifier+shift+$-key-2 move container to workspace $-workspace-2
-bindsym --to-code $-modifier+shift+$-key-3 move container to workspace $-workspace-3
-bindsym --to-code $-modifier+shift+$-key-4 move container to workspace $-workspace-4
-bindsym --to-code $-modifier+shift+$-key-5 move container to workspace $-workspace-5
-bindsym --to-code $-modifier+shift+$-key-6 move container to workspace $-workspace-6
-bindsym --to-code $-modifier+shift+$-key-7 move container to workspace $-workspace-7
-bindsym --to-code $-modifier+shift+$-key-8 move container to workspace $-workspace-8
-bindsym --to-code $-modifier+shift+$-key-9 move container to workspace $-workspace-9
+bindsym --to-code $-modifier+$-key-0+shift move container to workspace $-workspace-0
+bindsym --to-code $-modifier+$-key-1+shift move container to workspace $-workspace-1
+bindsym --to-code $-modifier+$-key-2+shift move container to workspace $-workspace-2
+bindsym --to-code $-modifier+$-key-3+shift move container to workspace $-workspace-3
+bindsym --to-code $-modifier+$-key-4+shift move container to workspace $-workspace-4
+bindsym --to-code $-modifier+$-key-5+shift move container to workspace $-workspace-5
+bindsym --to-code $-modifier+$-key-6+shift move container to workspace $-workspace-6
+bindsym --to-code $-modifier+$-key-7+shift move container to workspace $-workspace-7
+bindsym --to-code $-modifier+$-key-8+shift move container to workspace $-workspace-8
+bindsym --to-code $-modifier+$-key-9+shift move container to workspace $-workspace-9
 
 bindsym --to-code $-modifier+$-key-0 workspace $-workspace-0
 bindsym --to-code $-modifier+$-key-1 workspace $-workspace-1
@@ -214,7 +220,8 @@ mode $-mode-resize bindsym --to-code escape mode $-mode-default
 
 bindsym --to-code $-modifier+m bar mode toggle
 
-bar status_command while date +'<span foreground="#fff">%V-%u %y-%m-%d %T</span>'; do sleep 1; done
+bar status_command while date +'<span foreground="#fff">%j-%U-%w %y-%m-%d %T</span>'; do sleep 1; done
+bar status_command while AZ=ABCDEFGHIJKLMNOPQRSTUVWXYZ; function az { echo ${AZ:$((RANDOM % 26)):1}; }; date +"%j-%U-%w %y-%m-%d %T <span foreground=\\"#f33\\">$(az)</span><span foreground=\\"#f93\\">$(az)</span><span foreground=\\"#ff3\\">$(az)</span><span foreground=\\"#9f3\\">$(az)</span><span foreground=\\"#39f\\">$(az)</span><span foreground=\\"#f39\\">$(az)</span>"; do sleep 1; done
 bar pango_markup enabled
 ## default
 bar position bottom
