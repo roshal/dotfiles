@@ -3,11 +3,6 @@
 
 editor = nano
 
-[user]
-
-email = roshal.e@esphere.ru
-name = Рошаль Ефим Геннадьевич
-
 [color]
 
 advice = true
@@ -30,6 +25,7 @@ ui = true
 [alias]
 
 # classic
+
 co = checkout
 br = branch
 ci = commit
@@ -42,6 +38,7 @@ dump = cat-file -p
 echo = !echo
 
 # custom
+
 ad = add
 cl = clone
 di = diff
@@ -49,6 +46,8 @@ in = init
 me = merge
 re = remote
 un = reset @ --
+
+#
 
 sl   = stash list
 ss   = stash show

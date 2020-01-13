@@ -4,6 +4,6 @@
 !/docs/
 !/packages/
 
-/packages/common/.config/thunar/accels.scm
+/packages/common/.config/Thunar/accels.scm
 
 !/.gitignore

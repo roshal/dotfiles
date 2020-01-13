@@ -52,22 +52,27 @@ set $-swaylock swaylock --daemonize --color 000000 --image /-/pictures/waves.jpg
 
 set $-output-0 'DP-1'
 set $-output-1 'HDMI-A-1'
+set $-output-2 'HDMI-A-2'
 
 output * bg /-/pictures/waves.jpg tile
 
 output $-output-0 enable
 output $-output-1 disable
+output $-output-2 disable
 
 output $-output-0 mode 1920x1200 position 0 0
 output $-output-1 mode 1920x1200 position 0 0
+output $-output-2 mode 1920x1200 position 0 0
 
-# output $-output-1 mode 1920x1080 position 0 -1200
+# output $-output-0 mode 1920x1200 position 0 -1200
+# output $-output-1 mode 1920x1200 position 0 -1200
+# output $-output-2 mode 1920x1200 position 0 -1200
 
 default_orientation vertical
 
 workspace_layout tabbed
 
-## class border background text indicator child_border
+### class border background text indicator child_border
 client.focused          #999999 #999999 #ffffff #ffffff #999999
 client.focused_inactive #666666 #666666 #cccccc #ffffff #666666
 client.unfocused        #333333 #333333 #999999 #ffffff #333333
@@ -80,7 +85,7 @@ floating_maximum_size 1600 x 1024
 
 # # swaymsg -t get_tree
 
-assign [app_id="^telegramdesktop$"] $-workspace-8
+# assign [instance="^telegram-desktop$"] border none
 
 # for_window [instance="^atom$"]
 # for_window [instance="^dolphin$"]
@@ -95,10 +100,16 @@ assign [app_id="^telegramdesktop$"] $-workspace-8
 
 # for_window [app_id="^terminator$"] split horizontal
 
-# for_window [window_type=dialog] focus
 # for_window [window_type=dialog] border normal 16
+# for_window [window_type=dialog] focus
 
-for_window [shell="xwayland"] border normal 0
+assign [app_id="^telegramdesktop$"] $-workspace-8
+
+assign [instance="^telegram-desktop$"] $-workspace-8
+
+for_window [shell="^xwayland$"] border normal 0
+
+for_window [app_id="^telegram-desktop$"] border none
 
 for_window [instance="^chromium$"] border none
 for_window [instance="^code-oss$"] border none
@@ -210,32 +221,32 @@ bindsym Shift+XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1%
 
 bindsym --to-code $-modifier+r mode $-mode-resize
 
-mode $-mode-resize bindsym --to-code $-way-l resize shrink width  10px
-mode $-mode-resize bindsym --to-code $-way-d resize grow   height 10px
-mode $-mode-resize bindsym --to-code $-way-u resize shrink height 10px
-mode $-mode-resize bindsym --to-code $-way-r resize grow   width  10px
+mode $-mode-resize bindsym --to-code $-way-l resize shrink width  16px
+mode $-mode-resize bindsym --to-code $-way-d resize grow   height 16px
+mode $-mode-resize bindsym --to-code $-way-u resize shrink height 16px
+mode $-mode-resize bindsym --to-code $-way-r resize grow   width  16px
 
 mode $-mode-resize bindsym --to-code return mode $-mode-default
 mode $-mode-resize bindsym --to-code escape mode $-mode-default
 
 bindsym --to-code $-modifier+m bar mode toggle
 
-bar status_command while date +'<span foreground="#fff">%j-%U-%w %y-%m-%d %T</span>'; do sleep 1; done
 bar status_command while AZ=ABCDEFGHIJKLMNOPQRSTUVWXYZ; function az { echo ${AZ:$((RANDOM % 26)):1}; }; date +"%j-%U-%w %y-%m-%d %T <span foreground=\\"#f33\\">$(az)</span><span foreground=\\"#f93\\">$(az)</span><span foreground=\\"#ff3\\">$(az)</span><span foreground=\\"#9f3\\">$(az)</span><span foreground=\\"#39f\\">$(az)</span><span foreground=\\"#f39\\">$(az)</span>"; do sleep 1; done
+bar status_command while date +'<span foreground="#fff">%j-%U-%w %y-%m-%d %T</span>'; do sleep 1; done
 bar pango_markup enabled
-## default
+### default
 bar position bottom
-## inherited
-# bar font pango:monospace 12px
-## no effect
+### inherited
+# bar font pango:monospace 9
+### no effect
 bar separator_symbol q
-## default
+### default
 bar wrap_scroll no
-## default
+### default
 bar mode dock
-## default
+### default
 bar hidden_state hide
-## no effect
+### no effect
 bar status_edge_padding 1024
 
 bar tray_padding 0
