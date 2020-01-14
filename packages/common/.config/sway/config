@@ -5,12 +5,63 @@
 # # man 5 sway-output
 # # man 5 swaynag
 
+### 4.15
+
 set $-mod-1 mod1
 set $-mod-4 mod4
 
 set $-modifier $-mod-4
 
 set $-terminal 'terminator'
+
+set $-mode-default 'default'
+set $-mode-resize  'resize'
+
+set $-swaylock swaylock --daemonize --color 000000 --tiling --font monospace --indicator-radius 96 --indicator-thickness 576
+set $-swaylock swaylock --daemonize --color 000000 --image /-/pictures/waves.jpg --tiling --font monospace --indicator-radius 96 --indicator-thickness 576
+
+set $-swaynag swaynag -t custom -m 'you pressed the exit shortcut - do you really want to exit sway ? - this will end your wayland session' -b 'yes - exit sway' 'swaymsg exit'
+
+# # swaymsg -t get_outputs
+
+set $-output-0 'DP-1'
+set $-output-1 'HDMI-A-1'
+set $-output-2 'HDMI-A-2'
+
+### sway
+
+input * xkb_layout us,ru
+input * xkb_options grp:caps_toggle
+
+set $-idle-before-sleep before-sleep '$-swaylock'
+set $-idle-timeout-lock timeout 1024 '$-swaylock'
+set $-idle-timeout-dpms timeout 2048 'swaymsg "output * dpms off"'
+set $-idle-resume             resume 'swaymsg "output * dpms on"'
+
+exec swayidle -w $-idle-before-sleep $-idle-timeout-lock $-idle-timeout-dpms $-idle-resume
+
+# # swaymsg -t get_inputs
+
+set $-echo-output-focused `swaymsg -t get_outputs | jq -r '.[] | select(.focused)       | .name'`
+set $-echo-output-suspend `swaymsg -t get_outputs | jq -r '.[] | select(.active==false) | .name'`
+
+bindsym --to-code $-modifier+o exec swaymsg "output $-echo-output-focused disable; output $-echo-output-suspend enable"
+
+set $-echo-date `date +%y-%m-%d`
+set $-echo-time `date +%H-%M-%S`
+
+set $-grim-crop slurp -b 00000000 -w 1 | grim -g -
+set $-grim-full grim -o $-echo-output-focused
+
+set $-grim-copy -t png - | wl-copy --primary --type image/png
+set $-grim-path /-/grim/grim--$-echo-date--$-echo-time.png
+
+bindsym --to-code            print       exec $-grim-crop $-grim-path
+bindsym --to-code            print+shift exec $-grim-full $-grim-path
+bindsym --to-code $-modifier+print       exec $-grim-crop $-grim-copy
+bindsym --to-code $-modifier+print+shift exec $-grim-full $-grim-copy
+
+### 6.8
 
 set $-way-u up
 set $-way-l left
@@ -19,6 +70,14 @@ set $-way-d down
 
 set $-way-p prior
 set $-way-n next
+
+bindsym --to-code $-modifier+$-way-n      workspace next_on_output
+bindsym --to-code $-modifier+$-way-r+ctrl workspace next_on_output
+bindsym --to-code $-modifier+$-way-r+mod1 workspace next_on_output
+
+bindsym --to-code $-modifier+$-way-p      workspace prev_on_output
+bindsym --to-code $-modifier+$-way-l+ctrl workspace prev_on_output
+bindsym --to-code $-modifier+$-way-l+mod1 workspace prev_on_output
 
 bindsym --to-code $-modifier+$-way-u focus $-way-u
 bindsym --to-code $-modifier+$-way-l focus $-way-l
@@ -79,105 +138,15 @@ bindsym --to-code $-modifier+$-key-7 workspace $-workspace-7
 bindsym --to-code $-modifier+$-key-8 workspace $-workspace-8
 bindsym --to-code $-modifier+$-key-9 workspace $-workspace-9
 
-set $-mode-default 'default'
-set $-mode-resize  'resize'
+### 4
 
-set $-swaylock swaylock --daemonize --color 000000 --tiling --font monospace --indicator-radius 96 --indicator-thickness 576
-set $-swaylock swaylock --daemonize --color 000000 --image /-/pictures/waves.jpg --tiling --font monospace --indicator-radius 96 --indicator-thickness 576
-
-set $-swaynag swaynag -t custom -m 'you pressed the exit shortcut - do you really want to exit sway ? - this will end your wayland session' -b 'yes - exit sway' 'swaymsg exit'
-
-# # swaymsg -t get_outputs
-
-set $-output-0 'DP-1'
-set $-output-1 'HDMI-A-1'
-set $-output-2 'HDMI-A-2'
-
-output * bg /-/pictures/waves.jpg tile
-
-output $-output-0 enable
-output $-output-1 disable
-output $-output-2 disable
-
-output $-output-0 mode 1920x1200 position 0 0
-output $-output-1 mode 1920x1200 position 0 0
-output $-output-2 mode 1920x1200 position 0 0
-
-# output $-output-0 mode 1920x1200 position 0 -1200
-# output $-output-1 mode 1920x1200 position 0 -1200
-# output $-output-2 mode 1920x1200 position 0 -1200
-
-default_orientation vertical
-
-workspace_layout tabbed
-
-### class border background text indicator child_border
-client.focused          #999999 #999999 #ffffff #ffffff #999999
-client.focused_inactive #666666 #666666 #cccccc #ffffff #666666
-client.unfocused        #333333 #333333 #999999 #ffffff #333333
-client.urgent           #ff6666 #ff6666 #ffffff #ffffff #ff6666
-
-focus_follows_mouse no
-
-floating_minimum_size  256 x 256
-floating_maximum_size 1600 x 1024
-
-# # swaymsg -t get_tree
-
-# assign [instance="^telegram-desktop$"] border none
-
-# for_window [instance="^atom$"]
-# for_window [instance="^dolphin$"]
-# for_window [instance="^jetbrains-pycharm-ce$"]
-# for_window [instance="^jetbrains-webstorm$"]
-# for_window [instance="^telegram-desktop$"]
-# for_window [instance="^thunar$"]
-# for_window [instance="^tilix$"]
-
-# for_window [instance="^Navigator$" class="^firefox$"]
-# for_window [instance="^sublime_text$"]
-
-# for_window [app_id="^terminator$"] split horizontal
-
-# for_window [window_type=dialog] border normal 16
-# for_window [window_type=dialog] focus
-
-assign [app_id="^telegramdesktop$"] $-workspace-8
-
-assign [instance="^telegram-desktop$"] $-workspace-8
-
-for_window [shell="^xwayland$"] border normal 0
-
-for_window [app_id="^telegram-desktop$"] border none
-
-for_window [instance="^chromium$"] border none
-for_window [instance="^code-oss$"] border none
-for_window [instance="^jetbrains-webstorm$" title="^win0$"] border none
-for_window [instance="^jetbrains-webstorm$" title="^win0$"] floating enable
+### 4.2
 
 font pango: monospace 9
 
-default_border          none
-default_floating_border none
-
-hide_edge_borders --i3 both
-
-input * xkb_layout us,ru
-input * xkb_options grp:caps_toggle
-
-# floating_modifier $-modifier normal
-# floating_modifier $-modifier inverse
-floating_modifier $-modifier
+### 4.3
 
 bindsym --to-code $-modifier+tab workspace back_and_forth
-
-bindsym --to-code $-modifier+$-way-n      workspace next_on_output
-bindsym --to-code $-modifier+$-way-r+ctrl workspace next_on_output
-bindsym --to-code $-modifier+$-way-r+mod1 workspace next_on_output
-
-bindsym --to-code $-modifier+$-way-p      workspace prev_on_output
-bindsym --to-code $-modifier+$-way-l+ctrl workspace prev_on_output
-bindsym --to-code $-modifier+$-way-l+mod1 workspace prev_on_output
 
 bindsym --to-code $-modifier+q       kill
 bindsym --to-code $-modifier+q+shift kill
@@ -229,6 +198,8 @@ bindsym Shift+XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1%
 
 bindsym --to-code $-modifier+z mode $-mode-resize
 
+### 4.5
+
 mode $-mode-resize bindsym --to-code $-way-l resize shrink width  16px
 mode $-mode-resize bindsym --to-code $-way-d resize grow   height 16px
 mode $-mode-resize bindsym --to-code $-way-u resize shrink height 16px
@@ -237,6 +208,98 @@ mode $-mode-resize bindsym --to-code $-way-r resize grow   width  16px
 mode $-mode-resize bindsym --to-code return mode $-mode-default
 mode $-mode-resize bindsym --to-code escape mode $-mode-default
 
+### 4.6
+
+# floating_modifier $-modifier normal
+# floating_modifier $-modifier inverse
+floating_modifier $-modifier
+
+### 4.7
+
+floating_minimum_size  256 x 256
+floating_maximum_size 1600 x 1024
+
+### 4.8
+
+default_orientation vertical
+
+### 4.9
+
+workspace_layout tabbed
+
+### class border background text indicator child_border
+client.focused          #999999 #999999 #ffffff #ffffff #999999
+client.focused_inactive #666666 #666666 #cccccc #ffffff #666666
+client.unfocused        #333333 #333333 #999999 #ffffff #333333
+client.urgent           #ff6666 #ff6666 #ffffff #ffffff #ff6666
+
+### 4.22
+
+focus_follows_mouse no
+
+### 5.7
+
+output * bg /-/pictures/waves.jpg tile
+
+output $-output-0 enable
+output $-output-1 disable
+output $-output-2 disable
+
+output $-output-0 mode 1920x1200 position 0 0
+output $-output-1 mode 1920x1200 position 0 0
+output $-output-2 mode 1920x1200 position 0 0
+
+# output $-output-0 mode 1920x1200 position 0 -1200
+# output $-output-1 mode 1920x1200 position 0 -1200
+# output $-output-2 mode 1920x1200 position 0 -1200
+
+### 4.11
+
+default_border          none
+default_floating_border none
+
+### 4.13
+
+# # swaymsg -t get_tree
+
+for_window [shell="^xwayland$"] border normal 0
+
+for_window [app_id="^telegram-desktop$"] border none
+
+for_window [instance="^chromium$"] border none
+for_window [instance="^code-oss$"] border none
+for_window [instance="^jetbrains-webstorm$" title="^win0$"] border none
+for_window [instance="^jetbrains-webstorm$" title="^win0$"] floating enable
+
+# for_window [instance="^telegram-desktop$"] border none
+
+# for_window [instance="^atom$"]
+# for_window [instance="^dolphin$"]
+# for_window [instance="^jetbrains-pycharm-ce$"]
+# for_window [instance="^jetbrains-webstorm$"]
+# for_window [instance="^telegram-desktop$"]
+# for_window [instance="^thunar$"]
+# for_window [instance="^tilix$"]
+
+# for_window [instance="^Navigator$" class="^firefox$"]
+# for_window [instance="^sublime_text$"]
+
+# for_window [app_id="^terminator$"] split horizontal
+
+# for_window [window_type=dialog] border normal 16
+# for_window [window_type=dialog] focus
+
+### 4.17
+
+assign [app_id="^telegramdesktop$"] $-workspace-8
+
+assign [instance="^telegram-desktop$"] $-workspace-8
+
+### 4.12
+
+hide_edge_borders --i3 both
+
+### 5
 
 bar status_command while AZ=ABCDEFGHIJKLMNOPQRSTUVWXYZ; function az { echo ${AZ:$((RANDOM % 26)):1}; }; date +"%j-%U-%w %y-%m-%d %T <span foreground=\\"#f33\\">$(az)</span><span foreground=\\"#f93\\">$(az)</span><span foreground=\\"#ff3\\">$(az)</span><span foreground=\\"#9f3\\">$(az)</span><span foreground=\\"#39f\\">$(az)</span><span foreground=\\"#f39\\">$(az)</span>"; do sleep 1; done
 bar status_command while date +'<span foreground="#fff">%j-%U-%w %y-%m-%d %T</span>'; do sleep 1; done
@@ -278,31 +341,3 @@ bar colors active_workspace   #666666 #666666 #cccccc
 bar colors inactive_workspace #333333 #333333 #cccccc
 bar colors urgent_workspace   #996633 #996633 #ffffff
 bar colors binding_mode       #993366 #993366 #ffffff
-
-set $-idle-before-sleep before-sleep '$-swaylock'
-set $-idle-timeout-lock timeout 1024 '$-swaylock'
-set $-idle-timeout-dpms timeout 2048 'swaymsg "output * dpms off"'
-set $-idle-resume             resume 'swaymsg "output * dpms on"'
-
-exec swayidle -w $-idle-before-sleep $-idle-timeout-lock $-idle-timeout-dpms $-idle-resume
-
-# # swaymsg -t get_inputs
-
-set $-echo-output-focused `swaymsg -t get_outputs | jq -r '.[] | select(.focused)       | .name'`
-set $-echo-output-suspend `swaymsg -t get_outputs | jq -r '.[] | select(.active==false) | .name'`
-
-bindsym --to-code $-modifier+o exec swaymsg "output $-echo-output-focused disable; output $-echo-output-suspend enable"
-
-set $-echo-date `date +%y-%m-%d`
-set $-echo-time `date +%H-%M-%S`
-
-set $-grim-crop slurp -b 00000000 -w 1 | grim -g -
-set $-grim-full grim -o $-echo-output-focused
-
-set $-grim-copy -t png - | wl-copy --primary --type image/png
-set $-grim-path /-/grim/grim--$-echo-date--$-echo-time.png
-
-bindsym --to-code            print       exec $-grim-crop $-grim-path
-bindsym --to-code            print+shift exec $-grim-full $-grim-path
-bindsym --to-code $-modifier+print       exec $-grim-crop $-grim-copy
-bindsym --to-code $-modifier+print+shift exec $-grim-full $-grim-copy
