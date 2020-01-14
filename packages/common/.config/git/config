@@ -47,6 +47,15 @@ me = merge
 re = remote
 un = reset @ --
 
+all = add --all
+com = commit
+
+cam = commit --allow-empty-message --no-edit --amend
+cem = commit --allow-empty-message --message '' --allow-empty
+
+cce = config user.email roshal@users.noreply.github.com
+ccn = config user.name  roshal
+
 #
 
 sl   = stash list
@@ -66,21 +75,10 @@ li   = log --graph --oneline
 tr   = log --graph
 line = log --oneline
 
-all = add --all
-cam = commit --allow-empty-message --no-edit --amend
-cem = commit --allow-empty-message --message '' --allow-empty
-
-cce = config user.email roshal@users.noreply.github.com
-ccn = config user.name  roshal
-
 mes = merge --squash
 
 rev = remote --verbose
 rrc = rm -r --cached .
-
-hist = log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
-dump = cat-file -p
-type = cat-file -t
 
 pgh = push github HEAD
 phh = push heroku HEAD
@@ -97,3 +95,9 @@ rao = remote add origin
 rrg = remote remove github
 rrh = remote remove heroku
 rro = remote remove origin
+
+#
+
+hist = log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
+dump = cat-file -p
+type = cat-file -t

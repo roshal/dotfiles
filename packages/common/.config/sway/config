@@ -20,6 +20,21 @@ set $-way-d down
 set $-way-p prior
 set $-way-n next
 
+bindsym --to-code $-modifier+$-way-u focus $-way-u
+bindsym --to-code $-modifier+$-way-l focus $-way-l
+bindsym --to-code $-modifier+$-way-r focus $-way-r
+bindsym --to-code $-modifier+$-way-d focus $-way-d
+
+bindsym --to-code $-modifier+$-way-u+shift move $-way-u
+bindsym --to-code $-modifier+$-way-l+shift move $-way-l
+bindsym --to-code $-modifier+$-way-r+shift move $-way-r
+bindsym --to-code $-modifier+$-way-d+shift move $-way-d
+
+bindsym --to-code $-modifier+$-way-d+ctrl move workspace to output $-way-d
+bindsym --to-code $-modifier+$-way-d+mod1 move workspace to output $-way-d
+bindsym --to-code $-modifier+$-way-u+ctrl move workspace to output $-way-u
+bindsym --to-code $-modifier+$-way-u+mod1 move workspace to output $-way-u
+
 set $-key-0 grave
 set $-key-1 1
 set $-key-2 2
@@ -42,11 +57,35 @@ set $-workspace-7 '7       '
 set $-workspace-8 '8       '
 set $-workspace-9 '9       '
 
+bindsym --to-code $-modifier+$-key-0+shift move container to workspace $-workspace-0
+bindsym --to-code $-modifier+$-key-1+shift move container to workspace $-workspace-1
+bindsym --to-code $-modifier+$-key-2+shift move container to workspace $-workspace-2
+bindsym --to-code $-modifier+$-key-3+shift move container to workspace $-workspace-3
+bindsym --to-code $-modifier+$-key-4+shift move container to workspace $-workspace-4
+bindsym --to-code $-modifier+$-key-5+shift move container to workspace $-workspace-5
+bindsym --to-code $-modifier+$-key-6+shift move container to workspace $-workspace-6
+bindsym --to-code $-modifier+$-key-7+shift move container to workspace $-workspace-7
+bindsym --to-code $-modifier+$-key-8+shift move container to workspace $-workspace-8
+bindsym --to-code $-modifier+$-key-9+shift move container to workspace $-workspace-9
+
+bindsym --to-code $-modifier+$-key-0 workspace $-workspace-0
+bindsym --to-code $-modifier+$-key-1 workspace $-workspace-1
+bindsym --to-code $-modifier+$-key-2 workspace $-workspace-2
+bindsym --to-code $-modifier+$-key-3 workspace $-workspace-3
+bindsym --to-code $-modifier+$-key-4 workspace $-workspace-4
+bindsym --to-code $-modifier+$-key-5 workspace $-workspace-5
+bindsym --to-code $-modifier+$-key-6 workspace $-workspace-6
+bindsym --to-code $-modifier+$-key-7 workspace $-workspace-7
+bindsym --to-code $-modifier+$-key-8 workspace $-workspace-8
+bindsym --to-code $-modifier+$-key-9 workspace $-workspace-9
+
 set $-mode-default 'default'
 set $-mode-resize  'resize'
 
 set $-swaylock swaylock --daemonize --color 000000 --tiling --font monospace --indicator-radius 96 --indicator-thickness 576
 set $-swaylock swaylock --daemonize --color 000000 --image /-/pictures/waves.jpg --tiling --font monospace --indicator-radius 96 --indicator-thickness 576
+
+set $-swaynag swaynag -t custom -m 'you pressed the exit shortcut - do you really want to exit sway ? - this will end your wayland session' -b 'yes - exit sway' 'swaymsg exit'
 
 # # swaymsg -t get_outputs
 
@@ -130,48 +169,6 @@ input * xkb_options grp:caps_toggle
 # floating_modifier $-modifier inverse
 floating_modifier $-modifier
 
-bindsym --to-code $-modifier+space focus mode_toggle
-
-bindsym --to-code $-modifier+a focus parent
-bindsym --to-code $-modifier+c focus parent
-
-bindsym --to-code $-modifier+$-way-u      focus $-way-u
-bindsym --to-code $-modifier+$-way-l      focus $-way-l
-bindsym --to-code $-modifier+$-way-r      focus $-way-r
-bindsym --to-code $-modifier+$-way-d      focus $-way-d
-
-bindsym --to-code $-modifier+$-way-u+shift move $-way-u
-bindsym --to-code $-modifier+$-way-l+shift move $-way-l
-bindsym --to-code $-modifier+$-way-r+shift move $-way-r
-bindsym --to-code $-modifier+$-way-d+shift move $-way-d
-
-bindsym --to-code $-modifier+$-way-d+ctrl move workspace to output $-way-d
-bindsym --to-code $-modifier+$-way-d+mod1 move workspace to output $-way-d
-bindsym --to-code $-modifier+$-way-u+ctrl move workspace to output $-way-u
-bindsym --to-code $-modifier+$-way-u+mod1 move workspace to output $-way-u
-
-bindsym --to-code $-modifier+$-key-0+shift move container to workspace $-workspace-0
-bindsym --to-code $-modifier+$-key-1+shift move container to workspace $-workspace-1
-bindsym --to-code $-modifier+$-key-2+shift move container to workspace $-workspace-2
-bindsym --to-code $-modifier+$-key-3+shift move container to workspace $-workspace-3
-bindsym --to-code $-modifier+$-key-4+shift move container to workspace $-workspace-4
-bindsym --to-code $-modifier+$-key-5+shift move container to workspace $-workspace-5
-bindsym --to-code $-modifier+$-key-6+shift move container to workspace $-workspace-6
-bindsym --to-code $-modifier+$-key-7+shift move container to workspace $-workspace-7
-bindsym --to-code $-modifier+$-key-8+shift move container to workspace $-workspace-8
-bindsym --to-code $-modifier+$-key-9+shift move container to workspace $-workspace-9
-
-bindsym --to-code $-modifier+$-key-0 workspace $-workspace-0
-bindsym --to-code $-modifier+$-key-1 workspace $-workspace-1
-bindsym --to-code $-modifier+$-key-2 workspace $-workspace-2
-bindsym --to-code $-modifier+$-key-3 workspace $-workspace-3
-bindsym --to-code $-modifier+$-key-4 workspace $-workspace-4
-bindsym --to-code $-modifier+$-key-5 workspace $-workspace-5
-bindsym --to-code $-modifier+$-key-6 workspace $-workspace-6
-bindsym --to-code $-modifier+$-key-7 workspace $-workspace-7
-bindsym --to-code $-modifier+$-key-8 workspace $-workspace-8
-bindsym --to-code $-modifier+$-key-9 workspace $-workspace-9
-
 bindsym --to-code $-modifier+tab workspace back_and_forth
 
 bindsym --to-code $-modifier+$-way-n      workspace next_on_output
@@ -182,9 +179,6 @@ bindsym --to-code $-modifier+$-way-p      workspace prev_on_output
 bindsym --to-code $-modifier+$-way-l+ctrl workspace prev_on_output
 bindsym --to-code $-modifier+$-way-l+mod1 workspace prev_on_output
 
-bindsym --to-code $-modifier+p            scratchpad show
-bindsym --to-code $-modifier+p+shift move scratchpad
-
 bindsym --to-code $-modifier+q       kill
 bindsym --to-code $-modifier+q+shift kill
 
@@ -193,33 +187,47 @@ bindsym --to-code $-modifier+return exec $-terminal
 bindsym --to-code $-modifier+shift+c reload
 bindsym --to-code $-modifier+shift+r reload
 
-bindsym --to-code $-modifier+shift+e exec swaynag -t custom -m 'you pressed the exit shortcut - do you really want to exit sway ? - this will end your Wayland session' -b 'yes - exit sway' 'swaymsg exit'
-
-bindsym --to-code $-modifier+g layout default
-bindsym --to-code $-modifier+s layout stacking
-bindsym --to-code $-modifier+t layout tabbed
+bindsym --to-code $-modifier+shift+e exec swaynag $-swaynag
 
 bindsym --to-code $-modifier+e layout toggle split
 
+bindsym --to-code $-modifier+d layout default
+bindsym --to-code $-modifier+s layout stacking
+bindsym --to-code $-modifier+t layout tabbed
+
+bindsym --to-code $-modifier+h splith
+bindsym --to-code $-modifier+v splitv
+
 bindsym --to-code $-modifier+f fullscreen
 
-bindsym --to-code $-modifier+shift+f     floating toggle
 bindsym --to-code $-modifier+shift+space floating toggle
+bindsym --to-code $-modifier+shift+f     floating toggle
+
+bindsym --to-code $-modifier+space focus mode_toggle
+bindsym --to-code $-modifier+a     focus parent
+bindsym --to-code $-modifier+c     focus parent
+
+bindsym --to-code $-modifier+m bar mode toggle
 
 bindsym --to-code $-modifier+minus scratchpad show
+bindsym --to-code $-modifier+p     scratchpad show
 
-bindsym --to-code $-modifier+d exec rofi -show run | xargs swaymsg exec --
+bindsym --to-code $-modifier+shift+p move scratchpad
+
+bindsym --to-code $-modifier+r exec rofi -show run | xargs swaymsg exec --
 bindsym --to-code $-modifier+i exec $-swaylock
 bindsym --to-code $-modifier+n exec thunar
 bindsym --to-code $-modifier+u exec swaylock --color ffffff --font monospace --indicator-radius 96 --indicator-thickness 576
 
-bindsym --to-code $-modifier+h split h
+# set $factor 1
+# bindsym --to-code $-modifier+x set $factor $factor*16; input * scroll_factor $factor
 
-bindsym --to-code $-modifier+v split v
+bindsym --to-code $-modifier+shift+x input * scroll_factor 8
+bindsym --to-code $-modifier+shift+z input * scroll_factor 1
 
 bindsym Shift+XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1%
 
-bindsym --to-code $-modifier+r mode $-mode-resize
+bindsym --to-code $-modifier+z mode $-mode-resize
 
 mode $-mode-resize bindsym --to-code $-way-l resize shrink width  16px
 mode $-mode-resize bindsym --to-code $-way-d resize grow   height 16px
@@ -229,7 +237,6 @@ mode $-mode-resize bindsym --to-code $-way-r resize grow   width  16px
 mode $-mode-resize bindsym --to-code return mode $-mode-default
 mode $-mode-resize bindsym --to-code escape mode $-mode-default
 
-bindsym --to-code $-modifier+m bar mode toggle
 
 bar status_command while AZ=ABCDEFGHIJKLMNOPQRSTUVWXYZ; function az { echo ${AZ:$((RANDOM % 26)):1}; }; date +"%j-%U-%w %y-%m-%d %T <span foreground=\\"#f33\\">$(az)</span><span foreground=\\"#f93\\">$(az)</span><span foreground=\\"#ff3\\">$(az)</span><span foreground=\\"#9f3\\">$(az)</span><span foreground=\\"#39f\\">$(az)</span><span foreground=\\"#f39\\">$(az)</span>"; do sleep 1; done
 bar status_command while date +'<span foreground="#fff">%j-%U-%w %y-%m-%d %T</span>'; do sleep 1; done
@@ -251,9 +258,9 @@ bar status_edge_padding 1024
 
 bar tray_padding 0
 
-bar colors background         #000000
-bar colors statusline         #000000
-bar colors separator          #ffffff
+bar colors background #000000
+bar colors statusline #000000
+bar colors separator  #ffffff
 
 bar colors focused_background #000000
 bar colors focused_statusline #ffffff
@@ -280,12 +287,6 @@ set $-idle-resume             resume 'swaymsg "output * dpms on"'
 exec swayidle -w $-idle-before-sleep $-idle-timeout-lock $-idle-timeout-dpms $-idle-resume
 
 # # swaymsg -t get_inputs
-
-# set $factor 1
-# bindsym --to-code $-modifier+x set $factor $factor*16; input * scroll_factor $factor
-
-bindsym --to-code $-modifier+x input * scroll_factor 8
-bindsym --to-code $-modifier+z input * scroll_factor 1
 
 set $-echo-output-focused `swaymsg -t get_outputs | jq -r '.[] | select(.focused)       | .name'`
 set $-echo-output-suspend `swaymsg -t get_outputs | jq -r '.[] | select(.active==false) | .name'`
