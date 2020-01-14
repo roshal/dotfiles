@@ -11,6 +11,15 @@ urxvt......thickness: 8
 urxvt.externalBorder: 8
 urxvt.internalBorder: 8
 
+# 333 666 black
+# 33f 39f blue
+# 3f3 9f3 green
+# 3ff 3f9 cyan
+# ccc fff white
+# f33 f39 red
+# f3f 93f magenta
+# ff3 f93 yellow
+
 urxvt.borderColor: #333 // gray20
 urxvt.cursorColor: #fff // gray100
 urxvt.scrollColor: #666 // gray40
