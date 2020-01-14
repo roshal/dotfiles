@@ -67,15 +67,15 @@ tr   = log --graph
 line = log --oneline
 
 all = add --all
-cam = commit --allow-empty --allow-empty-message -m '' --amend
-com = commit --allow-empty --allow-empty-message -m ''
+cam = commit --allow-empty-message --no-edit --amend
+cem = commit --allow-empty-message --message '' --allow-empty
 
 cce = config user.email roshal@users.noreply.github.com
 ccn = config user.name  roshal
 
 mes = merge --squash
 
-rev = remote -v
+rev = remote --verbose
 rrc = rm -r --cached .
 
 hist = log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
