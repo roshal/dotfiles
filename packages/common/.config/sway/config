@@ -185,7 +185,7 @@ bindsym --to-code $-modifier+p     scratchpad show
 
 bindsym --to-code $-modifier+shift+p move scratchpad
 
-bindsym --to-code $-modifier+d exec rofi -show run | xargs swaymsg exec --
+bindsym --to-code $-modifier+d exec rofi -show combi | xargs swaymsg exec --
 bindsym --to-code $-modifier+i exec $-swaylock
 bindsym --to-code $-modifier+n exec thunar
 bindsym --to-code $-modifier+u exec swaylock --color ffffff --font monospace --indicator-radius 96 --indicator-thickness 576

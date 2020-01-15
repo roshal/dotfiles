@@ -76,3 +76,7 @@ alias _ccl='cd /-/git.esphere.local.copy/courier/light-ui'
 alias _cff='cd /-/git.esphere.local.copy/frontend/Fish'
 alias _cfl='cd /-/git.esphere.local.copy/frontend/Leda'
 alias _ggr='cd /-/github/roshal'
+
+# virtualbox
+
+alias virtualbox='QT_QPA_PLATFORM= virtualbox'
