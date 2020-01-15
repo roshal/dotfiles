@@ -140,6 +140,8 @@ bindsym --to-code $-modifier+$-key-9 workspace $-workspace-9
 
 ### 4
 
+### 4.1
+
 ### 4.2
 
 font pango: monospace 9
@@ -158,9 +160,9 @@ bindsym --to-code $-modifier+shift+r reload
 
 bindsym --to-code $-modifier+shift+e exec swaynag $-swaynag
 
-bindsym --to-code $-modifier+e layout toggle split
+bindsym --to-code $-modifier+e layout toggle
 
-bindsym --to-code $-modifier+d layout default
+bindsym --to-code $-modifier+r layout default
 bindsym --to-code $-modifier+s layout stacking
 bindsym --to-code $-modifier+t layout tabbed
 
@@ -183,7 +185,7 @@ bindsym --to-code $-modifier+p     scratchpad show
 
 bindsym --to-code $-modifier+shift+p move scratchpad
 
-bindsym --to-code $-modifier+r exec rofi -show run | xargs swaymsg exec --
+bindsym --to-code $-modifier+d exec rofi -show run | xargs swaymsg exec --
 bindsym --to-code $-modifier+i exec $-swaylock
 bindsym --to-code $-modifier+n exec thunar
 bindsym --to-code $-modifier+u exec swaylock --color ffffff --font monospace --indicator-radius 96 --indicator-thickness 576
@@ -197,6 +199,8 @@ bindsym --to-code $-modifier+shift+z input * scroll_factor 1
 bindsym Shift+XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1%
 
 bindsym --to-code $-modifier+z mode $-mode-resize
+
+### 4.4
 
 ### 4.5
 
@@ -221,11 +225,15 @@ floating_maximum_size 1600 x 1024
 
 ### 4.8
 
-default_orientation vertical
+# default_orientation auto
 
 ### 4.9
 
 workspace_layout tabbed
+
+### 4.10
+
+# title_align left
 
 ### class border background text indicator child_border
 client.focused          #999999 #999999 #ffffff #ffffff #999999
@@ -233,30 +241,14 @@ client.focused_inactive #666666 #666666 #cccccc #ffffff #666666
 client.unfocused        #333333 #333333 #999999 #ffffff #333333
 client.urgent           #ff6666 #ff6666 #ffffff #ffffff #ff6666
 
-### 4.22
-
-focus_follows_mouse no
-
-### 5.7
-
-output * bg /-/pictures/waves.jpg tile
-
-output $-output-0 enable
-output $-output-1 disable
-output $-output-2 disable
-
-output $-output-0 mode 1920x1200 position 0 0
-output $-output-1 mode 1920x1200 position 0 0
-output $-output-2 mode 1920x1200 position 0 0
-
-# output $-output-0 mode 1920x1200 position 0 -1200
-# output $-output-1 mode 1920x1200 position 0 -1200
-# output $-output-2 mode 1920x1200 position 0 -1200
-
 ### 4.11
 
 default_border          none
 default_floating_border none
+
+### 4.12
+
+hide_edge_borders --i3 both
 
 ### 4.13
 
@@ -264,10 +256,9 @@ default_floating_border none
 
 for_window [shell="^xwayland$"] border normal 0
 
-for_window [app_id="^telegram-desktop$"] border none
-
 for_window [instance="^chromium$"] border none
 for_window [instance="^code-oss$"] border none
+
 for_window [instance="^jetbrains-webstorm$" title="^win0$"] border none
 for_window [instance="^jetbrains-webstorm$" title="^win0$"] floating enable
 
@@ -289,33 +280,43 @@ for_window [instance="^jetbrains-webstorm$" title="^win0$"] floating enable
 # for_window [window_type=dialog] border normal 16
 # for_window [window_type=dialog] focus
 
+### 4.14
+
+# no_focus [window_role="pop-up"]
+
 ### 4.17
 
 assign [app_id="^telegramdesktop$"] $-workspace-8
 
-assign [instance="^telegram-desktop$"] $-workspace-8
+### 4.22
 
-### 4.12
-
-hide_edge_borders --i3 both
+focus_follows_mouse no
 
 ### 5
 
 bar status_command while AZ=ABCDEFGHIJKLMNOPQRSTUVWXYZ; function az { echo ${AZ:$((RANDOM % 26)):1}; }; date +"%j-%U-%w %y-%m-%d %T <span foreground=\\"#f33\\">$(az)</span><span foreground=\\"#f93\\">$(az)</span><span foreground=\\"#ff3\\">$(az)</span><span foreground=\\"#9f3\\">$(az)</span><span foreground=\\"#39f\\">$(az)</span><span foreground=\\"#f39\\">$(az)</span>"; do sleep 1; done
 bar status_command while date +'<span foreground="#fff">%j-%U-%w %y-%m-%d %T</span>'; do sleep 1; done
+
 bar pango_markup enabled
+
 ### default
-bar position bottom
+# bar position bottom
+
 ### inherited
 # bar font pango:monospace 9
+
 ### no effect
 bar separator_symbol q
+
 ### default
-bar wrap_scroll no
+# bar wrap_scroll no
+
 ### default
-bar mode dock
+# bar mode dock
+
 ### default
-bar hidden_state hide
+# bar hidden_state hide
+
 ### no effect
 bar status_edge_padding 1024
 
@@ -341,3 +342,19 @@ bar colors active_workspace   #666666 #666666 #cccccc
 bar colors inactive_workspace #333333 #333333 #cccccc
 bar colors urgent_workspace   #996633 #996633 #ffffff
 bar colors binding_mode       #993366 #993366 #ffffff
+
+### 5.7
+
+output * bg /-/pictures/waves.jpg tile
+
+output $-output-0 enable
+output $-output-1 disable
+output $-output-2 disable
+
+output $-output-0 mode 1920x1200 position 0 0
+output $-output-1 mode 1920x1200 position 0 0
+output $-output-2 mode 1920x1200 position 0 0
+
+# output $-output-0 mode 1920x1200 position 0 -1200
+# output $-output-1 mode 1920x1200 position 0 -1200
+# output $-output-2 mode 1920x1200 position 0 -1200

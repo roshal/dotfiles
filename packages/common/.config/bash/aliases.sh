@@ -1,25 +1,73 @@
 
-alias ls='ls --color=auto'
+# arch
 
-alias g='grep --color'
-alias l='ls -Al --group-directories-first'
-alias z='grep -iz --color'
+alias pacman='sudo pacman --color always'
+
+# bash
+
+alias rc='echo -ne \\'\ec\\''
+
+alias re='exec bash'
+
+# change directory
+
+alias aur='cd /-/aur'
+
+# github
+
+alias arch-linux-notes='cd /-/github/roshal/arch-linux-notes'
+alias arch-linux='cd /-/github/roshal/arch-linux'
+alias dotfiles='cd /-/github/roshal/dotfiles'
+alias roshal='cd /-/github/roshal'
+
+# grep
+
+alias grep='grep --color'
+
+alias g='grep'
+alias z='grep -iz'
+
+# history
+
 alias h='history'
 
 alias hh='hstr'
-alias ll='ls -A --group-directories-first'
-alias py='python'
-alias rc='echo -ne \\'\ec\\''
-alias re='exec bash'
+
+# linux
 
 alias diff='diff --color'
-alias grep='grep --color'
-alias lint='npx eslint --color --ext .ts,.tsx --'
-alias lock='swaylock --color 000000 --image /-/pictures/waves.jpg --tiling --font monospace --indicator-radius 96 --indicator-thickness 576'
+
+# list directory
+
+# LC_COLLATE=C
+alias ls='ls --color=auto'
+
+alias l='ls -Al --group-directories-first'
+alias ll='ls -A --group-directories-first'
+
+# node
+
+alias jest='npx jest'
+alias lint='npx eslint --color --ext .ts,.tsx'
+
+# pass
+
+alias pass='py /-/github/roshal/python/common/hex-16-shuffle.py'
+
+# python
+
+alias py='python'
+
+# systemctl
+
 alias syre='systemctl reboot'
 alias sysu='systemctl suspend'
 
+alias lock='swaylock --color 000000 --image /-/pictures/waves.jpg --tiling --font monospace --indicator-radius 96 --indicator-thickness 576'
+
 alias suck='sysu && lock'
+
+# underscore
 
 alias _gcl='cd /-/git.esphere.local/courier/light-ui'
 alias _gff='cd /-/git.esphere.local/frontend/Fish'
@@ -28,19 +76,3 @@ alias _ccl='cd /-/git.esphere.local.copy/courier/light-ui'
 alias _cff='cd /-/git.esphere.local.copy/frontend/Fish'
 alias _cfl='cd /-/git.esphere.local.copy/frontend/Leda'
 alias _ggr='cd /-/github/roshal'
-
-alias l='LC_COLLATE=C ls -Ahl --group-directories-first'
-alias z='grep --color'
-alias z='grep -iz --color'
-
-alias re='exec bash'
-alias py='python'
-
-alias grep='grep --color'
-alias sysu='systemctl suspend'
-
-alias g-f-f='cd /-/git.esphere.local/frontend/Fish'
-alias g-f-l='cd /-/git.esphere.local/frontend/Leda'
-alias g-c-l='cd /-/git.esphere.local.copy/frontend/Leda'
-
-alias pacman='sudo pacman --color always'
