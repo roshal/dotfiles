@@ -1,6 +1,6 @@
 
 ### if not running interactively don not do anything
-if [[ $- != *i* ]]
+if [[ ${-} != *i* ]]
 then return
 fi
 
