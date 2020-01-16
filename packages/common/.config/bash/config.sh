@@ -86,7 +86,6 @@ complete -F _yargs_completions nps
 
 #
 
-export LC_MESSAGES=ru_RU.UTF-8
 export LS_COLORS='di=0;94:'
 
 ### history
