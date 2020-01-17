@@ -1,7 +1,6 @@
 [global_config]
   always_split_with_profile = True
   enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
-  extra_styling = False
   geometry_hinting = True
   hide_on_lose_focus = True
   inactive_color_offset = 1.0
@@ -23,7 +22,6 @@
 [plugins]
 [profiles]
   [[default]]
-    allow_bold = False
     backspace_binding = automatic
     cursor_blink = False
     cursor_color = "#ffffff"
@@ -31,8 +29,8 @@
     delete_binding = automatic
     font = monospace 9
     foreground_color = "#999999"
-    palette = "#333333:#ff3333:#33ff33:#ffff33:#3333ff:#ff33ff:#33ffff:#cccccc:#666666:#ff3399:#99ff33:#ff9933:#3399ff:#9933ff:#33ff99:#ffffff"
     icon_bell = False
+    palette = "#333333:#ff3333:#33ff33:#ffff33:#3333ff:#ff33ff:#33ffff:#cccccc:#666666:#ff3399:#99ff33:#ff9933:#3399ff:#9933ff:#33ff99:#ffffff"
     scroll_on_keystroke = False
     scrollback_infinite = True
     scrollbar_position = left

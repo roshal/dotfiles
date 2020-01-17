@@ -4,7 +4,7 @@
 	font-size: 9pt;
 }
 
-/*
+/*\
 * {
 	font-family: monospace;
 }
@@ -12,4 +12,8 @@
 .terminator {
 	font-family: monospace;
 }
-*/
+
+.termite {
+	padding: 8px;
+}
+\*/

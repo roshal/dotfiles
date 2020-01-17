@@ -86,7 +86,7 @@ complete -F _yargs_completions nps
 
 #
 
-export LS_COLORS='di=0;94:'
+export LS_COLORS='di=1;94:'
 
 ### history
 

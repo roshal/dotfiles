@@ -1,0 +1,75 @@
+
+[options]
+
+allow_bold = true
+# audible_bell = false
+# bold_is_bright = false
+# cell_height_scale = 1.0
+# cell_width_scale = 1.0
+# clickable_url = true
+# dynamic_title = true
+font = monospace 9
+# fullscreen = true
+# icon_name = terminal
+# mouse_autohide = false
+scroll_on_output = false
+scroll_on_keystroke = false
+# scrollback_lines = 10000
+# search_wrap = true
+# urgent_on_bell = true
+# hyperlinks = false
+
+# browser = xdg-open
+
+cursor_blink = off
+
+# cursor_shape = ibeam
+
+### hide links that are no longer valid in url select overlay mode
+# filter_unmatched_urls = true
+
+### emit escape sequences for extra modified keys
+# modify_other_keys = false
+
+# size_hints = true
+
+scrollbar = left
+
+[colors]
+
+cursor = #fff
+cursor_foreground = #000
+
+background = #000
+foreground = #999
+foreground_bold = #fff
+
+# highlight = #fff
+
+color0  = #333
+color1  = #f33
+color2  = #3f3
+color3  = #ff3
+color4  = #33f
+color5  = #f3f
+color6  = #3ff
+color7  = #ccc
+color8  = #666
+color9  = #f39
+color10 = #9f3
+color11 = #f93
+color12 = #39f
+color13 = #93f
+color14 = #3f9
+color15 = #fff
+
+[hints]
+
+# active_foreground = #fff
+# active_background = #fff
+# padding = 8
+# border = #fff
+# border_width = 0.5
+# roundness = 2.0
+
+# vim: ft=dosini cms=#%s
