@@ -35,6 +35,7 @@ VAAPI_MPEG4_ENABLED=true
 # export XKB_DEFAULT_LAYOUT=us,ru
 # export XKB_DEFAULT_OPTIONS=grp:caps_toggle
 
+# # https://github.com/swaywm/sway/wiki#disabling-client-side-qt-decorations
 # # https://wiki.archlinux.org/index.php/Wayland#Qt_5
 # # https://wiki.qt.io/QtWayland#Run_Qt_applications_as_Wayland_clients
 export QT_QPA_PLATFORM=wayland

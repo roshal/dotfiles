@@ -19,6 +19,7 @@ alias arch-linux-notes='cd /-/github/roshal/arch-linux-notes'
 alias arch-linux='cd /-/github/roshal/arch-linux'
 alias dotfiles='cd /-/github/roshal/dotfiles'
 alias roshal='cd /-/github/roshal'
+alias test-task-kanban-board='cd /-/github/roshal/test-task-kanban-board'
 
 # grep
 
