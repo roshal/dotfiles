@@ -2,8 +2,9 @@
 
 
 !/docs/
-!/packages/
+!/home/
+!/junk/
 
-/packages/common/.config/Thunar/accels.scm
+/home/.config/Thunar/accels.scm
 
 !/.gitignore

@@ -1,6 +1,6 @@
 
 exit
 
-stow --target /home/user --stow common
+stow --target ${HOME} --stow home
 
-stow --target /home/user --adopt common
+stow --target ${HOME} --adopt home

@@ -9,5 +9,5 @@
 
 ```shell
 cd packages
-stow --target ~ --stow common
+stow --target ${HOME} --stow home
 ```
