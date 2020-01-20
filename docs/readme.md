@@ -1,5 +1,7 @@
 
-# dotfiles
+## dotfiles
+
+configuration files for linux applications
 
 ## prerequisites
 
