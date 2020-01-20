@@ -220,7 +220,7 @@ floating_modifier $-modifier
 
 ### 4.7
 
-floating_minimum_size  256 x 256
+floating_minimum_size  256 x  256
 floating_maximum_size 1600 x 1024
 
 ### 4.8

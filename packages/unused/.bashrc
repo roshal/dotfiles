@@ -1,5 +1,6 @@
+
 source /usr/share/git/completion/git-prompt.sh
-# alias ls='ls --color=auto'
+
 alias st='sublime_text'
 alias l='ls -Al --color --group-directories-first'
 alias ll='ls -AFil --color'
@@ -13,6 +14,6 @@ alias e='explorer .'
 alias py='pytho'
 alias c='cd /common'
 alias g='g++ -std=c++14 -o common.exe main.cpp'
-#
+
 export PS1='\u@\h: \w$(__git_ps1) \\$ \[$(tput sgr0)\]'
 export EDITOR='vim'

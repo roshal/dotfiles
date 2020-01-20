@@ -16,7 +16,7 @@ source /usr/share/nvm/init-nvm.sh
 
 # if [[ -r /usr/share/doc/mcfly/mcfly.bash ]]
 # then
-#   source /usr/share/doc/mcfly/mcfly.bash
+# 	source /usr/share/doc/mcfly/mcfly.bash
 # fi
 
 ### fixes
