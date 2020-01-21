@@ -1,0 +1,14 @@
+
+# device                   directory  type  options   dump  pass
+
+  /dev/mapper/volume-swap  none       swap  defaults  0     0
+
+  /dev/mapper/volume-root  /          ext4  discard   0     1
+
+  /dev/mapper/volume-boot  /boot      ext4  discard   0     2
+
+  /dev/mapper/volume-home  /home      ext4  discard   0     2
+
+  /dev/mapper/volume-var   /var       ext4  discard   0     2
+
+  /dev/mapper/volume-data  /-         ext4  discard   0     2

@@ -1,8 +1,4 @@
 
-# arch
-
-alias pacman='sudo pacman --color always'
-
 # bash
 
 alias rc='echo -ne \\'\ec\\''
