@@ -11,5 +11,5 @@ configuration files for linux applications
 
 ```shell
 cd packages
-stow --target ${HOME} --stow home
+stow --target ${HOME} --stow user
 ```

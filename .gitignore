@@ -2,9 +2,10 @@
 /*
 
 !/docs/
-!/home/
 !/junk/
+!/root/
+!/user/
 
-/home/.config/Thunar/accels.scm
+/user/.config/Thunar/accels.scm
 
 !/.gitignore
