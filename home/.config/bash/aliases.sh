@@ -25,7 +25,7 @@ alias test-task-kanban-board='cd /-/github/roshal/test-task-kanban-board'
 
 alias grep='grep --color'
 
-alias g='grep'
+alias x='grep -i'
 alias z='grep -iz'
 
 # history
