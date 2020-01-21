@@ -294,11 +294,11 @@ focus_follows_mouse no
 
 ### 5
 
-set $-echo-keyboard-layout `swaymsg -t get_inputs | jq -r '.[] | select(.identifier == "1121:16:NOVATEK_USB_Keyboard") | .xkb_active_layout_name | .[0:2] | ascii_downcase'`
-set $-echo-keyboard-layout `echo date-`
+set $-echo-keyboard-layout `swaymsg -t get_inputs | jq -r '.[] | select(.identifier == "1121:16:NOVATEK_USB_Keyboard") | .xkb_active_layout_name | .[0:2] | ascii_upcase'`
+set $-echo-keyboard-layout `swaymsg -t get_inputs | jq -r '.[] | select(.identifier == "1539:8:Gaming_KB__Gaming_KB") | .xkb_active_layout_name | .[0:2] | ascii_upcase'`
 
 bar status_command while AZ=ABCDEFGHIJKLMNOPQRSTUVWXYZ; function az { echo ${AZ:$((RANDOM % 26)):1}; }; date +"%j-%U-%w %y-%m-%d %T <span foreground=\\"#f33\\">$(az)</span><span foreground=\\"#f93\\">$(az)</span><span foreground=\\"#ff3\\">$(az)</span><span foreground=\\"#9f3\\">$(az)</span><span foreground=\\"#39f\\">$(az)</span><span foreground=\\"#f39\\">$(az)</span>"; do sleep 1; done
-bar status_command while date +$-echo-keyboard-layout'<span foreground="#fff">%j-%U-%w %y-%m-%d %T</span>'; do sleep 1; done
+bar status_command while date +"%j-%U-%w %y-%m-%d %T $-echo-keyboard-layout"; do sleep 1; done
 
 bar pango_markup enabled
 
