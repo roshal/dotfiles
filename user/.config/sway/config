@@ -5,6 +5,8 @@
 # # man 5 sway-output
 # # man 5 swaynag
 
+include '~/.config/sway/config-$(cat /etc/hostname)'
+
 ### 4.15
 
 set $-mod-1 mod1
@@ -42,13 +44,13 @@ exec swayidle -w $-idle-before-sleep $-idle-timeout-lock $-idle-timeout-dpms $-i
 
 # # swaymsg -t get_inputs
 
-set $-echo-output-focused `swaymsg -t get_outputs | jq -r '.[] | select(.focused)         | .name'`
-set $-echo-output-suspend `swaymsg -t get_outputs | jq -r '.[] | select(.active == false) | .name'`
+set $-echo-output-focused $(swaymsg -t get_outputs | jq -r '.[] | select(.focused)         | .name')
+set $-echo-output-suspend $(swaymsg -t get_outputs | jq -r '.[] | select(.active == false) | .name')
 
 bindsym --to-code $-modifier+o exec swaymsg "output $-echo-output-focused disable; output $-echo-output-suspend enable"
 
-set $-echo-date `date +%y-%m-%d`
-set $-echo-time `date +%H-%M-%S`
+set $-echo-date $(date +%y-%m-%d)
+set $-echo-time $(date +%H-%M-%S)
 
 set $-grim-crop slurp -b 00000000 -w 1 | grim -g -
 set $-grim-full grim -o $-echo-output-focused
@@ -294,10 +296,7 @@ focus_follows_mouse no
 
 ### 5
 
-set $-echo-keyboard-layout `swaymsg -t get_inputs | jq -r '.[] | select(.identifier == "1121:16:NOVATEK_USB_Keyboard") | .xkb_active_layout_name | .[0:2] | ascii_upcase'`
-set $-echo-keyboard-layout `swaymsg -t get_inputs | jq -r '.[] | select(.identifier == "1539:8:Gaming_KB__Gaming_KB") | .xkb_active_layout_name | .[0:2] | ascii_upcase'`
-
-bar status_command while AZ=ABCDEFGHIJKLMNOPQRSTUVWXYZ; function az { echo ${AZ:$((RANDOM % 26)):1}; }; date +"%j-%U-%w %y-%m-%d %T <span foreground=\\"#f33\\">$(az)</span><span foreground=\\"#f93\\">$(az)</span><span foreground=\\"#ff3\\">$(az)</span><span foreground=\\"#9f3\\">$(az)</span><span foreground=\\"#39f\\">$(az)</span><span foreground=\\"#f39\\">$(az)</span>"; do sleep 1; done
+# bar status_command while AZ=ABCDEFGHIJKLMNOPQRSTUVWXYZ; function az { echo ${AZ:$((RANDOM % 26)):1}; }; date +"%j-%U-%w %y-%m-%d %T <span foreground=\\"#f33\\">$(az)</span><span foreground=\\"#f93\\">$(az)</span><span foreground=\\"#ff3\\">$(az)</span><span foreground=\\"#9f3\\">$(az)</span><span foreground=\\"#39f\\">$(az)</span><span foreground=\\"#f39\\">$(az)</span>"; do sleep 1; done
 bar status_command while date +"%j-%U-%w %y-%m-%d %T $-echo-keyboard-layout"; do sleep 1; done
 
 bar pango_markup enabled
