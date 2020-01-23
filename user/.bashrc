@@ -1,8 +1,14 @@
 
 ### if not running interactively don not do anything
-if [[ ${-} != *i* ]]
+if ! echo ${-} | grep -q i
 then return
 fi
+
+### change initial directory
+if test -z "${__next++}"
+then cd /-
+fi
+export __next=
 
 source "${HOME}/.config/bash/config.sh"
 
