@@ -13,6 +13,7 @@ alias aur='cd /-/aur'
 
 alias arch-linux-notes='cd /-/github/roshal/arch-linux-notes'
 alias arch-linux='cd /-/github/roshal/arch-linux'
+alias common='cd /-/github/roshal/python/common'
 alias dotfiles='cd /-/github/roshal/dotfiles'
 alias roshal='cd /-/github/roshal'
 alias test-task-kanban-board='cd /-/github/roshal/test-task-kanban-board'
@@ -50,7 +51,7 @@ alias lint='npx eslint --color --ext .ts,.tsx'
 
 # pass
 
-alias pass='py /-/github/roshal/python/common/hex-16-shuffle.py'
+alias pass='py /-/github/roshal/python/common/hex-16-sequence.py'
 
 # python
 
