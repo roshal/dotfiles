@@ -1,2 +1,4 @@
 
 set $-echo-keyboard-layout $(swaymsg -t get_inputs | jq -r '.[] | select(.identifier == "1539:8:Gaming_KB__Gaming_KB") | .xkb_active_layout_name | .[0:2] | ascii_upcase')
+
+for_window [shell=] title_format %shell %title
