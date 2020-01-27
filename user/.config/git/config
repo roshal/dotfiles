@@ -48,10 +48,13 @@ re = remote
 un = reset @ --
 
 all = add --all
+
 com = commit
 
 cam = commit --allow-empty-message --no-edit --amend
 cem = commit --allow-empty-message --message '' --allow-empty
+
+amend = commit --amend
 
 cce = config user.email roshal@users.noreply.github.com
 ccn = config user.name  roshal
