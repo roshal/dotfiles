@@ -264,6 +264,8 @@ for_window [instance="^code-oss$"] border none
 for_window [instance="^jetbrains-webstorm$" title="^win0$"] border none
 for_window [instance="^jetbrains-webstorm$" title="^win0$"] floating enable
 
+for_window [instance="^vlc$"] focus_follows_mouse yes
+
 # for_window [instance="^telegram-desktop$"] border none
 
 # for_window [instance="^atom$"]
