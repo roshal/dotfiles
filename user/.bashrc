@@ -12,5 +12,6 @@ export __next=
 
 source "${HOME}/.config/bash/config.sh"
 
-source "${HOME}/.config/bash/aliases-$(cat /etc/hostname).sh"
 source "${HOME}/.config/bash/aliases.sh"
+
+source "${HOME}/.config/bash/aliases-links.sh"
