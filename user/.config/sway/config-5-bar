@@ -1,0 +1,86 @@
+
+##### 5.1 i3bar command
+
+##### 5.2 configuring i3bar
+
+bar status_command while date +"%j-%U-%w %y-%m-%d %T $-echo-keyboard-layout "; do sleep 1; done
+
+##### 5.3 display mode
+
+### default
+# bar mode dock
+
+### default
+# bar hidden_state hide
+
+### default
+# bar modifier mod4
+
+##### 5.4 mouse button commands
+
+##### 5.5 bar id
+
+##### 5.6 position
+
+### default
+# bar position bottom
+
+##### 5.7 outputs
+
+##### 5.8 tray output
+
+##### 5.9 tray padding
+
+bar tray_padding 0
+
+##### 5.10 font
+
+### inherited
+# bar font pango:monospace 9
+
+##### 5.11 custom separator symbol
+
+### no effect
+bar separator_symbol '|'
+
+##### 5.12 workspace buttons
+
+### default
+# bar workspace_buttons yes
+
+##### 5.13 strip workspace numbers or name
+
+bar strip_workspace_numbers yes
+
+### default
+# strip_workspace_name no
+
+##### 5.14 binding mode indicator
+
+### default
+# binding_mode_indicator yes
+
+##### 5.15 colors
+
+#993366 magenta
+#996633 gold
+#669933 green
+#663399 purple
+#336699 blue
+#336699 green
+
+bar colors background #000000
+bar colors statusline #666666
+bar colors separator  #cccccc
+
+bar colors focused_background #333333
+bar colors focused_statusline #999999
+bar colors focused_separator  #ffffff
+
+bar colors focused_workspace  #666666 #666666 #cccccc
+bar colors active_workspace   #666666 #666666 #cccccc
+bar colors inactive_workspace #333333 #333333 #999999
+bar colors urgent_workspace   #996633 #996633 #cccccc
+bar colors binding_mode       #993366 #993366 #cccccc
+
+##### 5.16 transparency

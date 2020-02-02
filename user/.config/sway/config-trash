@@ -1,0 +1,13 @@
+
+##### 4.3 keyboard bindings
+
+set $factor 1
+
+bindsym --to-code $-modifier+shift+y set $factor $factor*16; input * scroll_factor $factor
+
+bindsym --to-code $-modifier+shift+x input * scroll_factor 8
+bindsym --to-code $-modifier+shift+z input * scroll_factor 1
+
+##### 5.2
+
+bar status_command while AZ=ABCDEFGHIJKLMNOPQRSTUVWXYZ; function az { echo ${AZ:$((RANDOM % 26)):1}; }; date +"%j-%U-%w %y-%m-%d %T <span foreground=\\"#f33\\">$(az)</span><span foreground=\\"#f93\\">$(az)</span><span foreground=\\"#ff3\\">$(az)</span><span foreground=\\"#9f3\\">$(az)</span><span foreground=\\"#39f\\">$(az)</span><span foreground=\\"#f39\\">$(az)</span>"; do sleep 1; done
