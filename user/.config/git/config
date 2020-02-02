@@ -104,6 +104,10 @@ mes = merge --squash
 rev = remote --verbose
 rrc = rm -r --cached .
 
+pgf = push github HEAD --force
+phf = push heroku HEAD --force
+pof = push origin HEAD --force
+
 pgh = push github HEAD
 phh = push heroku HEAD
 poh = push origin HEAD

@@ -16,12 +16,14 @@ set $-swaylock swaylock --daemonize --color 000000 --image /-/pictures/waves.jpg
 
 ### sway
 
+titlebar_padding 8 4
+
 input * xkb_layout us,ru
 input * xkb_options grp:caps_toggle
 
 set $-idle-before-sleep before-sleep '$-swaylock'
-set $-idle-timeout-lock timeout 1024 '$-swaylock'
-set $-idle-timeout-dpms timeout 2048 'swaymsg "output * dpms off"'
+set $-idle-timeout-lock timeout 4096 '$-swaylock'
+set $-idle-timeout-dpms timeout 8192 'swaymsg "output * dpms off"'
 set $-idle-resume             resume 'swaymsg "output * dpms on"'
 
 exec swayidle -w $-idle-before-sleep $-idle-timeout-lock $-idle-timeout-dpms $-idle-resume
@@ -121,6 +123,9 @@ client.urgent           #ff6666 #ff6666 #ffffff #ffffff #ff6666
 
 ### 4.11
 
+### set normal 0
+default_border normal 0
+
 default_border          none
 default_floating_border none
 
@@ -132,39 +137,42 @@ hide_edge_borders --i3 both
 
 # # swaymsg -t get_tree
 
-for_window [shell="^xwayland$"] border normal 0
-
 # for_window [tiling] border none
 
-# for_window [app_id="^telegramdesktop$"] border none
-# for_window [app_id="^terminator$"] border none
+# for_window [window_type=dialog] border normal 16
+# for_window [window_type=dialog] focus
 
-# for_window [window_role="^browser$"] border none
+for_window [shell="^xwayland$"] border normal
+for_window [shell=] title_format %shell %title
 
-# for_window [instance="^chromium$"] border none
-# for_window [instance="^code-oss$"] border none
+# for_window [app_id="^terminator$"] border normal
+# for_window [app_id="^terminator$"] split horizontal
 
-# for_window [instance="^telegram-desktop$"] border none
+for_window [app_id="^telegramdesktop$"] border none
+
+for_window [instance="^telegram-desktop$"] border none
+
+for_window [instance="^vlc$"] inhibit_idle fullscreen
+for_window [instance="^vlc$"] popup_during_fullscreen ignore
 
 for_window [instance="^jetbrains-webstorm$" title="^win0$"] border none
 for_window [instance="^jetbrains-webstorm$" title="^win0$"] floating enable
 
-for_window [instance="^vlc$"] focus_follows_mouse yes
+for_window [instance="^code-oss$"] border none
+
+for_window [instance="^chromium$"] border none
+for_window [instance="^chromium$"] inhibit_idle fullscreen
+
+# for_window [instance="^Navigator$" class="^firefox$"]
+
+# for_window [window_role="^browser$"] border none
 
 # for_window [instance="^atom$"]
 # for_window [instance="^dolphin$"]
 # for_window [instance="^jetbrains-pycharm-ce$"]
-# for_window [instance="^jetbrains-webstorm$"]
+# for_window [instance="^sublime_text$"]
 # for_window [instance="^thunar$"]
 # for_window [instance="^tilix$"]
-
-# for_window [instance="^Navigator$" class="^firefox$"]
-# for_window [instance="^sublime_text$"]
-
-# for_window [app_id="^terminator$"] split horizontal
-
-# for_window [window_type=dialog] border normal 16
-# for_window [window_type=dialog] focus
 
 ### 4.14
 
@@ -200,9 +208,19 @@ bar separator_symbol q
 # bar hidden_state hide
 
 ### no effect
-bar status_edge_padding 1024
+# bar status_edge_padding 1920
+
+### default
+# bar status_padding 0
 
 bar tray_padding 0
+
+#993366 magenta
+#996633 gold
+#669933 green
+#663399 purple
+#336699 blue
+#336699 green
 
 bar colors background #000000
 bar colors statusline #000000
@@ -211,13 +229,6 @@ bar colors separator  #ffffff
 bar colors focused_background #000000
 bar colors focused_statusline #ffffff
 bar colors focused_separator  #ffffff
-
-#993366 magenta
-#996633 gold
-#669933 green
-#663399 purple
-#336699 blue
-#336699 green
 
 bar colors focused_workspace  #666666 #666666 #ffffff
 bar colors active_workspace   #666666 #666666 #cccccc
@@ -381,3 +392,5 @@ bindsym --to-code $-modifier+m bar mode toggle
 ### 4.17
 
 assign [app_id="^telegramdesktop$"] $-workspace-8
+
+assign [instance="^telegram-desktop$"] $-workspace-8
