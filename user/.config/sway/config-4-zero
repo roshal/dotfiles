@@ -120,10 +120,10 @@ exec swayidle -w $-idle-before-sleep $-idle-timeout-lock $-idle-timeout-dpms $-i
 ##### 4.20 changing colors
 
 ### class border background text indicator child_border
-client.focused          #999999 #999999 #ffffff #ffffff #999999
-client.focused_inactive #666666 #666666 #cccccc #ffffff #666666
-client.unfocused        #333333 #333333 #999999 #ffffff #333333
-client.urgent           #ff6666 #ff6666 #ffffff #ffffff #ff6666
+client.focused          $-black-d $-black-d $-black-f $-black-f $-black-d
+client.focused_inactive $-black-c $-black-c $-black-e $-black-f $-black-c
+client.unfocused        $-black-b $-black-b $-black-d $-black-f $-black-b
+client.urgent           $-color-m $-color-m $-black-f $-black-f $-color-m
 
 ##### 4.21 interprocess communication
 

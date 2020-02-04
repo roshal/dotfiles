@@ -62,25 +62,18 @@ bar strip_workspace_numbers yes
 
 ##### 5.15 colors
 
-#993366 magenta
-#996633 gold
-#669933 green
-#663399 purple
-#336699 blue
-#336699 green
+bar colors background $-black-a
+bar colors statusline $-black-c
+bar colors separator  $-black-e
 
-bar colors background #000000
-bar colors statusline #666666
-bar colors separator  #cccccc
+bar colors focused_background $-black-b
+bar colors focused_statusline $-black-d
+bar colors focused_separator  $-black-f
 
-bar colors focused_background #333333
-bar colors focused_statusline #999999
-bar colors focused_separator  #ffffff
-
-bar colors focused_workspace  #666666 #666666 #cccccc
-bar colors active_workspace   #666666 #666666 #cccccc
-bar colors inactive_workspace #333333 #333333 #999999
-bar colors urgent_workspace   #996633 #996633 #cccccc
-bar colors binding_mode       #993366 #993366 #cccccc
+bar colors focused_workspace  $-black-c $-black-c $-black-e
+bar colors active_workspace   $-black-c $-black-c $-black-e
+bar colors inactive_workspace $-black-b $-black-b $-black-d
+bar colors urgent_workspace   $-color-y $-color-y $-black-e
+bar colors binding_mode       $-color-r $-color-r $-black-e
 
 ##### 5.16 transparency
