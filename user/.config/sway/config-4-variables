@@ -24,6 +24,7 @@ set $-echo-time $(date +%H-%M-%S)
 
 set $-grim-crop slurp -b 00000000 -w 1 | grim -g -
 set $-grim-full grim -o $-echo-output-focused
+set $-grim-view swaymsg -t get_tree | jq -r '.. | .nodes? // empty | .[] | if .focused then . else .floating_nodes[] | select(.focused) end | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | grim -g -
 
 set $-grim-copy -t png - | wl-copy --primary --type image/png
 set $-grim-path /-/grim/grim--$-echo-date--$-echo-time.png

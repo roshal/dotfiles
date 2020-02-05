@@ -15,8 +15,10 @@ bindsym --to-code $-modifier+u exec swaylock --color ffffff --font monospace --i
 bindsym --to-code $-modifier+shift+e exec swaynag $-swaynag
 
 bindsym --to-code            print       exec $-grim-crop $-grim-path
+bindsym --to-code            print+ctrl  exec $-grim-view $-grim-path
 bindsym --to-code            print+shift exec $-grim-full $-grim-path
 bindsym --to-code $-modifier+print       exec $-grim-crop $-grim-copy
+bindsym --to-code $-modifier+print+ctrl  exec $-grim-view $-grim-copy
 bindsym --to-code $-modifier+print+shift exec $-grim-full $-grim-copy
 
 ##### 6.2 splitting containers
