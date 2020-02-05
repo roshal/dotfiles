@@ -13,6 +13,7 @@ alias aur='cd /-/aur'
 
 alias arch-linux-notes='cd /-/github/roshal/arch-linux-notes'
 alias arch-linux='cd /-/github/roshal/arch-linux'
+alias chromium-theme='cd /-/github/roshal/chromium-theme'
 alias common='cd /-/github/roshal/python/common'
 alias dotfiles='cd /-/github/roshal/dotfiles'
 alias roshal='cd /-/github/roshal'

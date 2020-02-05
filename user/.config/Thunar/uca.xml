@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
-	<action>
-		<unique-id>1576441797674966-1</unique-id>
-		<name>- open terminator here</name>
-		<icon>utilities-terminal</icon>
-		<command>exo-open --working-directory %f --launch terminator</command>
-		<patterns>*</patterns>
-		<startup-notify/>
-	</action>
-	<action>
-		<unique-id>1577081468257511-1</unique-id>
-		<name>- terminator</name>
-		<icon>terminator</icon>
-		<command>terminator --working-directory=%F</command>
-		<patterns>*</patterns>
-		<directories/>
-	</action>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>- open terminator here</name>
+	<unique-id>1576441797674966-1</unique-id>
+	<command>exo-open --working-directory %f --launch terminator</command>
+	<description></description>
+	<patterns>*</patterns>
+	<startup-notify/>
+</action>
+<action>
+	<icon>terminator</icon>
+	<name>- terminator</name>
+	<unique-id>1577081468257511-1</unique-id>
+	<command>terminator --working-directory=%F</command>
+	<description></description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>code-oss</icon>
+	<name>- code</name>
+	<unique-id>1580924883387982-1</unique-id>
+	<command>code</command>
+	<description></description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
 </actions>
