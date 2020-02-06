@@ -65,6 +65,8 @@ un = reset @ --
 
 all = add --all
 
+bvv = branch -v --verbose
+
 com = commit
 
 cam = commit --allow-empty-message --no-edit --amend
