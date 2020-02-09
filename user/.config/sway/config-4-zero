@@ -123,7 +123,7 @@ exec swayidle -w $-idle-before-sleep $-idle-timeout-lock $-idle-timeout-dpms $-i
 client.focused          $-black-d $-black-d $-black-f $-black-f $-black-d
 client.focused_inactive $-black-c $-black-c $-black-e $-black-f $-black-c
 client.unfocused        $-black-b $-black-b $-black-d $-black-f $-black-b
-client.urgent           $-color-m $-color-m $-black-f $-black-f $-color-m
+client.urgent           $-color-y $-color-y $-black-f $-black-f $-color-y
 
 ##### 4.21 interprocess communication
 

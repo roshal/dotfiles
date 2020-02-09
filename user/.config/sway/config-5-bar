@@ -74,6 +74,6 @@ bar colors focused_workspace  $-black-c $-black-c $-black-e
 bar colors active_workspace   $-black-c $-black-c $-black-e
 bar colors inactive_workspace $-black-b $-black-b $-black-d
 bar colors urgent_workspace   $-color-y $-color-y $-black-e
-bar colors binding_mode       $-color-r $-color-r $-black-e
+bar colors binding_mode       $-color-b $-color-b $-black-e
 
 ##### 5.16 transparency
