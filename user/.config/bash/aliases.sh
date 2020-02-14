@@ -47,7 +47,10 @@ alias ll='ls -A --group-directories-first'
 ### node
 
 alias jest='npx jest'
+
 alias lint='npx eslint --color --ext .ts,.tsx'
+
+alias tsc='npx tsc'
 
 ### pass
 
