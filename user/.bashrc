@@ -12,6 +12,8 @@ export __next=
 
 source "${HOME}/.config/bash/config.sh"
 
+source "${HOME}/.config/bash/completion-nps.sh"
+
 source "${HOME}/.config/bash/aliases.sh"
 
 source "${HOME}/.config/bash/aliases-links.sh"

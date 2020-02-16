@@ -52,6 +52,10 @@ alias lint='npx eslint --color --ext .ts,.tsx'
 
 alias tsc='npx tsc'
 
+### path
+
+alias path='tr : \\n <<< "${PATH}"'
+
 ### pass
 
 alias pass='py /-/github/roshal/python/common/hex-16-sequence.py'
