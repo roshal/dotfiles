@@ -1,7 +1,7 @@
 
 [core]
 
-editor = nano
+editor = code --wait
 
 [merge]
 
@@ -18,6 +18,14 @@ tool = vscode
 [difftool "vscode"]
 
 cmd = code --wait --diff $LOCAL $REMOTE
+
+[pager]
+
+log = false
+
+[pull]
+
+rebase = true
 
 [color]
 
@@ -95,11 +103,10 @@ pop  = stash pop
 drop = stash drop
 list = stash list
 
-l    = log -4
-ll   = log -8
-li   = log --graph --oneline
-tr   = log --graph
-line = log --oneline
+l  = log -n8
+lg = log -n8 --graph
+ll = log -32 --graph --oneline
+lo = log -32         --oneline
 
 mes = merge --squash
 
