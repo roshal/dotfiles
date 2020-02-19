@@ -75,6 +75,7 @@ me = merge
 re = remote
 un = reset @ --
 
+aa = add --all
 all = add --all
 
 bvv = branch -v --verbose
