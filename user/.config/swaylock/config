@@ -1,0 +1,8 @@
+daemonize
+
+image=/-/pictures/waves.jpg
+color=000000
+tiling
+font=monospace
+indicator-radius=96
+indicator-thickness=576

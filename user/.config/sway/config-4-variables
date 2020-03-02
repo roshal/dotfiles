@@ -6,13 +6,10 @@ set $-modifier mod4
 set $-mode-default default
 set $-mode-resize resize
 
-set $-swaylock swaylock --daemonize --color 000000 --tiling --font monospace --indicator-radius 96 --indicator-thickness 576
-set $-swaylock swaylock --daemonize --color 000000 --image /-/pictures/waves.jpg --tiling --font monospace --indicator-radius 96 --indicator-thickness 576
-
 set $-swaynag swaynag -t custom -m 'you pressed the exit shortcut - do you really want to exit sway ? - this will end your wayland session' -b 'yes - exit sway' 'swaymsg exit'
 
-set $-idle-before-sleep before-sleep $-swaylock
-set $-idle-timeout-lock timeout 4096 $-swaylock
+set $-idle-before-sleep before-sleep swaylock
+set $-idle-timeout-lock timeout 4096 swaylock
 set $-idle-timeout-dpms timeout 8192 swaymsg "output * dpms off"
 set $-idle-resume             resume swaymsg "output * dpms on"
 

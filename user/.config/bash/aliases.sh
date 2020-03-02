@@ -73,9 +73,9 @@ alias screen-capture='wf-recorder -f /-/wf-recorder/wf-recorder--$(date +%y-%m-%
 alias syre='systemctl reboot'
 alias sysu='systemctl suspend'
 
-alias lock='swaylock --color 000000 --image /-/pictures/waves.jpg --tiling --font monospace --indicator-radius 96 --indicator-thickness 576'
+alias lock='swaylock'
 
-alias suck='sysu && lock'
+alias suck='sysu && swaylock'
 
 ### virtualbox
 
