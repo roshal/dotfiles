@@ -23,10 +23,6 @@ cmd = code --wait --diff $LOCAL $REMOTE
 
 log = false
 
-[pull]
-
-rebase = true
-
 [color]
 
 advice = true
