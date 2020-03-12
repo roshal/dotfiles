@@ -11,6 +11,10 @@ alias aur='cd /-/aur'
 
 ### github
 
+alias s='git status'
+
+### github
+
 alias arch-linux-notes='cd /-/github/roshal/arch-linux-notes'
 alias arch-linux='cd /-/github/roshal/arch-linux'
 alias chromium-theme='cd /-/github/roshal/chromium-theme'
