@@ -5,7 +5,7 @@ configuration files for linux applications
 
 ## prerequisites
 
-`stow`
+[`stow`](https://www.gnu.org/software/stow/manual/stow)
 
 ## bootstrap
 
