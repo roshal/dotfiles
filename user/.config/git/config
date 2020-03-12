@@ -61,6 +61,10 @@ echo = !echo
 
 loging = log --color --pretty='%C(auto)%cs %h %<(8,trunc)%ae%d %s%C(reset)'
 
+# overwrite
+
+commit = commit --allow-empty --allow-empty-message
+
 # custom
 
 ad = add
@@ -85,8 +89,8 @@ amend = commit --amend
 
 #
 
-config-home-mail = config user.email roshal@users.noreply.github.com
-config-home-name = config user.name 'roshal'
+config-roshal-mail = config user.email roshal@users.noreply.github.com
+config-roshal-name = config user.name 'roshal'
 
 config-esphere-mail = config user.email roshal.e@esphere.ru
 config-esphere-name = config user.name 'Рошаль Ефим Геннадьевич'

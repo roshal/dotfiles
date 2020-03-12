@@ -3,7 +3,7 @@
 
 ##### 5.2 configuring i3bar
 
-bar status_command while date +"%j-%U-%w %y-%m-%d %T $-echo-keyboard-layoutR"; do sleep 1; done
+bar status_command while date +"%j-%U-%w %y-%m-%d %T $-echo-keyboard-layout"; do sleep 1; done
 
 ##### 5.3 display mode
 
