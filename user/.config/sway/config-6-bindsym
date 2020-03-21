@@ -142,9 +142,10 @@ bindsym --to-code $-modifier+shift+r reload
 ##### 6.20 scratchpad
 
 bindsym --to-code $-modifier+shift+p move scratchpad
+bindsym --to-code $-modifier+minus   move scratchpad
 
-bindsym --to-code $-modifier+minus scratchpad show
-bindsym --to-code $-modifier+p     scratchpad show
+bindsym --to-code $-modifier+plus scratchpad show
+bindsym --to-code $-modifier+p    scratchpad show
 
 ##### 6.21 nop
 

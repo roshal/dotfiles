@@ -50,9 +50,13 @@ alias ll='ls -A --group-directories-first'
 
 ### node
 
+alias cy='npx cypress run'
+
+alias cypress='npx cypress'
+
 alias jest='npx jest'
 
-alias lint='npx eslint --color --ext .ts,.tsx'
+alias lint='npx eslint --color --ext .js,.jsx,.ts,.tsx'
 
 alias tsc='npx tsc'
 

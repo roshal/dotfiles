@@ -73,7 +73,7 @@ for_window [shell=] title_format %title - %shell
 
 for_window [app_id="^terminator$"] border normal 0
 
-for_window [instance="^telegram-desktop-bin$"] border none
+for_window [instance="^telegram-desktop$"] border none
 
 for_window [instance="^vlc$"] inhibit_idle fullscreen
 for_window [instance="^vlc$"] popup_during_fullscreen ignore
@@ -105,11 +105,11 @@ for_window [instance="^chromium$"] inhibit_idle fullscreen
 
 ##### 4.16 x resources
 
-##### 4.17 automatically putting clients on specific workspaces
+##### 4.17 automatically putting clients on specific workspacesR
 
 assign [app_id="^telegramdesktop$"] $-workspace-8
 
-assign [instance="^telegram-desktop-bin$"] $-workspace-8
+assign [instance="^telegram-desktop$"] $-workspace-8
 
 ##### 4.18 automatically starting applications on i3 startup
 
