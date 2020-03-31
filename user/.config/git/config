@@ -23,6 +23,10 @@ cmd = code --wait --diff $LOCAL $REMOTE
 
 log = false
 
+[rebase]
+
+backend = apply
+
 [color]
 
 advice = true
@@ -59,7 +63,7 @@ echo = !echo
 
 # default
 
-loging = log --color --pretty='%C(auto)%cs %h %<(8,trunc)%ae%d %s%C(reset)'
+loging = log --reverse --color --pretty='%C(auto)%cs %h %<(8,trunc)%ae %<(60,trunc)%s%n%-d%C(reset)'
 
 # overwrite
 
@@ -110,8 +114,10 @@ list = stash list
 
 l  = loging -16
 ll = loging -32
-lg = loging -32 --graph
+lg = loging -32 --graph --reverse
 lo = loging -32 --oneline
+
+sn = show --name-status
 
 mes = merge --squash
 
@@ -130,10 +136,8 @@ pgv = push github HEAD --no-verify
 phv = push heroku HEAD --no-verify
 pov = push origin HEAD --no-verify
 
-reh  = reset --hard
-rehg = reset --hard github/HEAD
-rehh = reset --hard heroku/HEAD
-reho = reset --hard origin/HEAD
+reh  = reset HEAD^
+reH  = reset HEAD^ --hard
 
 rag = remote add github
 rah = remote add heroku
