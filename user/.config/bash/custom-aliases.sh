@@ -13,6 +13,9 @@ alias aur='cd /-/aur'
 
 alias s='git status'
 
+alias l='git l'
+alias ll='git ll'
+
 ### github
 
 alias arch-linux-notes='cd /-/github/roshal/arch-linux-notes'
@@ -28,8 +31,13 @@ alias tokens='cd /-/github/roshal/tokens'
 
 alias grep='grep --color'
 
+alias v='grep -iv'
 alias x='grep -i'
 alias z='grep -iz'
+
+alias vv='grep -9 -iv'
+alias xx='grep -9 -i'
+alias zz='grep -9 -iz'
 
 ### history
 
@@ -45,8 +53,8 @@ alias diff='diff --color'
 
 alias ls='ls --color=auto'
 
-alias l='ls -Al --group-directories-first'
-alias ll='ls -A --group-directories-first'
+alias f='ls -Al --group-directories-first'
+alias ff='ls -A --group-directories-first'
 
 ### node
 
