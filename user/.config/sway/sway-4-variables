@@ -4,6 +4,7 @@
 set $-modifier mod4
 
 set $-mode-default default
+set $-mode-nag nag
 set $-mode-resize resize
 
 set $-swaynag swaynag -t custom -m 'you pressed the exit shortcut - do you really want to exit sway ? - this will end your wayland session' -b 'yes - exit sway' 'swaymsg exit'
@@ -12,6 +13,8 @@ set $-idle-before-sleep before-sleep swaylock
 set $-idle-timeout-lock timeout 4096 swaylock
 set $-idle-timeout-dpms timeout 8192 swaymsg "output * dpms off"
 set $-idle-resume             resume swaymsg "output * dpms on"
+
+set $-echo-keyboard-layout $(swaymsg -t get_inputs | jq -r 'max_by(.xkb_active_layout_index).xkb_active_layout_name[0:2] | try ascii_upcase // "--"')
 
 set $-echo-output-focused $(swaymsg -t get_outputs | jq -r '.[] | select(.focused)         | .name')
 set $-echo-output-suspend $(swaymsg -t get_outputs | jq -r '.[] | select(.active == false) | .name')

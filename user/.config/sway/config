@@ -5,14 +5,14 @@
 # # man 5 sway-output
 # # man 5 swaynag
 
-include '~/.config/sway/config-$(cat /etc/hostname)'
+include '~/.config/sway/sway-$(cat /etc/hostname)'
 
 ##### 4
 
 # # swaymsg -t get_tree
 
-include '~/.config/sway/config-4-variables'
-include '~/.config/sway/config-4-zero'
+include '~/.config/sway/sway-4-variables'
+include '~/.config/sway/sway-4-zero'
 
 ##### 5 configuring i3bar
 
@@ -27,13 +27,13 @@ bar status_edge_padding 0
 ### default
 bar status_padding 4
 
-include '~/.config/sway/config-5-bar'
+include '~/.config/sway/sway-5-bar'
 
 ##### 6 list of commands
 
 # # sudo libinput debug-events
 
-include '~/.config/sway/config-6-bindsym'
+include '~/.config/sway/sway-6-bindsym'
 
 ##### sway
 
@@ -59,3 +59,20 @@ output $-output-2 mode 1920x1200 position 0 0
 # output $-output-0 mode 1920x1200 position 0 -1200
 # output $-output-1 mode 1920x1200 position 0 -1200
 # output $-output-2 mode 1920x1200 position 0 -1200
+
+# # https://wiki.archlinux.org/index.php/Sway#Control_swaynag_with_the_keyboard
+
+mode $-mode-nag bindsym --to-code ctrl+d mode $-mode-default
+
+mode $-mode-nag bindsym --to-code q      exec swaynagmode --exit
+mode $-mode-nag bindsym --to-code escape exec swaynagmode --exit
+
+mode $-mode-nag bindsym --to-code return exec swaynagmode --confirm
+
+mode $-mode-nag bindsym --to-code tab       exec swaynagmode --select prev
+mode $-mode-nag bindsym --to-code tab+shift exec swaynagmode --select next
+
+mode $-mode-nag bindsym --to-code $-way-u exec swaynagmode --select next
+mode $-mode-nag bindsym --to-code $-way-l exec swaynagmode --select next
+mode $-mode-nag bindsym --to-code $-way-r exec swaynagmode --select prev
+mode $-mode-nag bindsym --to-code $-way-d exec swaynagmode --select prev

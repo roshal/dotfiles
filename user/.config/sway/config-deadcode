@@ -1,2 +1,0 @@
-
-set $-echo-keyboard-layout $(swaymsg -t get_inputs | jq -r '.[] | select(.identifier == "1121:16:NOVATEK_USB_Keyboard") | .xkb_active_layout_name | .[0:2] | ascii_upcase')
