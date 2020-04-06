@@ -13,6 +13,10 @@ alias aur='cd /-/aur'
 
 alias s='git status'
 
+alias a='git add'
+
+alias d='git diff'
+
 alias l='git l'
 alias ll='git ll'
 
