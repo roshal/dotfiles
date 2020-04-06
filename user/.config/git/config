@@ -136,8 +136,7 @@ pgv = push github HEAD --no-verify
 phv = push heroku HEAD --no-verify
 pov = push origin HEAD --no-verify
 
-reh  = reset HEAD^
-reH  = reset HEAD^ --hard
+reh = reset HEAD^
 
 rag = remote add github
 rah = remote add heroku
