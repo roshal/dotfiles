@@ -41,12 +41,12 @@ titlebar_padding 6 4
 
 # # swaymsg -t get_inputs
 
-input * xkb_layout us,ru
-input * xkb_options grp:caps_toggle
+input type:keyboard xkb_layout us,ru
+input type:keyboard xkb_options grp:caps_toggle
 
 # # swaymsg -t get_outputs
 
-output * bg /-/pictures/waves.jpg tile
+output type:output bg /-/pictures/waves.jpg tile
 
 output $-output-0 enable
 output $-output-1 disable
