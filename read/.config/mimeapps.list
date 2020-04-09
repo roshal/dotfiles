@@ -3,4 +3,5 @@
 video/x-matroska=vlc.desktop;
 
 [Default Applications]
+image/png=imv.desktop;
 text/plain=code-oss.desktop;
