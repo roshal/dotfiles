@@ -1,0 +1,57 @@
+
+defaults.bluealsa {
+	interface hci0
+	device 00:42:79:77:95:54
+	profile a2dp
+}
+
+pcm.wireless {
+	type plug
+	slave.pcm {
+		type bluealsa
+		device 00:42:79:77:95:54
+		profile a2dp
+	}
+	hint {
+		show on
+	}
+}
+
+pcm.wireless-srs-xb12 {
+	type plug
+	slave.pcm {
+		type bluealsa
+		device 00:42:79:77:95:54
+		profile a2dp
+	}
+	hint {
+		show on
+		# description 'sony srs-xb12'
+	}
+}
+
+pcm.wireless-wh-ch700n {
+	type plug
+	slave.pcm {
+		type bluealsa
+		device 70:26:05:DD:FD:DD
+		profile a2dp
+	}
+	hint {
+		show on
+		# description 'sony wh-ch700n'
+	}
+}
+
+pcm.wireless-wi-xb400 {
+	type plug
+	slave.pcm {
+		type bluealsa
+		device 74:45:CE:02:0A:75
+		profile a2dp
+	}
+	hint {
+		show on
+		# description 'sony wi-xb400'
+	}
+}

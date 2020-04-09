@@ -46,7 +46,7 @@ input type:keyboard xkb_options grp:caps_toggle
 
 # # swaymsg -t get_outputs
 
-output type:output bg /-/pictures/waves.jpg tile
+output * bg /-/pictures/waves.jpg tile
 
 output $-output-0 enable
 output $-output-1 disable

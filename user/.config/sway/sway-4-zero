@@ -7,11 +7,17 @@ font pango: monospace 9
 
 ##### 4.3 keyboard bindings
 
-bindsym --to-code XF86AudioMicMute exec amixer set Speaker toggle
-bindsym --to-code XF86AudioMute exec amixer set Master toggle
+# bindsym --to-code XF86AudioMicMute exec amixer set Speaker toggle
+# bindsym --to-code XF86AudioMute exec amixer set Master toggle
 
-bindsym --to-code XF86AudioLowerVolume exec amixer set Master 1-
-bindsym --to-code XF86AudioRaiseVolume exec amixer set Master 1+
+# bindsym --to-code XF86AudioLowerVolume exec amixer set Master 1-
+# bindsym --to-code XF86AudioRaiseVolume exec amixer set Master 1+
+
+bindsym --to-code XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SINK@ toggle
+bindsym --to-code XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+bindsym --to-code XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1db
+bindsym --to-code XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1db
 
 ##### 4.4 mouse bindings
 
@@ -81,6 +87,9 @@ for_window [instance="^vlc$"] popup_during_fullscreen ignore
 for_window [instance="^jetbrains-webstorm$" title="^win0$"] border none
 for_window [instance="^jetbrains-webstorm$" title="^win0$"] floating enable
 
+for_window [instance="^jetbrains-pycharm$" title="^win0$"] border none
+for_window [instance="^jetbrains-pycharm$" title="^win0$"] floating enable
+
 for_window [instance="^jetbrains-pycharm-ce$" title="^win0$"] border none
 for_window [instance="^jetbrains-pycharm-ce$" title="^win0$"] floating enable
 
@@ -95,7 +104,6 @@ for_window [instance="^chromium$"] inhibit_idle fullscreen
 
 # for_window [instance="^atom$"]
 # for_window [instance="^dolphin$"]
-# for_window [instance="^jetbrains-pycharm-ce$"]
 # for_window [instance="^sublime_text$"]
 # for_window [instance="^thunar$"]
 # for_window [instance="^tilix$"]
