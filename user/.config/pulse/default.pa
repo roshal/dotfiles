@@ -1,9 +1,9 @@
 
 .include /etc/pulse/default.pa
 
+# # https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting#Glitches,_skips_or_crackling
 # # https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting#Setting_the_default_fragment_number_and_buffer_size_in_PulseAudio
 # load-module module-udev-detect tsched=0
 
-# # https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting#Glitches,_skips_or_crackling
 # # https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting#Automatically_switch_to_Bluetooth_or_USB_headset
-load-module module-switch-on-connect
+load-module module-switch-on-connect ignore_virtual=no
