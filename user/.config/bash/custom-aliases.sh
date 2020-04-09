@@ -8,6 +8,8 @@ alias re='exec bash'
 ### change directory
 
 alias aur='cd /-/aur'
+alias config='cd /home/user/.config'
+alias user='cd /home/user'
 
 ### github
 
@@ -79,6 +81,11 @@ alias path='tr : \\n <<< "${PATH}"'
 ### pass
 
 alias pass='py /-/github/roshal/python/common/hex-16-sequence.py'
+
+### pulseaudio
+
+alias m='pulsemixer'
+alias mm='pulseaudio --kill ; sleep 1 ; pulseaudio --start'
 
 ### python
 

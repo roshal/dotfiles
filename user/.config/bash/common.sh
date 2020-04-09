@@ -17,7 +17,7 @@ TERM=terminator
 
 ### initiate
 
-amixer --quiet set Master 0db
+# amixer --quiet set Master 0db
 
 ### fixes
 
@@ -100,3 +100,14 @@ export IGNOREEOF=100
 ### path
 
 export PATH="${HOME}/.yarn/bin:${PATH}"
+
+### sudo
+
+# # https://wiki.archlinux.org/index.php/Sudo#Passing_aliases
+alias sudo='sudo '
+
+### nano
+
+# # https://wiki.archlinux.org/index.php/Nano#Replacing_vi_with_nano
+export VISUAL=nano
+export EDITOR=nano
