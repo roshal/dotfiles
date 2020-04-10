@@ -116,8 +116,9 @@ for_window [instance="^chromium$"] inhibit_idle fullscreen
 
 ##### 4.16 x resources
 
-##### 4.17 automatically putting clients on specific workspacesR
+##### 4.17 automatically putting clients on specific workspaces
 
+# # wayland
 assign [app_id="^telegramdesktop$"] $-workspace-8
 
 assign [instance="^telegram-desktop$"] $-workspace-8
