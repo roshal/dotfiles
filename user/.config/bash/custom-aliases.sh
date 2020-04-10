@@ -80,12 +80,12 @@ alias path='tr : \\n <<< "${PATH}"'
 
 ### pass
 
-alias pass='py /-/github/roshal/python/common/hex-16-sequence.py'
+alias pass='py /-/github/roshal/python/source/common/hex-16-sequence.py'
 
 ### pulseaudio
 
-alias m='pulsemixer'
-alias mm='pulseaudio --kill ; sleep 1 ; pulseaudio --start'
+alias p='pulsemixer'
+alias p-restart='systemctl --user restart pulseaudio.* ; systemctl --user status pulseaudio.*'
 
 ### python
 
@@ -97,12 +97,16 @@ alias screen-capture='wf-recorder -f /-/wf-recorder/wf-recorder--$(date +%y-%m-%
 
 ### systemctl
 
+alias systemctl='systemctl --no-pager'
+
 alias syre='systemctl reboot'
 alias sysu='systemctl suspend'
 
-alias lock='swaylock'
+### suspend and lock
 
 alias suck='sysu && swaylock'
+
+alias lock='swaylock'
 
 ### virtualbox
 
