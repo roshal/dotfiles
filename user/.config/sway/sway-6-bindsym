@@ -107,10 +107,14 @@ bindsym --to-code $-modifier+$-key-7 workspace $-workspace-7
 bindsym --to-code $-modifier+$-key-8 workspace $-workspace-8
 bindsym --to-code $-modifier+$-key-9 workspace $-workspace-9
 
-bindsym --to-code $-modifier+$-key-i workspace $-workspace-0
-bindsym --to-code $-modifier+$-key-h workspace $-workspace-1
-bindsym --to-code $-modifier+$-key-d workspace $-workspace-2
-bindsym --to-code $-modifier+$-key-e workspace $-workspace-3
+bindsym --to-code $-modifier+$-key-i       workspace $-workspace-0
+bindsym --to-code $-modifier+$-key-h       workspace $-workspace-1
+bindsym --to-code $-modifier+$-key-d       workspace $-workspace-2
+bindsym --to-code $-modifier+$-key-e       workspace $-workspace-3
+bindsym --to-code $-modifier+$-key-i+shift workspace $-workspace-4
+bindsym --to-code $-modifier+$-key-h+shift workspace $-workspace-5
+bindsym --to-code $-modifier+$-key-d+shift workspace $-workspace-6
+bindsym --to-code $-modifier+$-key-e+shift workspace $-workspace-7
 
 ##### 6.9 moving workspaces to a different screen
 
