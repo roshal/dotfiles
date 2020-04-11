@@ -7,14 +7,20 @@ font pango: monospace 9
 
 ##### 4.3 keyboard bindings
 
+# bindsym --to-code XF86AudioPlay    exec notify-send play
+# bindsym --to-code XF86AudioNext    exec notify-send next
+# bindsym --to-code XF86AudioPrev    exec notify-send prev
+# bindsym --to-code XF86AudioForward exec notify-send forward
+# bindsym --to-code XF86AudioRewind  exec notify-send rewind
+
 # bindsym --to-code XF86AudioMicMute exec amixer set Speaker toggle
-# bindsym --to-code XF86AudioMute exec amixer set Master toggle
+# bindsym --to-code XF86AudioMute    exec amixer set Master toggle
 
 # bindsym --to-code XF86AudioLowerVolume exec amixer set Master 1-
 # bindsym --to-code XF86AudioRaiseVolume exec amixer set Master 1+
 
 bindsym --to-code XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SINK@ toggle
-bindsym --to-code XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym --to-code XF86AudioMute    exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 bindsym --to-code XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1db
 bindsym --to-code XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1db
