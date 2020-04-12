@@ -39,14 +39,18 @@ include '~/.config/sway/sway-6-bindsym'
 
 titlebar_padding 6 4
 
+# # man 7 xkeyboard-config
 # # swaymsg -t get_inputs
 
 input type:keyboard xkb_layout us,ru
 input type:keyboard xkb_options grp:caps_toggle
 
+# input type:pointer accel_profile flat
+# input type:pointer pointer_accel 1
+
 # # swaymsg -t get_outputs
 
-output * bg /-/pictures/waves.jpg tile
+output * background /-/pictures/waves.jpg tile
 
 output $-output-0 enable
 output $-output-1 disable
