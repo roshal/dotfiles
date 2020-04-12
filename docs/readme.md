@@ -12,3 +12,9 @@ configuration files for linux applications
 ```shell
 stow --target ${HOME} --stow user
 ```
+
+## verification
+
+```shell
+find ${HOME}/.config -xtype l
+```

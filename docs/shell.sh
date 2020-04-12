@@ -10,3 +10,7 @@ exit
 stow --target / --stow root
 
 stow --target / --adopt root
+
+exit
+
+find . -xtype l
