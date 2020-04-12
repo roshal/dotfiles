@@ -15,24 +15,26 @@ scrollbar = left
 
 [colors]
 
-cursor = #ffffff
+cursor = #fff
 
-background = #000000
-foreground = #999999
+background = #000
+foreground = #999
 
-color0  = #333333
-color1  = #ff3333
-color2  = #33ff33
-color3  = #ffff33
-color4  = #3333ff
-color5  = #ff33ff
-color6  = #33ffff
-color7  = #cccccc
-color8  = #666666
-color9  = #ff3399
-color10 = #99ff33
-color11 = #ff9933
-color12 = #3399ff
-color13 = #9933ff
-color14 = #33ff99
-color15 = #ffffff
+color0  = #333
+color1  = #f33
+color2  = #3f3
+color3  = #ff3
+color4  = #33f
+color5  = #f3f
+color6  = #3ff
+color7  = #ccc
+color8  = #666
+color9  = #f39
+color10 = #9f3
+color11 = #f93
+color12 = #39f
+color13 = #93f
+color14 = #3f9
+color15 = #fff
+
+[hints]

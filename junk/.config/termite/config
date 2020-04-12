@@ -1,9 +1,9 @@
 
 [options]
 
-allow_bold = true
+# allow_bold = true
 # audible_bell = false
-# bold_is_bright = false
+bold_is_bright = false
 # cell_height_scale = 1.0
 # cell_width_scale = 1.0
 # clickable_url = true
@@ -12,7 +12,7 @@ font = monospace 9
 # fullscreen = true
 # icon_name = terminal
 # mouse_autohide = false
-scroll_on_output = false
+# scroll_on_output = false
 scroll_on_keystroke = false
 # scrollback_lines = 10000
 # search_wrap = true
@@ -29,7 +29,7 @@ cursor_blink = off
 # filter_unmatched_urls = true
 
 ### emit escape sequences for extra modified keys
-# modify_other_keys = false
+modify_other_keys = false
 
 # size_hints = true
 
@@ -38,11 +38,11 @@ scrollbar = left
 [colors]
 
 cursor = #fff
-cursor_foreground = #000
+# cursor_foreground = #000
 
 background = #000
 foreground = #999
-foreground_bold = #fff
+# foreground_bold = #fff
 
 # highlight = #fff
 

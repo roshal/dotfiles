@@ -1,4 +1,4 @@
 
-mode=drun
+mode = run
 
-stylesheet=style.css
+stylesheet = style.css
