@@ -4,7 +4,7 @@
 	<icon>code-oss</icon>
 	<name>- open code</name>
 	<unique-id>1580924883387982-1</unique-id>
-	<command>swaymsg -- exec code %f</command>
+	<command>swaymsg -- exec code &quot;%F&quot;</command>
 	<description></description>
 	<patterns>*</patterns>
 	<directories/>
@@ -14,7 +14,7 @@
 	<icon>utilities-terminal</icon>
 	<name>- open terminal</name>
 	<unique-id>1576441797674966-1</unique-id>
-	<command>exo-open --launch TerminalEmulator --working-directory %f</command>
+	<command>exo-open --launch TerminalEmulator --working-directory &quot;%f&quot;</command>
 	<description></description>
 	<patterns>*</patterns>
 </action>
@@ -22,7 +22,7 @@
 	<icon>terminator</icon>
 	<name>- open terminator</name>
 	<unique-id>1577081468257511-1</unique-id>
-	<command>swaymsg -- exec terminator --working-directory %f</command>
+	<command>swaymsg -- exec terminator --working-directory &quot;%f&quot;</command>
 	<description></description>
 	<patterns>*</patterns>
 </action>
@@ -30,7 +30,7 @@
 	<icon>utilities-terminal</icon>
 	<name>- open termite</name>
 	<unique-id>1586681270334267-1</unique-id>
-	<command>swaymsg -- exec termite --directory %f</command>
+	<command>swaymsg -- exec termite --directory &quot;%f&quot;</command>
 	<description></description>
 	<patterns>*</patterns>
 	<directories/>
