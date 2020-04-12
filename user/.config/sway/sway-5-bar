@@ -1,4 +1,10 @@
 
+### seems default
+# bar status_padding 4
+
+### no effect
+bar status_edge_padding 9
+
 ##### 5.1 i3bar command
 
 ##### 5.2 configuring i3bar
