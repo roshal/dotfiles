@@ -1,0 +1,14 @@
+
+[options]
+
+# background = checks
+
+# overlay = true
+
+scaling_mode = none
+
+upscaling_method = nearest_neighbour
+
+[aliases]
+
+[binds]
