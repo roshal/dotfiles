@@ -1,0 +1,4 @@
+
+FileManager = thunar
+TerminalEmulator = termite
+WebBrowser = chromium
