@@ -4,7 +4,7 @@
 	<icon>code-oss</icon>
 	<name>- open code</name>
 	<unique-id>1580924883387982-1</unique-id>
-	<command>code %f</command>
+	<command>swaymsg -- exec code %f</command>
 	<description></description>
 	<patterns>*</patterns>
 	<directories/>
@@ -22,7 +22,7 @@
 	<icon>terminator</icon>
 	<name>- open terminator</name>
 	<unique-id>1577081468257511-1</unique-id>
-	<command>terminator --working-directory %f</command>
+	<command>swaymsg -- exec terminator --working-directory %f</command>
 	<description></description>
 	<patterns>*</patterns>
 </action>
@@ -30,7 +30,7 @@
 	<icon>utilities-terminal</icon>
 	<name>- open termite</name>
 	<unique-id>1586681270334267-1</unique-id>
-	<command>termite --directory %f</command>
+	<command>swaymsg -- exec termite --directory %f</command>
 	<description></description>
 	<patterns>*</patterns>
 	<directories/>

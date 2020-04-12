@@ -21,6 +21,10 @@ alias aur='cd /-/aur'
 alias config='cd /home/user/.config'
 alias user='cd /home/user'
 
+### english
+
+alias english='LC_ALL=C'
+
 ### git
 
 alias s='git status'
