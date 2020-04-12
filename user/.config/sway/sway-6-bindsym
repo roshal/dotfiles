@@ -4,7 +4,7 @@ bindsym --to-code $-modifier+q+shift kill
 
 ##### 6.1 executing applications
 
-bindsym --to-code $-modifier+return exec terminator
+bindsym --to-code $-modifier+return exec termite
 
 bindsym --to-code $-modifier+d exec wofi
 bindsym --to-code $-modifier+i exec swaylock
