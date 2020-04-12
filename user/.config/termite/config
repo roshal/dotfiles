@@ -1,0 +1,39 @@
+
+[options]
+
+clickable_url = false
+font = monospace 9
+mouse_autohide = true
+scroll_on_keystroke = false
+
+cursor_blink = off
+
+cursor_shape = underline
+
+modify_other_keys = false
+
+scrollbar = left
+
+[colors]
+
+cursor = #ffffff
+
+background = #000000
+foreground = #999999
+
+color0  = #333333
+color1  = #ff3333
+color2  = #33ff33
+color3  = #ffff33
+color4  = #3333ff
+color5  = #ff33ff
+color6  = #33ffff
+color7  = #cccccc
+color8  = #666666
+color9  = #ff3399
+color10 = #99ff33
+color11 = #ff9933
+color12 = #3399ff
+color13 = #9933ff
+color14 = #33ff99
+color15 = #ffffff
