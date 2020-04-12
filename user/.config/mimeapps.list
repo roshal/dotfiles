@@ -1,0 +1,9 @@
+
+[Default Applications]
+
+image/png=imv.desktop;
+text/plain=code-oss.desktop;
+
+[Added Associations]
+
+inode/directory=imv.desktop;

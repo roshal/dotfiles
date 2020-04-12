@@ -1,4 +1,2 @@
-
-FileManager = thunar
-TerminalEmulator = termite
-WebBrowser = chromium
+WebBrowser=chromium
+TerminalEmulator=custom-TerminalEmulator
