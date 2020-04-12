@@ -10,6 +10,5 @@ configuration files for linux applications
 ## bootstrap
 
 ```shell
-cd packages
 stow --target ${HOME} --stow user
 ```
