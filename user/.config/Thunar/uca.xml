@@ -4,7 +4,7 @@
 	<icon>code-oss</icon>
 	<name>- open code</name>
 	<unique-id>1580924883387982-1</unique-id>
-	<command>swaymsg -- exec code &quot;%F&quot;</command>
+	<command>swaymsg -- exec code -- &quot;%F&quot;</command>
 	<description></description>
 	<patterns>*</patterns>
 	<directories/>
@@ -34,5 +34,16 @@
 	<description></description>
 	<patterns>*</patterns>
 	<directories/>
+</action>
+<action>
+	<icon>vlc</icon>
+	<name>- open vlc</name>
+	<unique-id>1586709417021274-1</unique-id>
+	<command>swaymsg -- exec vlc -- &quot;%F&quot;</command>
+	<description></description>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<video-files/>
 </action>
 </actions>
