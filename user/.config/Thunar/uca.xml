@@ -17,7 +17,6 @@
 	<command>exo-open --launch TerminalEmulator --working-directory %f</command>
 	<description></description>
 	<patterns>*</patterns>
-	<directories/>
 </action>
 <action>
 	<icon>terminator</icon>
@@ -34,5 +33,6 @@
 	<command>termite --directory=%f</command>
 	<description></description>
 	<patterns>*</patterns>
+	<directories/>
 </action>
 </actions>
