@@ -4,12 +4,6 @@ if ! echo ${-} | grep -q i
 then return
 fi
 
-### change initial directory
-if test -z "${__next++}"
-then cd /-
-fi
-export __next=
-
 source "${HOME}/.config/bash/common.sh"
 source "${HOME}/.config/bash/custom-aliases.sh"
 source "${HOME}/.config/bash/custom-completion-nps.sh"

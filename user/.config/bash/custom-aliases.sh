@@ -10,6 +10,11 @@ alias rc='echo -ne \\'\ec\\''
 
 alias re='exec bash'
 
+### termite
+
+### change initial directory
+alias termite='termite --directory /-'
+
 ### change directory
 
 alias aur='cd /-/aur'
