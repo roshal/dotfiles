@@ -14,12 +14,12 @@ bindsym --to-code $-modifier+u exec swaylock --color ffffff
 
 bindsym --to-code $-modifier+shift+e exec swaynag $-swaynag
 
-bindsym --to-code            print       exec $-grim-crop $-grim-path
-bindsym --to-code            print+ctrl  exec $-grim-view $-grim-path
-bindsym --to-code            print+shift exec $-grim-full $-grim-path
-bindsym --to-code $-modifier+print       exec $-grim-crop $-grim-copy
-bindsym --to-code $-modifier+print+ctrl  exec $-grim-view $-grim-copy
-bindsym --to-code $-modifier+print+shift exec $-grim-full $-grim-copy
+bindsym --to-code            $-key-p       exec $-grim-crop $-grim-path
+bindsym --to-code            $-key-p+ctrl  exec $-grim-view $-grim-path
+bindsym --to-code            $-key-p+shift exec $-grim-full $-grim-path
+bindsym --to-code $-modifier+$-key-p       exec $-grim-crop $-grim-copy
+bindsym --to-code $-modifier+$-key-p+ctrl  exec $-grim-view $-grim-copy
+bindsym --to-code $-modifier+$-key-p+shift exec $-grim-full $-grim-copy
 
 ##### 6.2 splitting containers
 
@@ -111,10 +111,11 @@ bindsym --to-code $-modifier+$-key-i       workspace $-workspace-0
 bindsym --to-code $-modifier+$-key-h       workspace $-workspace-1
 bindsym --to-code $-modifier+$-key-d       workspace $-workspace-2
 bindsym --to-code $-modifier+$-key-e       workspace $-workspace-3
-bindsym --to-code $-modifier+$-key-i+shift workspace $-workspace-4
-bindsym --to-code $-modifier+$-key-h+shift workspace $-workspace-5
-bindsym --to-code $-modifier+$-key-d+shift workspace $-workspace-6
-bindsym --to-code $-modifier+$-key-e+shift workspace $-workspace-7
+
+bindsym --to-code $-modifier+$-key-i+shift move container to $-workspace-4
+bindsym --to-code $-modifier+$-key-h+shift move container to $-workspace-5
+bindsym --to-code $-modifier+$-key-d+shift move container to $-workspace-6
+bindsym --to-code $-modifier+$-key-e+shift move container to $-workspace-7
 
 ##### 6.9 moving workspaces to a different screen
 
@@ -140,8 +141,7 @@ bindsym --to-code $-modifier+b border toggle
 
 ##### 6.19 reloading
 
-bindsym --to-code $-modifier+shift+c reload
-bindsym --to-code $-modifier+shift+r reload
+bindsym --to-code $-modifier+$-key-b reload
 
 ##### 6.20 scratchpad
 

@@ -120,3 +120,7 @@ alias lock='swaylock'
 ### virtualbox
 
 alias virtualbox='QT_QPA_PLATFORM= virtualbox'
+
+### wofi
+
+alias wofi='wofi --allow-images'

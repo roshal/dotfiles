@@ -80,7 +80,10 @@ for_window [window_type=dialog] border normal 8
 
 # for_window [window_type=dialog] focus
 
-for_window [app_id=] border normal 0
+# for_window [app_id="firefox"]
+# for_window [app_id="thunar"]
+
+for_window [app_id="termite"] border normal 0
 
 for_window [shell="^xwayland$"] border normal 0
 
@@ -105,15 +108,10 @@ for_window [instance="^code-oss$"] border none
 for_window [instance="^chromium$"] border none
 for_window [instance="^chromium$"] inhibit_idle fullscreen
 
-# for_window [instance="^Navigator$" class="^firefox$"]
-
 # for_window [window_role="^browser$"] border none
 
 # for_window [instance="^atom$"]
-# for_window [instance="^dolphin$"]
 # for_window [instance="^sublime_text$"]
-# for_window [instance="^thunar$"]
-# for_window [instance="^tilix$"]
 
 ##### 4.14 do not focus window upon opening
 

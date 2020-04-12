@@ -48,6 +48,10 @@ set $-key-7 7
 set $-key-8 8
 set $-key-9 9
 
+set $-key-p print
+set $-key-s scroll_lock
+set $-key-b pause
+
 set $-key-i insert
 set $-key-h home
 set $-key-d delete
