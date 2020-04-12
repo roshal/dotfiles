@@ -1,10 +1,6 @@
 
 [options]
 
-# background = checks
-
-# overlay = true
-
 scaling_mode = none
 
 upscaling_method = nearest_neighbour
@@ -12,3 +8,7 @@ upscaling_method = nearest_neighbour
 [aliases]
 
 [binds]
+
+b = background 000000
+n = background checks
+w = background ffffff
