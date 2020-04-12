@@ -13,7 +13,12 @@ source /usr/share/nvm/init-nvm.sh
 
 PS1='\e[40;90m\n\e[97m#\e[90m \e[92m\t\e[90m \e[94m$(pwd)\e[90m$(__git_ps1 " \e[97m%s\e[90m")\e[K\e[m\n'
 
+# # https://wiki.archlinux.org/index.php/Environment_variables#Examples
 TERM=termite
+
+# # https://wiki.archlinux.org/index.php/Nano#Replacing_vi_with_nano
+export VISUAL=nano
+export EDITOR=nano
 
 ### initiate
 
@@ -99,7 +104,6 @@ WLR_RDP_ADDRESS=0.0.0.0
 WLR_BACKENDS=rdp
 
 # # https://wiki.archlinux.org/index.php/Bash#Shell_exits_even_if_ignoreeof_set
-
 export IGNOREEOF=100
 
 ### path
@@ -118,14 +122,3 @@ export PATH="${HOME}/.yarn/bin:${PATH}"
 ### pipx
 
 eval "$(register-python-argcomplete pipx)"
-
-### sudo
-
-# # https://wiki.archlinux.org/index.php/Sudo#Passing_aliases
-alias sudo='sudo '
-
-### nano
-
-# # https://wiki.archlinux.org/index.php/Nano#Replacing_vi_with_nano
-export VISUAL=nano
-export EDITOR=nano

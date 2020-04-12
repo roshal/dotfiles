@@ -2,15 +2,15 @@
 [options]
 
 bold_is_bright = false
-clickable_url = false
+clickable_url = true
+cursor_blink = off
+dynamic_title = false
 font = monospace 9
+hyperlinks = true
+modify_other_keys = false
 mouse_autohide = true
 scroll_on_keystroke = false
-
-cursor_blink = off
-
-modify_other_keys = false
-
+scrollback_lines = 65536
 scrollbar = left
 
 [colors]
