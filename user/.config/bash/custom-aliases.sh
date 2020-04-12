@@ -11,7 +11,7 @@ alias aur='cd /-/aur'
 alias config='cd /home/user/.config'
 alias user='cd /home/user'
 
-### github
+### git
 
 alias s='git status'
 
@@ -29,9 +29,14 @@ alias arch-linux='cd /-/github/roshal/arch-linux'
 alias chromium-theme='cd /-/github/roshal/chromium-theme'
 alias common='cd /-/github/roshal/python/common'
 alias dotfiles='cd /-/github/roshal/dotfiles'
+alias github='cd /-/github'
 alias roshal='cd /-/github/roshal'
 alias test-task-kanban-board='cd /-/github/roshal/test-task-kanban-board'
 alias tokens='cd /-/github/roshal/tokens'
+
+### gitlab
+
+alias gitlab='cd /-/gitlab'
 
 ### grep
 
