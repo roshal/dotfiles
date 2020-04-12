@@ -56,7 +56,7 @@ function man {
 	command man "${@}"
 }
 
-#
+### colors
 
 export LS_COLORS='di=1;94:'
 
@@ -70,32 +70,36 @@ PROMPT_COMMAND="${PROMPT_COMMAND} && history -r"
 
 export PROMPT_COMMAND
 
-shopt -s histappend
+# hstr configuration hstr --show-configuration
 
-# hstr configuration hstr -s
+shopt -s histappend
 
 export HISTTIMEFORMAT='%y-%m-%d %T '
 
 ### get more colors
 export HSTR_CONFIG=hicolor
+
 ### leading space hides commands from history
 export HISTCONTROL=ignorespace
+
 ### increase history file size - default is 500
 export HISTFILESIZE=65536
+
 ### increase history size - default is 500
 export HISTSIZE=${HISTFILESIZE}
+
 ## bind hstr to ctrl-r - for vi mode check doc
 bind '"\C-r": "\C-a hstr -- \C-j"'
-# bind 'kill last command' to ctrl-x k
-bind '"\C-xk": "\C-a hstr -k \C-j"'
 
 # remote desktop protocol
+
 export WLR_RDP_TLS_CERT_PATH=/-/remmina/tls.crt
 export WLR_RDP_TLS_KEY_PATH=/-/remmina/tls.key
 WLR_RDP_ADDRESS=0.0.0.0
 WLR_BACKENDS=rdp
 
 # # https://wiki.archlinux.org/index.php/Bash#Shell_exits_even_if_ignoreeof_set
+
 export IGNOREEOF=100
 
 ### path

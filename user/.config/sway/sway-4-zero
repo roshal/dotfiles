@@ -77,13 +77,14 @@ hide_edge_borders --i3 both
 # for_window [tiling] border none
 
 for_window [window_type=dialog] border normal 8
+
 # for_window [window_type=dialog] focus
+
+for_window [app_id=] border normal 0
 
 for_window [shell="^xwayland$"] border normal 0
 
 for_window [shell=] title_format %title - %shell
-
-for_window [app_id="^terminator$"] border normal 0
 
 for_window [instance="^telegram-desktop$"] border none
 

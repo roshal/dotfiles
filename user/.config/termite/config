@@ -1,14 +1,13 @@
 
 [options]
 
+bold_is_bright = false
 clickable_url = false
 font = monospace 9
 mouse_autohide = true
 scroll_on_keystroke = false
 
 cursor_blink = off
-
-cursor_shape = underline
 
 modify_other_keys = false
 
