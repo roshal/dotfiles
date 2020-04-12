@@ -67,6 +67,10 @@ alias ls='ls --color=auto'
 alias f='ls -Al --group-directories-first'
 alias ff='ls -A --group-directories-first'
 
+### man
+
+alias man='man --no-hyphenation --no-justification'
+
 ### node
 
 alias cy='npx cypress run'

@@ -71,9 +71,6 @@
 scrolling:
   history: 65536
   multiplier: 4
-  auto_scroll: false
-
-tabspaces: 2
 
 font:
   normal:
