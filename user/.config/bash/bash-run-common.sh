@@ -4,7 +4,6 @@
 
 source "${HOME}/.config/bash/bash-run-config.sh"
 
-source "${HOME}/.config/bash/bash-run-config.sh"
 source "${HOME}/.config/bash/bash-source-alias.sh"
 source "${HOME}/.config/bash/bash-source-aliases.sh"
 source "${HOME}/.config/bash/bash-source-commands.sh"
