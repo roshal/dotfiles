@@ -31,7 +31,8 @@ alias user='cd /home/user'
 
 ### projects
 
-alias _ecl='cd /-/esphere/courier/light-ui'
-alias _efF='cd /-/esphere/frontend/Fish'
-alias _efL='cd /-/esphere/frontend/Leda'
-alias _efl='cd /-/esphere/frontend/leda-npm'
+alias _cl='cd /-/esphere/courier/light-ui'
+
+alias _ff='cd /-/esphere/frontend/Fish'
+alias _fl='cd /-/esphere/frontend/leda-npm'
+alias _fL='cd /-/esphere/frontend/Leda'
