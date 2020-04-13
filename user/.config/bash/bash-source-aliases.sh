@@ -10,29 +10,21 @@ alias rc='echo -ne \\'\ec\\''
 
 alias re='exec bash'
 
-### termite
-
-### change initial directory
-alias termite='termite --directory /-'
-
 ### english
 
 alias english='LC_ALL=C'
 
 ### git
 
+alias a='git add'
+alias d='git diff'
 alias s='git status'
 
-alias a='git add'
-
-alias d='git diff'
-
 alias l='git l'
+
 alias ll='git ll'
 
 ### grep
-
-alias grep='grep --color'
 
 alias v='grep -iv'
 alias x='grep -i'
@@ -48,23 +40,13 @@ alias h='history'
 
 alias hh='hstr'
 
-### linux
-
-alias diff='diff --color'
-
-### list directory
-
-# # https://wiki.archlinux.org/index.php/Color_output_in_console#ls
-alias ls='ls --color=auto'
+### directory list
 
 alias f='ls -Al --group-directories-first'
+
 alias ff='ls -A --group-directories-first'
 
-### man
-
-alias man='man --no-hyphenation --no-justification'
-
-### node
+### npx
 
 alias cy='npx cypress run'
 
@@ -80,22 +62,13 @@ alias tsc='npx tsc'
 
 alias path='tr : \\n <<< "${PATH}"'
 
-### pass
-
-alias pass='py /-/github/roshal/python/source/common/hex-16-sequence.py'
-
 ### pulseaudio
 
 alias p='pulsemixer'
-alias p-restart='systemctl --user restart pulseaudio.* ; systemctl --user status pulseaudio.*'
 
 ### python
 
 alias py='python'
-
-### screen capture
-
-alias screen-capture='wf-recorder -f /-/wf-recorder/wf-recorder--$(date +%y-%m-%d)--$(date +%H-%M-%S).mp4'
 
 ### systemctl
 
@@ -104,15 +77,11 @@ alias systemctl='systemctl --no-pager'
 alias syre='systemctl reboot'
 alias sysu='systemctl suspend'
 
-### suspend and lock
-
-alias suck='sysu && swaylock'
+### lock and suspend
 
 alias lock='swaylock'
 
-### virtualbox
-
-alias virtualbox='QT_QPA_PLATFORM= virtualbox'
+alias stop='sysu && swaylock'
 
 ### wofi
 

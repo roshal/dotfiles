@@ -35,6 +35,7 @@ export VAAPI_MPEG4_ENABLED=true
 # # https://wiki.archlinux.org/index.php/Wayland#Qt_5
 # # https://wiki.qt.io/QtWayland#Run_Qt_applications_as_Wayland_clients
 # # prevent xwayland fullscreen glitches but windows and notifications works bad
+# # virtualbox does not work
 # export QT_QPA_PLATFORM=wayland
 
 # # https://github.com/swaywm/sway/wiki/Running-programs-natively-under-wayland#gtk3
