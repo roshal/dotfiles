@@ -67,7 +67,7 @@ function man {
 	LESS_TERMCAP_me=$'\e[0m' \
 	LESS_TERMCAP_se=$'\e[0m' \
 	LESS_TERMCAP_ue=$'\e[0m' \
-	command man "${@}"
+	command man ${@}
 }
 
 ### colors
@@ -77,12 +77,6 @@ export LS_COLORS='di=1;94:'
 ### history
 
 # # hstr --show-configuration
-
-PROMPT_COMMAND="${PROMPT_COMMAND:-true}"
-
-PROMPT_COMMAND="${PROMPT_COMMAND} && history -a"
-PROMPT_COMMAND="${PROMPT_COMMAND} && history -c"
-PROMPT_COMMAND="${PROMPT_COMMAND} && history -r"
 
 shopt -s histappend
 
@@ -113,11 +107,6 @@ export WLR_RDP_TLS_KEY_PATH=/-/remmina/tls.key
 
 # # https://wiki.archlinux.org/index.php/Bash#Shell_exits_even_if_ignoreeof_set
 export IGNOREEOF=100
-
-### path
-
-PATH="${HOME}/.local/bin:${PATH}"
-PATH="${HOME}/.yarn/bin:${PATH}"
 
 ### pip
 
