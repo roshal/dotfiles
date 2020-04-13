@@ -1,2 +1,2 @@
 
-source "${HOME}/.config/bash/activation.sh"
+source "${HOME}/.config/bash/bash-profile.sh"

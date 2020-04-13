@@ -25,14 +25,6 @@ export EDITOR=nano
 
 # amixer --quiet set Master 0db
 
-### termite
-
-### https://wiki.archlinux.org/index.php/Termite#Ctrl+Shift+t
-
-source /etc/profile.d/vte.sh
-
-__vte_prompt_command
-
 ### fixes
 
 ### fix webstorm window draw
