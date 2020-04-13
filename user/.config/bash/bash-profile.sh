@@ -6,6 +6,10 @@ cd /-
 PATH="${HOME}/.local/bin:${PATH}"
 PATH="${HOME}/.yarn/bin:${PATH}"
 
+### pipx
+
+eval "$(register-python-argcomplete pipx)"
+
 ### termite
 
 # # https://wiki.archlinux.org/index.php/Termite#Ctrl+Shift+t
@@ -19,10 +23,6 @@ PROMPT_COMMAND="${PROMPT_COMMAND:-true}"
 PROMPT_COMMAND="${PROMPT_COMMAND} && history -a"
 PROMPT_COMMAND="${PROMPT_COMMAND} && history -c"
 PROMPT_COMMAND="${PROMPT_COMMAND} && history -r"
-
-### pipx
-
-eval "$(register-python-argcomplete pipx)"
 
 ### bash
 
