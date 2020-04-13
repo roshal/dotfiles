@@ -8,7 +8,8 @@ PATH="${HOME}/.yarn/bin:${PATH}"
 
 ### pipx
 
-eval "$(register-python-argcomplete pipx)"
+test -e "${HOME}/.local/bin/register-python-argcomplete" && eval "$(register-python-argcomplete pipx)"
+test -e "${HOME}/.yarn/bin/nps" && eval "$(nps completion)"
 
 ### termite
 
