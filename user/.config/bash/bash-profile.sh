@@ -26,4 +26,4 @@ eval "$(register-python-argcomplete pipx)"
 
 ### bash
 
-source "${HOME}/.config/bash/bash-activation.sh"
+source "${HOME}/.config/bash/bash-run-common.sh"
