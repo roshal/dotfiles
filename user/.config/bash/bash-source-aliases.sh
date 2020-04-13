@@ -15,12 +15,6 @@ alias re='exec bash'
 ### change initial directory
 alias termite='termite --directory /-'
 
-### change directory
-
-alias aur='cd /-/aur'
-alias config='cd /home/user/.config'
-alias user='cd /home/user'
-
 ### english
 
 alias english='LC_ALL=C'
@@ -35,22 +29,6 @@ alias d='git diff'
 
 alias l='git l'
 alias ll='git ll'
-
-### github
-
-alias arch-linux-notes='cd /-/github/roshal/arch-linux-notes'
-alias arch-linux='cd /-/github/roshal/arch-linux'
-alias chromium-theme='cd /-/github/roshal/chromium-theme'
-alias common='cd /-/github/roshal/python/common'
-alias dotfiles='cd /-/github/roshal/dotfiles'
-alias github='cd /-/github'
-alias roshal='cd /-/github/roshal'
-alias test-task-kanban-board='cd /-/github/roshal/test-task-kanban-board'
-alias tokens='cd /-/github/roshal/tokens'
-
-### gitlab
-
-alias gitlab='cd /-/gitlab'
 
 ### grep
 
@@ -76,6 +54,7 @@ alias diff='diff --color'
 
 ### list directory
 
+# # https://wiki.archlinux.org/index.php/Color_output_in_console#ls
 alias ls='ls --color=auto'
 
 alias f='ls -Al --group-directories-first'
