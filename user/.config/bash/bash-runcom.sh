@@ -107,7 +107,3 @@ export IGNOREEOF=100
 # }
 
 # complete -o default -F _pip_completion pip
-
-### pipx
-
-eval "$(register-python-argcomplete pipx)"
