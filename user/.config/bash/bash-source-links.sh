@@ -1,6 +1,4 @@
 
-### links
-
 alias _gr='cd /-/github/roshal'
 
 alias _ecl='cd /-/esphere/courier/light-ui'
