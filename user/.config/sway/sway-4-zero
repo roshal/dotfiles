@@ -80,10 +80,10 @@ for_window [window_type=dialog] border normal 8
 
 # for_window [window_type=dialog] focus
 
-# for_window [app_id="firefox"]
-# for_window [app_id="thunar"]
+# for_window [app_id="^firefox$"]
+# for_window [app_id="^thunar$"]
 
-for_window [app_id="termite"] border normal 0
+for_window [app_id="^termite$"] border normal 0
 
 for_window [shell="^xwayland$"] border normal 0
 
@@ -115,7 +115,7 @@ for_window [instance="^chromium$"] inhibit_idle fullscreen
 
 ##### 4.14 do not focus window upon opening
 
-# no_focus [window_role="pop-up"]
+# no_focus [window_role=pop-up]
 
 ##### 4.15 variables
 

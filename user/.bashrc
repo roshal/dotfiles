@@ -1,14 +1,6 @@
 
 ### if not running interactively don not do anything
-if ! echo ${-} | grep -q i
-then return
-fi
-
-### change initial directory
-if test -z "${__flag++}"
-then cd /-
-fi
-export __flag=
+! echo ${-} | grep -q i && return
 
 source "${HOME}/.config/bash/common.sh"
 source "${HOME}/.config/bash/custom-aliases.sh"

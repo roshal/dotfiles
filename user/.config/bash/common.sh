@@ -14,7 +14,8 @@ source /usr/share/nvm/init-nvm.sh
 PS1='\e[40;90m\n\e[97m#\e[90m \e[92m\t\e[90m \e[94m$(pwd)\e[90m$(__git_ps1 " \e[97m%s\e[90m")\e[K\e[m\n'
 
 # # https://wiki.archlinux.org/index.php/Environment_variables#Examples
-TERM=termite
+
+export TERM=termite
 
 # # https://wiki.archlinux.org/index.php/Nano#Replacing_vi_with_nano
 export VISUAL=nano
@@ -23,6 +24,14 @@ export EDITOR=nano
 ### initiate
 
 # amixer --quiet set Master 0db
+
+### termite
+
+### https://wiki.archlinux.org/index.php/Termite#Ctrl+Shift+t
+
+source /etc/profile.d/vte.sh
+
+__vte_prompt_command
 
 ### fixes
 
@@ -34,7 +43,7 @@ export AWT_TOOLKIT=MToolkit
 
 ### enable mpeg-4
 # # https://wiki.archlinux.org/index.php/Hardware_video_acceleration#VA-API_drivers
-VAAPI_MPEG4_ENABLED=true
+export VAAPI_MPEG4_ENABLED=true
 
 ### xkb not for sway
 # export XKB_DEFAULT_LAYOUT=us,ru
@@ -46,11 +55,11 @@ VAAPI_MPEG4_ENABLED=true
 # # prevent xwayland fullscreen glitches but windows and notifications works bad
 # export QT_QPA_PLATFORM=wayland
 
-# # https://github.com/swaywm/sway/wiki/Running-programs-natively-under-wayland#firefox
+# # https://github.com/swaywm/sway/wiki/Running-programs-natively-under-wayland#gtk3
 # # https://wiki.archlinux.org/index.php/Firefox#Wayland
 export MOZ_ENABLE_WAYLAND=1
 
-# # https://wiki.archlinux.org/index.php?oldid=584342#man
+# # https://wiki.archlinux.org/index.php/Color_output_in_console#man
 function man {
 	LESS_TERMCAP_md=$'\e[92m' \
 	LESS_TERMCAP_so=$'\e[7m' \
@@ -67,15 +76,13 @@ export LS_COLORS='di=1;94:'
 
 ### history
 
-PROMPT_COMMAND='true'
+# # hstr --show-configuration
+
+PROMPT_COMMAND="${PROMPT_COMMAND:-true}"
 
 PROMPT_COMMAND="${PROMPT_COMMAND} && history -a"
 PROMPT_COMMAND="${PROMPT_COMMAND} && history -c"
 PROMPT_COMMAND="${PROMPT_COMMAND} && history -r"
-
-export PROMPT_COMMAND
-
-# hstr configuration hstr --show-configuration
 
 shopt -s histappend
 
@@ -96,20 +103,21 @@ export HISTSIZE=${HISTFILESIZE}
 ## bind hstr to ctrl-r - for vi mode check doc
 bind '"\C-r": "\C-a hstr -- \C-j"'
 
-# remote desktop protocol
+### remote desktop protocol
+
+# WLR_BACKENDS=rdp
+# WLR_RDP_ADDRESS=0.0.0.0
 
 export WLR_RDP_TLS_CERT_PATH=/-/remmina/tls.crt
 export WLR_RDP_TLS_KEY_PATH=/-/remmina/tls.key
-WLR_RDP_ADDRESS=0.0.0.0
-WLR_BACKENDS=rdp
 
 # # https://wiki.archlinux.org/index.php/Bash#Shell_exits_even_if_ignoreeof_set
 export IGNOREEOF=100
 
 ### path
 
-export PATH="${HOME}/.local/bin:${PATH}"
-export PATH="${HOME}/.yarn/bin:${PATH}"
+PATH="${HOME}/.local/bin:${PATH}"
+PATH="${HOME}/.yarn/bin:${PATH}"
 
 ### pip
 
