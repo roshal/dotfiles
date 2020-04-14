@@ -74,6 +74,7 @@ alias py='python'
 
 alias systemctl='systemctl --no-pager'
 
+alias sypo='systemctl poweroff'
 alias syre='systemctl reboot'
 alias sysu='systemctl suspend'
 
