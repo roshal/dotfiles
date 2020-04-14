@@ -1,2 +1,2 @@
 
-source "${HOME}/.config/bash/bash-profile.sh"
+source "${HOME}/.config/bash/bash-config.sh"
