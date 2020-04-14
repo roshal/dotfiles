@@ -1,2 +1,2 @@
 
-source "${HOME}/.config/bash/bash-runcom.sh"
+source "${HOME}/.config/bash/bash-common.sh"
