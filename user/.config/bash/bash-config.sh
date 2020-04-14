@@ -22,7 +22,6 @@ test -e "${HOME}/.yarn/bin/nps" && eval "$(nps completion)"
 source /etc/profile.d/vte.sh
 
 source /usr/share/git/completion/git-prompt.sh
-
 source /usr/share/nvm/init-nvm.sh
 
 ### environment after vte
