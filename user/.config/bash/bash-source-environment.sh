@@ -4,8 +4,6 @@ export IGNOREEOF=100
 
 # # https://wiki.archlinux.org/index.php/Environment_variables#Examples
 
-export TERM=termite
-
 # # https://wiki.archlinux.org/index.php/Nano#Replacing_vi_with_nano
 export VISUAL=nano
 export EDITOR=nano
