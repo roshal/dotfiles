@@ -1,4 +1,6 @@
 
+# # https://git-scm.com/docs/git-confighttps://git-scm.com/docs/git-config
+
 [core]
 
 editor = code --wait
@@ -26,6 +28,12 @@ log = false
 [rebase]
 
 backend = apply
+
+[status]
+
+branch = true
+
+short = true
 
 [color]
 
@@ -64,10 +72,6 @@ echo = !echo
 # default
 
 loging = log --reverse --color --pretty='%C(auto)%cs %h %<(8,trunc)%ae %<(60,trunc)%s%n%-d%C(reset)'
-
-# overwrite
-
-commit = commit --allow-empty --allow-empty-message
 
 # custom
 

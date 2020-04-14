@@ -1,7 +1,4 @@
 
-### if not running interactively do not do anything
-! echo "${-}" | grep -q i && return
-
 ### change directory initially
 
 cd /-
