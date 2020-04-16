@@ -32,7 +32,7 @@ alias user='cd /home/user'
 ### projects
 
 alias _cl='cd /-/esphere/courier/light-ui'
-
+alias _fL='cd /-/esphere/frontend/Leda'
 alias _ff='cd /-/esphere/frontend/Fish'
 alias _fl='cd /-/esphere/frontend/leda-npm'
-alias _fL='cd /-/esphere/frontend/Leda'
+alias _ll='cd /-/esphere/lkk/lkkgui'
