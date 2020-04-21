@@ -7,11 +7,10 @@ bindsym --to-code $-modifier+q+shift kill
 bindsym --to-code $-modifier+return exec termite
 
 bindsym --to-code $-modifier+d exec wofi
-bindsym --to-code $-modifier+i exec swaylock
+bindsym --to-code $-modifier+i exec swaylock --image /-/pictures/waves.jpg
 bindsym --to-code $-modifier+n exec thunar
 bindsym --to-code $-modifier+o exec swaymsg "output $-echo-output-focused disable, output $-echo-output-suspend enable"
 bindsym --to-code $-modifier+u exec swaylock --color ffffff
-
 
 bindsym --to-code $-modifier+shift+e exec swaynag $-swaynag
 
