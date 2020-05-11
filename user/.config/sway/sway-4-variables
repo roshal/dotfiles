@@ -37,6 +37,12 @@ set $-way-d down
 set $-way-p prior
 set $-way-n next
 
+set $-mouse-l button1
+set $-mouse-r button2
+set $-mouse-m button3
+set $-mouse-u button4
+set $-mouse-d button5
+
 set $-key-0 grave
 set $-key-1 1
 set $-key-2 2
