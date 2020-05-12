@@ -70,16 +70,16 @@ bindsym $-modifier+$-way-d+mod1 move workspace to output $-way-d
 bindsym $-modifier+$-way-u+ctrl move workspace to output $-way-u
 bindsym $-modifier+$-way-u+mod1 move workspace to output $-way-u
 
-bindsym $-modifier+$-key-0+shift move container to workspace $-workspace-0
-bindsym $-modifier+$-key-1+shift move container to workspace $-workspace-1
-bindsym $-modifier+$-key-2+shift move container to workspace $-workspace-2
-bindsym $-modifier+$-key-3+shift move container to workspace $-workspace-3
-bindsym $-modifier+$-key-4+shift move container to workspace $-workspace-4
-bindsym $-modifier+$-key-5+shift move container to workspace $-workspace-5
-bindsym $-modifier+$-key-6+shift move container to workspace $-workspace-6
-bindsym $-modifier+$-key-7+shift move container to workspace $-workspace-7
-bindsym $-modifier+$-key-8+shift move container to workspace $-workspace-8
-bindsym $-modifier+$-key-9+shift move container to workspace $-workspace-9
+bindsym --to-code $-modifier+$-key-0+shift move container to workspace $-workspace-0
+bindsym --to-code $-modifier+$-key-1+shift move container to workspace $-workspace-1
+bindsym --to-code $-modifier+$-key-2+shift move container to workspace $-workspace-2
+bindsym --to-code $-modifier+$-key-3+shift move container to workspace $-workspace-3
+bindsym --to-code $-modifier+$-key-4+shift move container to workspace $-workspace-4
+bindsym --to-code $-modifier+$-key-5+shift move container to workspace $-workspace-5
+bindsym --to-code $-modifier+$-key-6+shift move container to workspace $-workspace-6
+bindsym --to-code $-modifier+$-key-7+shift move container to workspace $-workspace-7
+bindsym --to-code $-modifier+$-key-8+shift move container to workspace $-workspace-8
+bindsym --to-code $-modifier+$-key-9+shift move container to workspace $-workspace-9
 
 ##### 6.6 swapping containers
 
@@ -99,21 +99,21 @@ bindsym $-modifier+$-way-p      workspace prev_on_output
 bindsym $-modifier+$-way-l+ctrl workspace prev_on_output
 bindsym $-modifier+$-way-l+mod1 workspace prev_on_output
 
-bindsym $-modifier+$-key-0 workspace $-workspace-0
-bindsym $-modifier+$-key-1 workspace $-workspace-1
-bindsym $-modifier+$-key-2 workspace $-workspace-2
-bindsym $-modifier+$-key-3 workspace $-workspace-3
-bindsym $-modifier+$-key-4 workspace $-workspace-4
-bindsym $-modifier+$-key-5 workspace $-workspace-5
-bindsym $-modifier+$-key-6 workspace $-workspace-6
-bindsym $-modifier+$-key-7 workspace $-workspace-7
-bindsym $-modifier+$-key-8 workspace $-workspace-8
-bindsym $-modifier+$-key-9 workspace $-workspace-9
+bindsym --to-code $-modifier+$-key-0 workspace $-workspace-0
+bindsym --to-code $-modifier+$-key-1 workspace $-workspace-1
+bindsym --to-code $-modifier+$-key-2 workspace $-workspace-2
+bindsym --to-code $-modifier+$-key-3 workspace $-workspace-3
+bindsym --to-code $-modifier+$-key-4 workspace $-workspace-4
+bindsym --to-code $-modifier+$-key-5 workspace $-workspace-5
+bindsym --to-code $-modifier+$-key-6 workspace $-workspace-6
+bindsym --to-code $-modifier+$-key-7 workspace $-workspace-7
+bindsym --to-code $-modifier+$-key-8 workspace $-workspace-8
+bindsym --to-code $-modifier+$-key-9 workspace $-workspace-9
 
-bindsym $-modifier+$-key-i       workspace $-workspace-0
-bindsym $-modifier+$-key-h       workspace $-workspace-1
-bindsym $-modifier+$-key-d       workspace $-workspace-2
-bindsym $-modifier+$-key-e       workspace $-workspace-3
+bindsym $-modifier+$-key-i workspace $-workspace-0
+bindsym $-modifier+$-key-h workspace $-workspace-1
+bindsym $-modifier+$-key-d workspace $-workspace-2
+bindsym $-modifier+$-key-e workspace $-workspace-3
 
 bindsym $-modifier+$-key-i+shift move container to $-workspace-4
 bindsym $-modifier+$-key-h+shift move container to $-workspace-5
