@@ -1,7 +1,7 @@
 
 [options]
 
-scaling_mode = none
+# scaling_mode = none
 
 upscaling_method = nearest_neighbour
 

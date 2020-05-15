@@ -68,7 +68,7 @@ alias p='pulsemixer'
 
 ### python
 
-alias py='python'
+# alias py='python'
 
 ### systemctl
 
@@ -83,7 +83,3 @@ alias sysu='systemctl suspend'
 alias lock='swaylock'
 
 alias stop='sysu && swaylock'
-
-### wofi
-
-alias wofi='wofi --allow-images'
