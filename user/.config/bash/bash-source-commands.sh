@@ -1,23 +1,24 @@
 
-### termite
-
-alias termite='termite --directory /-'
-
-### grep
-
-alias grep='grep --color'
-
 ### linux
 
 alias diff='diff --color'
 
+alias grep='grep --color'
 # # https://wiki.archlinux.org/index.php/Color_output_in_console#ls
+
 alias ls='ls --color=auto'
+
+alias man='LC_ALL=ru_RU.UTF-8 man --no-hyphenation --no-justification'
+
+### sudo
+
+# # https://wiki.archlinux.org/index.php/Sudo#Passing_aliases
+alias sudo='sudo '
+
+### termite
+
+alias termite='termite --directory /-'
 
 ### wofi
 
 alias wofi='wofi --allow-images'
-
-### man
-
-alias man='LC_ALL=ru_RU.UTF-8 man --no-hyphenation --no-justification'

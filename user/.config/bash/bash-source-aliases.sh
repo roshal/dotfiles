@@ -1,9 +1,4 @@
 
-### sudo
-
-# # https://wiki.archlinux.org/index.php/Sudo#Passing_aliases
-alias sudo='sudo '
-
 ### bash
 
 alias rc='echo -ne \\'\ec\\''
