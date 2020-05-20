@@ -61,10 +61,6 @@ alias path='tr : \\n <<< "${PATH}"'
 
 alias p='pulsemixer'
 
-### python
-
-# alias py='python'
-
 ### systemctl
 
 alias systemctl='systemctl --no-pager'

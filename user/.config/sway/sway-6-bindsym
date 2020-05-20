@@ -55,8 +55,11 @@ bindsym $-modifier+$-way-l focus $-way-l
 bindsym $-modifier+$-way-r focus $-way-r
 bindsym $-modifier+$-way-d focus $-way-d
 
-bindsym --whole-window $-modifier+$-mouse-u focus $-way-l
-bindsym --whole-window $-modifier+$-mouse-d focus $-way-r
+bindsym --whole-window $-modifier+$-mouse-u+shift focus $-way-l
+bindsym --whole-window $-modifier+$-mouse-d+shift focus $-way-r
+
+bindsym --whole-window $-modifier+$-mouse-u workspace prev_on_output
+bindsym --whole-window $-modifier+$-mouse-d workspace next_on_output
 
 ##### 6.5 moving containers
 
