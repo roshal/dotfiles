@@ -1,4 +1,8 @@
 
+### alphabet
+
+alias az='echo abcdefghijklmnopqrstuvwxyz'
+
 ### linux
 
 alias diff='diff --color'
