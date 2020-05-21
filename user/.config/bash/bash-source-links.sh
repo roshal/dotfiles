@@ -9,14 +9,21 @@ alias freedesktop='cd /-/freedesktop'
 
 ### github
 
+alias common='cd /-/github/roshal/python/common'
+alias roshal='cd /-/github/roshal'
+alias github='cd /-/github'
+
+### github kksng
+
+alias leda='cd /-/github/kksng/leda'
+
+### github roshal
+
 alias arch-linux-notes='cd /-/github/roshal/arch-linux-notes'
 alias arch-linux='cd /-/github/roshal/arch-linux'
 alias chromium-theme='cd /-/github/roshal/chromium-theme'
-alias common='cd /-/github/roshal/python/common'
 alias dotfiles='cd /-/github/roshal/dotfiles'
-alias github='cd /-/github'
-alias leda='cd /-/github/kksng/leda'
-alias roshal='cd /-/github/roshal'
+alias lenteh='cd /-/github/roshal/lenteh'
 alias test-task-kanban-board='cd /-/github/roshal/test-task-kanban-board'
 alias tokens='cd /-/github/roshal/tokens'
 

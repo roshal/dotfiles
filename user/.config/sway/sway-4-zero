@@ -125,7 +125,9 @@ for_window [instance="^telegram-desktop$"] border none
 
 ##### 4.17 automatically putting clients on specific workspaces
 
-# # wayland
+assign [instance="^zoom$"] $-workspace-9
+
+### wayland
 assign [app_id="^telegramdesktop$"] $-workspace-8
 
 assign [instance="^telegram-desktop$"] $-workspace-8
