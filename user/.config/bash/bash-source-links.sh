@@ -20,7 +20,7 @@ alias leda='cd /-/github/kksng/leda'
 ### github roshal
 
 alias arch-linux-notes='cd /-/github/roshal/arch-linux-notes'
-alias arch-linux='cd /-/github/roshal/arch-linux'
+alias arch-linux-setup='cd /-/github/roshal/arch-linux-setup'
 alias chromium-theme='cd /-/github/roshal/chromium-theme'
 alias dotfiles='cd /-/github/roshal/dotfiles'
 alias lenteh='cd /-/github/roshal/lenteh'

@@ -53,6 +53,10 @@ alias lint='npx eslint --color --ext .js,.jsx,.ts,.tsx'
 
 alias tsc='npx tsc'
 
+### pacman
+
+alias update='sudo pacman --sync --refresh --sysupgrade'
+
 ### path
 
 alias path='tr : \\n <<< "${PATH}"'
@@ -60,6 +64,10 @@ alias path='tr : \\n <<< "${PATH}"'
 ### pulseaudio
 
 alias p='pulsemixer'
+
+### python
+
+alias py='python'
 
 ### systemctl
 
