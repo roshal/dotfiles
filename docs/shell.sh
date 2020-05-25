@@ -1,16 +1,29 @@
 
 exit
 
+### user
+
 stow --target ${HOME} --stow user
 
-stow --target ${HOME} --adopt user
 
-exit
+### root
 
 stow --target / --stow root
 
+### adopt
+
+stow --target ${HOME} --adopt user
+
 stow --target / --adopt root
 
-exit
+### chromium
+
+sudo stow --target / --stow chromium
+
+### chromium
+
+stow --target ${HOME} --stow firefox
+
+### help
 
 find . -xtype l

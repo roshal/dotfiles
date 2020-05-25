@@ -13,6 +13,10 @@ configuration files for linux applications
 stow --target ${HOME} --stow user
 ```
 
+```shell
+sudo stow --target / --stow chromium
+```
+
 ## verification
 
 ```shell
