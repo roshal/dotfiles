@@ -9,7 +9,7 @@ bar status_edge_padding 9
 
 ##### 5.2 configuring i3bar
 
-bar status_command while date +"%j-%U-%w %y-%m-%d %T $-echo-keyboard-layout"; do sleep 1; done
+bar status_command while date +"$-echo-keyboard-layout %j-%U-%w %y-%m-%d %T"; do sleep 1; done
 
 ##### 5.3 display mode
 

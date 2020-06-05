@@ -16,8 +16,8 @@ alias d='git diff'
 alias s='git status'
 
 alias l='git l'
-
 alias ll='git ll'
+alias lll='git lll'
 
 ### grep
 

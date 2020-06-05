@@ -19,6 +19,7 @@ alias leda='cd /-/github/kksng/leda'
 
 ### github roshal
 
+alias angular='cd /-/github/roshal/angular'
 alias arch-linux-notes='cd /-/github/roshal/arch-linux-notes'
 alias arch-linux-setup='cd /-/github/roshal/arch-linux-setup'
 alias chromium-theme='cd /-/github/roshal/chromium-theme'
@@ -38,8 +39,9 @@ alias user='cd /home/user'
 
 ### projects
 
-alias _cl='cd /-/esphere/courier/light-ui'
-alias _fL='cd /-/esphere/frontend/Leda'
-alias _ff='cd /-/esphere/frontend/Fish'
-alias _fl='cd /-/esphere/frontend/leda-npm'
-alias _ll='cd /-/esphere/lkk/lkkgui'
+alias Fish='cd /-/esphere/frontend/Fish'
+alias Leda='cd /-/esphere/frontend/Leda'
+alias leda-npm='cd /-/esphere/frontend/leda-npm'
+alias light-ui='cd /-/esphere/courier/light-ui'
+alias lkkdata='cd /-/esphere/lkk/lkkdata'
+alias lkkgui='cd /-/esphere/lkk/lkkgui'

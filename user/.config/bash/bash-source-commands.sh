@@ -3,6 +3,10 @@
 
 alias az='echo abcdefghijklmnopqrstuvwxyz'
 
+### bash
+
+alias trim='sed -e "s/^[[:space:]]*//"'
+
 ### linux
 
 alias diff='diff --color'

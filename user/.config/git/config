@@ -58,7 +58,7 @@ ui = true
 
 # classic
 
-co = checkout
+co = checkout --no-guess
 br = branch
 ci = commit
 st = status
@@ -71,7 +71,7 @@ echo = !echo
 
 # default
 
-loging = log --reverse --color --pretty='%C(auto)%cs %h %<(8,trunc)%ae %<(60,trunc)%s%n%-d%C(reset)'
+loging = log --reverse --color --abbrev=8 --pretty='%C(auto)%cs %h %<(8,trunc)%ce %<(60,trunc)%s%n%-d%C(reset)'
 
 # custom
 
@@ -116,8 +116,10 @@ pop  = stash pop
 drop = stash drop
 list = stash list
 
-l  = loging -16
-ll = loging -32
+l   = loging -16
+ll  = loging -32
+lll = loging -64
+
 lg = loging -32 --graph --reverse
 lo = loging -32 --oneline
 
