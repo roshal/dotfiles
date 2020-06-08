@@ -7,6 +7,11 @@ alias az='echo abcdefghijklmnopqrstuvwxyz'
 
 alias trim='sed -e "s/^[[:space:]]*//"'
 
+alias bytes='wc --bytes'
+alias chars='wc --chars'
+alias lines='wc --lines'
+alias words='wc --words'
+
 ### linux
 
 alias diff='diff --color'

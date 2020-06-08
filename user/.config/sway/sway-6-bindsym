@@ -2,6 +2,10 @@
 bindsym --to-code $-modifier+q       kill
 bindsym --to-code $-modifier+q+shift kill
 
+bindsym --to-code $-modifier+p            exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD headset_head_unit
+bindsym --to-code $-modifier+p+shift      exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD a2dp_sink
+bindsym --to-code $-modifier+p+shift+ctrl exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD off
+
 ##### 6.1 executing applications
 
 bindsym $-modifier+return exec termite
@@ -11,6 +15,8 @@ bindsym --to-code $-modifier+i exec swaylock --image /-/pictures/waves.jpg
 bindsym --to-code $-modifier+n exec thunar
 bindsym --to-code $-modifier+o exec swaymsg "output $-echo-output-focused disable, output $-echo-output-suspend enable"
 bindsym --to-code $-modifier+u exec swaylock --color ffffff
+
+bindsym --to-code $-modifier+u+shift exec swaylock --color 0000ff
 
 bindsym --to-code $-modifier+shift+e exec swaynag $-swaynag
 
