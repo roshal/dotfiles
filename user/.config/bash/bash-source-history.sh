@@ -5,7 +5,10 @@
 shopt -s histappend
 
 ### leading space hides commands from history
-export HISTCONTROL=ignorespace
+export HISTCONTROL=ignoreboth
+# export HISTCONTROL=ignoredups
+# export HISTCONTROL=ignorespace
+# export HISTCONTROL=ignorespace:ignoredups
 
 ### increase history file size - default is 500
 export HISTFILESIZE=65536

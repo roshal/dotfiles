@@ -24,7 +24,9 @@ alias arch-linux-notes='cd /-/github/roshal/arch-linux-notes'
 alias arch-linux-setup='cd /-/github/roshal/arch-linux-setup'
 alias chromium-theme='cd /-/github/roshal/chromium-theme'
 alias dotfiles='cd /-/github/roshal/dotfiles'
+alias javascript='cd /-/github/roshal/javascript'
 alias lenteh='cd /-/github/roshal/lenteh'
+alias roshal-online='cd /-/github/roshal/roshal-online'
 alias test-task-kanban-board='cd /-/github/roshal/test-task-kanban-board'
 alias tokens='cd /-/github/roshal/tokens'
 
@@ -36,6 +38,11 @@ alias gitlab='cd /-/gitlab'
 
 alias config='cd /home/user/.config'
 alias user='cd /home/user'
+
+### groups
+
+alias frontend='cd /-/esphere/lfrontendkk'
+alias lkk='cd /-/esphere/lkk'
 
 ### projects
 

@@ -5,6 +5,10 @@ alias rc='echo -ne \\'\ec\\''
 
 alias re='exec bash'
 
+### cat
+
+alias c='cat'
+
 ### english
 
 alias english='LC_ALL=C'
@@ -35,7 +39,13 @@ alias h='history'
 
 alias hh='hstr'
 
-### directory list
+### lock and suspend
+
+alias lock='swaylock'
+
+alias stop='sysu && swaylock'
+
+### ls
 
 alias f='ls -Al --group-directories-first'
 
@@ -76,9 +86,3 @@ alias systemctl='systemctl --no-pager'
 alias sypo='systemctl poweroff'
 alias syre='systemctl reboot'
 alias sysu='systemctl suspend'
-
-### lock and suspend
-
-alias lock='swaylock'
-
-alias stop='sysu && swaylock'

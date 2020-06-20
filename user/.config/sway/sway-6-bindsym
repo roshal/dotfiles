@@ -2,9 +2,12 @@
 bindsym --to-code $-modifier+q       kill
 bindsym --to-code $-modifier+q+shift kill
 
-bindsym --to-code $-modifier+p            exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD headset_head_unit
-bindsym --to-code $-modifier+p+shift      exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD a2dp_sink
-bindsym --to-code $-modifier+p+shift+ctrl exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD off
+bindsym --to-code $-modifier+alt+h exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD headset_head_unit
+bindsym --to-code $-modifier+alt+a exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD a2dp_sink
+bindsym --to-code $-modifier+alt+o exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD off
+
+bindsym --to-code $-modifier+alt+m       exec makoctl dismiss -a
+bindsym --to-code $-modifier+alt+m+shift exec makoctl dismiss
 
 ##### 6.1 executing applications
 
@@ -26,6 +29,8 @@ bindsym            $-key-p+shift exec $-grim-full $-grim-path
 bindsym $-modifier+$-key-p       exec $-grim-crop $-grim-copy
 bindsym $-modifier+$-key-p+ctrl  exec $-grim-view $-grim-copy
 bindsym $-modifier+$-key-p+shift exec $-grim-full $-grim-copy
+
+bindsym $-modifier+shift+s exec $-grim-slurp
 
 ##### 6.2 splitting containers
 
@@ -153,7 +158,7 @@ bindsym --to-code $-modifier+b border toggle
 
 ##### 6.19 reloading
 
-bindsym $-modifier+$-key-b reload
+bindsym $-modifier+shift+$-key-b reload
 
 ##### 6.20 scratchpad
 

@@ -12,6 +12,10 @@ alias chars='wc --chars'
 alias lines='wc --lines'
 alias words='wc --words'
 
+### dismiss
+
+alias dismiss='makoctl dismiss --all'
+
 ### linux
 
 alias diff='diff --color'
@@ -21,7 +25,8 @@ alias grep='grep --color'
 
 alias ls='ls --color=auto'
 
-alias man='LC_ALL=ru_RU.UTF-8 man --no-hyphenation --no-justification'
+alias man='LANG=ru_RU.UTF-8 "man" --no-hyphenation --no-justification'
+alias men='"man" --no-hyphenation --no-justification'
 
 ### sudo
 

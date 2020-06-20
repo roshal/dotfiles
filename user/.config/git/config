@@ -56,7 +56,7 @@ ui = true
 
 [alias]
 
-# classic
+### classic
 
 co = checkout --no-guess
 br = branch
@@ -69,11 +69,11 @@ type = cat-file -t
 dump = cat-file -p
 echo = !echo
 
-# default
+### default
 
-loging = log --reverse --color --abbrev=8 --pretty='%C(auto)%cs %h %<(8,trunc)%ce %<(60,trunc)%s%n%-d%C(reset)'
+loging = log --reverse --color --abbrev=8 --date=format:%y-%m-%d --pretty='%C(auto)%cd %h %<(8,trunc)%ce %<(53,trunc)%s%n%-d%C(reset)'
 
-# custom
+### custom
 
 ad = add
 cl = clone

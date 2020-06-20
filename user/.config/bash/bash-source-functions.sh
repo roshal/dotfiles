@@ -1,10 +1,20 @@
 
-function eslintjq () {
-	jq '.["rules"]["'"${1}"'"]'
+function aurcgcam {
+	cd '/-/aur'
+	git clone "https://aur.archlinux.org/$1.git"
+	cd -
+	cd "/-/aur/$1"
+	sudo --validate
+	makepkg --syncdeps --install
+	cd -
 }
 
 function environ () {
-	sed 's/\x0/\n/g' /proc/${1}/environ
+	sed 's/\x0/\n/g' /proc/$1/environ
+}
+
+function eslintjq () {
+	jq '.["rules"]["'"$1"'"]'
 }
 
 # # https://wiki.archlinux.org/index.php/Color_output_in_console#man

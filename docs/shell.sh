@@ -5,7 +5,6 @@ exit
 
 stow --target ${HOME} --stow user
 
-
 ### root
 
 stow --target / --stow root

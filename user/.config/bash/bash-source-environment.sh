@@ -29,16 +29,17 @@ export VAAPI_MPEG4_ENABLED=true
 # export XKB_DEFAULT_LAYOUT=us,ru
 # export XKB_DEFAULT_OPTIONS=grp:caps_toggle
 
+### prevent xwayland fullscreen glitches but windows and notifications works bad
+### virtualbox does not work
 # # https://github.com/swaywm/sway/wiki#disabling-client-side-qt-decorations
 # # https://wiki.archlinux.org/index.php/Wayland#Qt_5
 # # https://wiki.qt.io/QtWayland#Run_Qt_applications_as_Wayland_clients
-# # prevent xwayland fullscreen glitches but windows and notifications works bad
-# # virtualbox does not work
 # export QT_QPA_PLATFORM=wayland
 
+### clipboard paste to chromium does not work
 # # https://github.com/swaywm/sway/wiki/Running-programs-natively-under-wayland#gtk3
 # # https://wiki.archlinux.org/index.php/Firefox#Wayland
-export MOZ_ENABLE_WAYLAND=1
+# export MOZ_ENABLE_WAYLAND=1
 
 ### remote desktop protocol
 
