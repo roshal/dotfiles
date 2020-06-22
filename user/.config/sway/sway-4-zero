@@ -25,11 +25,29 @@ bindsym XF86AudioMute    exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1db
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1db
 
+bindsym --to-code $-modifier+alt+h exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD headset_head_unit
+bindsym --to-code $-modifier+alt+a exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD a2dp_sink
+bindsym --to-code $-modifier+alt+o exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD off
+
+bindsym --to-code $-modifier+alt+m       exec makoctl dismiss --all
+bindsym --to-code $-modifier+alt+m+shift exec makoctl dismiss
+
+bindsym --to-code $-modifier+f9  exec playerctl play-pause
+bindsym --to-code $-modifier+f10 exec playerctl stop
+bindsym --to-code $-modifier+f11 exec playerctl previous
+bindsym --to-code $-modifier+f12 exec playerctl next
+
+# bindsym --whole-window BTN_EXTRA workspace prev_on_output
+# bindsym --whole-window BTN_SIDE workspace next_on_output
+
+bindsym --whole-window $-modifier+button8 workspace prev_on_output
+bindsym --whole-window $-modifier+button9 workspace next_on_output
+
 ##### 4.4 mouse bindings
 
 ##### 4.5 binding modes
 
-bindsym --to-code $-modifier+z mode $-mode-resize
+bindsym --to-code $-modifier+shift+r mode $-mode-resize
 
 mode $-mode-resize bindsym --to-code $-way-l resize shrink width  16px
 mode $-mode-resize bindsym --to-code $-way-d resize grow   height 16px

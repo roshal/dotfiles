@@ -2,6 +2,7 @@
 ### alphabet
 
 alias az='echo abcdefghijklmnopqrstuvwxyz'
+alias za='echo zyxwvutsrqponmlkjihgfedcba'
 
 ### bash
 

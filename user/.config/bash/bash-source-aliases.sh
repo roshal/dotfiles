@@ -25,13 +25,13 @@ alias lll='git lll'
 
 ### grep
 
-alias v='grep -iv'
-alias x='grep -i'
-alias z='grep -iz'
+alias v='grep --ignore-case -v'
+alias x='grep --ignore-case'
+alias z='grep --ignore-case -z'
 
-alias vv='grep -9 -iv'
-alias xx='grep -9 -i'
-alias zz='grep -9 -iz'
+alias vv='grep -9 --ignore-case -v'
+alias xx='grep -9 --ignore-case'
+alias zz='grep -9 --ignore-case -z'
 
 ### history
 
@@ -47,9 +47,9 @@ alias stop='sysu && swaylock'
 
 ### ls
 
-alias f='ls -Al --group-directories-first'
+alias f='ls -l --almost-all --group-directories-first'
 
-alias ff='ls -A --group-directories-first'
+alias ff='ls --almost-all --group-directories-first'
 
 ### npx
 

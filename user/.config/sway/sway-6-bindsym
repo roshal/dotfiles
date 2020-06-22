@@ -2,13 +2,6 @@
 bindsym --to-code $-modifier+q       kill
 bindsym --to-code $-modifier+q+shift kill
 
-bindsym --to-code $-modifier+alt+h exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD headset_head_unit
-bindsym --to-code $-modifier+alt+a exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD a2dp_sink
-bindsym --to-code $-modifier+alt+o exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD off
-
-bindsym --to-code $-modifier+alt+m       exec makoctl dismiss -a
-bindsym --to-code $-modifier+alt+m+shift exec makoctl dismiss
-
 ##### 6.1 executing applications
 
 bindsym $-modifier+return exec termite
@@ -69,9 +62,6 @@ bindsym $-modifier+$-way-d focus $-way-d
 bindsym --whole-window $-modifier+$-mouse-u+shift focus $-way-l
 bindsym --whole-window $-modifier+$-mouse-d+shift focus $-way-r
 
-bindsym --whole-window $-modifier+$-mouse-u workspace prev_on_output
-bindsym --whole-window $-modifier+$-mouse-d workspace next_on_output
-
 ##### 6.5 moving containers
 
 bindsym $-modifier+$-way-u+shift move $-way-u
@@ -112,6 +102,12 @@ bindsym $-modifier+$-way-r+mod1 workspace next_on_output
 bindsym $-modifier+$-way-p      workspace prev_on_output
 bindsym $-modifier+$-way-l+ctrl workspace prev_on_output
 bindsym $-modifier+$-way-l+mod1 workspace prev_on_output
+
+bindsym --whole-window $-modifier+$-mouse-u workspace prev_on_output
+bindsym --whole-window $-modifier+$-mouse-d workspace next_on_output
+
+bindsym --to-code $-modifier+z       workspace next_on_output
+bindsym --to-code $-modifier+z+shift workspace prev_on_output
 
 bindsym --to-code $-modifier+$-key-0 workspace $-workspace-0
 bindsym --to-code $-modifier+$-key-1 workspace $-workspace-1

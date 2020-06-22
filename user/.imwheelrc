@@ -1,0 +1,5 @@
+
+"^"
+
+Control_L, Up,   Button4, 4
+Control_L, Down, Button5, 4

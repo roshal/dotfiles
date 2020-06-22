@@ -1,6 +1,8 @@
 
 exit
 
+ln -s --target ${HOME} user/.imwheelrc
+
 ### user
 
 stow --target ${HOME} --stow user

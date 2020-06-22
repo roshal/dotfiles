@@ -1,5 +1,5 @@
 
-function aurcgcam {
+function aurgsm {
 	cd '/-/aur'
 	git clone "https://aur.archlinux.org/$1.git"
 	cd -
