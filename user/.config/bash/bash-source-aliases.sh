@@ -66,6 +66,7 @@ alias tsc='npx tsc'
 ### pacman
 
 alias update='sudo pacman --sync --refresh --sysupgrade'
+alias updates='pacman --query --upgrades'
 
 ### path
 

@@ -1,7 +1,7 @@
 
 ### password
 
-alias pass='python /-/github/roshal/python/source/common/hex-16-sequence.py'
+alias pass='python /-/github/roshal/python/source/cli/generation/hex16sequence.py'
 
 ### screen capture
 

@@ -152,7 +152,7 @@ assign [instance="^telegram-desktop$"] $-workspace-8
 
 ##### 4.18 automatically starting applications on i3 startup
 
-exec swayidle -w $-idle-before-sleep $-idle-timeout-lock $-idle-timeout-dpms $-idle-resume
+# exec swayidle -w $-idle-before-sleep $-idle-timeout-lock $-idle-timeout-dpms $-idle-resume
 
 ##### 4.19 automatically putting workspaces on specific screens
 
