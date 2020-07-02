@@ -130,6 +130,10 @@ mes = merge --squash
 rev = remote --verbose
 rrc = rm -r --cached .
 
+buom = branch -u origin/master
+ctod = checkout --track origin/dev
+puoh = push -u origin HEAD
+
 pgf = push github HEAD --force
 phf = push heroku HEAD --force
 pof = push origin HEAD --force
