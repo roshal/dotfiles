@@ -48,7 +48,7 @@ titlebar_padding 6 4
 # # swaymsg -t get_inputs
 
 input type:keyboard xkb_layout us,ru
-input type:keyboard xkb_options grp:caps_toggle
+input type:keyboard xkb_options grp:caps_toggle,grp_led:scroll
 
 input type:keyboard repeat_delay 250
 input type:keyboard repeat_rate 30

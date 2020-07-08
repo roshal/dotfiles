@@ -6,9 +6,9 @@
 
 bindsym --to-code $-modifier+ctrl+a mode $-mode-audio
 
-mode $-mode-audio bindsym --to-code a exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD mode $-mode-default, a2dp_sink
-mode $-mode-audio bindsym --to-code h exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD mode $-mode-default, headset_head_unit
-mode $-mode-audio bindsym --to-code o exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD mode $-mode-default, off
+mode $-mode-audio bindsym --to-code a mode $-mode-default, exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD a2dp_sink
+mode $-mode-audio bindsym --to-code h mode $-mode-default, exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD headset_head_unit
+mode $-mode-audio bindsym --to-code o mode $-mode-default, exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD off
 
 mode $-mode-audio bindsym return mode $-mode-default
 mode $-mode-audio bindsym escape mode $-mode-default
@@ -17,10 +17,10 @@ mode $-mode-audio bindsym escape mode $-mode-default
 
 bindsym --to-code $-modifier+ctrl+b mode $-mode-bluetooth
 
-mode $-mode-bluetooth bindsym --to-code a exec --no-startup-id mode $-mode-default, bluetoothctl power  on
-mode $-mode-bluetooth bindsym --to-code c exec --no-startup-id mode $-mode-default, bluetoothctl connect    $-mac-headset
-mode $-mode-bluetooth bindsym --to-code d exec --no-startup-id mode $-mode-default, bluetoothctl disconnect $-mac-headset
-mode $-mode-bluetooth bindsym --to-code z exec --no-startup-id mode $-mode-default, bluetoothctl power off
+mode $-mode-bluetooth bindsym --to-code a mode $-mode-default, exec --no-startup-id bluetoothctl power  on
+mode $-mode-bluetooth bindsym --to-code c mode $-mode-default, exec --no-startup-id bluetoothctl connect    $-mac-headset
+mode $-mode-bluetooth bindsym --to-code d mode $-mode-default, exec --no-startup-id bluetoothctl disconnect $-mac-headset
+mode $-mode-bluetooth bindsym --to-code z mode $-mode-default, exec --no-startup-id bluetoothctl power off
 
 mode $-mode-bluetooth bindsym return mode $-mode-default
 mode $-mode-bluetooth bindsym escape mode $-mode-default
@@ -29,8 +29,8 @@ mode $-mode-bluetooth bindsym escape mode $-mode-default
 
 bindsym --to-code $-modifier+ctrl+n mode $-mode-network
 
-mode $-mode-network bindsym --to-code a exec --no-startup-id mode $-mode-default, nmcli connection up   ethernet
-mode $-mode-network bindsym --to-code z exec --no-startup-id mode $-mode-default, nmcli connection down ethernet
+mode $-mode-network bindsym --to-code a mode $-mode-default, exec --no-startup-id nmcli connection up   ethernet
+mode $-mode-network bindsym --to-code z mode $-mode-default, exec --no-startup-id nmcli connection down ethernet
 
 mode $-mode-network bindsym return mode $-mode-default
 mode $-mode-network bindsym escape mode $-mode-default
@@ -51,10 +51,10 @@ mode $-mode-resize bindsym escape mode $-mode-default
 
 bindsym --to-code $-modifier+ctrl+p mode $-mode-system
 
-mode $-mode-system bindsym --to-code p       exec --no-startup-id mode $-mode-default, systemctl poweroff
-mode $-mode-system bindsym --to-code r       exec --no-startup-id mode $-mode-default, systemctl reboot
-mode $-mode-system bindsym --to-code r+shift exec --no-startup-id mode $-mode-default, systemctl reboot --firmware-setup
-mode $-mode-system bindsym --to-code s       exec --no-startup-id mode $-mode-default, systemctl suspend
+mode $-mode-system bindsym --to-code p       mode $-mode-default, exec --no-startup-id systemctl poweroff
+mode $-mode-system bindsym --to-code r       mode $-mode-default, exec --no-startup-id systemctl reboot
+mode $-mode-system bindsym --to-code r+shift mode $-mode-default, exec --no-startup-id systemctl reboot --firmware-setup
+mode $-mode-system bindsym --to-code s       mode $-mode-default, exec --no-startup-id systemctl suspend
 
 mode $-mode-system bindsym return mode $-mode-default
 mode $-mode-system bindsym escape mode $-mode-default
@@ -63,8 +63,8 @@ mode $-mode-system bindsym escape mode $-mode-default
 
 bindsym --to-code $-modifier+ctrl+v mode $-mode-vpn
 
-mode $-mode-vpn bindsym --to-code a exec --no-startup-id mode $-mode-default, cat /-/vpn/key | nmcli connection up corus --ask
-mode $-mode-vpn bindsym --to-code z exec --no-startup-id mode $-mode-default, nmcli connection down corus
+mode $-mode-vpn bindsym --to-code a mode $-mode-default, exec --no-startup-id cat /-/vpn/key | nmcli connection up corus --ask
+mode $-mode-vpn bindsym --to-code z mode $-mode-default, exec --no-startup-id nmcli connection down corus
 
 mode $-mode-vpn bindsym return mode $-mode-default
 mode $-mode-vpn bindsym escape mode $-mode-default
@@ -73,8 +73,8 @@ mode $-mode-vpn bindsym escape mode $-mode-default
 
 bindsym --to-code $-modifier+ctrl+w mode $-mode-wireguard
 
-mode $-mode-wireguard bindsym --to-code a exec --no-startup-id mode $-mode-default, sudo wg-quick up   /-/wireguard/wireguard.conf
-mode $-mode-wireguard bindsym --to-code z exec --no-startup-id mode $-mode-default, sudo wg-quick down /-/wireguard/wireguard.conf
+mode $-mode-wireguard bindsym --to-code a mode $-mode-default, exec --no-startup-id sudo wg-quick up   /-/wireguard/wireguard.conf
+mode $-mode-wireguard bindsym --to-code z mode $-mode-default, exec --no-startup-id sudo wg-quick down /-/wireguard/wireguard.conf
 
 mode $-mode-wireguard bindsym return mode $-mode-default
 mode $-mode-wireguard bindsym escape mode $-mode-default

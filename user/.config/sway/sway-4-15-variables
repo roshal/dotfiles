@@ -3,30 +3,7 @@
 
 set $-modifier mod4
 
-set $-mode-default default
-
-set $-mode-audio audio
-set $-mode-bluetooth bluetooth
-set $-mode-nag nag
-set $-mode-network network
-set $-mode-resize resize
-set $-mode-system system
-set $-mode-vpn vpn
-
-set $-swaynag swaynag -t custom -m 'you pressed the exit shortcut - do you really want to exit sway ? - this will end your wayland session' -b 'yes - exit sway' 'swaymsg exit'
-
-set $-idle-before-sleep before-sleep swaylock
-set $-idle-timeout-lock timeout 4096 swaylock
-set $-idle-timeout-dpms timeout 8192 swaymsg "output * dpms off"
-set $-idle-resume             resume swaymsg "output * dpms on"
-
-set $-echo-keyboard-layout $(swaymsg -t get_inputs | jq -r 'max_by(.xkb_active_layout_index).xkb_active_layout_name[0:2] | try ascii_upcase // "--"')
-
-set $-echo-output-focused $(swaymsg -t get_outputs | jq -r '.[] | select(.focused)         | .name')
-set $-echo-output-suspend $(swaymsg -t get_outputs | jq -r '.[] | select(.focused != true) | .name')
-
-set $-echo-date $(date +%y-%m-%d)
-set $-echo-time $(date +%H-%M-%S)
+### commands
 
 set $-grim-crop slurp -b 00000000 -w 1 | grim -g -
 set $-grim-full grim -o $-echo-output-focused
@@ -37,21 +14,56 @@ set $-grim-path /-/grim/grim--$-echo-date--$-echo-time.png
 
 set $-grim-slurp slurp -b 00000000 -w 1 -f "$(echo -e 'x %x\ny %y\nw %w\nh %h')" | xargs -0 notify-send
 
-set $-way-u up
-set $-way-l left
-set $-way-r right
-set $-way-d down
+### echo
 
-set $-way-p prior
-set $-way-n next
+set $-echo-keyboard-layout $(swaymsg -t get_inputs | jq -r 'max_by(.xkb_active_layout_index).xkb_active_layout_name[0:2] | try ascii_upcase // "--"')
 
-set $-mouse-l button1
-set $-mouse-r button2
-set $-mouse-m button3
-set $-mouse-u button4
-set $-mouse-d button5
-set $-mouse-s button8
-set $-mouse-e button9
+set $-echo-output-focused $(swaymsg -t get_outputs | jq -r '.[] | select(.focused)         | .name')
+set $-echo-output-suspend $(swaymsg -t get_outputs | jq -r '.[] | select(.focused != true) | .name')
+
+set $-echo-date $(date +%y-%m-%d)
+set $-echo-time $(date +%H-%M-%S)
+
+### idle
+
+set $-idle-before-sleep before-sleep swaylock
+set $-idle-timeout-lock timeout 4096 swaylock
+set $-idle-timeout-dpms timeout 8192 swaymsg "output * dpms off"
+set $-idle-resume             resume swaymsg "output * dpms on"
+
+### macs
+
+set $-mac-headset 70:26:05:DD:FD:DD
+
+### outputs
+
+set $-output-0 DP-1
+set $-output-1 HDMI-A-1
+set $-output-2 HDMI-A-2
+
+### swaynag
+
+set $-swaynag swaynag -t custom -m 'you pressed the exit shortcut - do you really want to exit sway ? - this will end your wayland session' -b 'yes - exit sway' 'swaymsg exit'
+
+### lists
+
+### colors
+
+set $-black-a 000000
+set $-black-b 333333
+set $-black-c 666666
+set $-black-d 999999
+set $-black-e cccccc
+set $-black-f ffffff
+
+set $-color-r 993366
+set $-color-g 669933
+set $-color-y 996633
+set $-color-b 336699
+set $-color-m 663399
+set $-color-c 339966
+
+### keys
 
 set $-key-0 grave
 set $-key-1 1
@@ -73,6 +85,40 @@ set $-key-h home
 set $-key-d delete
 set $-key-e end
 
+### modes
+
+set $-mode-default default
+
+set $-mode-audio audio
+set $-mode-bluetooth bluetooth
+set $-mode-nag nag
+set $-mode-network network
+set $-mode-resize resize
+set $-mode-system system
+set $-mode-vpn vpn
+
+### mouse
+
+set $-mouse-l button1
+set $-mouse-r button2
+set $-mouse-m button3
+set $-mouse-u button4
+set $-mouse-d button5
+set $-mouse-s button8
+set $-mouse-e button9
+
+### ways
+
+set $-way-u up
+set $-way-l left
+set $-way-r right
+set $-way-d down
+
+set $-way-p prior
+set $-way-n next
+
+### workspaces
+
 set $-workspace-0 '0:0       '
 set $-workspace-1 '1:1       '
 set $-workspace-2 '2:2       '
@@ -83,23 +129,3 @@ set $-workspace-6 '6:6       '
 set $-workspace-7 '7:7       '
 set $-workspace-8 '8:8       '
 set $-workspace-9 '9:9       '
-
-set $-output-0 DP-1
-set $-output-1 HDMI-A-1
-set $-output-2 HDMI-A-2
-
-set $-black-a 000000
-set $-black-b 333333
-set $-black-c 666666
-set $-black-d 999999
-set $-black-e cccccc
-set $-black-f ffffff
-
-set $-color-r 993366
-set $-color-g 669933
-set $-color-y 996633
-set $-color-b 336699
-set $-color-m 663399
-set $-color-c 339966
-
-set $-mac-headset 70:26:05:DD:FD:DD

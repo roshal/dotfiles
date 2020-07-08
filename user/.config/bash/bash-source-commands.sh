@@ -1,6 +1,8 @@
 
 ### alphabet
 
+alias AZ='echo ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+alias ZA='echo ZYXWVUTSRQPONMLKJIHGFEDCBA'
 alias az='echo abcdefghijklmnopqrstuvwxyz'
 alias za='echo zyxwvutsrqponmlkjihgfedcba'
 
