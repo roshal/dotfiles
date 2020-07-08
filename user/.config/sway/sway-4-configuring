@@ -1,11 +1,14 @@
 
 ##### 4.1 comments
+# # # https://i3wm.org/docs/userguide.html#_comments
 
 ##### 4.2 fonts
+# # # https://i3wm.org/docs/userguide.html#fonts
 
 font pango: monospace 9
 
 ##### 4.3 keyboard bindings
+# # # https://i3wm.org/docs/userguide.html#keybindings
 
 # bindsym --to-code XF86AudioPlay    exec notify-send play
 # bindsym --to-code XF86AudioNext    exec notify-send next
@@ -25,72 +28,68 @@ bindsym XF86AudioMute    exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1db
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1db
 
-bindsym --to-code $-modifier+alt+h exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD headset_head_unit
-bindsym --to-code $-modifier+alt+a exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD a2dp_sink
-bindsym --to-code $-modifier+alt+o exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD off
-
-bindsym --to-code $-modifier+alt+m       exec makoctl dismiss --all
-bindsym --to-code $-modifier+alt+m+shift exec makoctl dismiss
-
 bindsym --to-code $-modifier+f9  exec playerctl play-pause
 bindsym --to-code $-modifier+f10 exec playerctl stop
 bindsym --to-code $-modifier+f11 exec playerctl previous
 bindsym --to-code $-modifier+f12 exec playerctl next
 
+bindsym --to-code $-modifier+m       exec makoctl dismiss --all
+bindsym --to-code $-modifier+m+shift exec makoctl dismiss
+
 # bindsym --whole-window BTN_EXTRA workspace prev_on_output
 # bindsym --whole-window BTN_SIDE workspace next_on_output
 
-bindsym --whole-window $-modifier+button8 workspace prev_on_output
-bindsym --whole-window $-modifier+button9 workspace next_on_output
+bindsym --whole-window $-modifier+$-mouse-s focus $-way-l
+bindsym --whole-window $-modifier+$-mouse-e focus $-way-r
 
 ##### 4.4 mouse bindings
+# # # https://i3wm.org/docs/userguide.html#mousebindings
 
 ##### 4.5 binding modes
-
-bindsym --to-code $-modifier+shift+r mode $-mode-resize
-
-mode $-mode-resize bindsym --to-code $-way-l resize shrink width  16px
-mode $-mode-resize bindsym --to-code $-way-d resize grow   height 16px
-mode $-mode-resize bindsym --to-code $-way-u resize shrink height 16px
-mode $-mode-resize bindsym --to-code $-way-r resize grow   width  16px
-
-mode $-mode-resize bindsym return mode $-mode-default
-mode $-mode-resize bindsym escape mode $-mode-default
+# # # https://i3wm.org/docs/userguide.html#binding_modes
 
 ##### 4.6 the floating modifier
+# # # https://i3wm.org/docs/userguide.html#floating_modifier
 
 # floating_modifier $-modifier normal
 # floating_modifier $-modifier inverse
 floating_modifier $-modifier
 
 ##### 4.7 constraining floating window size
+# # # https://i3wm.org/docs/userguide.html#_constraining_floating_window_size
 
 floating_minimum_size  256 x 160
 floating_maximum_size 1536 x 960
 
 ##### 4.8 orientation for new workspaces
+# # # https://i3wm.org/docs/userguide.html#_orientation_for_new_workspaces
 
 # default_orientation auto
 
 ##### 4.9 layout mode for new containers
+# # # https://i3wm.org/docs/userguide.html#_layout_mode_for_new_containers
 
 workspace_layout tabbed
 
 ##### 4.10 window title alignment
+# # # https://i3wm.org/docs/userguide.html#_window_title_alignment
 
 # title_align left
 
 ##### 4.11 default border style for new windows
+# # # https://i3wm.org/docs/userguide.html#_default_border_style_for_new_windows
 
 default_border none 1
 
 default_floating_border none 1
 
 ##### 4.12 hiding borders adjacent to the screen edges
+# # # https://i3wm.org/docs/userguide.html#_hiding_vertical_borders
 
 hide_edge_borders --i3 both
 
 ##### 4.13 arbitrary commands for specific windows
+# # # https://i3wm.org/docs/userguide.html#for_window
 
 for_window [shell="^xwayland$"] border normal 0
 
@@ -134,14 +133,18 @@ for_window [instance="^telegram-desktop$"] border none
 # for_window [instance="^sublime_text$"]
 
 ##### 4.14 do not focus window upon opening
+# # # https://i3wm.org/docs/userguide.html#no_focus
 
 # no_focus [window_role=pop-up]
 
 ##### 4.15 variables
+# # # https://i3wm.org/docs/userguide.html#variables
 
 ##### 4.16 x resources
+# # # https://i3wm.org/docs/userguide.html#xresources
 
 ##### 4.17 automatically putting clients on specific workspaces
+# # # https://i3wm.org/docs/userguide.html#assign_workspace
 
 assign [instance="^zoom$"] $-workspace-9
 
@@ -151,12 +154,15 @@ assign [app_id="^telegramdesktop$"] $-workspace-8
 assign [instance="^telegram-desktop$"] $-workspace-8
 
 ##### 4.18 automatically starting applications on i3 startup
+# # # https://i3wm.org/docs/userguide.html#_automatically_starting_applications_on_i3_startup
 
 # exec swayidle -w $-idle-before-sleep $-idle-timeout-lock $-idle-timeout-dpms $-idle-resume
 
 ##### 4.19 automatically putting workspaces on specific screens
+# # # https://i3wm.org/docs/userguide.html#workspace_screen
 
 ##### 4.20 changing colors
+# # # https://i3wm.org/docs/userguide.html#_changing_colors
 
 ### class border background text indicator child_border
 client.focused          $-black-d $-black-d $-black-f $-black-f $-black-d
@@ -165,49 +171,59 @@ client.unfocused        $-black-b $-black-b $-black-d $-black-f $-black-b
 client.urgent           $-color-y $-color-y $-black-f $-black-f $-color-y
 
 ##### 4.21 interprocess communication
+# # # https://i3wm.org/docs/userguide.html#_interprocess_communication
 
 ##### 4.22 focus follows mouse
+# # # https://i3wm.org/docs/userguide.html#_focus_follows_mouse
 
 focus_follows_mouse no
 
 ##### 4.23 mouse warping
+# # # https://i3wm.org/docs/userguide.html#_mouse_warping
 
 ### deafult
 # mouse_warping output
 
 ##### 4.24 popups during fullscreen mode
+# # # https://i3wm.org/docs/userguide.html#_popups_during_fullscreen_mode
 
 ### deafult
 # popup_during_fullscreen smart
 
 ##### 4.25 focus wrapping
+# # # https://i3wm.org/docs/userguide.html#_focus_wrapping
 
 ### deafult
 # focus_wrapping yes
 
 ##### 4.26 forcing xinerama
+# # # https://i3wm.org/docs/userguide.html#_forcing_xinerama
 
 ### deafult
 # force_xinerama no
 
 ##### 4.27 automatic back-and-forth when switching to the current workspace
+# # # https://i3wm.org/docs/userguide.html#workspace_auto_back_and_forth
 
-### deafult
-# workspace_auto_back_and_forth no
+workspace_auto_back_and_forth yes
 
 ##### 4.28 delaying urgency hint reset on workspace change
+# # # https://i3wm.org/docs/userguide.html#_delaying_urgency_hint_reset_on_workspace_change
 
 ### deafult
 # force_display_urgency_hint 500 ms
 
 ##### 4.29 focus on window activation
+# # # https://i3wm.org/docs/userguide.html#focus_on_window_activation
 
 ### deafult
 # focus_on_window_activation smart
 
 ##### 4.30 drawing marks on window decoration
+# # # https://i3wm.org/docs/userguide.html#show_marks
 
 ### deafult
 # show_marks yes
 
 ##### 4.31 line continuation
+# # # https://i3wm.org/docs/userguide.html#line_continuation

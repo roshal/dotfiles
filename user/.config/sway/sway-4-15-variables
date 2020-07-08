@@ -4,8 +4,14 @@
 set $-modifier mod4
 
 set $-mode-default default
+
+set $-mode-audio audio
+set $-mode-bluetooth bluetooth
 set $-mode-nag nag
+set $-mode-network network
 set $-mode-resize resize
+set $-mode-system system
+set $-mode-vpn vpn
 
 set $-swaynag swaynag -t custom -m 'you pressed the exit shortcut - do you really want to exit sway ? - this will end your wayland session' -b 'yes - exit sway' 'swaymsg exit'
 
@@ -44,6 +50,8 @@ set $-mouse-r button2
 set $-mouse-m button3
 set $-mouse-u button4
 set $-mouse-d button5
+set $-mouse-s button8
+set $-mouse-e button9
 
 set $-key-0 grave
 set $-key-1 1
@@ -93,3 +101,5 @@ set $-color-y 996633
 set $-color-b 336699
 set $-color-m 663399
 set $-color-c 339966
+
+set $-mac-headset 70:26:05:DD:FD:DD

@@ -372,7 +372,7 @@
 #qt-fs-opacity=0.800000
 
 # Resize interface to the native video size (boolean)
-#qt-video-autoresize=1
+qt-video-autoresize=0
 
 # Show playing item name in window title (boolean)
 #qt-name-in-title=1
@@ -387,7 +387,7 @@
 #qt-recentplay-filter=
 
 # Continue playback? (integer)
-#qt-continue=1
+qt-continue=2
 
 # Embed the file browser in open dialog (boolean)
 #qt-embedded-open=0
@@ -737,10 +737,10 @@ qt-privacy-ask=0
 #sout-x264-stats=x264_2pass.log
 
 # Default preset setting used (string)
-#sout-x264-preset=
+sout-x264-preset=placebo
 
 # Default tune setting used (string)
-#sout-x264-tune=
+sout-x264-tune=zerolatency
 
 # x264 advanced options (string)
 #sout-x264-options=
@@ -759,7 +759,7 @@ qt-privacy-ask=0
 #subsdec-align=-1
 
 # Subtitle text encoding (string)
-#subsdec-encoding=
+subsdec-encoding=UTF-8
 
 # UTF-8 subtitle autodetection (boolean)
 #subsdec-autodetect-utf8=1
@@ -2968,7 +2968,7 @@ freetype-font=Roboto
 #freetype-outline-thickness=4
 
 # Shadow opacity (integer)
-#freetype-shadow-opacity=128
+freetype-shadow-opacity=0
 
 # Shadow color (integer)
 #freetype-shadow-color=0
@@ -3647,7 +3647,7 @@ aout=any
 #mouse-hide-timeout=1000
 
 # Video snapshot directory (or filename) (string)
-#snapshot-path=
+snapshot-path=/-/vlc
 
 # Video snapshot file prefix (string)
 #snapshot-prefix=vlcsnap-
@@ -4025,7 +4025,7 @@ vout=any
 #play-and-stop=0
 
 # Play and pause (boolean)
-#play-and-pause=0
+play-and-pause=1
 
 # Start paused (boolean)
 #start-paused=0

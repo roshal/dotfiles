@@ -66,7 +66,7 @@ alias tsc='npx tsc'
 ### pacman
 
 alias update='sudo pacman --sync --refresh --sysupgrade'
-alias updates='pacman --query --upgrades'
+alias updates='sudo pacman --sync --refresh && pacman --query --upgrades'
 
 ### path
 
@@ -79,6 +79,10 @@ alias p='pulsemixer'
 ### python
 
 alias py='python'
+
+### rm
+
+alias rr='rm --recursive'
 
 ### systemctl
 

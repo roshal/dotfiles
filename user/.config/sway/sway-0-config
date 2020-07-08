@@ -7,14 +7,17 @@
 
 include '~/.config/sway/sway-$(cat /etc/hostname)'
 
-##### 4
+##### 4 configuring
+# # # https://i3wm.org/docs/userguide.html#configuring
 
 # # swaymsg -t get_tree
 
-include '~/.config/sway/sway-4-variables'
-include '~/.config/sway/sway-4-zero'
+include '~/.config/sway/sway-4-15-variables'
+include '~/.config/sway/sway-4-binding-modes'
+include '~/.config/sway/sway-4-configuring'
 
 ##### 5 configuring i3bar
+# # # https://i3wm.org/docs/userguide.html#_configuring_i3bar
 
 # bar pango_markup enabled
 
@@ -30,12 +33,14 @@ bar status_padding 4
 include '~/.config/sway/sway-5-bar'
 
 ##### 6 list of commands
+# # # https://i3wm.org/docs/userguide.html#list_of_commands
 
 # # sudo libinput debug-events
 
 include '~/.config/sway/sway-6-bindsym'
 
 ##### sway
+# # # https://github.com/swaywm/sway/wiki
 
 titlebar_padding 6 4
 
@@ -44,6 +49,9 @@ titlebar_padding 6 4
 
 input type:keyboard xkb_layout us,ru
 input type:keyboard xkb_options grp:caps_toggle
+
+input type:keyboard repeat_delay 250
+input type:keyboard repeat_rate 30
 
 # input type:pointer accel_profile flat
 # input type:pointer pointer_accel 1

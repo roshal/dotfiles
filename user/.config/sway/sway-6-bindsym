@@ -94,6 +94,7 @@ bindsym --to-code $-modifier+shift+s sticky toggle
 ##### 6.8 changing workspaces or moving to workspaces
 
 bindsym $-modifier+tab workspace back_and_forth
+bindsym $-modifier+caps_lock workspace back_and_forth
 
 bindsym $-modifier+$-way-n      workspace next_on_output
 bindsym $-modifier+$-way-r+ctrl workspace next_on_output
@@ -146,7 +147,7 @@ bindsym $-modifier+$-key-e+shift move container to $-workspace-7
 
 ##### 6.16 changing border style
 
-bindsym --to-code $-modifier+b border toggle
+bindsym --to-code $-modifier+shift+b border toggle
 
 ##### 6.17 enabling shared memory logging
 
@@ -171,4 +172,4 @@ bindsym $-modifier+minus+shift scratchpad show
 
 ##### 6.22 i3bar control
 
-bindsym --to-code $-modifier+m bar mode toggle
+bindsym --to-code $-modifier+b bar mode toggle
