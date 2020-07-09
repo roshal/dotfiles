@@ -38,6 +38,8 @@ include '~/.config/sway/sway-5-bar'
 # # sudo libinput debug-events
 
 include '~/.config/sway/sway-6-bindsym'
+include '~/.config/sway/sway-6-bindsym-audio'
+include '~/.config/sway/sway-6-bindsym-mouse'
 
 ##### sway
 # # # https://github.com/swaywm/sway/wiki

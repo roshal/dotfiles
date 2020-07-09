@@ -10,6 +10,16 @@ mode $-mode-audio bindsym --to-code a mode $-mode-default, exec pactl set-card-p
 mode $-mode-audio bindsym --to-code h mode $-mode-default, exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD headset_head_unit
 mode $-mode-audio bindsym --to-code o mode $-mode-default, exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD off
 
+mode $-mode-audio bindsym --whole-window $-mouse-u exec pactl set-sink-volume @DEFAULT_SINK@ +1db && $-pulsemixer-volume > $-mako-pulsemixer
+mode $-mode-audio bindsym --whole-window $-mouse-m exec pactl set-sink-volume @DEFAULT_SINK@  0db && $-pulsemixer-volume > $-mako-pulsemixer
+mode $-mode-audio bindsym --whole-window $-mouse-d exec pactl set-sink-volume @DEFAULT_SINK@ -1db && $-pulsemixer-volume > $-mako-pulsemixer
+
+mode $-mode-audio bindsym --whole-window $-mouse-e exec pactl set-sink-mute @DEFAULT_SINK@ on  && $-pulsemixer-volume > $-mako-pulsemixer
+mode $-mode-audio bindsym --whole-window $-mouse-s exec pactl set-sink-mute @DEFAULT_SINK@ off && $-pulsemixer-volume > $-mako-pulsemixer
+
+mode $-mode-audio bindsym --whole-window $-mouse-e+shift exec pactl set-source-mute @DEFAULT_SINK@ on  && $-pulsemixer-volume > $-mako-pulsemixer
+mode $-mode-audio bindsym --whole-window $-mouse-s+shift exec pactl set-source-mute @DEFAULT_SINK@ off && $-pulsemixer-volume > $-mako-pulsemixer
+
 mode $-mode-audio bindsym return mode $-mode-default
 mode $-mode-audio bindsym escape mode $-mode-default
 

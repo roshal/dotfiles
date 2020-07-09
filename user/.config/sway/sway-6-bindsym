@@ -59,9 +59,6 @@ bindsym $-modifier+$-way-l focus $-way-l
 bindsym $-modifier+$-way-r focus $-way-r
 bindsym $-modifier+$-way-d focus $-way-d
 
-bindsym --whole-window $-modifier+$-mouse-u+shift focus $-way-l
-bindsym --whole-window $-modifier+$-mouse-d+shift focus $-way-r
-
 ##### 6.5 moving containers
 
 bindsym $-modifier+$-way-u+shift move $-way-u
@@ -104,9 +101,6 @@ bindsym $-modifier+$-way-p      workspace prev_on_output
 bindsym $-modifier+$-way-l+ctrl workspace prev_on_output
 bindsym $-modifier+$-way-l+mod1 workspace prev_on_output
 
-bindsym --whole-window $-modifier+$-mouse-u workspace prev_on_output
-bindsym --whole-window $-modifier+$-mouse-d workspace next_on_output
-
 bindsym --to-code $-modifier+z       workspace next_on_output
 bindsym --to-code $-modifier+z+shift workspace prev_on_output
 
@@ -121,15 +115,25 @@ bindsym --to-code $-modifier+$-key-7 workspace $-workspace-7
 bindsym --to-code $-modifier+$-key-8 workspace $-workspace-8
 bindsym --to-code $-modifier+$-key-9 workspace $-workspace-9
 
-bindsym $-modifier+$-key-i workspace $-workspace-0
-bindsym $-modifier+$-key-h workspace $-workspace-1
-bindsym $-modifier+$-key-d workspace $-workspace-2
-bindsym $-modifier+$-key-e workspace $-workspace-3
+bindsym $-modifier+$-key-i workspace $-workspace-6
+bindsym $-modifier+$-key-h workspace $-workspace-7
+bindsym $-modifier+$-key-d workspace $-workspace-8
+bindsym $-modifier+$-key-e workspace $-workspace-9
 
-bindsym $-modifier+$-key-i+shift move container to $-workspace-4
-bindsym $-modifier+$-key-h+shift move container to $-workspace-5
-bindsym $-modifier+$-key-d+shift move container to $-workspace-6
-bindsym $-modifier+$-key-e+shift move container to $-workspace-7
+bindsym $-modifier+$-key-i+shift move container to $-workspace-6
+bindsym $-modifier+$-key-h+shift move container to $-workspace-7
+bindsym $-modifier+$-key-d+shift move container to $-workspace-8
+bindsym $-modifier+$-key-e+shift move container to $-workspace-9
+
+bindsym $-modifier+$-key-i+mod1 workspace $-workspace-1
+bindsym $-modifier+$-key-h+mod1 workspace $-workspace-2
+bindsym $-modifier+$-key-d+mod1 workspace $-workspace-3
+bindsym $-modifier+$-key-e+mod1 workspace $-workspace-4
+
+bindsym $-modifier+$-key-i+mod1+shift move container to $-workspace-1
+bindsym $-modifier+$-key-h+mod1+shift move container to $-workspace-2
+bindsym $-modifier+$-key-d+mod1+shift move container to $-workspace-3
+bindsym $-modifier+$-key-e+mod1+shift move container to $-workspace-4
 
 ##### 6.9 moving workspaces to a different screen
 

@@ -41,6 +41,10 @@ set $-output-0 DP-1
 set $-output-1 HDMI-A-1
 set $-output-2 HDMI-A-2
 
+### pulsemixer
+
+set $-pulsemixer-volume pulsemixer --get-volume | jq -s add/length
+
 ### swaynag
 
 set $-swaynag swaynag -t custom -m 'you pressed the exit shortcut - do you really want to exit sway ? - this will end your wayland session' -b 'yes - exit sway' 'swaymsg exit'
@@ -85,6 +89,10 @@ set $-key-h home
 set $-key-d delete
 set $-key-e end
 
+### mako
+
+set $-mako-pulsemixer /-/mako/pulsemixer
+
 ### modes
 
 set $-mode-default default
@@ -99,13 +107,35 @@ set $-mode-vpn vpn
 
 ### mouse
 
+# set $-mouse-l BTN_LEFT
+# set $-mouse-r BTN_RIGHT
+
 set $-mouse-l button1
 set $-mouse-r button2
-set $-mouse-m button3
+
+# set $-mouse-m button3
+
+set $-mouse-m BTN_MIDDLE
+
 set $-mouse-u button4
 set $-mouse-d button5
+
+# set $-mouse-f BTN_FORWARD
+# set $-mouse-b BTN_BACK
+
+set $-mouse-f button6
+set $-mouse-b button7
+
+### north south
+
+# set $-mouse-s BTN_SIDE
+# set $-mouse-e BTN_EXTRA
+
 set $-mouse-s button8
 set $-mouse-e button9
+
+# set $-mouse-t BTN_TASK
+# set $-mouse-j BTN_JOYSTICK
 
 ### ways
 
@@ -116,6 +146,10 @@ set $-way-d down
 
 set $-way-p prior
 set $-way-n next
+
+### wob
+
+set $-wob-base wob -t1000 -W400 -H8 -o0 -b0 -p0 -abottom -M-16
 
 ### workspaces
 
