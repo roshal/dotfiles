@@ -10,6 +10,8 @@ font pango: monospace 9
 ##### 4.3 keyboard bindings
 # # # https://i3wm.org/docs/userguide.html#keybindings
 
+# # https://github.com/swaywm/sway/wiki/Shortcut-handling
+
 ##### 4.4 mouse bindings
 # # # https://i3wm.org/docs/userguide.html#mousebindings
 
