@@ -65,7 +65,10 @@ alias tsc='npx tsc'
 
 ### pacman
 
+alias cleanse='sudo pacman --remove --nosave --recursive $(pacman --query --deps --quiet --unrequired)'
+
 alias update='sudo pacman --sync --refresh --sysupgrade'
+
 alias updates='sudo pacman --sync --refresh && pacman --query --upgrades'
 
 ### path

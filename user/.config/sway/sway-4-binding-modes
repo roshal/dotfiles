@@ -59,7 +59,7 @@ mode $-mode-resize bindsym escape mode $-mode-default
 
 ### system
 
-bindsym --to-code $-modifier+ctrl+p mode $-mode-system
+bindsym --to-code $-modifier+ctrl+s mode $-mode-system
 
 mode $-mode-system bindsym --to-code p       mode $-mode-default, exec --no-startup-id systemctl poweroff
 mode $-mode-system bindsym --to-code r       mode $-mode-default, exec --no-startup-id systemctl reboot
