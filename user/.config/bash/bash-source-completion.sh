@@ -6,3 +6,8 @@
 # }
 
 # complete -o default -F _pip_completion pip
+
+### yarn
+# # https://github.com/dsifford/yarn-completion
+
+# curl --create-dirs --output /home/user/.local/share/bash-completion/completions/yarn -- https://raw.githubusercontent.com/dsifford/yarn-completion/master/yarn-completion.bash

@@ -85,7 +85,10 @@ alias py='python'
 
 ### rm
 
+alias rf='rm --force'
 alias rr='rm --recursive'
+
+alias rrf='rm --force --recursive'
 
 ### systemctl
 

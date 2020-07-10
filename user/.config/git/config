@@ -71,6 +71,7 @@ echo = !echo
 
 ### default
 
+loghex = log --abbrev=8
 loging = log --reverse --color --abbrev=8 --date=format:%y-%m-%d --pretty='%C(auto)%cd %h %<(8,trunc)%ce %<(53,trunc)%s%n%-d%C(reset)'
 
 ### custom

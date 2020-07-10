@@ -1,0 +1,6 @@
+
+[Desktop Entry]
+
+Type=Application
+Name=network manager applet
+Exec=nm-applet --indicator
