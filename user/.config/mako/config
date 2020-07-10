@@ -1,0 +1,59 @@
+
+### global configuration options
+
+max-visible=5
+
+# sort=-time
+
+# output=""
+
+# layer=top
+
+anchor=bottom-right
+
+### style options
+
+font=monospace 9
+
+background-color=#333333
+
+text-color=#ffffff
+
+width=256
+
+height=256
+
+margin=8
+
+padding=8
+
+border-size=0
+
+# border-color=#4c7899ff
+
+border-radius=8
+
+# progress-color=over #5588aaff
+
+# icons=1
+
+# max-icon-size=64
+
+# icon-path=""
+
+# markup=1
+
+# actions=1
+
+format=<b>%s</b>\n\n%b
+
+# default-timeout=0
+
+# ignore-timeout=0
+
+group-by=app-name
+
+[grouped]
+
+format=<b>%s</b>\n\n%b
+# format=<b>%s</b>\n\n%b\n\n%a %g-%h-%t

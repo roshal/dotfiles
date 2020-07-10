@@ -101,8 +101,8 @@ bindsym $-modifier+$-way-p      workspace prev_on_output
 bindsym $-modifier+$-way-l+ctrl workspace prev_on_output
 bindsym $-modifier+$-way-l+mod1 workspace prev_on_output
 
-bindsym --to-code $-modifier+z       workspace next_on_output
-bindsym --to-code $-modifier+z+shift workspace prev_on_output
+bindsym --to-code $-modifier+x workspace next_on_output
+bindsym --to-code $-modifier+z workspace prev_on_output
 
 bindsym --to-code $-modifier+$-key-0 workspace $-workspace-0
 bindsym --to-code $-modifier+$-key-1 workspace $-workspace-1
