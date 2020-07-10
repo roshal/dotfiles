@@ -62,12 +62,16 @@ co = checkout --no-guess
 br = branch
 ci = commit
 st = status
-unstage = reset @ --
+
 last = log -1 @
 hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 type = cat-file -t
 dump = cat-file -p
 echo = !echo
+
+remove = rm --cached
+
+unstage = reset @ --
 
 ### default
 
