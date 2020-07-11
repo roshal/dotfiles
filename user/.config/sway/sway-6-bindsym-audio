@@ -26,13 +26,6 @@ bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1db && $
 bindsym --to-code $-modifier+m       exec makoctl dismiss --all
 bindsym --to-code $-modifier+m+shift exec makoctl dismiss
 
-### playerctl
-
-bindsym --to-code $-modifier+f9  exec playerctl play-pause
-bindsym --to-code $-modifier+f10 exec playerctl stop
-bindsym --to-code $-modifier+f11 exec playerctl previous
-bindsym --to-code $-modifier+f12 exec playerctl next
-
 ### pactl
 
 bindsym --whole-window $-modifier+ctrl+$-mouse-u exec pactl set-sink-volume @DEFAULT_SINK@ +1db && $-pulsemixer-volume > $-mako-pulsemixer
@@ -44,3 +37,10 @@ bindsym --whole-window $-modifier+ctrl+shift+$-mouse-d exec pactl set-sink-mute 
 
 bindsym --whole-window $-modifier+ctrl+mod1+$-mouse-u exec pactl set-source-mute @DEFAULT_SINK@ off && $-pulsemixer-volume > $-mako-pulsemixer
 bindsym --whole-window $-modifier+ctrl+mod1+$-mouse-d exec pactl set-source-mute @DEFAULT_SINK@ on  && $-pulsemixer-volume > $-mako-pulsemixer
+
+### playerctl
+
+bindsym --to-code $-modifier+f9  exec playerctl play-pause
+bindsym --to-code $-modifier+f10 exec playerctl stop
+bindsym --to-code $-modifier+f11 exec playerctl previous
+bindsym --to-code $-modifier+f12 exec playerctl next

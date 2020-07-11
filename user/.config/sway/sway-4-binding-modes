@@ -35,6 +35,22 @@ mode $-mode-bluetooth bindsym --to-code z mode $-mode-default, exec --no-startup
 mode $-mode-bluetooth bindsym return mode $-mode-default
 mode $-mode-bluetooth bindsym escape mode $-mode-default
 
+### lock
+
+bindsym --to-code $-modifier+ctrl+l mode $-mode-lock
+
+mode $-mode-lock bindsym --to-code z exec swaylock --color 000000
+mode $-mode-lock bindsym --to-code b exec swaylock --color 0000ff
+mode $-mode-lock bindsym --to-code g exec swaylock --color 00ff00
+mode $-mode-lock bindsym --to-code c exec swaylock --color 00ffff
+mode $-mode-lock bindsym --to-code r exec swaylock --color ff0000
+mode $-mode-lock bindsym --to-code m exec swaylock --color ff00ff
+mode $-mode-lock bindsym --to-code y exec swaylock --color ffff00
+mode $-mode-lock bindsym --to-code w exec swaylock --color ffffff
+
+mode $-mode-lock bindsym return mode $-mode-default
+mode $-mode-lock bindsym escape mode $-mode-default
+
 ### network
 
 bindsym --to-code $-modifier+ctrl+n mode $-mode-network
@@ -73,7 +89,7 @@ mode $-mode-system bindsym escape mode $-mode-default
 
 bindsym --to-code $-modifier+ctrl+v mode $-mode-vpn
 
-mode $-mode-vpn bindsym --to-code a mode $-mode-default, exec --no-startup-id cat /-/vpn/key | nmcli connection up corus --ask
+mode $-mode-vpn bindsym --to-code a mode $-mode-default, exec --no-startup-id cat /-/keys/corus-vpn | nmcli connection up corus --ask
 mode $-mode-vpn bindsym --to-code z mode $-mode-default, exec --no-startup-id nmcli connection down corus
 
 mode $-mode-vpn bindsym return mode $-mode-default

@@ -1,20 +1,10 @@
 
-#######################  directory  type  options   dump  pass
+#######################  directory  type  options  dump  pass
 
-###### UUID=0d1e701c-28e7-49d4-8def-1d2ba672b9b9
-/dev/mapper/volume-swap  none       swap  defaults  0     0
+/dev/volume/root         /          ext4  discard  0     1
+/dev/volume/root-boot    /boot      ext4  discard  0     2
+/dev/volume/root-home    /home      ext4  discard  0     2
+/dev/volume/root-var     /var       ext4  discard  0     2
 
-###### UUID=ff65c5f7-d038-4d5e-b155-c9b121888f51
-/dev/mapper/volume-root  /          ext4  discard   0     1
-
-###### UUID=289c1e4f-5a2d-498d-8b0d-90caa8eb7dbc
-/dev/mapper/volume-boot  /boot      ext4  discard   0     2
-
-###### UUID=331cdff3-4f51-4545-8890-47b20b1d5a47
-/dev/mapper/volume-home  /home      ext4  discard   0     2
-
-###### UUID=b07ae262-2bf0-494e-b515-913966a43af8
-/dev/mapper/volume-var   /var       ext4  discard   0     2
-
-###### UUID=912310e5-d3b1-41a8-bb3b-3a42a11c093f
-/dev/mapper/volume-data  /-         ext4  discard   0     2
+/dev/volume/data         /-         ext4  discard  0     2
+/dev/volume/swap         none       swap  discard  0     0

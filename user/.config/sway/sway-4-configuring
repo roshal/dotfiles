@@ -1,4 +1,6 @@
 
+# # # https://i3wm.org/docs/userguide.html#configuring
+
 ##### 4.1 comments
 # # # https://i3wm.org/docs/userguide.html#_comments
 
@@ -130,7 +132,7 @@ assign [instance="^telegram-desktop$"] $-workspace-8
 
 # exec swayidle -w $-idle-before-sleep $-idle-timeout-lock $-idle-timeout-dpms $-idle-resume
 
-exec_always tail --follow $-mako-pulsemixer --lines 1 | $-wob-base
+# exec_always tail --follow $-mako-pulsemixer --lines 1 | $-wob-base
 
 ##### 4.19 automatically putting workspaces on specific screens
 # # # https://i3wm.org/docs/userguide.html#workspace_screen

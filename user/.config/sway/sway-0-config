@@ -1,4 +1,6 @@
 
+# # # https://i3wm.org/docs/userguide.html#configuring
+
 # # man 5 sway
 # # man 5 sway-bar
 # # man 5 sway-input
@@ -18,17 +20,6 @@ include '~/.config/sway/sway-4-configuring'
 
 ##### 5 configuring i3bar
 # # # https://i3wm.org/docs/userguide.html#_configuring_i3bar
-
-# bar pango_markup enabled
-
-### default
-# bar wrap_scroll no
-
-### have effect
-bar status_edge_padding 0
-
-### default
-bar status_padding 4
 
 include '~/.config/sway/sway-5-bar'
 

@@ -1,19 +1,29 @@
 
-bar height 0
+# # # https://i3wm.org/docs/userguide.html#_configuring_i3bar
 
-### seems by default
-# bar status_padding 4
+bar pango_markup enabled
+
+bar height 0
 
 ### no effect
 bar status_edge_padding 9
 
+### seems by default
+# bar status_padding 4
+
+### default
+# bar wrap_scroll no
+
 ##### 5.1 i3bar command
+# # # https://i3wm.org/docs/userguide.html#_i3bar_command
 
 ##### 5.2 configuring i3bar
+# # # https://i3wm.org/docs/userguide.html#status_command
 
-bar status_command while date +"%j-%U-%w %y-%m-%d %T "; do sleep 0.5; done
+bar status_command sh /-/shell/sway-bar-status.sh
 
 ##### 5.3 display mode
+# # # https://i3wm.org/docs/userguide.html#_display_mode
 
 ### default
 # bar mode dock
@@ -25,50 +35,67 @@ bar status_command while date +"%j-%U-%w %y-%m-%d %T "; do sleep 0.5; done
 # bar modifier mod4
 
 ##### 5.4 mouse button commands
+# # # https://i3wm.org/docs/userguide.html#_mouse_button_commands
 
 ##### 5.5 bar id
+# # # https://i3wm.org/docs/userguide.html#_bar_id
 
 ##### 5.6 position
+# # # https://i3wm.org/docs/userguide.html#i3bar_position
 
 ### default
 # bar position bottom
 
 ##### 5.7 outputs
+# # # https://i3wm.org/docs/userguide.html#_output_s
 
 ##### 5.8 tray output
+# # # https://i3wm.org/docs/userguide.html#_tray_output
 
 ##### 5.9 tray padding
+# # # https://i3wm.org/docs/userguide.html#_tray_padding
 
 bar tray_padding 0
 
 ##### 5.10 font
+# # # https://i3wm.org/docs/userguide.html#_font
 
 ### inherited
 # bar font pango:monospace 9
 
 ##### 5.11 custom separator symbol
+# # # https://i3wm.org/docs/userguide.html#_custom_separator_symbol
 
 ### no effect
 bar separator_symbol '|'
 
 ##### 5.12 workspace buttons
+# # # https://i3wm.org/docs/userguide.html#_workspace_buttons
 
 ### default
 # bar workspace_buttons yes
 
-##### 5.13 strip workspace numbers or name
+##### 5.13 minimal width for workspace buttons
+# # # https://i3wm.org/docs/userguide.html#_minimal_width_for_workspace_buttons
+
+# bar workspace_min_width 40
+
+##### 5.14 strip workspace numbers or name
+# # # https://i3wm.org/docs/userguide.html#_strip_workspace_numbers_name
 
 bar strip_workspace_numbers yes
 
 ### default
 # strip_workspace_name no
 
-##### 5.14 binding mode indicator
+##### 5.15 binding mode indicator
+# # # https://i3wm.org/docs/userguide.html#_binding_mode_indicator
 
 ### default
 # binding_mode_indicator yes
 
-##### 5.15 colors
+##### 5.16 colors
+# # # https://i3wm.org/docs/userguide.html#_colors
 
 bar colors background $-black-a
 bar colors statusline $-black-c
@@ -84,4 +111,5 @@ bar colors inactive_workspace $-black-b $-black-b $-black-d
 bar colors urgent_workspace   $-color-y $-color-y $-black-e
 bar colors binding_mode       $-color-b $-color-b $-black-e
 
-##### 5.16 transparency
+##### 5.17 transparency
+# # # https://i3wm.org/docs/userguide.html#_transparency
