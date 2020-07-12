@@ -76,7 +76,9 @@ unstage = reset @ --
 ### default
 
 loghex = log --abbrev=8
-loging = log --reverse --color --abbrev=8 --date=format:%y-%m-%d --pretty='%C(auto)%cd %h %<(8,trunc)%ce %<(53,trunc)%s%n%-d%C(reset)'
+
+# # https://git-scm.com/docs/pretty-formats
+loging = log --reverse --color --abbrev=8 --date='format:%y-%m-%d %T' --pretty='%C(auto)%ad %h %<(8,trunc)%ae %<(53,trunc)%s%n%-d%C(reset)'
 
 ### custom
 
@@ -98,7 +100,13 @@ com = commit
 cam = commit --allow-empty-message --no-edit --amend
 cem = commit --allow-empty-message --message '' --allow-empty
 
-amend = commit --amend
+amend = commit --amend --allow-empty-message --no-edit
+
+# # git config --local format.signoff true
+# # git config --local commit.gpgSign true
+sign = commit --signoff
+
+patch = add --patch
 
 #
 
@@ -160,6 +168,10 @@ rao = remote add origin
 rrg = remote remove github
 rrh = remote remove heroku
 rro = remote remove origin
+
+rsg = git remote set-url github
+rsh = git remote set-url heroku
+rso = git remote set-url origin
 
 #
 
