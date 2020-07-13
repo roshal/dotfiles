@@ -100,6 +100,8 @@ com = commit
 cam = commit --allow-empty-message --no-edit --amend
 cem = commit --allow-empty-message --message '' --allow-empty
 
+undo = reset --soft HEAD@{1}
+
 amend = commit --amend --allow-empty-message --no-edit
 
 # # git config --local format.signoff true
