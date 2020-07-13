@@ -27,10 +27,10 @@ mode $-mode-audio bindsym escape mode $-mode-default
 
 bindsym --to-code $-modifier+ctrl+c mode $-mode-cursor
 
-mode $-mode-cursor bindsym $-way-u seat - cursor move  0 -1
-mode $-mode-cursor bindsym $-way-l seat - cursor move -1  0
-mode $-mode-cursor bindsym $-way-r seat - cursor move  1  0
-mode $-mode-cursor bindsym $-way-d seat - cursor move  0  1
+mode $-mode-cursor bindsym $-way-u seat - cursor move  0        -$-step-a
+mode $-mode-cursor bindsym $-way-l seat - cursor move -$-step-a  0
+mode $-mode-cursor bindsym $-way-r seat - cursor move  $-step-a  0
+mode $-mode-cursor bindsym $-way-d seat - cursor move  0         $-step-a
 
 mode $-mode-cursor bindsym $-way-u+ctrl seat - cursor move  0        -$-step-b
 mode $-mode-cursor bindsym $-way-l+ctrl seat - cursor move -$-step-b  0
@@ -63,14 +63,14 @@ bindsym --to-code $-modifier+ctrl+k mode $-mode-kill
 
 mode $-mode-kill bindsym --to-code c mode $-mode-default , exec killall chromium
 mode $-mode-kill bindsym --to-code f mode $-mode-default , exec killall firefox
-mode $-mode-kill bindsym --to-code n mode $-mode-default , exec killall nn-applet
+mode $-mode-kill bindsym --to-code n mode $-mode-default , exec killall nm-applet
 mode $-mode-kill bindsym --to-code s mode $-mode-default , exec killall swaynag
 mode $-mode-kill bindsym --to-code t mode $-mode-default , exec killall telegram-desktop
 mode $-mode-kill bindsym --to-code v mode $-mode-default , exec killall vlc
 
 mode $-mode-kill bindsym --to-code c+shift mode $-mode-default , exec killall -9 chromium
 mode $-mode-kill bindsym --to-code f+shift mode $-mode-default , exec killall -9 firefox
-mode $-mode-kill bindsym --to-code n+shift mode $-mode-default , exec killall -9 nn-applet
+mode $-mode-kill bindsym --to-code n+shift mode $-mode-default , exec killall -9 nm-applet
 mode $-mode-kill bindsym --to-code s+shift mode $-mode-default , exec killall -9 swaynsg
 mode $-mode-kill bindsym --to-code t+shift mode $-mode-default , exec killall -9 telegram-desktop
 mode $-mode-kill bindsym --to-code v+shift mode $-mode-default , exec killall -9 vlc
@@ -101,7 +101,7 @@ bindsym --to-code $-modifier+ctrl+n mode $-mode-network
 mode $-mode-network bindsym --to-code a mode $-mode-default , exec nmcli connection up   ethernet
 mode $-mode-network bindsym --to-code z mode $-mode-default , exec nmcli connection down ethernet
 
-mode $-mode-network bindsym --to-code i exec 'killall nm-applet ; nm-applet --indicator'
+mode $-mode-network bindsym --to-code i mode $-mode-default , exec $-shell-nm-applet
 
 mode $-mode-network bindsym return mode $-mode-default
 mode $-mode-network bindsym escape mode $-mode-default
@@ -110,11 +110,11 @@ mode $-mode-network bindsym escape mode $-mode-default
 
 bindsym --to-code $-modifier+ctrl+o mode $-mode-output
 
-mode $-mode-output bindsym --to-code a mode $-mode-default , exec swaymsg -- output $-echo-output-suspend enable
-mode $-mode-output bindsym --to-code z mode $-mode-default , exec swaymsg -- output $-echo-output-focused enable
+mode $-mode-output bindsym --to-code a mode $-mode-default , exec swaymsg -- output $-echo-output-focused enable
+mode $-mode-output bindsym --to-code z mode $-mode-default , exec swaymsg -- output $-echo-output-suspend enable
 
-mode $-mode-output bindsym --to-code a+shift mode $-mode-default , exec swaymsg -- output $-echo-output-suspend disable
-mode $-mode-output bindsym --to-code z+shift mode $-mode-default , exec swaymsg -- output $-echo-output-focused disable
+mode $-mode-output bindsym --to-code a+shift mode $-mode-default , exec swaymsg -- output $-echo-output-focused disable
+mode $-mode-output bindsym --to-code z+shift mode $-mode-default , exec swaymsg -- output $-echo-output-suspend disable
 
 mode $-mode-output bindsym return mode $-mode-default
 mode $-mode-output bindsym escape mode $-mode-default

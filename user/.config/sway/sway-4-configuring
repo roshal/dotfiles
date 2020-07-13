@@ -134,10 +134,12 @@ assign [instance="^telegram-desktop$"] $-workspace-8
 
 # exec_always tail --follow $-mako-pulsemixer --lines 1 | $-wob-base
 
-exec nm-applet --indicator
+exec_always $-shell-nm-applet
 
 ##### 4.19 automatically putting workspaces on specific screens
 # # # https://i3wm.org/docs/userguide.html#workspace_screen
+
+workspace $-workspace-escape output $-output-1
 
 ##### 4.20 changing colors
 # # # https://i3wm.org/docs/userguide.html#_changing_colors

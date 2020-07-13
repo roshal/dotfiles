@@ -24,6 +24,8 @@ set $-echo-output-suspend $(swaymsg -t get_outputs | jq -r '.[] | select(.focuse
 set $-echo-date $(date +%y-%m-%d)
 set $-echo-time $(date +%H-%M-%S)
 
+set $-shell-nm-applet 'killall --quiet nm-applet ; nm-applet --indicator'
+
 ### idle
 
 set $-idle-before-sleep before-sleep swaylock
@@ -169,3 +171,5 @@ set $-workspace-6 '6:6       '
 set $-workspace-7 '7:7       '
 set $-workspace-8 '8:8       '
 set $-workspace-9 '9:9       '
+
+set $-workspace-escape '10:escape  '

@@ -47,6 +47,8 @@ input type:keyboard repeat_rate 30
 # input type:pointer accel_profile flat
 # input type:pointer pointer_accel 1
 
+# seat * xcursor_theme default 24
+
 # # swaymsg -t get_outputs
 
 output * background /-/pictures/waves.jpg tile
@@ -59,9 +61,9 @@ output $-output-0 mode 1920x1200 position 0 0
 output $-output-1 mode 1920x1200 position 0 0
 output $-output-2 mode 1920x1200 position 0 0
 
-# output $-output-0 mode 1920x1200 position 0 -1200
-# output $-output-1 mode 1920x1200 position 0 -1200
-# output $-output-2 mode 1920x1200 position 0 -1200
+# output $-output-0 mode 1920x1200 position 0 2048
+# output $-output-1 mode 1920x1080 position 0 2048
+# output $-output-2 mode 1920x1200 position 0 2048
 
 ### host relative
 
