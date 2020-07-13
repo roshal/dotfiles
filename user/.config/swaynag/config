@@ -1,6 +1,9 @@
 
+# # man 5 swaynag
+
+# edge=top
+
 font=monospace 9
-edge=top
 
 border-bottom-size=0
 message-padding=8
@@ -13,24 +16,24 @@ button-padding=8
 
 [custom]
 
-background=cccccc
-border=ffffff
-border-bottom=ffffff
-button-background=ffffff
-text=000000
+background=333333
+border=666666
+border-bottom=666666
+button-background=666666
+text=666666
 
 [error]
 
-background=cccc00
-border=ffffff
-border-bottom=ffffff
-button-background=ffffff
-text=000000
+background=330000
+border=660000
+border-bottom=660000
+button-background=660000
+text=ffffff
 
 [warning]
 
-background=cc0000
-border=ffffff
-border-bottom=ffffff
-button-background=ffffff
-text=000000
+background=333300
+border=666600
+border-bottom=666600
+button-background=666600
+text=ffffff

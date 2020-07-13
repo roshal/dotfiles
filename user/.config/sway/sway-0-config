@@ -7,8 +7,6 @@
 # # man 5 sway-output
 # # man 5 swaynag
 
-include '~/.config/sway/sway-$(cat /etc/hostname)'
-
 ##### 4 configuring
 # # # https://i3wm.org/docs/userguide.html#configuring
 
@@ -65,19 +63,6 @@ output $-output-2 mode 1920x1200 position 0 0
 # output $-output-1 mode 1920x1200 position 0 -1200
 # output $-output-2 mode 1920x1200 position 0 -1200
 
-# # https://wiki.archlinux.org/index.php/Sway#Control_swaynag_with_the_keyboard
+### host relative
 
-mode $-mode-nag bindsym --to-code ctrl+d mode $-mode-default
-
-mode $-mode-nag bindsym --to-code q      exec swaynagmode --exit
-mode $-mode-nag bindsym --to-code escape exec swaynagmode --exit
-
-mode $-mode-nag bindsym --to-code return exec swaynagmode --confirm
-
-mode $-mode-nag bindsym --to-code tab       exec swaynagmode --select prev
-mode $-mode-nag bindsym --to-code tab+shift exec swaynagmode --select next
-
-mode $-mode-nag bindsym --to-code $-way-u exec swaynagmode --select next
-mode $-mode-nag bindsym --to-code $-way-l exec swaynagmode --select next
-mode $-mode-nag bindsym --to-code $-way-r exec swaynagmode --select prev
-mode $-mode-nag bindsym --to-code $-way-d exec swaynagmode --select prev
+include '~/.config/sway/sway-$(cat /etc/hostname)'
