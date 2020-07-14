@@ -67,6 +67,7 @@ mode $-mode-kill bindsym --to-code n mode $-mode-default , exec killall nm-apple
 mode $-mode-kill bindsym --to-code s mode $-mode-default , exec killall swaynag
 mode $-mode-kill bindsym --to-code t mode $-mode-default , exec killall telegram-desktop
 mode $-mode-kill bindsym --to-code v mode $-mode-default , exec killall vlc
+mode $-mode-kill bindsym --to-code z mode $-mode-default , exec killall zoom
 
 mode $-mode-kill bindsym --to-code c+shift mode $-mode-default , exec killall -9 chromium
 mode $-mode-kill bindsym --to-code f+shift mode $-mode-default , exec killall -9 firefox
@@ -74,6 +75,7 @@ mode $-mode-kill bindsym --to-code n+shift mode $-mode-default , exec killall -9
 mode $-mode-kill bindsym --to-code s+shift mode $-mode-default , exec killall -9 swaynsg
 mode $-mode-kill bindsym --to-code t+shift mode $-mode-default , exec killall -9 telegram-desktop
 mode $-mode-kill bindsym --to-code v+shift mode $-mode-default , exec killall -9 vlc
+mode $-mode-kill bindsym --to-code z+shift mode $-mode-default , exec killall -9 zoom
 
 mode $-mode-kill bindsym return mode $-mode-default
 mode $-mode-kill bindsym escape mode $-mode-default

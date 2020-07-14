@@ -3,7 +3,7 @@
 
 bar pango_markup enabled
 
-bar height 0
+bar height 24
 
 ### no effect
 bar status_edge_padding 9

@@ -86,8 +86,6 @@ bindsym --to-code $-modifier+shift+s sticky toggle
 ##### 6.8 changing workspaces or moving to workspaces
 # # # https://i3wm.org/docs/userguide.html#_changing_named_workspaces_moving_to_workspaces
 
-# # workspace --no-auto-back-and-forth $-workspace-0
-
 bindsym $-modifier+$-key-i workspace $-workspace-6
 bindsym $-modifier+$-key-h workspace $-workspace-7
 bindsym $-modifier+$-key-d workspace $-workspace-8
@@ -131,7 +129,7 @@ bindsym $-modifier+$-way-n workspace next_on_output
 bindsym $-modifier+$-way-p+shift move to workspace prev_on_output
 bindsym $-modifier+$-way-n+shift move to workspace next_on_output
 
-bindsym $-modifier+escape workspace $-workspace-escape
+bindsym $-modifier+escape workspace --no-auto-back-and-forth $-workspace-escape
 
 bindsym $-modifier+escape+shift move to workspace $-workspace-escape
 
@@ -204,11 +202,11 @@ bindsym $-modifier+shift+$-key-b reload
 ##### 6.20 scratchpad
 # # # https://i3wm.org/docs/userguide.html#_scratchpad
 
-bindsym $-modifier+equal       scratchpad show
-bindsym $-modifier+minus+shift scratchpad show
+bindsym $-modifier+equal scratchpad show
+bindsym $-modifier+minus move scratchpad
 
 bindsym $-modifier+equal+shift move scratchpad
-bindsym $-modifier+minus       move scratchpad
+bindsym $-modifier+minus+shift scratchpad show
 
 ##### 6.21 nop
 # # # https://i3wm.org/docs/userguide.html#_nop

@@ -97,3 +97,8 @@ alias systemctl='systemctl --no-pager'
 alias sypo='systemctl poweroff'
 alias syre='systemctl reboot'
 alias sysu='systemctl suspend'
+
+### time
+
+alias dashtime='date +"%y-%m-%d--%H-%M-%S"'
+alias datetime='date +"%y-%m-%d %T"'
