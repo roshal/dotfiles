@@ -30,8 +30,8 @@ floating_modifier $-modifier
 ##### 4.7 constraining floating window size
 # # # https://i3wm.org/docs/userguide.html#_constraining_floating_window_size
 
-floating_minimum_size   64 x 40
-floating_maximum_size 1920 x 1200
+floating_minimum_size   64 x  40
+floating_maximum_size 1536 x 960
 
 ##### 4.8 orientation for new workspaces
 # # # https://i3wm.org/docs/userguide.html#_orientation_for_new_workspaces
