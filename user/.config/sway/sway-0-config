@@ -13,6 +13,7 @@
 # # swaymsg -t get_tree
 
 include '~/.config/sway/sway-4-15-variables'
+include '~/.config/sway/sway-4-18-autostart'
 include '~/.config/sway/sway-4-binding-modes'
 include '~/.config/sway/sway-4-configuring'
 
@@ -38,11 +39,11 @@ titlebar_padding 6 4
 # # man 7 xkeyboard-config
 # # swaymsg -t get_inputs
 
+input type:keyboard repeat_:delay 250
+input type:keyboard repeat_rate 30
+
 input type:keyboard xkb_layout us,ru
 input type:keyboard xkb_options grp:caps_toggle,grp_led:scroll
-
-input type:keyboard repeat_delay 250
-input type:keyboard repeat_rate 30
 
 # input type:pointer accel_profile flat
 # input type:pointer pointer_accel 1

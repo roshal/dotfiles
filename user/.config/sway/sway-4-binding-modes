@@ -130,6 +130,8 @@ mode $-mode-resize bindsym $-way-l resize shrink width  16px
 mode $-mode-resize bindsym $-way-r resize grow   width  16px
 mode $-mode-resize bindsym $-way-d resize grow   height 16px
 
+mode $-mode-resize bindsym $-key-1 set 1024 768
+
 mode $-mode-resize bindsym return mode $-mode-default
 mode $-mode-resize bindsym escape mode $-mode-default
 
