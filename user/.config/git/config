@@ -104,6 +104,8 @@ undo = reset --soft HEAD@{1}
 
 amend = commit --amend --allow-empty-message --no-edit
 
+edit = commit --amend --allow-empty-message
+
 # # git config --local format.signoff true
 # # git config --local commit.gpgSign true
 sign = commit --signoff

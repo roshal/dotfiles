@@ -1,4 +1,10 @@
 
 mode = run
 
-stylesheet = style.css
+width = 768
+
+height = 512
+
+key_left =
+
+key_right =
