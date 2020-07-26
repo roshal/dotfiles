@@ -3,23 +3,32 @@
 
 # # https://wiki.archlinux.org/index.php/Xbindkeys
 
-# bindsym --to-code XF86AudioPlay    exec notify-send play
-# bindsym --to-code XF86AudioNext    exec notify-send next
-# bindsym --to-code XF86AudioPrev    exec notify-send prev
-# bindsym --to-code XF86AudioForward exec notify-send forward
-# bindsym --to-code XF86AudioRewind  exec notify-send rewind
+bindsym --to-code XF86AudioForward exec notify-send forward
+bindsym --to-code XF86AudioRewind  exec notify-send rewind
 
-# bindsym --to-code XF86AudioMicMute exec amixer set Speaker toggle
-# bindsym --to-code XF86AudioMute    exec amixer set Master toggle
+bindsym --to-code XF86AudioLowerVolume exec notify-send lower-volume
+bindsym --to-code XF86AudioRaiseVolume exec notify-send raise-volume
 
-# bindsym --to-code XF86AudioLowerVolume exec amixer set Master 1-
-# bindsym --to-code XF86AudioRaiseVolume exec amixer set Master 1+
+bindsym --to-code XF86AudioMicMute exec notify-send mic-mute
+bindsym --to-code XF86AudioMute    exec notify-send mute
 
-bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMute    exec pactl set-sink-mute   @DEFAULT_SINK@ toggle
+bindsym --to-code XF86AudioNext exec notify-send next
+bindsym --to-code XF86AudioPrev exec notify-send prev
 
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1db && $-pulsemixer-volume > $-mako-pulsemixer
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1db && $-pulsemixer-volume > $-mako-pulsemixer
+bindsym --to-code XF86AudioPlay exec notify-send play
+bindsym --to-code XF86AudioStop exec notify-send stop
+
+# bindsym XF86AudioLowerVolume exec amixer set Master 1-
+# bindsym XF86AudioRaiseVolume exec amixer set Master 1+
+
+# bindsym XF86AudioMicMute exec amixer set Speaker toggle
+# bindsym XF86AudioMute    exec amixer set Master  toggle
+
+# bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1db && $-pulsemixer-volume > $-mako-pulsemixer
+# bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1db && $-pulsemixer-volume > $-mako-pulsemixer
+
+# bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SINK@ toggle
+# bindsym XF86AudioMute    exec pactl set-sink-mute   @DEFAULT_SINK@ toggle
 
 ### makoctl
 

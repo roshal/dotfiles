@@ -1,0 +1,66 @@
+
+:indent 2
+:tl "ru"
+
+:chr-source-seperator                                                           "═"
+:chr-target-seperator                                                           "─"
+
+:fmt-languages                                                                  "< %s > %t "
+
+:fmt-prompt                                                                     "%s> "
+
+:fmt-welcome-message                                                            "translate-shell"
+:fmt-welcome-submessage                                                         "(:q to quit)"
+
+:sgr-alternatives-original                                                      "light blue" "bold"
+
+:sgr-alternatives-translations                                                  "light blue"
+:sgr-alternatives-translations-item                                             "light cyan" "bold"
+
+:sgr-brief-translation                                                         ["light cyan" "bold"]
+:sgr-brief-translation-phonetics                                               ["light cyan" "bold"]
+
+:sgr-dictionary-explanation                                                     "light blue"
+:sgr-dictionary-explanation-item                                               ["light blue" "bold"]
+
+:sgr-dictionary-word                                                            "light cyan" "bold"
+:sgr-dictionary-word-class                                                      "light blue"
+
+:sgr-languages                                                                  "light blue"
+:sgr-languages-sl                                                               "light blue" "bold"
+:sgr-languages-tl                                                               "light cyan" "bold"
+
+:sgr-original                                                                  ["light blue" "bold"]
+:sgr-original-phonetics                                                        ["light blue" "bold"]
+
+:sgr-original-dictionary-detailed-example                                      ["light blue" "bold"]
+:sgr-original-dictionary-detailed-explanation                                   "light cyan" "bold"
+:sgr-original-dictionary-detailed-synonyms                                      "light blue"
+:sgr-original-dictionary-detailed-synonyms-item                                 "light blue" "bold"
+:sgr-original-dictionary-detailed-word-class                                    "light blue"
+
+:sgr-original-dictionary-examples                                               "light blue"
+:sgr-original-dictionary-examples-example                                      ["light blue" "bold"]
+:sgr-original-dictionary-examples-original                                     ["light cyan" "bold" "negative"]
+
+:sgr-original-dictionary-see-also                                               "light blue"
+:sgr-original-dictionary-see-also-phrases                                       "light blue"
+:sgr-original-dictionary-see-also-phrases-item                                  "light cyan" "bold" "underline"
+
+:sgr-original-dictionary-synonyms                                               "light blue"
+:sgr-original-dictionary-synonyms-synonyms                                      "light blue"
+:sgr-original-dictionary-synonyms-synonyms-item                                 "light cyan" "bold"
+:sgr-original-dictionary-synonyms-word-class                                    "light blue"
+
+:sgr-prompt                                                                     "light blue" "bold"
+:sgr-prompt-message                                                             "light blue"
+:sgr-prompt-message-original                                                    "light blue" "bold"
+
+:sgr-source-seperator                                                           "light blue"
+:sgr-target-seperator                                                           "light blue"
+
+:sgr-translation                                                                "light cyan" "bold"
+:sgr-translation-phonetics                                                      "light cyan" "bold"
+
+:sgr-welcome-message                                                            "light blue" "bold"
+:sgr-welcome-submessage                                                         "light blue"

@@ -97,6 +97,11 @@ set $-key-h home
 set $-key-d delete
 set $-key-e end
 
+### macs
+
+set $-mac-headset bluez_card.70_26_05_DD_FD_DD
+set $-mac-speaker bluez_card.00:42:79:77:95:54
+
 ### mako
 
 set $-mako-pulsemixer /-/mako/pulsemixer

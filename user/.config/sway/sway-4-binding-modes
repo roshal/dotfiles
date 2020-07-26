@@ -6,9 +6,13 @@
 
 bindsym --to-code $-modifier+ctrl+a mode $-mode-audio
 
-mode $-mode-audio bindsym --to-code a mode $-mode-default , exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD a2dp_sink
-mode $-mode-audio bindsym --to-code h mode $-mode-default , exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD headset_head_unit
-mode $-mode-audio bindsym --to-code o mode $-mode-default , exec pactl set-card-profile bluez_card.70_26_05_DD_FD_DD off
+mode $-mode-audio bindsym --to-code a mode $-mode-default , exec pactl set-card-profile $-mac-headset a2dp_sink
+mode $-mode-audio bindsym --to-code h mode $-mode-default , exec pactl set-card-profile $-mac-headset headset_head_unit
+mode $-mode-audio bindsym --to-code o mode $-mode-default , exec pactl set-card-profile $-mac-headset off
+
+mode $-mode-audio bindsym --to-code a+shift mode $-mode-default , exec pactl set-card-profile $-mac-speaker a2dp_sink
+mode $-mode-audio bindsym --to-code h+shift mode $-mode-default , exec pactl set-card-profile $-mac-speaker headset_head_unit
+mode $-mode-audio bindsym --to-code o+shift mode $-mode-default , exec pactl set-card-profile $-mac-speaker off
 
 mode $-mode-audio bindsym --whole-window $-mouse-u exec pactl set-sink-volume @DEFAULT_SINK@ +1db && $-pulsemixer-volume > $-mako-pulsemixer
 mode $-mode-audio bindsym --whole-window $-mouse-m exec pactl set-sink-volume @DEFAULT_SINK@  0db && $-pulsemixer-volume > $-mako-pulsemixer
@@ -49,7 +53,7 @@ mode $-mode-cursor bindsym escape mode $-mode-default
 
 bindsym --to-code $-modifier+ctrl+b mode $-mode-bluetooth
 
-mode $-mode-bluetooth bindsym --to-code a mode $-mode-default , exec bluetoothctl power  on
+mode $-mode-bluetooth bindsym --to-code a mode $-mode-default , exec bluetoothctl power on
 mode $-mode-bluetooth bindsym --to-code c mode $-mode-default , exec bluetoothctl connect    $-mac-headset
 mode $-mode-bluetooth bindsym --to-code d mode $-mode-default , exec bluetoothctl disconnect $-mac-headset
 mode $-mode-bluetooth bindsym --to-code z mode $-mode-default , exec bluetoothctl power off
@@ -130,7 +134,7 @@ mode $-mode-resize bindsym $-way-l resize shrink width  16px
 mode $-mode-resize bindsym $-way-r resize grow   width  16px
 mode $-mode-resize bindsym $-way-d resize grow   height 16px
 
-mode $-mode-resize bindsym $-key-1 set 1024 768
+mode $-mode-resize bindsym $-key-1 resize set 1024 768
 
 mode $-mode-resize bindsym return mode $-mode-default
 mode $-mode-resize bindsym escape mode $-mode-default

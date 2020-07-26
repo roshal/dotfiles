@@ -159,6 +159,10 @@ bindsym --to-code $-modifier+$-key-7+shift move to workspace $-workspace-7
 bindsym --to-code $-modifier+$-key-8+shift move to workspace $-workspace-8
 bindsym --to-code $-modifier+$-key-9+shift move to workspace $-workspace-9
 
+# bindsym --to-code $-modifier+caps_lock workspace back_and_forth
+
+# bindsym --to-code $-modifier+caps_lock+shift move to workspace back_and_forth
+
 bindsym --to-code $-modifier+z workspace prev_on_output
 bindsym --to-code $-modifier+x workspace next_on_output
 

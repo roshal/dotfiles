@@ -34,7 +34,7 @@ alias men='"man" --no-hyphenation --no-justification'
 ### sudo
 
 # # https://wiki.archlinux.org/index.php/Sudo#Passing_aliases
-alias sudo='sudo --prompt "$(echo -e pass for %u\\n\\r)" '
+alias sudo='sudo --prompt "$(tput setaf 3)$(echo -e enter pass for %u\\n\\r)$(tput sgr0)"'
 
 ### termite
 

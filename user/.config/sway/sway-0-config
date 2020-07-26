@@ -39,7 +39,7 @@ titlebar_padding 6 4
 # # man 7 xkeyboard-config
 # # swaymsg -t get_inputs
 
-input type:keyboard repeat_:delay 250
+input type:keyboard repeat_delay 250
 input type:keyboard repeat_rate 30
 
 input type:keyboard xkb_layout us,ru

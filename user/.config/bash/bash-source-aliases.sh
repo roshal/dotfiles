@@ -102,3 +102,10 @@ alias sysu='systemctl suspend'
 
 alias dashtime='date +"%y-%m-%d--%H-%M-%S"'
 alias datetime='date +"%y-%m-%d %T"'
+
+### translate
+
+alias t='trans'
+
+alias en='trans -t en'
+alias ru='trans -t ru'
