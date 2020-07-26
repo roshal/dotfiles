@@ -1,6 +1,8 @@
 
 # # # https://i3wm.org/docs/userguide.html#list_of_commands
 
+# # cat /usr/include/xkbcommon/xkbcommon-keysyms.h
+
 bindsym --to-code $-modifier+q       kill
 bindsym --to-code $-modifier+q+shift kill
 
