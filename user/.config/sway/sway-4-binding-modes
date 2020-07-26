@@ -25,8 +25,6 @@ mode $-mode-audio bindsym --whole-window $-mouse-e+shift exec pactl set-source-m
 mode $-mode-audio bindsym --whole-window $-mouse-s+shift exec pactl set-source-mute @DEFAULT_SINK@ off && $-pulsemixer-volume > $-mako-pulsemixer
 
 mode $-mode-audio bindsym escape mode $-mode-default
-mode $-mode-audio bindsym return mode $-mode-default
-mode $-mode-audio bindsym space  mode $-mode-default
 
 ### cursor
 
@@ -48,8 +46,6 @@ mode $-mode-cursor bindsym $-way-r+shift seat - cursor move  $-step-c  0
 mode $-mode-cursor bindsym $-way-d+shift seat - cursor move  0         $-step-c
 
 mode $-mode-cursor bindsym escape mode $-mode-default
-mode $-mode-cursor bindsym return mode $-mode-default
-mode $-mode-cursor bindsym space  mode $-mode-default
 
 ### bluetooth
 
@@ -61,8 +57,6 @@ mode $-mode-bluetooth bindsym --to-code d mode $-mode-default , exec bluetoothct
 mode $-mode-bluetooth bindsym --to-code z mode $-mode-default , exec bluetoothctl power off
 
 mode $-mode-bluetooth bindsym escape mode $-mode-default
-mode $-mode-bluetooth bindsym return mode $-mode-default
-mode $-mode-bluetooth bindsym space  mode $-mode-default
 
 ### kill
 
@@ -85,8 +79,6 @@ mode $-mode-kill bindsym --to-code v+shift mode $-mode-default , exec killall -9
 mode $-mode-kill bindsym --to-code z+shift mode $-mode-default , exec killall -9 zoom
 
 mode $-mode-kill bindsym escape mode $-mode-default
-mode $-mode-kill bindsym return mode $-mode-default
-mode $-mode-kill bindsym space  mode $-mode-default
 
 ### lock
 
@@ -102,8 +94,6 @@ mode $-mode-lock bindsym --to-code y mode $-mode-default , exec swaylock --color
 mode $-mode-lock bindsym --to-code w mode $-mode-default , exec swaylock --color ffffff
 
 mode $-mode-lock bindsym escape mode $-mode-default
-mode $-mode-lock bindsym return mode $-mode-default
-mode $-mode-lock bindsym space  mode $-mode-default
 
 ### move
 
@@ -120,8 +110,6 @@ mode $-mode-move bindsym $-way-r+shift move $-way-r $-step-b
 mode $-mode-move bindsym $-way-d+shift move $-way-d $-step-b
 
 mode $-mode-move bindsym escape mode $-mode-default
-mode $-mode-move bindsym return mode $-mode-default
-mode $-mode-move bindsym space  mode $-mode-default
 
 ### network
 
@@ -133,8 +121,6 @@ mode $-mode-network bindsym --to-code z mode $-mode-default , exec nmcli connect
 mode $-mode-network bindsym --to-code i mode $-mode-default , exec $-shell-nm-applet
 
 mode $-mode-network bindsym escape mode $-mode-default
-mode $-mode-network bindsym return mode $-mode-default
-mode $-mode-network bindsym space  mode $-mode-default
 
 ### output
 
@@ -147,8 +133,6 @@ mode $-mode-output bindsym --to-code a+shift mode $-mode-default , exec swaymsg 
 mode $-mode-output bindsym --to-code z+shift mode $-mode-default , exec swaymsg -- output $-echo-output-suspend disable
 
 mode $-mode-output bindsym escape mode $-mode-default
-mode $-mode-output bindsym return mode $-mode-default
-mode $-mode-output bindsym space  mode $-mode-default
 
 ### resize
 
@@ -166,8 +150,6 @@ mode $-mode-resize bindsym --to-code $-key-3 resize set  480  342
 mode $-mode-resize bindsym --to-code $-key-4 resize set  240  207
 
 mode $-mode-resize bindsym escape mode $-mode-default
-mode $-mode-resize bindsym return mode $-mode-default
-mode $-mode-resize bindsym space  mode $-mode-default
 
 ### system
 
@@ -182,8 +164,6 @@ mode $-mode-system bindsym --to-code p mode $-mode-default , exec systemctl powe
 mode $-mode-system bindsym --to-code s mode $-mode-default , exec systemctl suspend
 
 mode $-mode-system bindsym escape mode $-mode-default
-mode $-mode-system bindsym return mode $-mode-default
-mode $-mode-system bindsym space  mode $-mode-default
 
 ### vpn
 
@@ -193,8 +173,6 @@ mode $-mode-vpn bindsym --to-code a mode $-mode-default , exec cat /-/keys/corus
 mode $-mode-vpn bindsym --to-code z mode $-mode-default , exec nmcli connection down corus
 
 mode $-mode-vpn bindsym escape mode $-mode-default
-mode $-mode-vpn bindsym return mode $-mode-default
-mode $-mode-vpn bindsym space  mode $-mode-default
 
 ### wireguard
 
@@ -204,5 +182,3 @@ mode $-mode-wireguard bindsym --to-code a mode $-mode-default , exec sudo --askp
 mode $-mode-wireguard bindsym --to-code z mode $-mode-default , exec sudo --askpass wg-quick down /-/wireguard/wireguard.conf
 
 mode $-mode-wireguard bindsym escape mode $-mode-default
-mode $-mode-wireguard bindsym return mode $-mode-default
-mode $-mode-wireguard bindsym space  mode $-mode-default
