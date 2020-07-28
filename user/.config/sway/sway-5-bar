@@ -57,7 +57,7 @@ bar status_command sh /-/shell/sway-bar-status.sh
 ##### 5.9 tray padding
 # # # https://i3wm.org/docs/userguide.html#_tray_padding
 
-bar tray_padding 0
+bar tray_padding 1
 
 ##### 5.10 font
 # # # https://i3wm.org/docs/userguide.html#_font

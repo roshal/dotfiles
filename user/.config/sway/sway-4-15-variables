@@ -33,31 +33,20 @@ set $-idle-timeout-lock timeout 4096 swaylock
 set $-idle-timeout-dpms timeout 8192 swaymsg -- output \* dpms off
 set $-idle-resume             resume swaymsg -- output \* dpms on
 
-### macs
-
-set $-mac-headset 70:26:05:DD:FD:DD
-
-### outputs
-
-set $-output-0 DP-1
-set $-output-1 HDMI-A-1
-set $-output-2 HDMI-A-2
-
 ### pulsemixer
 
 set $-pulsemixer-volume pulsemixer --get-volume | jq -s add/length
-
-### step
-
-set $-step-a  1
-set $-step-b  8
-set $-step-c 64
 
 ### wob
 
 set $-wob-base wob -t1000 -W400 -H8 -o0 -b0 -p0 -abottom -M-16
 
 ### lists
+
+### bluetooth
+
+set $-bluetooth-headset bluez_card.70_26_05_DD_FD_DD
+set $-bluetooth-speaker bluez_card.00_42_79_77_95_54
 
 ### colors
 
@@ -99,8 +88,8 @@ set $-key-e end
 
 ### macs
 
-set $-mac-headset bluez_card.70_26_05_DD_FD_DD
-set $-mac-speaker bluez_card.00:42:79:77:95:54
+set $-mac-headset 70:26:05:DD:FD:DD
+set $-mac-speaker 00:42:79:77:95:54
 
 ### mako
 
@@ -154,6 +143,18 @@ set $-mouse-e button9
 
 # set $-mouse-t BTN_TASK
 # set $-mouse-j BTN_JOYSTICK
+
+### outputs
+
+set $-output-0 DP-1
+set $-output-1 HDMI-A-1
+set $-output-2 HDMI-A-2
+
+### step
+
+set $-step-a  1
+set $-step-b  8
+set $-step-c 64
 
 ### ways
 
