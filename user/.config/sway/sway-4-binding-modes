@@ -2,9 +2,41 @@
 ##### 4.5 binding modes
 # # # https://i3wm.org/docs/userguide.html#binding_modes
 
-### audio
+### binding-modes
+
+bindsym --to-code $-modifier+z mode $-binding-mode
 
 bindsym --to-code $-modifier+ctrl+a mode $-mode-audio
+bindsym --to-code $-modifier+ctrl+b mode $-mode-bluetooth
+bindsym --to-code $-modifier+ctrl+c mode $-mode-cursor
+bindsym --to-code $-modifier+ctrl+k mode $-mode-kill
+bindsym --to-code $-modifier+ctrl+l mode $-mode-lock
+bindsym --to-code $-modifier+ctrl+m mode $-mode-move
+bindsym --to-code $-modifier+ctrl+n mode $-mode-network
+bindsym --to-code $-modifier+ctrl+o mode $-mode-output
+bindsym --to-code $-modifier+ctrl+r mode $-mode-resize
+bindsym --to-code $-modifier+ctrl+s mode $-mode-system
+bindsym --to-code $-modifier+ctrl+v mode $-mode-vpn
+bindsym --to-code $-modifier+ctrl+w mode $-mode-wireguard
+
+##### modes
+
+mode $-mode-binding-modes bindsym --to-code a mode $-mode-audio
+mode $-mode-binding-modes bindsym --to-code b mode $-mode-bluetooth
+mode $-mode-binding-modes bindsym --to-code c mode $-mode-cursor
+mode $-mode-binding-modes bindsym --to-code k mode $-mode-kill
+mode $-mode-binding-modes bindsym --to-code l mode $-mode-lock
+mode $-mode-binding-modes bindsym --to-code m mode $-mode-move
+mode $-mode-binding-modes bindsym --to-code n mode $-mode-network
+mode $-mode-binding-modes bindsym --to-code o mode $-mode-output
+mode $-mode-binding-modes bindsym --to-code r mode $-mode-resize
+mode $-mode-binding-modes bindsym --to-code s mode $-mode-system
+mode $-mode-binding-modes bindsym --to-code v mode $-mode-vpn
+mode $-mode-binding-modes bindsym --to-code w mode $-mode-wireguard
+
+mode $-mode-binding-modes bindsym escape mode $-mode-default
+
+### audio
 
 mode $-mode-audio bindsym --to-code a mode $-mode-default , exec pactl set-card-profile $-bluetooth-headset a2dp_sink
 mode $-mode-audio bindsym --to-code h mode $-mode-default , exec pactl set-card-profile $-bluetooth-headset headset_head_unit
@@ -26,9 +58,16 @@ mode $-mode-audio bindsym --whole-window $-mouse-s+shift exec pactl set-source-m
 
 mode $-mode-audio bindsym escape mode $-mode-default
 
-### cursor
+### bluetooth
 
-bindsym --to-code $-modifier+ctrl+c mode $-mode-cursor
+mode $-mode-bluetooth bindsym --to-code a mode $-mode-default , exec bluetoothctl power on
+mode $-mode-bluetooth bindsym --to-code c mode $-mode-default , exec bluetoothctl connect    $-mac-headset
+mode $-mode-bluetooth bindsym --to-code d mode $-mode-default , exec bluetoothctl disconnect $-mac-headset
+mode $-mode-bluetooth bindsym --to-code z mode $-mode-default , exec bluetoothctl power no
+
+mode $-mode-bluetooth bindsym escape mode $-mode-default
+
+### cursor
 
 mode $-mode-cursor bindsym $-way-u seat - cursor move  0        -$-step-a
 mode $-mode-cursor bindsym $-way-l seat - cursor move -$-step-a  0
@@ -47,20 +86,7 @@ mode $-mode-cursor bindsym $-way-d+shift seat - cursor move  0         $-step-c
 
 mode $-mode-cursor bindsym escape mode $-mode-default
 
-### bluetooth
-
-bindsym --to-code $-modifier+ctrl+b mode $-mode-bluetooth
-
-mode $-mode-bluetooth bindsym --to-code a mode $-mode-default , exec bluetoothctl power on
-mode $-mode-bluetooth bindsym --to-code c mode $-mode-default , exec bluetoothctl connect    $-mac-headset
-mode $-mode-bluetooth bindsym --to-code d mode $-mode-default , exec bluetoothctl disconnect $-mac-headset
-mode $-mode-bluetooth bindsym --to-code z mode $-mode-default , exec bluetoothctl power no
-
-mode $-mode-bluetooth bindsym escape mode $-mode-default
-
 ### kill
-
-bindsym --to-code $-modifier+ctrl+k mode $-mode-kill
 
 mode $-mode-kill bindsym --to-code c mode $-mode-default , exec killall chromium
 mode $-mode-kill bindsym --to-code f mode $-mode-default , exec killall firefox
@@ -82,8 +108,6 @@ mode $-mode-kill bindsym escape mode $-mode-default
 
 ### lock
 
-bindsym --to-code $-modifier+ctrl+l mode $-mode-lock
-
 mode $-mode-lock bindsym --to-code z mode $-mode-default , exec swaylock --color 000000
 mode $-mode-lock bindsym --to-code b mode $-mode-default , exec swaylock --color 0000ff
 mode $-mode-lock bindsym --to-code g mode $-mode-default , exec swaylock --color 00ff00
@@ -96,8 +120,6 @@ mode $-mode-lock bindsym --to-code w mode $-mode-default , exec swaylock --color
 mode $-mode-lock bindsym escape mode $-mode-default
 
 ### move
-
-bindsym --to-code $-modifier+ctrl+m mode $-mode-move
 
 mode $-mode-move bindsym $-way-u move $-way-u $-step-a
 mode $-mode-move bindsym $-way-l move $-way-l $-step-a
@@ -113,8 +135,6 @@ mode $-mode-move bindsym escape mode $-mode-default
 
 ### network
 
-bindsym --to-code $-modifier+ctrl+n mode $-mode-network
-
 mode $-mode-network bindsym --to-code a mode $-mode-default , exec nmcli connection up   ethernet
 mode $-mode-network bindsym --to-code z mode $-mode-default , exec nmcli connection down ethernet
 
@@ -123,8 +143,6 @@ mode $-mode-network bindsym --to-code i mode $-mode-default , exec $-shell-nm-ap
 mode $-mode-network bindsym escape mode $-mode-default
 
 ### output
-
-bindsym --to-code $-modifier+ctrl+o mode $-mode-output
 
 mode $-mode-output bindsym --to-code a mode $-mode-default , exec swaymsg -- output $-echo-output-focused enable
 mode $-mode-output bindsym --to-code z mode $-mode-default , exec swaymsg -- output $-echo-output-suspend enable
@@ -135,8 +153,6 @@ mode $-mode-output bindsym --to-code z+shift mode $-mode-default , exec swaymsg 
 mode $-mode-output bindsym escape mode $-mode-default
 
 ### resize
-
-bindsym --to-code $-modifier+ctrl+r mode $-mode-resize
 
 mode $-mode-resize bindsym $-way-u resize shrink height 16px
 mode $-mode-resize bindsym $-way-l resize shrink width  16px
@@ -153,8 +169,6 @@ mode $-mode-resize bindsym escape mode $-mode-default
 
 ### system
 
-bindsym --to-code $-modifier+ctrl+s mode $-mode-system
-
 mode $-mode-system bindsym --to-code b mode $-mode-default , exec systemctl reboot --firmware-setup
 mode $-mode-system bindsym --to-code r mode $-mode-default , exec systemctl reboot
 
@@ -167,16 +181,12 @@ mode $-mode-system bindsym escape mode $-mode-default
 
 ### vpn
 
-bindsym --to-code $-modifier+ctrl+v mode $-mode-vpn
-
 mode $-mode-vpn bindsym --to-code a mode $-mode-default , exec cat /-/keys/corus-vpn | nmcli connection up corus --ask
 mode $-mode-vpn bindsym --to-code z mode $-mode-default , exec nmcli connection down corus
 
 mode $-mode-vpn bindsym escape mode $-mode-default
 
 ### wireguard
-
-bindsym --to-code $-modifier+ctrl+w mode $-mode-wireguard
 
 mode $-mode-wireguard bindsym --to-code a mode $-mode-default , exec sudo --askpass wg-quick up   /-/wireguard/wireguard.conf
 mode $-mode-wireguard bindsym --to-code z mode $-mode-default , exec sudo --askpass wg-quick down /-/wireguard/wireguard.conf

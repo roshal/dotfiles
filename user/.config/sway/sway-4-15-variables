@@ -3,6 +3,10 @@
 
 set $-modifier mod4
 
+### binding-mode
+
+set $-binding-mode 'binding-mode'
+
 ### commands
 
 set $-grim-crop slurp -b 00000000 -w 1 | grim -g -
@@ -41,7 +45,7 @@ set $-pulsemixer-volume pulsemixer --get-volume | jq -s add/length
 
 set $-wob-base wob -t1000 -W400 -H8 -o0 -b0 -p0 -abottom -M-16
 
-### lists
+##### lists
 
 ### bluetooth
 
@@ -99,18 +103,18 @@ set $-mako-pulsemixer /-/mako/pulsemixer
 
 set $-mode-default default
 
-set $-mode-audio     'audio           '
-set $-mode-bluetooth 'bluetooth       '
-set $-mode-cursor    'cursor          '
-set $-mode-kill      'kill            '
-set $-mode-lock      'lock            '
-set $-mode-move      'move            '
-set $-mode-network   'network         '
-set $-mode-output    'output          '
-set $-mode-resize    'resize          '
-set $-mode-system    'system          '
-set $-mode-vpn       'vpn             '
-set $-mode-wireguard 'wireguard       '
+set $-mode-audio     'audio       '
+set $-mode-bluetooth 'bluetooth   '
+set $-mode-cursor    'cursor      '
+set $-mode-kill      'kill        '
+set $-mode-lock      'lock        '
+set $-mode-move      'move        '
+set $-mode-network   'network     '
+set $-mode-output    'output      '
+set $-mode-resize    'resize      '
+set $-mode-system    'system      '
+set $-mode-vpn       'vpn         '
+set $-mode-wireguard 'wireguard   '
 
 ### mouse
 

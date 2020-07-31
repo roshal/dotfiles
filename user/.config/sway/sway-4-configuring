@@ -71,7 +71,7 @@ for_window [tiling] border none
 
 for_window [window_role="^browser$"] border none
 
-for_window [window_type=dialog] border normal 8
+for_window [window_type=dialog] border none
 
 # for_window [window_type=dialog] focus
 
