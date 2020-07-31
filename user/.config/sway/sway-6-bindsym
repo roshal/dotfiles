@@ -9,13 +9,13 @@ bindsym --to-code $-modifier+q+shift kill
 ##### 6.1 executing applications
 # # # https://i3wm.org/docs/userguide.html#exec
 
-bindsym $-key-p       exec $-grim-crop $-grim-path
-bindsym $-key-p+ctrl  exec $-grim-view $-grim-path
-bindsym $-key-p+shift exec $-grim-full $-grim-path
+bindsym $-key-p       exec $-grim-crop $-grim-copy
+bindsym $-key-p+ctrl  exec $-grim-view $-grim-copy
+bindsym $-key-p+shift exec $-grim-full $-grim-copy
 
-bindsym $-modifier+$-key-p       exec $-grim-crop $-grim-copy
-bindsym $-modifier+$-key-p+ctrl  exec $-grim-view $-grim-copy
-bindsym $-modifier+$-key-p+shift exec $-grim-full $-grim-copy
+bindsym $-modifier+$-key-p       exec $-grim-crop $-grim-path
+bindsym $-modifier+$-key-p+ctrl  exec $-grim-view $-grim-path
+bindsym $-modifier+$-key-p+shift exec $-grim-full $-grim-path
 
 bindsym $-modifier+$-key-s exec $-grim-slurp
 
@@ -164,9 +164,6 @@ bindsym --to-code $-modifier+$-key-9+shift move to workspace $-workspace-9
 # bindsym --to-code $-modifier+caps_lock workspace back_and_forth
 
 # bindsym --to-code $-modifier+caps_lock+shift move to workspace back_and_forth
-
-bindsym --to-code $-modifier+z workspace prev_on_output
-bindsym --to-code $-modifier+x workspace next_on_output
 
 ##### 6.9 moving workspaces to a different screen
 # # # https://i3wm.org/docs/userguide.html#_moving_workspaces_to_a_different_screen
