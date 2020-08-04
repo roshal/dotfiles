@@ -155,9 +155,10 @@ set $-pulsemixer-volume pulsemixer --get-volume | jq -s add/length
 
 ### step
 
-set $-step-a  1
-set $-step-b  8
-set $-step-c 64
+set $-step-a   1
+set $-step-b   8
+set $-step-c  64
+set $-step-d 512
 
 ### wob
 

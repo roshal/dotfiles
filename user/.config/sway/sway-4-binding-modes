@@ -84,6 +84,11 @@ mode $-mode-cursor bindsym $-arrow-l+shift seat - cursor move -$-step-c  0
 mode $-mode-cursor bindsym $-arrow-r+shift seat - cursor move  $-step-c  0
 mode $-mode-cursor bindsym $-arrow-d+shift seat - cursor move  0         $-step-c
 
+mode $-mode-cursor bindsym $-arrow-u+shift+ctrl seat - cursor move  0        -$-step-d
+mode $-mode-cursor bindsym $-arrow-l+shift+ctrl seat - cursor move -$-step-d  0
+mode $-mode-cursor bindsym $-arrow-r+shift+ctrl seat - cursor move  $-step-d  0
+mode $-mode-cursor bindsym $-arrow-d+shift+ctrl seat - cursor move  0         $-step-d
+
 mode $-mode-cursor bindsym escape mode $-mode-default
 
 ### kill
