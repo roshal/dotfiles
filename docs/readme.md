@@ -10,11 +10,11 @@ configuration files for linux applications
 ## bootstrap
 
 ```shell
-stow --target "${HOME}" --stow 'user'
+stow --target "${HOME}" --stow user
 ```
 
 ```shell
-sudo stow --target / --stow 'chromium'
+sudo stow --target / --stow chromium
 ```
 
 ## listing
@@ -27,6 +27,8 @@ find "${HOME}/.config" -type l
 
 ```shell
 find "${HOME}/.config" -xtype l
+```
 
+```shell
 find "${HOME}/.config" -xtype l -exec rm {} +
 ```

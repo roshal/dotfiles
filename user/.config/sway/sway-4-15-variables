@@ -1,56 +1,12 @@
 
 ##### 4.15 variables
 
+set $-although mod1
 set $-modifier mod4
 
 ### binding-mode
 
 set $-binding-mode 'binding-mode'
-
-### commands
-
-set $-grim-crop slurp -b 00000000 -w 1 | grim -g -
-set $-grim-full grim -o $-echo-output-focused
-set $-grim-view swaymsg -t get_tree | jq -r '.. | .nodes? // empty | .[] | if .focused then . else .floating_nodes[] | select(.focused) end | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | grim -g -
-
-set $-grim-copy -t png - | wl-copy --type image/png
-set $-grim-path /-/grim/grim--$-echo-date--$-echo-time.png
-
-set $-grim-slurp slurp -b 00000000 -w 1 -f "$(echo -e 'x %x\ny %y\nw %w\nh %h')" | xargs -0 notify-send
-
-### echo
-
-set $-echo-keyboard-layout $(swaymsg -t get_inputs | jq -r 'max_by(.xkb_active_layout_index).xkb_active_layout_name[0:2] | try ascii_upcase // "--"')
-
-set $-echo-output-focused $(swaymsg -t get_outputs | jq -r '.[] | select(.focused)         | .name')
-set $-echo-output-suspend $(swaymsg -t get_outputs | jq -r '.[] | select(.focused != true) | .name')
-
-set $-echo-date $(date +%y-%m-%d)
-set $-echo-time $(date +%H-%M-%S)
-
-set $-shell-nm-applet 'killall --quiet nm-applet ; nm-applet --indicator'
-
-### idle
-
-set $-idle-before-sleep before-sleep swaylock
-set $-idle-timeout-lock timeout 4096 swaylock
-set $-idle-timeout-dpms timeout 8192 swaymsg -- output \* dpms off
-set $-idle-resume             resume swaymsg -- output \* dpms on
-
-### pulsemixer
-
-set $-pulsemixer-volume pulsemixer --get-volume | jq -s add/length
-
-### wob
-
-set $-wob-base wob -t1000 -W400 -H8 -o0 -b0 -p0 -abottom -M-16
-
-##### lists
-
-### bluetooth
-
-set $-bluetooth-headset bluez_card.70_26_05_DD_FD_DD
-set $-bluetooth-speaker bluez_card.00_42_79_77_95_54
 
 ### colors
 
@@ -68,7 +24,58 @@ set $-color-b 336699
 set $-color-m 663399
 set $-color-c 339966
 
+### devices
+
+set $-bluetooth-headset bluez_card.70_26_05_DD_FD_DD
+set $-bluetooth-speaker bluez_card.00_42_79_77_95_54
+
+set $-mac-headset 70:26:05:DD:FD:DD
+set $-mac-speaker 00:42:79:77:95:54
+
+### echo
+
+set $-echo-keyboard-layout $(swaymsg -t get_inputs | jq -r 'max_by(.xkb_active_layout_index).xkb_active_layout_name[0:2] | try ascii_upcase // "--"')
+
+set $-echo-output-focused $(swaymsg -t get_outputs | jq -r '.[] | select(.focused)         | .name')
+set $-echo-output-suspend $(swaymsg -t get_outputs | jq -r '.[] | select(.focused != true) | .name')
+
+set $-echo-date $(date +%y-%m-%d)
+set $-echo-time $(date +%H-%M-%S)
+
+set $-shell-nm-applet 'killall --quiet nm-applet ; nm-applet --indicator'
+
+### grim
+
+set $-grim-crop slurp -b 00000000 -w 1 | grim -g -
+set $-grim-full grim -o $-echo-output-focused
+set $-grim-view swaymsg -t get_tree | jq -r '.. | .nodes? // empty | .[] | if .focused then . else .floating_nodes[] | select(.focused) end | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | grim -g -
+
+set $-grim-copy -t png - | wl-copy --type image/png
+set $-grim-path /-/grim/grim--$-echo-date--$-echo-time.png
+
+set $-grim-slurp slurp -b 00000000 -w 1 -f "$(echo -e 'x %x\ny %y\nw %w\nh %h')" | xargs -0 notify-send
+
+### idle
+
+set $-idle-before-sleep before-sleep swaylock
+set $-idle-timeout-lock timeout 4096 swaylock
+set $-idle-timeout-dpms timeout 8192 swaymsg -- output \* dpms off
+set $-idle-resume             resume swaymsg -- output \* dpms on
+
 ### keys
+
+set $-arrow-u up
+set $-arrow-l left
+set $-arrow-r right
+set $-arrow-d down
+
+set $-control-i insert
+set $-control-h home
+set $-control-d delete
+set $-control-e end
+
+set $-control-p prior
+set $-control-n next
 
 set $-key-0 grave
 set $-key-1 1
@@ -81,23 +88,9 @@ set $-key-7 7
 set $-key-8 8
 set $-key-9 9
 
-set $-key-p print
-set $-key-s scroll_lock
-set $-key-b pause
-
-set $-key-i insert
-set $-key-h home
-set $-key-d delete
-set $-key-e end
-
-### macs
-
-set $-mac-headset 70:26:05:DD:FD:DD
-set $-mac-speaker 00:42:79:77:95:54
-
-### mako
-
-set $-mako-pulsemixer /-/mako/pulsemixer
+set $-special-p print
+set $-special-s scroll_lock
+set $-special-b pause
 
 ### modes
 
@@ -137,8 +130,6 @@ set $-mouse-d button5
 set $-mouse-f button6
 set $-mouse-b button7
 
-### north south
-
 # set $-mouse-s BTN_SIDE
 # set $-mouse-e BTN_EXTRA
 
@@ -154,21 +145,23 @@ set $-output-0 DP-1
 set $-output-1 HDMI-A-1
 set $-output-2 HDMI-A-2
 
+### paths
+
+set $-path-mako-pulsemixer /-/mako/pulsemixer
+
+### pulsemixer
+
+set $-pulsemixer-volume pulsemixer --get-volume | jq -s add/length
+
 ### step
 
 set $-step-a  1
 set $-step-b  8
 set $-step-c 64
 
-### ways
+### wob
 
-set $-way-u up
-set $-way-l left
-set $-way-r right
-set $-way-d down
-
-set $-way-p prior
-set $-way-n next
+set $-wob-base wob -t1000 -W400 -H8 -o0 -b0 -p0 -abottom -M-16
 
 ### workspaces
 
@@ -183,4 +176,4 @@ set $-workspace-7 '7:7       '
 set $-workspace-8 '8:8       '
 set $-workspace-9 '9:9       '
 
-set $-workspace-escape '10:escape  '
+set $-workspace-escape '10:        '

@@ -9,17 +9,17 @@ bindsym --to-code $-modifier+q+shift kill
 ##### 6.1 executing applications
 # # # https://i3wm.org/docs/userguide.html#exec
 
-bindsym $-key-p       exec $-grim-crop $-grim-copy
-bindsym $-key-p+ctrl  exec $-grim-view $-grim-copy
-bindsym $-key-p+shift exec $-grim-full $-grim-copy
+bindsym $-modifier+$-special-p       exec $-grim-crop $-grim-path
+bindsym $-modifier+$-special-p+ctrl  exec $-grim-view $-grim-path
+bindsym $-modifier+$-special-p+shift exec $-grim-full $-grim-path
 
-bindsym $-modifier+$-key-p       exec $-grim-crop $-grim-path
-bindsym $-modifier+$-key-p+ctrl  exec $-grim-view $-grim-path
-bindsym $-modifier+$-key-p+shift exec $-grim-full $-grim-path
-
-bindsym $-modifier+$-key-s exec $-grim-slurp
+bindsym $-modifier+$-special-s exec $-grim-slurp
 
 bindsym $-modifier+return exec termite
+
+bindsym $-special-p       exec $-grim-crop $-grim-copy
+bindsym $-special-p+ctrl  exec $-grim-view $-grim-copy
+bindsym $-special-p+shift exec $-grim-full $-grim-copy
 
 bindsym --to-code $-modifier+d exec wofi
 bindsym --to-code $-modifier+l exec swaylock --image /-/pictures/waves.jpg
@@ -55,10 +55,10 @@ bindsym --to-code $-modifier+v splitv
 ##### 6.4 focusing containers
 # # # https://i3wm.org/docs/userguide.html#_focusing_moving_containers
 
-bindsym $-modifier+$-way-u focus $-way-u
-bindsym $-modifier+$-way-l focus $-way-l
-bindsym $-modifier+$-way-r focus $-way-r
-bindsym $-modifier+$-way-d focus $-way-d
+bindsym $-modifier+$-arrow-u focus $-arrow-u
+bindsym $-modifier+$-arrow-l focus $-arrow-l
+bindsym $-modifier+$-arrow-r focus $-arrow-r
+bindsym $-modifier+$-arrow-d focus $-arrow-d
 
 bindsym $-modifier+space focus mode_toggle
 
@@ -68,10 +68,10 @@ bindsym --to-code $-modifier+c focus child
 ##### 6.5 moving containers
 # # # https://i3wm.org/docs/userguide.html#_moving_containers
 
-bindsym $-modifier+$-way-u+shift move $-way-u $-step-b
-bindsym $-modifier+$-way-l+shift move $-way-l $-step-b
-bindsym $-modifier+$-way-r+shift move $-way-r $-step-b
-bindsym $-modifier+$-way-d+shift move $-way-d $-step-b
+bindsym $-modifier+$-arrow-u+shift move $-arrow-u $-step-b
+bindsym $-modifier+$-arrow-l+shift move $-arrow-l $-step-b
+bindsym $-modifier+$-arrow-r+shift move $-arrow-r $-step-b
+bindsym $-modifier+$-arrow-d+shift move $-arrow-d $-step-b
 
 bindsym --to-code $-modifier+mod1+a move absolute position center
 bindsym --to-code $-modifier+mod1+c move position center
@@ -88,48 +88,32 @@ bindsym --to-code $-modifier+shift+s sticky toggle
 ##### 6.8 changing workspaces or moving to workspaces
 # # # https://i3wm.org/docs/userguide.html#_changing_named_workspaces_moving_to_workspaces
 
-bindsym $-modifier+$-key-i workspace $-workspace-6
-bindsym $-modifier+$-key-h workspace $-workspace-7
-bindsym $-modifier+$-key-d workspace $-workspace-8
-bindsym $-modifier+$-key-e workspace $-workspace-9
+bindsym $-modifier+$-arrow-u+mod1 move workspace to output $-arrow-u
+bindsym $-modifier+$-arrow-l+mod1 move workspace to output $-arrow-l
+bindsym $-modifier+$-arrow-r+mod1 move workspace to output $-arrow-r
+bindsym $-modifier+$-arrow-d+mod1 move workspace to output $-arrow-d
 
-bindsym $-modifier+$-key-i+ctrl workspace $-workspace-1
-bindsym $-modifier+$-key-h+ctrl workspace $-workspace-2
-bindsym $-modifier+$-key-d+ctrl workspace $-workspace-3
-bindsym $-modifier+$-key-e+ctrl workspace $-workspace-4
+bindsym $-modifier+$-arrow-u+ctrl workspace prev_on_output
+bindsym $-modifier+$-arrow-d+ctrl workspace next_on_output
 
-bindsym $-modifier+$-key-i+shift move to workspace $-workspace-6
-bindsym $-modifier+$-key-h+shift move to workspace $-workspace-7
-bindsym $-modifier+$-key-d+shift move to workspace $-workspace-8
-bindsym $-modifier+$-key-e+shift move to workspace $-workspace-9
+bindsym $-modifier+$-arrow-l+ctrl workspace prev
+bindsym $-modifier+$-arrow-r+ctrl workspace next
 
-bindsym $-modifier+$-key-i+shift+ctrl move to workspace $-workspace-1
-bindsym $-modifier+$-key-h+shift+ctrl move to workspace $-workspace-2
-bindsym $-modifier+$-key-d+shift+ctrl move to workspace $-workspace-3
-bindsym $-modifier+$-key-e+shift+ctrl move to workspace $-workspace-4
+bindsym $-modifier+$-control-i workspace $-workspace-6
+bindsym $-modifier+$-control-h workspace $-workspace-7
+bindsym $-modifier+$-control-d workspace $-workspace-8
+bindsym $-modifier+$-control-e workspace $-workspace-9
 
-bindsym $-modifier+$-way-u+mod1 move workspace to output $-way-u
-bindsym $-modifier+$-way-l+mod1 move workspace to output $-way-l
-bindsym $-modifier+$-way-r+mod1 move workspace to output $-way-r
-bindsym $-modifier+$-way-d+mod1 move workspace to output $-way-d
+bindsym $-modifier+$-control-i+shift move to workspace $-workspace-6
+bindsym $-modifier+$-control-h+shift move to workspace $-workspace-7
+bindsym $-modifier+$-control-d+shift move to workspace $-workspace-8
+bindsym $-modifier+$-control-e+shift move to workspace $-workspace-9
 
-bindsym $-modifier+$-way-u+ctrl workspace prev_on_output
-bindsym $-modifier+$-way-d+ctrl workspace next_on_output
+bindsym $-modifier+$-control-p workspace prev_on_output
+bindsym $-modifier+$-control-n workspace next_on_output
 
-bindsym $-modifier+$-way-l+ctrl workspace prev
-bindsym $-modifier+$-way-r+ctrl workspace next
-
-bindsym $-modifier+$-way-u+ctrl+shift workspace prev_on_output
-bindsym $-modifier+$-way-d+ctrl+shift workspace next_on_output
-
-bindsym $-modifier+$-way-l+ctrl+shift workspace prev
-bindsym $-modifier+$-way-r+ctrl+shift workspace next
-
-bindsym $-modifier+$-way-p workspace prev_on_output
-bindsym $-modifier+$-way-n workspace next_on_output
-
-bindsym $-modifier+$-way-p+shift move to workspace prev_on_output
-bindsym $-modifier+$-way-n+shift move to workspace next_on_output
+bindsym $-modifier+$-control-p+shift move to workspace prev_on_output
+bindsym $-modifier+$-control-n+shift move to workspace next_on_output
 
 bindsym $-modifier+escape workspace --no-auto-back-and-forth $-workspace-escape
 
@@ -200,7 +184,7 @@ bindsym --to-code $-modifier+shift+b border toggle
 ##### 6.19 reloading
 # # # https://i3wm.org/docs/userguide.html#_reloading_restarting_exiting
 
-bindsym $-modifier+shift+$-key-b reload
+bindsym $-modifier+shift+$-special-b reload
 
 ##### 6.20 scratchpad
 # # # https://i3wm.org/docs/userguide.html#_scratchpad

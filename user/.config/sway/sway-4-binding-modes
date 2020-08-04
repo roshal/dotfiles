@@ -46,15 +46,15 @@ mode $-mode-audio bindsym --to-code a+shift mode $-mode-default , exec pactl set
 mode $-mode-audio bindsym --to-code h+shift mode $-mode-default , exec pactl set-card-profile $-bluetooth-speaker headset_head_unit
 mode $-mode-audio bindsym --to-code o+shift mode $-mode-default , exec pactl set-card-profile $-bluetooth-speaker off
 
-mode $-mode-audio bindsym --whole-window $-mouse-u exec pactl set-sink-volume @DEFAULT_SINK@ +1db && $-pulsemixer-volume > $-mako-pulsemixer
-mode $-mode-audio bindsym --whole-window $-mouse-m exec pactl set-sink-volume @DEFAULT_SINK@  0db && $-pulsemixer-volume > $-mako-pulsemixer
-mode $-mode-audio bindsym --whole-window $-mouse-d exec pactl set-sink-volume @DEFAULT_SINK@ -1db && $-pulsemixer-volume > $-mako-pulsemixer
+mode $-mode-audio bindsym --whole-window $-mouse-u exec pactl set-sink-volume @DEFAULT_SINK@ +1db && $-pulsemixer-volume > $-path-mako-pulsemixer
+mode $-mode-audio bindsym --whole-window $-mouse-m exec pactl set-sink-volume @DEFAULT_SINK@  0db && $-pulsemixer-volume > $-path-mako-pulsemixer
+mode $-mode-audio bindsym --whole-window $-mouse-d exec pactl set-sink-volume @DEFAULT_SINK@ -1db && $-pulsemixer-volume > $-path-mako-pulsemixer
 
-mode $-mode-audio bindsym --whole-window $-mouse-e exec pactl set-sink-mute @DEFAULT_SINK@ on  && $-pulsemixer-volume > $-mako-pulsemixer
-mode $-mode-audio bindsym --whole-window $-mouse-s exec pactl set-sink-mute @DEFAULT_SINK@ off && $-pulsemixer-volume > $-mako-pulsemixer
+mode $-mode-audio bindsym --whole-window $-mouse-e exec pactl set-sink-mute @DEFAULT_SINK@ on  && $-pulsemixer-volume > $-path-mako-pulsemixer
+mode $-mode-audio bindsym --whole-window $-mouse-s exec pactl set-sink-mute @DEFAULT_SINK@ off && $-pulsemixer-volume > $-path-mako-pulsemixer
 
-mode $-mode-audio bindsym --whole-window $-mouse-e+shift exec pactl set-source-mute @DEFAULT_SINK@ on  && $-pulsemixer-volume > $-mako-pulsemixer
-mode $-mode-audio bindsym --whole-window $-mouse-s+shift exec pactl set-source-mute @DEFAULT_SINK@ off && $-pulsemixer-volume > $-mako-pulsemixer
+mode $-mode-audio bindsym --whole-window $-mouse-e+shift exec pactl set-source-mute @DEFAULT_SINK@ on  && $-pulsemixer-volume > $-path-mako-pulsemixer
+mode $-mode-audio bindsym --whole-window $-mouse-s+shift exec pactl set-source-mute @DEFAULT_SINK@ off && $-pulsemixer-volume > $-path-mako-pulsemixer
 
 mode $-mode-audio bindsym escape mode $-mode-default
 
@@ -69,20 +69,20 @@ mode $-mode-bluetooth bindsym escape mode $-mode-default
 
 ### cursor
 
-mode $-mode-cursor bindsym $-way-u seat - cursor move  0        -$-step-a
-mode $-mode-cursor bindsym $-way-l seat - cursor move -$-step-a  0
-mode $-mode-cursor bindsym $-way-r seat - cursor move  $-step-a  0
-mode $-mode-cursor bindsym $-way-d seat - cursor move  0         $-step-a
+mode $-mode-cursor bindsym $-arrow-u seat - cursor move  0        -$-step-a
+mode $-mode-cursor bindsym $-arrow-l seat - cursor move -$-step-a  0
+mode $-mode-cursor bindsym $-arrow-r seat - cursor move  $-step-a  0
+mode $-mode-cursor bindsym $-arrow-d seat - cursor move  0         $-step-a
 
-mode $-mode-cursor bindsym $-way-u+ctrl seat - cursor move  0        -$-step-b
-mode $-mode-cursor bindsym $-way-l+ctrl seat - cursor move -$-step-b  0
-mode $-mode-cursor bindsym $-way-r+ctrl seat - cursor move  $-step-b  0
-mode $-mode-cursor bindsym $-way-d+ctrl seat - cursor move  0         $-step-b
+mode $-mode-cursor bindsym $-arrow-u+ctrl seat - cursor move  0        -$-step-b
+mode $-mode-cursor bindsym $-arrow-l+ctrl seat - cursor move -$-step-b  0
+mode $-mode-cursor bindsym $-arrow-r+ctrl seat - cursor move  $-step-b  0
+mode $-mode-cursor bindsym $-arrow-d+ctrl seat - cursor move  0         $-step-b
 
-mode $-mode-cursor bindsym $-way-u+shift seat - cursor move  0        -$-step-c
-mode $-mode-cursor bindsym $-way-l+shift seat - cursor move -$-step-c  0
-mode $-mode-cursor bindsym $-way-r+shift seat - cursor move  $-step-c  0
-mode $-mode-cursor bindsym $-way-d+shift seat - cursor move  0         $-step-c
+mode $-mode-cursor bindsym $-arrow-u+shift seat - cursor move  0        -$-step-c
+mode $-mode-cursor bindsym $-arrow-l+shift seat - cursor move -$-step-c  0
+mode $-mode-cursor bindsym $-arrow-r+shift seat - cursor move  $-step-c  0
+mode $-mode-cursor bindsym $-arrow-d+shift seat - cursor move  0         $-step-c
 
 mode $-mode-cursor bindsym escape mode $-mode-default
 
@@ -121,15 +121,15 @@ mode $-mode-lock bindsym escape mode $-mode-default
 
 ### move
 
-mode $-mode-move bindsym $-way-u move $-way-u $-step-a
-mode $-mode-move bindsym $-way-l move $-way-l $-step-a
-mode $-mode-move bindsym $-way-r move $-way-r $-step-a
-mode $-mode-move bindsym $-way-d move $-way-d $-step-a
+mode $-mode-move bindsym $-arrow-u move $-arrow-u $-step-a
+mode $-mode-move bindsym $-arrow-l move $-arrow-l $-step-a
+mode $-mode-move bindsym $-arrow-r move $-arrow-r $-step-a
+mode $-mode-move bindsym $-arrow-d move $-arrow-d $-step-a
 
-mode $-mode-move bindsym $-way-u+shift move $-way-u $-step-b
-mode $-mode-move bindsym $-way-l+shift move $-way-l $-step-b
-mode $-mode-move bindsym $-way-r+shift move $-way-r $-step-b
-mode $-mode-move bindsym $-way-d+shift move $-way-d $-step-b
+mode $-mode-move bindsym $-arrow-u+shift move $-arrow-u $-step-b
+mode $-mode-move bindsym $-arrow-l+shift move $-arrow-l $-step-b
+mode $-mode-move bindsym $-arrow-r+shift move $-arrow-r $-step-b
+mode $-mode-move bindsym $-arrow-d+shift move $-arrow-d $-step-b
 
 mode $-mode-move bindsym escape mode $-mode-default
 
@@ -154,10 +154,10 @@ mode $-mode-output bindsym escape mode $-mode-default
 
 ### resize
 
-mode $-mode-resize bindsym $-way-u resize shrink height 16px
-mode $-mode-resize bindsym $-way-l resize shrink width  16px
-mode $-mode-resize bindsym $-way-r resize grow   width  16px
-mode $-mode-resize bindsym $-way-d resize grow   height 16px
+mode $-mode-resize bindsym $-arrow-u resize shrink height 16px
+mode $-mode-resize bindsym $-arrow-l resize shrink width  16px
+mode $-mode-resize bindsym $-arrow-r resize grow   width  16px
+mode $-mode-resize bindsym $-arrow-d resize grow   height 16px
 
 mode $-mode-resize bindsym --to-code $-key-0 resize set 1024  768
 mode $-mode-resize bindsym --to-code $-key-1 resize set 1920 1152

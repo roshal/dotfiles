@@ -9,4 +9,4 @@ exec $-shell-nm-applet
 
 ### exec always
 
-# exec_always tail --follow $-mako-pulsemixer --lines 1 | $-wob-base
+# exec_always tail --follow $-path-mako-pulsemixer --lines 1 | $-wob-base
