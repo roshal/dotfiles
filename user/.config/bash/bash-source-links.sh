@@ -1,7 +1,9 @@
 
+alias root='cd /'
+
 ### root
 
-alias root='cd /'
+alias home='cd /home'
 
 ### dash
 
@@ -21,15 +23,19 @@ alias wireguard='cd /-/wireguard'
 alias frontend='cd /-/esphere/frontend'
 alias lkk='cd /-/esphere/lkk'
 
+### esphere constructordms
+
+alias ui='cd /-/esphere/constructordms/ui'
+
+### esphere courier
+
+alias light-ui='cd /-/esphere/courier/light-ui'
+
 ### esphere frontend
 
 alias Fish='cd /-/esphere/frontend/Fish'
 alias Leda='cd /-/esphere/frontend/Leda'
 alias leda-npm='cd /-/esphere/frontend/leda-npm'
-
-### esphere courier
-
-alias light-ui='cd /-/esphere/courier/light-ui'
 
 ### esphere lkk
 
