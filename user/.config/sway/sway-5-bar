@@ -13,8 +13,7 @@ bar status_edge_padding 9
 ### no effect
 bar status_padding 9
 
-### default
-# bar wrap_scroll no
+bar wrap_scroll yes
 
 ##### 5.1 i3bar command
 # # # https://i3wm.org/docs/userguide.html#_i3bar_command
