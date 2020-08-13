@@ -169,7 +169,6 @@ focus_follows_mouse no
 ##### 4.25 focus wrapping
 # # # https://i3wm.org/docs/userguide.html#_focus_wrapping
 
-### deafult
 focus_wrapping no
 
 ##### 4.26 forcing xinerama

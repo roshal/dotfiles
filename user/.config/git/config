@@ -23,7 +23,7 @@ cmd = code --wait --diff $LOCAL $REMOTE
 
 [pager]
 
-log = false
+# log = false
 
 [rebase]
 
