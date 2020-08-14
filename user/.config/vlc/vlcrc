@@ -1,5 +1,5 @@
 ﻿###
-###  vlc 3.0.11
+###  vlc 3.0.11.1
 ###
 
 ###
@@ -372,7 +372,7 @@
 #qt-fs-opacity=0.800000
 
 # Resize interface to the native video size (boolean)
-qt-video-autoresize=0
+#qt-video-autoresize=1
 
 # Show playing item name in window title (boolean)
 #qt-name-in-title=1
@@ -387,7 +387,7 @@ qt-video-autoresize=0
 #qt-recentplay-filter=
 
 # Continue playback? (integer)
-qt-continue=2
+#qt-continue=1
 
 # Embed the file browser in open dialog (boolean)
 #qt-embedded-open=0
@@ -737,10 +737,10 @@ qt-privacy-ask=0
 #sout-x264-stats=x264_2pass.log
 
 # Default preset setting used (string)
-sout-x264-preset=placebo
+#sout-x264-preset=
 
 # Default tune setting used (string)
-sout-x264-tune=zerolatency
+#sout-x264-tune=
 
 # x264 advanced options (string)
 #sout-x264-options=
@@ -759,7 +759,7 @@ sout-x264-tune=zerolatency
 #subsdec-align=-1
 
 # Subtitle text encoding (string)
-subsdec-encoding=UTF-8
+#subsdec-encoding=
 
 # UTF-8 subtitle autodetection (boolean)
 #subsdec-autodetect-utf8=1
@@ -1338,6 +1338,11 @@ subsdec-encoding=UTF-8
 # Auto re-connect (boolean)
 #http-reconnect=0
 
+[dvdread] # DVDRead Input (no menu support)
+
+# DVD angle (integer)
+#dvdread-angle=1
+
 [concat] # Concatenated inputs
 
 # Inputs list (string)
@@ -1408,6 +1413,11 @@ subsdec-encoding=UTF-8
 
 # Sample rate (integer)
 #alsa-samplerate=48000
+
+[nfs] # NFS input
+
+# Set NFS uid/guid automatically (boolean)
+#nfs-auto-guid=1
 
 [libbluray] # Blu-ray Disc support (libbluray)
 
@@ -1692,6 +1702,17 @@ subsdec-encoding=UTF-8
 # Continuous 22kHz tone (integer)
 #dvb-tone=-1
 
+[smb] # SMB input
+
+# Username (string)
+#smb-user=
+
+# Password (string)
+#smb-pwd=
+
+# SMB domain (string)
+#smb-domain=
+
 [udp] # UDP input
 
 # UDP Source timeout (sec) (integer)
@@ -1709,6 +1730,14 @@ subsdec-encoding=UTF-8
 
 # Frame rate (string)
 #timecode-fps=25/1
+
+[dvdnav] # DVDnav Input
+
+# DVD angle (integer)
+#dvdnav-angle=1
+
+# Start directly in menu (boolean)
+#dvdnav-menu=1
 
 [vdpau_chroma] # VDPAU surface conversions
 
@@ -1950,7 +1979,7 @@ subsdec-encoding=UTF-8
 #sout-avi-subject=
 
 # Encoder (string)
-#sout-avi-encoder=VLC Media Player - 3.0.11 Vetinari
+#sout-avi-encoder=VLC Media Player - 3.0.11.1 Vetinari
 
 # Keywords (string)
 #sout-avi-keywords=
@@ -2932,7 +2961,7 @@ subsdec-encoding=UTF-8
 [freetype] # Freetype2 font renderer
 
 # Font (string)
-freetype-font=Roboto
+#freetype-font=Serif Bold
 
 # Monospace Font (string)
 #freetype-monofont=Monospace
@@ -2968,7 +2997,7 @@ freetype-font=Roboto
 #freetype-outline-thickness=4
 
 # Shadow opacity (integer)
-freetype-shadow-opacity=0
+#freetype-shadow-opacity=128
 
 # Shadow color (integer)
 #freetype-shadow-color=0
@@ -3581,7 +3610,7 @@ freetype-shadow-opacity=0
 #audio-time-stretch=1
 
 # Audio output module (string)
-aout=any
+#aout=
 
 # Media role (string)
 #role=video
@@ -3647,7 +3676,7 @@ aout=any
 #mouse-hide-timeout=1000
 
 # Video snapshot directory (or filename) (string)
-snapshot-path=/-/vlc
+#snapshot-path=
 
 # Video snapshot file prefix (string)
 #snapshot-prefix=vlcsnap-
@@ -3719,7 +3748,7 @@ snapshot-path=/-/vlc
 #deinterlace-mode=auto
 
 # Video output module (string)
-vout=any
+#vout=
 
 # Video filter module (string)
 #video-filter=
@@ -4025,7 +4054,7 @@ vout=any
 #play-and-stop=0
 
 # Play and pause (boolean)
-play-and-pause=1
+#play-and-pause=0
 
 # Start paused (boolean)
 #start-paused=0
