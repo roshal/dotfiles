@@ -2,5 +2,6 @@
 [Desktop Entry]
 
 Type=Application
-Name=virtualbox
+Name=--virtualbox
+Icon=virtualbox
 Exec=env QT_QPA_PLATFORM= virtualbox

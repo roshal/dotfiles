@@ -1,0 +1,7 @@
+
+[Desktop Entry]
+
+Type=Application
+Name=--chromium--roshal-coding
+Icon=chromium
+Exec=/usr/bin/chromium --profile-directory=profile--roshal-coding %U

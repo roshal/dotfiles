@@ -28,6 +28,8 @@ bindsym --to-code $-modifier+l exec swaylock --image /-/pictures/waves.jpg
 bindsym --to-code $-modifier+n exec thunar
 bindsym --to-code $-modifier+o exec swaymsg -- output $-echo-output-focused disable \, output $-echo-output-suspend enable
 
+bindsym --to-code $-modifier+shift+d exec wofi --show drun --allow-images --sort-order alphabetical --search --
+
 ##### 6.2 splitting containers
 # # # https://i3wm.org/docs/userguide.html#_splitting_containers
 
