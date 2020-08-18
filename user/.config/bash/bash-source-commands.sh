@@ -1,12 +1,12 @@
 
-### alphabet
+### actions
 
-alias AZ='echo ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-alias ZA='echo ZYXWVUTSRQPONMLKJIHGFEDCBA'
-alias az='echo abcdefghijklmnopqrstuvwxyz'
-alias za='echo zyxwvutsrqponmlkjihgfedcba'
+alias dismiss='makoctl dismiss --all'
 
-### bash
+### commands
+
+alias mv="mv --interactive"
+alias rm="rm --interactive"
 
 alias trim='sed -e "s/^[[:space:]]*//"'
 
@@ -15,21 +15,16 @@ alias chars='wc --chars'
 alias lines='wc --lines'
 alias words='wc --words'
 
-### dismiss
+### sequences
 
-alias dismiss='makoctl dismiss --all'
+alias 09='echo 0123456789'
+alias 90='echo 9876543210'
 
-### linux
+alias AZ='echo ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+alias ZA='echo ZYXWVUTSRQPONMLKJIHGFEDCBA'
 
-alias diff='diff --color'
-
-alias grep='grep --color'
-# # https://wiki.archlinux.org/index.php/Color_output_in_console#ls
-
-alias ls='ls --color=auto'
-
-alias man='LANG=ru_RU.UTF-8 "man" --no-hyphenation --no-justification'
-alias men='"man" --no-hyphenation --no-justification'
+alias az='echo abcdefghijklmnopqrstuvwxyz'
+alias za='echo zyxwvutsrqponmlkjihgfedcba'
 
 ### sudo
 
@@ -39,6 +34,18 @@ alias sudo='sudo --prompt "$(tput setaf 3)$(echo -e enter pass for %u\\n\\r)$(tp
 ### termite
 
 alias termite='termite --directory /-'
+
+### unix
+
+alias diff='diff --color'
+
+alias grep='grep --color'
+
+# # https://wiki.archlinux.org/index.php/Color_output_in_console#ls
+alias ls='ls --color=auto'
+
+alias man='LANG=ru_RU.UTF-8 "man" --no-hyphenation --no-justification'
+alias men='"man" --no-hyphenation --no-justification'
 
 ### wofi
 
