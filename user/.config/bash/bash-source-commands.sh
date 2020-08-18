@@ -5,15 +5,17 @@ alias dismiss='makoctl dismiss --all'
 
 ### commands
 
-alias mv="mv --interactive"
-alias rm="rm --interactive"
-
 alias trim='sed -e "s/^[[:space:]]*//"'
 
 alias bytes='wc --bytes'
 alias chars='wc --chars'
 alias lines='wc --lines'
 alias words='wc --words'
+
+### files
+
+# alias mv="mv --interactive"
+# alias rm="rm --interactive"
 
 ### sequences
 
