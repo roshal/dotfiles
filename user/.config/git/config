@@ -136,6 +136,12 @@ config-roshal-name = config user.name 'roshal'
 config-esphere-mail = config user.email roshal.e@esphere.ru
 config-esphere-name = config user.name 'Рошаль Ефим Геннадьевич'
 
+### diff
+
+dc = diff --cached
+dh = diff HEAD
+di = diff
+
 ### log
 
 hist = log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
