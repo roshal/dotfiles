@@ -30,6 +30,7 @@ include '~/.config/sway/sway-5-bar'
 include '~/.config/sway/sway-6-bindsym'
 include '~/.config/sway/sway-6-bindsym-audio'
 include '~/.config/sway/sway-6-bindsym-mouse'
+include '~/.config/sway/sway-6-bindsym-other'
 
 ##### sway
 # # # https://github.com/swaywm/sway/wiki

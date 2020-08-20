@@ -30,11 +30,6 @@ bindsym --to-code XF86AudioStop exec notify-send stop
 # bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SINK@ toggle
 # bindsym XF86AudioMute    exec pactl set-sink-mute   @DEFAULT_SINK@ toggle
 
-### makoctl
-
-bindsym --to-code $-modifier+m       exec makoctl dismiss --all
-bindsym --to-code $-modifier+m+shift exec makoctl dismiss
-
 ### pactl
 
 bindsym --whole-window $-modifier+$-mouse-u+ctrl exec pactl set-sink-volume @DEFAULT_SINK@ +1db && $-pulsemixer-volume > $-path-mako-pulsemixer
