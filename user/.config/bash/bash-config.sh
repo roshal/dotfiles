@@ -1,6 +1,6 @@
 
 ### if not running interactively do not do anything
-! echo "${-}" | grep -q i && return
+! echo "${-}" | grep --quiet i && return
 
 ### prompt
 
@@ -21,7 +21,13 @@ test -e "${HOME}/.yarn/bin/nps" && eval "$(nps completion)"
 # # https://wiki.archlinux.org/index.php/Termite#Ctrl+Shift+t
 source /etc/profile.d/vte.sh
 
-source /usr/share/git/completion/git-prompt.sh
+# # https://wiki.archlinux.org/index.php/Bash#Command_not_found
+source /usr/share/doc/pkgfile/command-not-found.bash
+# sudo pkgfile -u
+
+# # https://wiki.archlinux.org/index.php/Git#Git_prompt
+source /usr/share/git/git-prompt.sh
+
 source /usr/share/nvm/init-nvm.sh
 
 ### environment after vte

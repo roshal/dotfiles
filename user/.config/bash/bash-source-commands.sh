@@ -31,7 +31,7 @@ alias za='echo zyxwvutsrqponmlkjihgfedcba'
 ### sudo
 
 # # https://wiki.archlinux.org/index.php/Sudo#Passing_aliases
-alias sudo='sudo --prompt "$(tput setaf 3)$(echo -e enter pass for %u\\n\\r)$(tput sgr0)"'
+alias sudo='sudo --prompt "$(echo -e - $(tput setaf 3)enter pass for %u$(tput sgr0)\\r)" '
 
 ### termite
 

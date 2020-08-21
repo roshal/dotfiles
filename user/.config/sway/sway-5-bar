@@ -3,15 +3,16 @@
 
 # # man 5 sway-bar
 
-bar pango_markup enabled
+### default
+# bar swaybar_command swaybar
 
 bar height 24
 
-### no effect
-bar status_edge_padding 9
+# bar pango_markup enabled
 
-### no effect
-bar status_padding 9
+bar status_edge_padding 6
+
+bar status_padding 0
 
 bar wrap_scroll yes
 
@@ -56,7 +57,7 @@ bar status_command sh /-/shell/sway-bar-status.sh
 ##### 5.9 tray padding
 # # # https://i3wm.org/docs/userguide.html#_tray_padding
 
-bar tray_padding 1
+bar tray_padding 0
 
 ##### 5.10 font
 # # # https://i3wm.org/docs/userguide.html#_font
@@ -68,7 +69,7 @@ bar tray_padding 1
 # # # https://i3wm.org/docs/userguide.html#_custom_separator_symbol
 
 ### no effect
-bar separator_symbol '|'
+bar separator_symbol ''
 
 ##### 5.12 workspace buttons
 # # # https://i3wm.org/docs/userguide.html#_workspace_buttons
@@ -100,12 +101,14 @@ bar strip_workspace_numbers yes
 # # # https://i3wm.org/docs/userguide.html#_colors
 
 bar colors background $-black-a
-bar colors statusline $-black-c
-bar colors separator  $-black-e
+bar colors separator  $-black-b
+
+bar colors statusline $-black-d
 
 bar colors focused_background $-black-b
-bar colors focused_statusline $-black-d
-bar colors focused_separator  $-black-f
+bar colors focused_separator  $-black-c
+
+bar colors focused_statusline $-black-c
 
 bar colors focused_workspace  $-black-c $-black-c $-black-e
 bar colors active_workspace   $-black-c $-black-c $-black-e

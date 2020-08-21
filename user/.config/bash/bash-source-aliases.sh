@@ -15,6 +15,8 @@ alias english='LC_ALL=C'
 
 ### git
 
+alias g='git'
+
 alias a='git add'
 alias d='git diff'
 alias s='git status'
