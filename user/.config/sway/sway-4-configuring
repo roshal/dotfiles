@@ -7,7 +7,7 @@
 ##### 4.2 fonts
 # # # https://i3wm.org/docs/userguide.html#fonts
 
-font pango: monospace 9
+font monospace 9
 
 ##### 4.3 keyboard bindings
 # # # https://i3wm.org/docs/userguide.html#keybindings

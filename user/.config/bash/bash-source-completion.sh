@@ -10,7 +10,6 @@
 source /usr/share/git/completion/git-completion.bash
 
 __git_complete a __git_add
-__git_complete d __git_log_common_options
 __git_complete g __git_main
 __git_complete l __git_log_common_options
 __git_complete ll __git_log_common_options
