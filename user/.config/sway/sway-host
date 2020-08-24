@@ -1,3 +1,0 @@
-
-bindsym --to-code $-modifier+shift+x input type:pointer scroll_factor 8
-bindsym --to-code $-modifier+shift+z input type:pointer scroll_factor 1

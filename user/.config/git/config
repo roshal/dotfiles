@@ -7,8 +7,8 @@ editor = code --wait
 
 [include]
 
-path = config-alias.gitconfig
-path = config-color.gitconfig
+path = git-alias.gitconfig
+path = git-color.gitconfig
 
 ### commands
 

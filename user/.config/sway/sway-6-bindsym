@@ -15,9 +15,6 @@ bindsym $-modifier+$-special-p+shift exec $-grim-full $-grim-path
 
 bindsym $-modifier+$-special-s exec $-grim-slurp
 
-bindsym $-modifier+i       exec         $-shell-exec-nm-applet
-bindsym $-modifier+i+shift exec killall $-shell-kill-nm-applet
-
 bindsym $-modifier+return exec termite
 
 bindsym $-special-p       exec $-grim-crop $-grim-copy
@@ -28,6 +25,9 @@ bindsym --to-code $-modifier+d exec wofi
 bindsym --to-code $-modifier+l exec swaylock --image /-/pictures/waves.jpg
 bindsym --to-code $-modifier+n exec thunar
 bindsym --to-code $-modifier+o exec swaymsg -- output $-echo-output-focused disable \, output $-echo-output-suspend enable
+
+bindsym --to-code $-modifier+i       exec $-shell-exec-nm-applet
+bindsym --to-code $-modifier+i+shift exec $-shell-kill-nm-applet
 
 bindsym --to-code $-modifier+shift+d exec wofi --show drun --allow-images --sort-order alphabetical --search --
 
