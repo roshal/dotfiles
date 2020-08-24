@@ -1,0 +1,19 @@
+
+[color]
+
+advice = true
+blame = true
+branch = true
+decorate = true
+diff = true
+grep = true
+interactive = true
+interactive = true
+pager = true
+pager = true
+push = true
+remote = true
+showBranch = true
+status = true
+transport = true
+ui = true

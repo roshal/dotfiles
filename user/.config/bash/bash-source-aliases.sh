@@ -9,6 +9,10 @@ alias re='exec bash'
 
 alias c='cat'
 
+### code
+
+alias r='code -r'
+
 ### english
 
 alias english='LC_ALL=C'
