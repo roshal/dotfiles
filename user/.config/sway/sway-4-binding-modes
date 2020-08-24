@@ -21,20 +21,20 @@ bindsym --to-code $-modifier+ctrl+w mode $-mode-wireguard
 
 ##### modes
 
-mode $-mode-binding-modes bindsym --to-code a mode $-mode-audio
-mode $-mode-binding-modes bindsym --to-code b mode $-mode-bluetooth
-mode $-mode-binding-modes bindsym --to-code c mode $-mode-cursor
-mode $-mode-binding-modes bindsym --to-code k mode $-mode-kill
-mode $-mode-binding-modes bindsym --to-code l mode $-mode-lock
-mode $-mode-binding-modes bindsym --to-code m mode $-mode-move
-mode $-mode-binding-modes bindsym --to-code n mode $-mode-network
-mode $-mode-binding-modes bindsym --to-code o mode $-mode-output
-mode $-mode-binding-modes bindsym --to-code r mode $-mode-resize
-mode $-mode-binding-modes bindsym --to-code s mode $-mode-system
-mode $-mode-binding-modes bindsym --to-code v mode $-mode-vpn
-mode $-mode-binding-modes bindsym --to-code w mode $-mode-wireguard
+mode $-binding-mode bindsym --to-code a mode $-mode-audio
+mode $-binding-mode bindsym --to-code b mode $-mode-bluetooth
+mode $-binding-mode bindsym --to-code c mode $-mode-cursor
+mode $-binding-mode bindsym --to-code k mode $-mode-kill
+mode $-binding-mode bindsym --to-code l mode $-mode-lock
+mode $-binding-mode bindsym --to-code m mode $-mode-move
+mode $-binding-mode bindsym --to-code n mode $-mode-network
+mode $-binding-mode bindsym --to-code o mode $-mode-output
+mode $-binding-mode bindsym --to-code r mode $-mode-resize
+mode $-binding-mode bindsym --to-code s mode $-mode-system
+mode $-binding-mode bindsym --to-code v mode $-mode-vpn
+mode $-binding-mode bindsym --to-code w mode $-mode-wireguard
 
-mode $-mode-binding-modes bindsym escape mode $-mode-default
+mode $-binding-mode bindsym escape mode $-mode-default
 
 ### audio
 

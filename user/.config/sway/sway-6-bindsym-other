@@ -3,3 +3,6 @@
 
 bindsym --to-code $-modifier+m       exec makoctl dismiss --all
 bindsym --to-code $-modifier+m+shift exec makoctl dismiss
+
+bindsym --to-code $-modifier+x       exec makoctl dismiss --all
+bindsym --to-code $-modifier+x+shift exec makoctl dismiss
