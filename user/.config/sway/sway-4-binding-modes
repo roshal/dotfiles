@@ -147,7 +147,8 @@ mode $-mode-move bindsym escape mode $-mode-default
 mode $-mode-network bindsym --to-code a mode $-mode-default , exec nmcli connection up   ethernet
 mode $-mode-network bindsym --to-code z mode $-mode-default , exec nmcli connection down ethernet
 
-mode $-mode-network bindsym --to-code i mode $-mode-default , exec $-shell-nm-applet
+mode $-mode-network bindsym --to-code i       mode $-mode-default , exec $-shell-exec-nm-applet
+mode $-mode-network bindsym --to-code i+shift mode $-mode-default , exec $-shell-kill-nm-applet
 
 mode $-mode-network bindsym escape mode $-mode-default
 

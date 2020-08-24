@@ -15,7 +15,8 @@ bindsym $-modifier+$-special-p+shift exec $-grim-full $-grim-path
 
 bindsym $-modifier+$-special-s exec $-grim-slurp
 
-bindsym $-modifier+i exec $-shell-nm-applet
+bindsym $-modifier+i       exec         $-shell-exec-nm-applet
+bindsym $-modifier+i+shift exec killall $-shell-kill-nm-applet
 
 bindsym $-modifier+return exec termite
 

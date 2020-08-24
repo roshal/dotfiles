@@ -42,7 +42,8 @@ set $-echo-output-suspend $(swaymsg -t get_outputs | jq -r '.[] | select(.focuse
 set $-echo-date $(date +%y-%m-%d)
 set $-echo-time $(date +%H-%M-%S)
 
-set $-shell-nm-applet 'killall --quiet nm-applet ; nm-applet --indicator'
+set $-shell-kill-nm-applet 'killall --quiet nm-applet'
+set $-shell-exec-nm-applet 'killall --quiet nm-applet ; nm-applet --indicator'
 
 ### grim
 

@@ -1,5 +1,5 @@
 
-# # https://git-scm.com/docs/git-confighttps://git-scm.com/docs/git-config
+# # https://git-scm.com/docs/git-config
 
 [core]
 
@@ -56,104 +56,112 @@ ui = true
 
 [alias]
 
-### classic
+### origin
 
-co = checkout --no-guess
-br = branch
-ci = commit
-st = status
-
-last = log -1 @
-hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-type = cat-file -t
-dump = cat-file -p
-echo = !echo
-
-remove = rm --cached
-
-unstage = reset @ --
-
-### default
-
-loghex = log --abbrev=8
+origin-add = add
+origin-branch = branch
+origin-cat-file = cat-file
+origin-checkout = checkout
+origin-clone = clone
+origin-commit = commit --no-verify
+origin-config = config
+origin-diff = diff
+origin-init = init
+origin-merge = merge
+origin-push = push
+origin-remote = remote
+origin-reset = reset
+origin-rm = rm
+origin-show = show
+origin-stash = stash
+origin-status = status
 
 # # https://git-scm.com/docs/pretty-formats
-loging = log --reverse --color --abbrev=8 --date='format:%y-%m-%d %T' --pretty='%C(auto)%ad %h %<(8,trunc)%ae %<(53,trunc)%s%n%-d%C(reset)'
+origin-log = log --reverse --color --abbrev=8 --date='format:%y-%m-%d %T' --pretty='%C(auto)%ad %h %<(8,trunc)%ae %<(53,trunc)%s%n%-d%C(reset)'
+
+### classic
+
+co = origin-checkout --no-guess
+br = origin-branch
+ci = origin-commit
+st = origin-status
+
+last = origin-log -1 @
+hist = origin-log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+type = origin-cat-file -t
+dump = origin-cat-file -p
+echo = !echo
+
+remove = origin-rm --cached
+
+unstage = origin-reset @ --
 
 ### custom
 
-aa = add --all
-ad = add
-cl = clone
-di = diff
-in = init
-me = merge
-re = remote
-un = reset @ --
+aa = origin-add --all
+ad = origin-add
+cl = origin-clone
+di = origin-remote
+in = origin-init
+me = origin-merge
+re = origin-remote
+un = origin-reset @ --
 
-bvv = branch -v --verbose
+bvv = origin-branch -v --verbose
 
 ### add
 
-all = add --all
+all = origin-add --all
 
-patch = add --patch
+patch = origin-add --patch
 
 ### branch
 
-buom = branch -u origin/master
+buom = origin-branch -u origin/master
 
 ### cat-file
 
-dump = cat-file -p
-type = cat-file -t
+dump = origin-cat-file -p
+type = origin-cat-file -t
 
 ### checkout
 
-ctod = checkout --track origin/dev
+ctod = origin-checkout --track origin/dev
 
 ### commit
 
-com = commit
+amend = origin-commit --allow-empty-message --amend
 
-cam = commit --allow-empty-message --no-edit --amend
-cem = commit --allow-empty-message --allow-empty --message ''
-cin = commit --allow-empty-message --no-verify
-
-amend = commit --amend --allow-empty-message --no-edit
-
-edit = commit --amend --allow-empty-message
+cam = origin-commit --allow-empty-message --no-edit --amend
+cem = origin-commit --allow-empty-message --allow-empty --message ''
 
 # # git config --local format.signoff true
 # # git config --local commit.gpgSign true
-sign = commit --signoff
+sign = origin-commit --signoff
 
 ### config
 
-config-roshal-mail = config user.email roshal@users.noreply.github.com
-config-roshal-name = config user.name 'roshal'
+config-roshal-mail = origin-config user.email roshal@users.noreply.github.com
+config-roshal-name = origin-config user.name 'roshal'
 
-config-esphere-mail = config user.email roshal.e@esphere.ru
-config-esphere-name = config user.name 'Рошаль Ефим Геннадьевич'
+config-esphere-mail = origin-config user.email roshal.e@esphere.ru
+config-esphere-name = origin-config user.name 'Рошаль Ефим Геннадьевич'
 
 ### diff
+# # https://stackoverflow.com/a/1587952/9381882
 
-dc = diff --cached
-dh = diff HEAD
-di = diff
+dc = origin-diff --cached
+dh = origin-diff HEAD
+di = origin-diff
 
 ### log
 
-hist = log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
+l   = origin-log -16
+ll  = origin-log -32
+lll = origin-log -64
 
-### loging
-
-l   = loging -16
-ll  = loging -32
-lll = loging -64
-
-lg = loging -32 --graph --reverse
-lo = loging -32 --oneline
+lg = origin-log -32 --graph --reverse
+lo = origin-log -32 --oneline
 
 ### merge
 
@@ -161,66 +169,66 @@ mes = merge --squash
 
 ### push
 
-pg = push github HEAD
-ph = push heroku HEAD
-po = push origin HEAD
+pg = origin-push github HEAD
+ph = origin-push heroku HEAD
+po = origin-push origin HEAD
 
-pgf = push --force github HEAD
-phf = push --force heroku HEAD
-pof = push --force origin HEAD
+pgf = origin-push --force github HEAD
+phf = origin-push --force heroku HEAD
+pof = origin-push --force origin HEAD
 
-png = push --no-verify github HEAD
-pnh = push --no-verify heroku HEAD
-pno = push --no-verify origin HEAD
+png = origin-push --no-verify github HEAD
+pnh = origin-push --no-verify heroku HEAD
+pno = origin-push --no-verify origin HEAD
 
-pfng = push --force --no-verify github HEAD
-pfnh = push --force --no-verify heroku HEAD
-pfno = push --force --no-verify origin HEAD
+pfng = origin-push --force --no-verify github HEAD
+pfnh = origin-push --force --no-verify heroku HEAD
+pfno = origin-push --force --no-verify origin HEAD
 
-puoh = push -u github HEAD
-puoh = push -u heroku HEAD
-puoh = push -u origin HEAD
+puoh = origin-push -u github HEAD
+puoh = origin-push -u heroku HEAD
+puoh = origin-push -u origin HEAD
 
 ### remote
 
-rev = remote --verbose
+rev = origin-remote --verbose
 
-rag = remote add github
-rah = remote add heroku
-rao = remote add origin
+rag = origin-remote add github
+rah = origin-remote add heroku
+rao = origin-remote add origin
 
-rrg = remote remove github
-rrh = remote remove heroku
-rro = remote remove origin
+rrg = origin-remote remove github
+rrh = origin-remote remove heroku
+rro = origin-remote remove origin
 
-rsg = remote set-url github
-rsh = remote set-url heroku
-rso = remote set-url origin
+rsg = origin-remote set-url github
+rsh = origin-remote set-url heroku
+rso = origin-remote set-url origin
 
 ### reset
 
-reh = reset HEAD^
-roh = reset origin/HEAD
+reh = origin-reset HEAD^
+roh = origin-reset origin/HEAD
 
-undo = reset --soft HEAD@{1}
+undo = origin-reset --soft HEAD@{1}
 
 ### rm
 
-rrc = rm -r --cached .
-
-### stash
-
-sl   = stash list
-ss   = stash show
-sp   = stash push
-pp   = stash pop
-sa   = stash apply
-sc   = stash create
-sd   = stash drop
-pop  = stash pop
-drop = stash drop
-list = stash list
+rrc = origin-rm -r --cached .
 
 ### show
 
-sn = show --name-status
+sn = origin-show --name-status
+
+### stash
+
+sl   = origin-stash list
+ss   = origin-stash show
+sp   = origin-stash push
+pp   = origin-stash pop
+sa   = origin-stash apply
+sc   = origin-stash create
+sd   = origin-stash drop
+pop  = origin-stash pop
+drop = origin-stash drop
+list = origin-stash list
