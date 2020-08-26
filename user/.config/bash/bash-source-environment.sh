@@ -34,7 +34,7 @@ export VAAPI_MPEG4_ENABLED='true'
 # # https://github.com/swaywm/sway/wiki#disabling-client-side-qt-decorations
 # # https://wiki.archlinux.org/index.php/Wayland#Qt_5
 # # https://wiki.qt.io/QtWayland#Run_Qt_applications_as_Wayland_clients
-# export QT_QPA_PLATFORM='wayland'
+export QT_QPA_PLATFORM='wayland'
 
 ### clipboard paste to chromium does not work
 # # https://github.com/swaywm/sway/wiki/Running-programs-natively-under-wayland#gtk3

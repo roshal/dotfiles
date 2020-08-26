@@ -31,19 +31,23 @@ alias lll='git lll'
 
 ### grep
 
-alias v='grep --ignore-case -v'
-alias x='grep --ignore-case'
-alias z='grep --ignore-case -z'
+alias gv='grep --ignore-case -v'
+alias gg='grep --ignore-case'
+alias gz='grep --ignore-case -z'
 
-alias vv='grep -9 --ignore-case -v'
-alias xx='grep -9 --ignore-case'
-alias zz='grep -9 --ignore-case -z'
+alias g9v='grep -9 --ignore-case -v'
+alias g9x='grep -9 --ignore-case'
+alias g9z='grep -9 --ignore-case -z'
+
+### head
+
+alias h='head'
 
 ### history
 
-alias h='history'
-
 alias hh='hstr'
+
+alias hi='history'
 
 ### lock and suspend
 
@@ -106,6 +110,10 @@ alias sypo='systemctl poweroff'
 alias syre='systemctl reboot'
 alias sysu='systemctl suspend'
 
+### tail
+
+alias t='tail'
+
 ### time
 
 alias dashtime='date +"%y-%m-%d--%H-%M-%S"'
@@ -113,7 +121,7 @@ alias datetime='date +"%y-%m-%d %T"'
 
 ### translate
 
-alias t='trans'
+alias z='trans'
 
 alias en='trans -t en'
 alias ru='trans -t ru'
