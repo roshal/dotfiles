@@ -1,6 +1,8 @@
 
 <fontconfig>
 
+	<!-- https://www.w3.org/TR/css-fonts-4/#generic-font-families -->
+
 	<alias>
 		<family>cursive</family>
 		<prefer>

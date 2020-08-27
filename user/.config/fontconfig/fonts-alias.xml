@@ -1,6 +1,8 @@
 
 <fontconfig>
 
+	<!--generic-->
+
 	<alias>
 		<family>monospace</family>
 		<prefer>
