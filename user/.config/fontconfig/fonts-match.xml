@@ -1,0 +1,38 @@
+
+<fontconfig>
+
+	<!--google-->
+
+	<match>
+		<test name='family'>
+			<string>arial</string>
+		</test>
+		<edit name='family' binding='same'>
+			<string>roboto</string>
+		</edit>
+	</match>
+
+	<!--github-->
+	<!--gitlab-->
+
+	<match>
+		<test name='family'>
+			<string>blinkmacsystemfont</string>
+		</test>
+		<edit name='family'>
+			<string>dmca sans serif</string>
+		</edit>
+	</match>
+
+	<!--github-->
+
+	<match>
+		<test name='family'>
+			<string>sfmono-regular</string>
+		</test>
+		<edit name='family'>
+			<string>dmca sans serif</string>
+		</edit>
+	</match>
+
+</fontconfig>
