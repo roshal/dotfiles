@@ -69,25 +69,25 @@ mode $-mode-bluetooth bindsym escape mode $-mode-default
 
 ### cursor
 
-mode $-mode-cursor bindsym $-arrow-u seat - cursor move  0        -$-step-a
-mode $-mode-cursor bindsym $-arrow-l seat - cursor move -$-step-a  0
-mode $-mode-cursor bindsym $-arrow-r seat - cursor move  $-step-a  0
-mode $-mode-cursor bindsym $-arrow-d seat - cursor move  0         $-step-a
+mode $-mode-cursor bindsym $-arrow-u seat - cursor move  $-step-0 -$-step-a
+mode $-mode-cursor bindsym $-arrow-l seat - cursor move -$-step-a  $-step-0
+mode $-mode-cursor bindsym $-arrow-r seat - cursor move  $-step-a  $-step-0
+mode $-mode-cursor bindsym $-arrow-d seat - cursor move  $-step-0  $-step-a
 
-mode $-mode-cursor bindsym $-arrow-u+ctrl seat - cursor move  0        -$-step-b
-mode $-mode-cursor bindsym $-arrow-l+ctrl seat - cursor move -$-step-b  0
-mode $-mode-cursor bindsym $-arrow-r+ctrl seat - cursor move  $-step-b  0
-mode $-mode-cursor bindsym $-arrow-d+ctrl seat - cursor move  0         $-step-b
+mode $-mode-cursor bindsym $-arrow-u+ctrl seat - cursor move  $-step-0 -$-step-b
+mode $-mode-cursor bindsym $-arrow-l+ctrl seat - cursor move -$-step-b  $-step-0
+mode $-mode-cursor bindsym $-arrow-r+ctrl seat - cursor move  $-step-b  $-step-0
+mode $-mode-cursor bindsym $-arrow-d+ctrl seat - cursor move  $-step-0  $-step-b
 
-mode $-mode-cursor bindsym $-arrow-u+shift seat - cursor move  0        -$-step-c
-mode $-mode-cursor bindsym $-arrow-l+shift seat - cursor move -$-step-c  0
-mode $-mode-cursor bindsym $-arrow-r+shift seat - cursor move  $-step-c  0
-mode $-mode-cursor bindsym $-arrow-d+shift seat - cursor move  0         $-step-c
+mode $-mode-cursor bindsym $-arrow-u+shift seat - cursor move  $-step-0 -$-step-c
+mode $-mode-cursor bindsym $-arrow-l+shift seat - cursor move -$-step-c  $-step-0
+mode $-mode-cursor bindsym $-arrow-r+shift seat - cursor move  $-step-c  $-step-0
+mode $-mode-cursor bindsym $-arrow-d+shift seat - cursor move  $-step-0  $-step-c
 
-mode $-mode-cursor bindsym $-arrow-u+shift+ctrl seat - cursor move  0        -$-step-d
-mode $-mode-cursor bindsym $-arrow-l+shift+ctrl seat - cursor move -$-step-d  0
-mode $-mode-cursor bindsym $-arrow-r+shift+ctrl seat - cursor move  $-step-d  0
-mode $-mode-cursor bindsym $-arrow-d+shift+ctrl seat - cursor move  0         $-step-d
+mode $-mode-cursor bindsym $-arrow-u+shift+ctrl seat - cursor move  $-step-0 -$-step-d
+mode $-mode-cursor bindsym $-arrow-l+shift+ctrl seat - cursor move -$-step-d  $-step-0
+mode $-mode-cursor bindsym $-arrow-r+shift+ctrl seat - cursor move  $-step-d  $-step-0
+mode $-mode-cursor bindsym $-arrow-d+shift+ctrl seat - cursor move  $-step-0  $-step-d
 
 mode $-mode-cursor bindsym escape mode $-mode-default
 
@@ -135,10 +135,10 @@ mode $-mode-move bindsym $-arrow-l move $-arrow-l $-step-a
 mode $-mode-move bindsym $-arrow-r move $-arrow-r $-step-a
 mode $-mode-move bindsym $-arrow-d move $-arrow-d $-step-a
 
-mode $-mode-move bindsym $-arrow-u+shift move $-arrow-u $-step-b
-mode $-mode-move bindsym $-arrow-l+shift move $-arrow-l $-step-b
-mode $-mode-move bindsym $-arrow-r+shift move $-arrow-r $-step-b
-mode $-mode-move bindsym $-arrow-d+shift move $-arrow-d $-step-b
+mode $-mode-move bindsym $-arrow-u+shift move $-arrow-u $-step-c
+mode $-mode-move bindsym $-arrow-l+shift move $-arrow-l $-step-c
+mode $-mode-move bindsym $-arrow-r+shift move $-arrow-r $-step-c
+mode $-mode-move bindsym $-arrow-d+shift move $-arrow-d $-step-c
 
 mode $-mode-move bindsym escape mode $-mode-default
 
