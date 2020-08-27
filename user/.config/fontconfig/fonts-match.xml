@@ -1,18 +1,17 @@
 
 <fontconfig>
 
-	<!--google-->
+	<!--github-->
 
 	<match>
 		<test name='family'>
-			<string>arial</string>
+			<string>sfmono-regular</string>
 		</test>
-		<edit name='family' binding='same'>
-			<string>roboto</string>
+		<edit name='family'>
+			<string>dmca sans serif</string>
 		</edit>
 	</match>
 
-	<!--github-->
 	<!--gitlab-->
 
 	<match>
@@ -24,14 +23,25 @@
 		</edit>
 	</match>
 
-	<!--github-->
+	<!--google-->
 
 	<match>
 		<test name='family'>
-			<string>sfmono-regular</string>
+			<string>arial</string>
 		</test>
-		<edit name='family'>
-			<string>dmca sans serif</string>
+		<edit name='family' binding='same'>
+			<string>roboto</string>
+		</edit>
+	</match>
+
+	<!--times-->
+
+	<match>
+		<test name='family'>
+			<string>times new roman</string>
+		</test>
+		<edit name='family' binding='same'>
+			<string>roboto slab</string>
 		</edit>
 	</match>
 

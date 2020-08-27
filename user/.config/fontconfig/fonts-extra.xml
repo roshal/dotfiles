@@ -63,6 +63,7 @@
 	<alias>
 		<family>serif</family>
 		<prefer>
+			<family>roboto slab</family>
 			<family>freeserif</family>
 			<family>noto serif</family>
 			<family>dejavu serif</family>

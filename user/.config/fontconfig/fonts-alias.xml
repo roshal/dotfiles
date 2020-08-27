@@ -20,23 +20,7 @@
 	<alias>
 		<family>serif</family>
 		<prefer>
-			<family>freeserif</family>
-		</prefer>
-	</alias>
-
-	<alias>
-		<family>system-ui</family>
-		<prefer>
-			<family>dmca sans serif</family>
-		</prefer>
-	</alias>
-
-	<!--gitlab-->
-
-	<alias>
-		<family>menlo</family>
-		<prefer>
-			<family>monospace</family>
+			<family>roboto slab</family>
 		</prefer>
 	</alias>
 
@@ -45,16 +29,7 @@
 	<alias>
 		<family>verdana</family>
 		<prefer>
-			<family>hack</family>
-		</prefer>
-	</alias>
-
-	<!--vscode-->
-
-	<alias>
-		<family>ubuntu</family>
-		<prefer>
-			<family>monospace</family>
+			<family>dmca sans serif</family>
 		</prefer>
 	</alias>
 
