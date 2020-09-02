@@ -10,14 +10,14 @@ function __swaymsg__inputs__keyboard_layout {
 }
 
 function __swaymsg__outputs__focused {
-	JQ='.[] '
+	JQ='.[]'
 	JQ+=' | select(.focused)'
 	JQ+=' | .name'
 	swaymsg -t get_outputs | jq -r "${JQ}"
 }
 
 function __swaymsg__outputs__suspend {
-	JQ='.[] '
+	JQ='.[]'
 	JQ+=' | select(.focused != true)'
 	JQ+=' | .name'
 	swaymsg -t get_outputs | jq -r "${JQ}"
