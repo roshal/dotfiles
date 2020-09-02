@@ -9,17 +9,6 @@ function __swaymsg__inputs__keyboard_layout {
 	swaymsg -t get_inputs | jq -r "${JQ}"
 }
 
-function __swaymsg__tree__node {
-	JQ='..'
-	JQ+=' | .nodes? // empty'
-	JQ+=' | .[]'
-	JQ+=' | if .focused then . else .floating_nodes[]'
-	JQ+=' | select(.focused) end'
-	JQ+=' | .rect'
-	JQ+=' | "\(.x),\(.y) \(.width)x\(.height)"'
-	swaymsg -t get_tree | jq -r "${JQ}"
-}
-
 function __swaymsg__outputs__focused {
 	JQ='.[] '
 	JQ+=' | select(.focused)'
@@ -73,6 +62,17 @@ function __swaymsg__switch_output {
 	FOCUSED=$(__swaymsg__outputs__focused)
 	SUSPEND=$(__swaymsg__outputs__suspend)
 	swaymsg -- output ${FOCUSED} disable , output ${SUSPEND} enable
+}
+
+function __swaymsg__tree__node {
+	JQ='..'
+	JQ+=' | .nodes? // empty'
+	JQ+=' | .[]'
+	JQ+=' | if .focused then . else .floating_nodes[]'
+	JQ+=' | select(.focused) end'
+	JQ+=' | .rect'
+	JQ+=' | "\(.x),\(.y) \(.width)x\(.height)"'
+	swaymsg -t get_tree | jq -r "${JQ}"
 }
 
 function __wf_recorder {

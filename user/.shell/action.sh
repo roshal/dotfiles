@@ -29,10 +29,10 @@ elif test "${1}" == 'swaymsg--keyboard-layout'
 then __swaymsg__keyboard_layout
 
 elif test "${1}" == 'swaymsg--node--grim--wl-copy'
-then __swaymsg__node | __grim | __wl_copy
+then __swaymsg__tree__node | __grim | __wl_copy
 
 elif test "${1}" == 'swaymsg--node--grim-path'
-then __swaymsg__node | __grim__path
+then __swaymsg__tree__node | __grim__path
 
 elif test "${1}" == 'swaymsg--switch-output'
 then __swaymsg__switch_output
