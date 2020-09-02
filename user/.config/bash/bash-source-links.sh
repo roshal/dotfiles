@@ -25,6 +25,7 @@ alias lkk='cd /-/esphere/lkk'
 
 ### esphere constructordms
 
+alias backend='cd /-/esphere/constructordms/backend'
 alias ui='cd /-/esphere/constructordms/ui'
 
 ### esphere courier
