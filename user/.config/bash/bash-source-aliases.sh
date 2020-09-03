@@ -29,6 +29,8 @@ alias l='git l'
 alias ll='git ll'
 alias lll='git lll'
 
+alias ch='git checkout'
+
 ### grep
 
 alias gg='grep --ignore-case'
@@ -71,9 +73,11 @@ alias cy='npx cypress run'
 
 alias cypress='npx cypress'
 
+alias eslint='npx eslint --quiet --color --ext .js,.jsx,.ts,.tsx'
+
 alias jest='npx jest'
 
-alias lint='npx eslint --color --ext .js,.jsx,.ts,.tsx'
+alias lint='npx eslint --quiet --color --ext .js,.jsx,.ts,.tsx .'
 
 alias tsc='npx tsc'
 
