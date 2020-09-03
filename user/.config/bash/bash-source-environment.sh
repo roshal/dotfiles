@@ -22,6 +22,11 @@ export LS_COLORS='di=1;94:'
 # # https://wiki.archlinux.org/index.php/Firefox#Wayland
 # export MOZ_ENABLE_WAYLAND='1'
 
+### git
+
+# # https://github.com/typicode/husky#skip-all-hooks-rebase
+export HUSKY_SKIP_HOOKS=1
+
 ### qt
 
 ### prevent xwayland fullscreen glitches but windows and notifications works bad
