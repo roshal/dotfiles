@@ -23,6 +23,15 @@
 		</edit>
 	</match>
 
+	<match>
+		<test name='family'>
+			<string>menlo</string>
+		</test>
+		<edit name='family'>
+			<string>dmca sans serif</string>
+		</edit>
+	</match>
+
 	<!--google-->
 
 	<match>
