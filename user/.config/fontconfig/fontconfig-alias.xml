@@ -27,6 +27,13 @@
 	<!--rutracker-->
 
 	<alias>
+		<family>tahoma</family>
+		<prefer>
+			<family>dmca sans serif</family>
+		</prefer>
+	</alias>
+
+	<alias>
 		<family>verdana</family>
 		<prefer>
 			<family>dmca sans serif</family>
