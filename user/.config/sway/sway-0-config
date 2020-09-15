@@ -16,6 +16,7 @@ include '${HOME}/.config/sway/sway-4-15-variables'
 include '${HOME}/.config/sway/sway-4-18-autostart'
 include '${HOME}/.config/sway/sway-4-binding-modes'
 include '${HOME}/.config/sway/sway-4-configuring'
+include '${HOME}/.config/sway/sway-4-windows'
 
 ##### 5 configuring i3bar
 # # # https://i3wm.org/docs/userguide.html#_configuring_i3bar

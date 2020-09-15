@@ -1,9 +1,33 @@
 
-bindsym --whole-window $-key+$-mouse-u workspace prev_on_output
-bindsym --whole-window $-key+$-mouse-d workspace next_on_output
+##### 4.4 mouse bindings
+# # # https://i3wm.org/docs/userguide.html#mousebindings
 
-bindsym --whole-window --exclude-titlebar $-key+$-mouse-u+shift focus $-arrow-l
-bindsym --whole-window --exclude-titlebar $-key+$-mouse-d+shift focus $-arrow-r
+bindsym $-key+$-mouse-u move $-arrow-l
+bindsym $-key+$-mouse-d move $-arrow-r
 
-bindsym --whole-window --exclude-titlebar $-key+$-mouse-e focus $-arrow-l
-bindsym --whole-window --exclude-titlebar $-key+$-mouse-s focus $-arrow-r
+bindsym $-key+$-mouse-e move $-arrow-u
+bindsym $-key+$-mouse-s move $-arrow-d
+
+bindsym $-mouse-m kill
+bindsym $-mouse-r floating toggle
+
+bindsym $-mouse-b move $-arrow-l
+bindsym $-mouse-f move $-arrow-r
+
+bindsym $-mouse-e move $-arrow-u
+bindsym $-mouse-s move $-arrow-d
+
+bindsym --whole-window $-key+$-mouse-m       kill
+bindsym --whole-window $-key+$-mouse-m+shift floating toggle
+
+bindsym --whole-window $-key+$-mouse-u+$-alt exec swaymsg -- focus prev sibling
+bindsym --whole-window $-key+$-mouse-d+$-alt exec swaymsg -- focus next sibling
+
+bindsym --whole-window $-key+$-mouse-u+shift exec swaymsg -- focus prev
+bindsym --whole-window $-key+$-mouse-d+shift exec swaymsg -- focus next
+
+bindsym --whole-window --exclude-titlebar $-key+$-mouse-u workspace prev_on_output
+bindsym --whole-window --exclude-titlebar $-key+$-mouse-d workspace next_on_output
+
+bindsym --whole-window --exclude-titlebar $-key+$-mouse-e workspace prev
+bindsym --whole-window --exclude-titlebar $-key+$-mouse-s workspace next

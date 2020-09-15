@@ -93,14 +93,12 @@ set $-mode-wireguard 'wireguard   '
 ### mouse
 
 # set $-mouse-l BTN_LEFT
-# set $-mouse-r BTN_RIGHT
+# set $-mouse-m BTN_RIGHT
+# set $-mouse-r BTN_MIDDLE
 
 set $-mouse-l button1
-set $-mouse-r button2
-
-# set $-mouse-m button3
-
-set $-mouse-m BTN_MIDDLE
+set $-mouse-m button2
+set $-mouse-r button3
 
 set $-mouse-u button4
 set $-mouse-d button5

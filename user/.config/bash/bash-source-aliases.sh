@@ -81,6 +81,8 @@ alias lint='npx eslint --quiet --color --ext .js,.jsx,.ts,.tsx .'
 
 alias tsc='npx tsc'
 
+alias wds='npx webpack-dev-server'
+
 ### pacman
 
 alias cleanse='sudo pacman --remove --nosave --recursive $(pacman --query --deps --quiet --unrequired)'
