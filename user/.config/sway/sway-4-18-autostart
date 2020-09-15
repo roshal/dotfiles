@@ -5,7 +5,7 @@
 
 # exec swayidle -w $-idle-before-sleep $-idle-timeout-lock $-idle-timeout-dpms $-idle-resume
 
-exec $-shell-exec-nm-applet
+exec $-action nm-applet--restart
 
 ### exec always
 
