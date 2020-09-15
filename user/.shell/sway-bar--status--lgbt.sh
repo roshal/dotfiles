@@ -39,6 +39,10 @@ function S {
 	span c3c ${1}
 }
 
+function static {
+	date +"$(j 256)-$(U 36)-$(w 6) $(y 20)-$(m 09)-$(d 12) $(H 20):$(M 09):$(S 12)"
+}
+
 function status {
 	date +"$(j %j)-$(U %U)-$(w %w) $(y %y)-$(m %m)-$(d %d) $(H %H):$(M %M):$(S %S)"
 }
