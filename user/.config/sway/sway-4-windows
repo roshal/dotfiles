@@ -46,10 +46,12 @@ for_window [instance="^vlc$"] popup_during_fullscreen ignore
 ##### 4.17 automatically putting clients on specific workspaces
 # # # https://i3wm.org/docs/userguide.html#assign_workspace
 
-assign [instance="^zoom$"] $-workspace-9
-
 ### wayland
 assign [app_id="^telegramdesktop$"] $-workspace-8
+
+assign [app_id="^transmission-gtk$"] $-workspace-7
+
+assign [instance="^zoom$"] $-workspace-9
 
 assign [instance="^spotify$"] $-workspace-7
 
