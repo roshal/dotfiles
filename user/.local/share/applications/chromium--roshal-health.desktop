@@ -3,5 +3,5 @@
 
 Type=Application
 Name=--chromium--roshal-health
-Icon=chromium
+Icon=/home/user/.config/chromium/profile--roshal-health/Google Profile Picture.png
 Exec=/usr/bin/chromium --profile-directory=profile--roshal-health %U

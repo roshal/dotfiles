@@ -3,5 +3,5 @@
 
 Type=Application
 Name=--chromium--roshal-market
-Icon=chromium
+Icon=/home/user/.config/chromium/profile--roshal-market/Google Profile Picture.png
 Exec=/usr/bin/chromium --profile-directory=profile--roshal-market %U
