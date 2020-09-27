@@ -9,7 +9,7 @@ for_window [shell="^xdg_shell$"] title_format %title - sway
 for_window [shell="^xwayland$"] border normal 0
 for_window [shell="^xwayland$"] title_format %title - xorg
 
-# for_window [tiling] border none
+for_window [tiling] border none
 
 # for_window [window_role="^browser$"] focus
 
@@ -17,36 +17,34 @@ for_window [shell="^xwayland$"] title_format %title - xorg
 
 ### sway
 
+# for_window [app_id="^firefox$"] border normal 0
+
 for_window [app_id="^termite$"] border normal 0
 
-# for_window [app_id="^firefox$"]
-# for_window [app_id="^thunar$"]
+# for_window [app_id="^thunar$"] border normal 0
 
 ### xorg
 
-for_window [instance="^chromium$"] border none
+# for_window [instance="^atom$"] border none
+
 for_window [instance="^chromium$"] inhibit_idle fullscreen
 
-for_window [instance="^code-oss$"] border none
+# for_window [instance="^code-oss$"] border none
 
-for_window [instance="^jetbrains-pycharm$" title="^win0$"] border none
 for_window [instance="^jetbrains-pycharm$" title="^win0$"] floating enable
 
-for_window [instance="^jetbrains-pycharm-ce$" title="^win0$"] border none
 for_window [instance="^jetbrains-pycharm-ce$" title="^win0$"] floating enable
 
-for_window [instance="^jetbrains-webstorm$" title="^win0$"] border none
 for_window [instance="^jetbrains-webstorm$" title="^win0$"] floating enable
 
-for_window [instance="^spotify$"] border none
+# for_window [instance="^spotify$"] border none
 
-for_window [instance="^telegram-desktop$"] border none
+# for_window [instance="^sublime_text$"] border none
+
+# for_window [instance="^telegram-desktop$"] border none
 
 for_window [instance="^vlc$"] inhibit_idle fullscreen
 for_window [instance="^vlc$"] popup_during_fullscreen ignore
-
-# for_window [instance="^atom$"]
-# for_window [instance="^sublime_text$"]
 
 ##### 4.17 automatically putting clients on specific workspaces
 # # # https://i3wm.org/docs/userguide.html#assign_workspace
