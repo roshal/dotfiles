@@ -78,9 +78,11 @@ bindsym $-key+$-arrow-l+shift move $-arrow-l $-step-b
 bindsym $-key+$-arrow-r+shift move $-arrow-r $-step-b
 bindsym $-key+$-arrow-d+shift move $-arrow-d $-step-b
 
-bindsym --to-code $-key+mod1+a move absolute position center
-bindsym --to-code $-key+mod1+c move position center
-bindsym --to-code $-key+mod1+m move position mouse
+bindsym --to-code $-key+$-alt+c move position center
+bindsym --to-code $-key+$-alt+m move position mouse
+
+bindsym --to-code $-key+$-alt+c+shift move absolute position center
+bindsym --to-code $-key+$-alt+m+shift move absolute position mouse
 
 ##### 6.6 swapping containers
 # # # https://i3wm.org/docs/userguide.html#_swapping_containers
@@ -93,10 +95,10 @@ bindsym --to-code $-key+shift+s sticky toggle
 ##### 6.8 changing workspaces or moving to workspaces
 # # # https://i3wm.org/docs/userguide.html#_changing_named_workspaces_moving_to_workspaces
 
-bindsym $-key+$-arrow-u+mod1 move workspace to output $-arrow-u
-bindsym $-key+$-arrow-l+mod1 move workspace to output $-arrow-l
-bindsym $-key+$-arrow-r+mod1 move workspace to output $-arrow-r
-bindsym $-key+$-arrow-d+mod1 move workspace to output $-arrow-d
+bindsym $-key+$-arrow-u+$-alt move workspace to output $-arrow-u
+bindsym $-key+$-arrow-l+$-alt move workspace to output $-arrow-l
+bindsym $-key+$-arrow-r+$-alt move workspace to output $-arrow-r
+bindsym $-key+$-arrow-d+$-alt move workspace to output $-arrow-d
 
 bindsym $-key+$-arrow-u+ctrl workspace prev_on_output
 bindsym $-key+$-arrow-d+ctrl workspace next_on_output

@@ -27,4 +27,3 @@ left_meters=CPU Memory Swap Blank LoadAverage LoadAverage Blank Uptime Tasks Bla
 left_meter_modes=1 1 1 2 1 2 2 1 1 2 2 2
 right_meters=AllCPUs
 right_meter_modes=1
-vim_mode=0

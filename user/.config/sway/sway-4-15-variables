@@ -21,12 +21,21 @@ set $-black-d 999999
 set $-black-e cccccc
 set $-black-f ffffff
 
-set $-color-r 993366
-set $-color-g 669933
-set $-color-y 996633
-set $-color-b 336699
-set $-color-m 663399
-set $-color-c 339966
+set $-color-r cc3333
+set $-color-g 33cc33
+set $-color-b 3333cc
+
+set $-color-c 009999
+set $-color-m 990099
+set $-color-y 999900
+
+set $-shift-r 993366
+set $-shift-g 669933
+set $-shift-b 336699
+
+set $-shift-c 339966
+set $-shift-m 663399
+set $-shift-y 996633
 
 ### devices
 

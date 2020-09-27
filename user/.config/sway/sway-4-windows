@@ -2,24 +2,26 @@
 ##### 4.13 arbitrary commands for specific windows
 # # # https://i3wm.org/docs/userguide.html#for_window
 
-for_window [shell="^xwayland$"] border normal 0
-
 for_window [shell=] title_format %title - %shell
 
-for_window [tiling] border none
+for_window [shell="^xdgshell$"] title_format %title - sway
+for_window [shell="^xwayland$"] border normal 0
+for_window [shell="^xwayland$"] title_format %title - xorg
 
-for_window [window_role="^browser$"] border none
+# for_window [tiling] border none
 
-for_window [window_type=dialog] border none
+# for_window [window_role="^browser$"] focus
 
-# for_window [window_type=dialog] focus
+# for_window [window_type="^dialog$"] focus
 
-### windows
+### sway
 
 for_window [app_id="^termite$"] border normal 0
 
 # for_window [app_id="^firefox$"]
 # for_window [app_id="^thunar$"]
+
+### xorg
 
 for_window [instance="^chromium$"] border none
 for_window [instance="^chromium$"] inhibit_idle fullscreen
@@ -46,10 +48,13 @@ for_window [instance="^vlc$"] popup_during_fullscreen ignore
 ##### 4.17 automatically putting clients on specific workspaces
 # # # https://i3wm.org/docs/userguide.html#assign_workspace
 
-### wayland
+### sway
+
 assign [app_id="^telegramdesktop$"] $-workspace-8
 
 assign [app_id="^transmission-gtk$"] $-workspace-7
+
+### xorg
 
 assign [instance="^zoom$"] $-workspace-9
 

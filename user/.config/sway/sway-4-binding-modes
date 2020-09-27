@@ -169,6 +169,14 @@ mode $-mode-network bindsym escape mode $-mode-default
 
 ### output
 
+mode $-mode-output bindsym --to-code 0 mode $-mode-default , exec swaymsg -- output $-output-0
+mode $-mode-output bindsym --to-code 1 mode $-mode-default , exec swaymsg -- output $-output-1
+mode $-mode-output bindsym --to-code 2 mode $-mode-default , exec swaymsg -- output $-output-2
+
+mode $-mode-output bindsym --to-code 0+shift mode $-mode-default , exec swaymsg -- output $-output-0
+mode $-mode-output bindsym --to-code 1+shift mode $-mode-default , exec swaymsg -- output $-output-1
+mode $-mode-output bindsym --to-code 2+shift mode $-mode-default , exec swaymsg -- output $-output-2
+
 mode $-mode-output bindsym --to-code a mode $-mode-default , exec swaymsg -- output $-echo-output-focused enable
 mode $-mode-output bindsym --to-code z mode $-mode-default , exec swaymsg -- output $-echo-output-suspend enable
 
