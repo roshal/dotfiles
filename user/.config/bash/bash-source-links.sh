@@ -67,6 +67,7 @@ alias lenteh='cd /-/github/roshal/lenteh'
 alias nohash='cd /-/github/roshal/nohash'
 alias rollup='cd /-/github/roshal/rollup'
 alias roshal-online='cd /-/github/roshal/roshal-online'
+alias scrollax='cd /-/github/roshal/scrollax'
 alias test-task-kanban-board='cd /-/github/roshal/test-task-kanban-board'
 alias tokens='cd /-/github/roshal/tokens'
 

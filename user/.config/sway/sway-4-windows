@@ -4,7 +4,8 @@
 
 for_window [shell=] title_format %title - %shell
 
-for_window [shell="^xdgshell$"] title_format %title - sway
+for_window [shell="^xdg_shell$"] title_format %title - sway
+
 for_window [shell="^xwayland$"] border normal 0
 for_window [shell="^xwayland$"] title_format %title - xorg
 
@@ -36,6 +37,8 @@ for_window [instance="^jetbrains-pycharm-ce$" title="^win0$"] floating enable
 
 for_window [instance="^jetbrains-webstorm$" title="^win0$"] border none
 for_window [instance="^jetbrains-webstorm$" title="^win0$"] floating enable
+
+for_window [instance="^spotify$"] border none
 
 for_window [instance="^telegram-desktop$"] border none
 
