@@ -40,7 +40,7 @@ function S {
 }
 
 function static {
-	date +"$(j 256)-$(U 36)-$(w 6) $(y 20)-$(m 09)-$(d 12) $(H 20):$(M 09):$(S 12)"
+	date +"$(j 000)-$(U 00)-$(w 0) $(y 00)-$(m 00)-$(d 00) $(H 00):$(M 00):$(S 00)"
 }
 
 function status {

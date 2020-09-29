@@ -1,5 +1,4 @@
 
-
 function status {
 	echo '[{'
 	echo '"color": "999999",'
