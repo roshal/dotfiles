@@ -9,7 +9,7 @@ for_window [shell="^xwayland$$"] title_format '%title<span alpha="50%"> - xorg %
 
 for_window [tiling] border normal 0
 
-# for_window [window_role="^browser$"] border none
+for_window [window_role="^browser$"] border none
 
 # for_window [window_type="^dialog$"] focus
 
