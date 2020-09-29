@@ -4,10 +4,10 @@
 
 for_window [shell=] title_format %title - %shell
 
-for_window [shell="^xdg_shell$"] title_format %title - sway
+for_window [shell="^xdg_shell$"] title_format "%title<span foreground='#fff3'> - sway %instance %class</span>"
 
 for_window [shell="^xwayland$"] border normal 0
-for_window [shell="^xwayland$"] title_format %title - xorg
+for_window [shell="^xwayland$"] title_format "%title<span foreground='#fff3'> - xorg %instance %class</span>"
 
 for_window [tiling] border none
 
