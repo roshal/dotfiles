@@ -133,3 +133,7 @@ alias z='trans'
 
 alias en='trans -t en'
 alias ru='trans -t ru'
+
+### tty
+
+alias q='tty'
