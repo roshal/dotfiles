@@ -6,12 +6,12 @@ function random {
 }
 
 function rainbow {
-	echo -n "<span foreground='#f33'>$(random)</span>"
-	echo -n "<span foreground='#f93'>$(random)</span>"
-	echo -n "<span foreground='#ff3'>$(random)</span>"
-	echo -n "<span foreground='#9f3'>$(random)</span>"
-	echo -n "<span foreground='#39f'>$(random)</span>"
-	echo -n "<span foreground='#f39'>$(random)</span>"
+	echo -n "<span color='#f33'>$(random)</span>"
+	echo -n "<span color='#f93'>$(random)</span>"
+	echo -n "<span color='#ff3'>$(random)</span>"
+	echo -n "<span color='#9f3'>$(random)</span>"
+	echo -n "<span color='#39f'>$(random)</span>"
+	echo -n "<span color='#f39'>$(random)</span>"
 }
 
 function datetime {

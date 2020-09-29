@@ -1,6 +1,6 @@
 
 function s {
-	echo -n "<span foreground='#999'>${1}</span>"
+	echo -n "<span color='#999'>${1}</span>"
 }
 
 function static {

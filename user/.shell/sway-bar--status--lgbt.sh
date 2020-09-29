@@ -1,6 +1,6 @@
 
 function span {
-	echo -n "<span foreground='#${1}'>${2}</span>"
+	echo -n "<span color='#${1}'>${2}</span>"
 }
 
 function j {

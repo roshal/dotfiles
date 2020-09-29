@@ -2,46 +2,49 @@
 ##### 4.13 arbitrary commands for specific windows
 # # # https://i3wm.org/docs/userguide.html#for_window
 
-for_window [shell=] title_format %title - %shell
+for_window [shell=] title_format %title<span alpha="50%"> - %shell</span>
 
-for_window [shell="^xdg_shell$"] title_format "%title<span foreground='#fff3'> - sway %instance %class</span>"
+for_window [shell="^xdg_shell$"] title_format '%title<span alpha="50%"> - sway %instance %class</span>'
+for_window [shell="^xwayland$"]  title_format '%title<span alpha="50%"> - xorg %instance %class</span>'
 
-for_window [shell="^xwayland$"] border normal 0
-for_window [shell="^xwayland$"] title_format "%title<span foreground='#fff3'> - xorg %instance %class</span>"
+for_window [tiling] border normal 0
 
-for_window [tiling] border none
-
-# for_window [window_role="^browser$"] focus
+# for_window [window_role="^browser$"] border none
 
 # for_window [window_type="^dialog$"] focus
 
 ### sway
 
-# for_window [app_id="^firefox$"] border normal 0
+for_window [app_id="^firefox$"] border none
 
-for_window [app_id="^termite$"] border normal 0
+for_window [app_id="^telegramdesktop$"] border none
 
-# for_window [app_id="^thunar$"] border normal 0
+# for_window [app_id="^termite$"] border none
+
+for_window [app_id="^thunar$"] border none
 
 ### xorg
 
-# for_window [instance="^atom$"] border none
+for_window [instance="^atom$"] border none
 
+for_window [instance="^chromium$"] border none
 for_window [instance="^chromium$"] inhibit_idle fullscreen
 
-# for_window [instance="^code-oss$"] border none
+for_window [instance="^code-oss$"] border none
 
-for_window [instance="^jetbrains-pycharm$" title="^win0$"] floating enable
+for_window [instance="^jetbrains-" title="^win0$"] floating enable
 
-for_window [instance="^jetbrains-pycharm-ce$" title="^win0$"] floating enable
+for_window [instance="^jetbrains-pycharm$"] border none
 
-for_window [instance="^jetbrains-webstorm$" title="^win0$"] floating enable
+for_window [instance="^jetbrains-pycharm-ce$"] border none
 
-# for_window [instance="^spotify$"] border none
+for_window [instance="^jetbrains-webstorm$"] border none
 
-# for_window [instance="^sublime_text$"] border none
+for_window [instance="^spotify$"] border none
 
-# for_window [instance="^telegram-desktop$"] border none
+for_window [instance="^sublime_text$"] border none
+
+for_window [instance="^telegram-desktop$"] border none
 
 for_window [instance="^vlc$"] inhibit_idle fullscreen
 for_window [instance="^vlc$"] popup_during_fullscreen ignore
