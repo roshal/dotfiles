@@ -23,6 +23,8 @@ for_window [app_id="^telegramdesktop$"] border none
 
 for_window [app_id="^thunar$"] border none
 
+for_window [app_id="^transmission-gtk$"] border none
+
 ### xorg
 
 for_window [instance="^atom$"] border none
