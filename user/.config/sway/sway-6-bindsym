@@ -21,23 +21,23 @@ bindsym $-special-p       exec $-action slurp--grim--wl-copy
 bindsym $-special-p+ctrl  exec $-action swaymsg--node--grim--wl-copy
 bindsym $-special-p+shift exec $-action grim--output--wl-copy
 
-bindsym --to-code $-key+d exec wofi
+bindsym --to-code $-key+i       exec $-action nm-applet--restart
+bindsym --to-code $-key+i+shift exec $-action nm-applet--killall
+
 bindsym --to-code $-key+l exec swaylock --image /-/pictures/waves.jpg
 bindsym --to-code $-key+n exec thunar
 bindsym --to-code $-key+o exec $-action swaymsg--switch-output
 
-bindsym --to-code $-key+i       exec $-action nm-applet--restart
-bindsym --to-code $-key+i+shift exec $-action nm-applet--killall
-
-bindsym --to-code $-key+shift+d exec wofi --show drun --allow-images --sort-order alphabetical --search --
+bindsym --to-code $-key+d       exec wofi
+bindsym --to-code $-key+d+shift exec wofi --show drun --allow-images --sort-order alphabetical --search --
 
 ##### 6.2 splitting containers
 # # # https://i3wm.org/docs/userguide.html#_splitting_containers
 
-bindsym --to-code $-key+shift+e split toggle
+bindsym --to-code $-key+r split toggle
 
-bindsym --to-code $-key+shift+h split horizontal
-bindsym --to-code $-key+shift+v split vertical
+bindsym --to-code $-key+h splith
+bindsym --to-code $-key+v splitv
 
 ##### 6.3 manipulating layout
 # # # https://i3wm.org/docs/userguide.html#manipulating_layout
@@ -45,17 +45,12 @@ bindsym --to-code $-key+shift+v split vertical
 ### does incomprehensibly
 # bindsym --to-code $-key+d layout default
 
-bindsym --to-code $-key+e layout toggle
-
-bindsym --to-code $-key+s layout stacking
-bindsym --to-code $-key+t layout tabbed
+bindsym --to-code $-key+e floating toggle
 
 bindsym --to-code $-key+f fullscreen
 
-bindsym --to-code $-key+f+shift floating toggle
-
-bindsym --to-code $-key+h splith
-bindsym --to-code $-key+v splitv
+bindsym --to-code $-key+s layout stacking
+bindsym --to-code $-key+t layout tabbed
 
 ##### 6.4 focusing containers
 # # # https://i3wm.org/docs/userguide.html#_focusing_moving_containers

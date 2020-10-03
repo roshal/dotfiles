@@ -62,6 +62,7 @@ assign [app_id="^transmission-gtk$"] $-workspace-7
 
 ### xorg
 
+### does not work
 assign [instance="^spotify$"] $-workspace-7
 
 assign [instance="^telegram-desktop$"] $-workspace-8

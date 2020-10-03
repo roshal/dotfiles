@@ -109,7 +109,7 @@ mode $-mode-kill bindsym --to-code c mode $-mode-default , exec killall chromium
 mode $-mode-kill bindsym --to-code f mode $-mode-default , exec killall firefox
 mode $-mode-kill bindsym --to-code j mode $-mode-default , exec killall java
 mode $-mode-kill bindsym --to-code n mode $-mode-default , exec killall nm-applet
-mode $-mode-kill bindsym --to-code s mode $-mode-default , exec killall swaynag
+mode $-mode-kill bindsym --to-code s mode $-mode-default , exec killall spotify
 mode $-mode-kill bindsym --to-code t mode $-mode-default , exec killall telegram-desktop
 mode $-mode-kill bindsym --to-code v mode $-mode-default , exec killall vlc
 mode $-mode-kill bindsym --to-code w mode $-mode-default , exec killall wf-recorder
