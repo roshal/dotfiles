@@ -1,7 +1,6 @@
 
 ##### 4.15 variables
 
-set $-alt mod1
 set $-key mod4
 
 ### actions
@@ -141,6 +140,44 @@ set $-path-mako-pulsemixer /-/mako/pulsemixer
 
 set $-pulsemixer-volume pulsemixer --get-volume | jq -s add/length
 
+### size
+
+set $-size-0    1
+set $-size-1    2
+set $-size-2    4
+set $-size-3    8
+set $-size-4   16
+set $-size-5   32
+set $-size-6   64
+set $-size-7  128
+set $-size-8  256
+set $-size-9  512
+set $-size-z 1024
+
+set $-size-x-0 1024
+set $-size-x-1 1920
+set $-size-x-2  960
+set $-size-x-3  640
+set $-size-x-4  480
+set $-size-x-5  384
+set $-size-x-6  320
+set $-size-x-7  512
+set $-size-x-8  240
+set $-size-x-9  256
+set $-size-x-z  192
+
+set $-size-y-0 1024
+set $-size-y-1 1200
+set $-size-y-2  600
+set $-size-y-3  400
+set $-size-y-4  300
+set $-size-y-5  240
+set $-size-y-6  200
+set $-size-y-7  512
+set $-size-y-8  150
+set $-size-y-9  256
+set $-size-y-z  120
+
 ### step
 
 set $-step-0    0
@@ -157,15 +194,16 @@ set $-wob-base wob -t1000 -W400 -H8 -o0 -b0 -p0 -abottom -M-16
 
 ### workspaces
 
-set $-workspace-0 '0:0       '
-set $-workspace-1 '1:1       '
-set $-workspace-2 '2:2       '
-set $-workspace-3 '3:3       '
-set $-workspace-4 '4:4       '
-set $-workspace-5 '5:5       '
-set $-workspace-6 '6:6       '
-set $-workspace-7 '7:7       '
-set $-workspace-8 '8:8       '
-set $-workspace-9 '9:9       '
+set $-workspace-0       '0:0       '
+set $-workspace-1       '1:1       '
+set $-workspace-2       '2:2       '
+set $-workspace-3       '3:3       '
+set $-workspace-4       '4:4       '
+set $-workspace-5       '5:5       '
+set $-workspace-6       '6:6       '
+set $-workspace-7       '7:7       '
+set $-workspace-8       '8:8       '
+set $-workspace-9       '9:9       '
 
 set $-workspace-escape '10:        '
+set $-workspace-zero   '11:        '

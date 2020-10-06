@@ -6,18 +6,18 @@
 
 bindsym --to-code $-key+z mode $-binding-mode
 
-bindsym --to-code $-key+ctrl+a mode $-mode-audio
-bindsym --to-code $-key+ctrl+b mode $-mode-bluetooth
-bindsym --to-code $-key+ctrl+c mode $-mode-cursor
-bindsym --to-code $-key+ctrl+k mode $-mode-kill
-bindsym --to-code $-key+ctrl+l mode $-mode-lock
-bindsym --to-code $-key+ctrl+m mode $-mode-move
-bindsym --to-code $-key+ctrl+n mode $-mode-network
-bindsym --to-code $-key+ctrl+o mode $-mode-output
-bindsym --to-code $-key+ctrl+r mode $-mode-resize
-bindsym --to-code $-key+ctrl+s mode $-mode-system
-bindsym --to-code $-key+ctrl+v mode $-mode-vpn
-bindsym --to-code $-key+ctrl+w mode $-mode-wireguard
+bindsym --to-code ctrl+$-key+a mode $-mode-audio
+bindsym --to-code ctrl+$-key+b mode $-mode-bluetooth
+bindsym --to-code ctrl+$-key+c mode $-mode-cursor
+bindsym --to-code ctrl+$-key+k mode $-mode-kill
+bindsym --to-code ctrl+$-key+l mode $-mode-lock
+bindsym --to-code ctrl+$-key+m mode $-mode-move
+bindsym --to-code ctrl+$-key+n mode $-mode-network
+bindsym --to-code ctrl+$-key+o mode $-mode-output
+bindsym --to-code ctrl+$-key+r mode $-mode-resize
+bindsym --to-code ctrl+$-key+s mode $-mode-system
+bindsym --to-code ctrl+$-key+v mode $-mode-vpn
+bindsym --to-code ctrl+$-key+w mode $-mode-wireguard
 
 ##### modes
 
@@ -38,63 +38,63 @@ mode $-binding-mode bindsym escape mode $-mode-default
 
 ### audio
 
-mode $-mode-audio bindsym --to-code a mode $-mode-default , exec pactl set-card-profile $-bluetooth-headset a2dp_sink
-mode $-mode-audio bindsym --to-code s mode $-mode-default , exec pactl set-card-profile $-bluetooth-headset headset_head_unit
-mode $-mode-audio bindsym --to-code z mode $-mode-default , exec pactl set-card-profile $-bluetooth-headset off
+mode $-mode-audio bindsym --to-code       a mode $-mode-default , exec pactl set-card-profile $-bluetooth-headset a2dp_sink
+mode $-mode-audio bindsym --to-code       s mode $-mode-default , exec pactl set-card-profile $-bluetooth-headset headset_head_unit
+mode $-mode-audio bindsym --to-code       z mode $-mode-default , exec pactl set-card-profile $-bluetooth-headset off
 
-mode $-mode-audio bindsym --to-code a+shift mode $-mode-default , exec pactl set-card-profile $-bluetooth-speaker a2dp_sink
-mode $-mode-audio bindsym --to-code s+shift mode $-mode-default , exec pactl set-card-profile $-bluetooth-speaker headset_head_unit
-mode $-mode-audio bindsym --to-code z+shift mode $-mode-default , exec pactl set-card-profile $-bluetooth-speaker off
+mode $-mode-audio bindsym --to-code shift+a mode $-mode-default , exec pactl set-card-profile $-bluetooth-speaker a2dp_sink
+mode $-mode-audio bindsym --to-code shift+s mode $-mode-default , exec pactl set-card-profile $-bluetooth-speaker headset_head_unit
+mode $-mode-audio bindsym --to-code shift+z mode $-mode-default , exec pactl set-card-profile $-bluetooth-speaker off
 
-mode $-mode-audio bindsym --whole-window $-mouse-u exec pactl set-sink-volume @DEFAULT_SINK@ +1db && $-pulsemixer-volume > $-path-mako-pulsemixer
-mode $-mode-audio bindsym --whole-window $-mouse-m exec pactl set-sink-volume @DEFAULT_SINK@  0db && $-pulsemixer-volume > $-path-mako-pulsemixer
-mode $-mode-audio bindsym --whole-window $-mouse-d exec pactl set-sink-volume @DEFAULT_SINK@ -1db && $-pulsemixer-volume > $-path-mako-pulsemixer
+mode $-mode-audio bindsym --whole-window       $-mouse-u exec pactl set-sink-volume @DEFAULT_SINK@ +1db && $-pulsemixer-volume > $-path-mako-pulsemixer
+mode $-mode-audio bindsym --whole-window       $-mouse-m exec pactl set-sink-volume @DEFAULT_SINK@  0db && $-pulsemixer-volume > $-path-mako-pulsemixer
+mode $-mode-audio bindsym --whole-window       $-mouse-d exec pactl set-sink-volume @DEFAULT_SINK@ -1db && $-pulsemixer-volume > $-path-mako-pulsemixer
 
-mode $-mode-audio bindsym --whole-window $-mouse-e exec pactl set-sink-mute @DEFAULT_SINK@ on  && $-pulsemixer-volume > $-path-mako-pulsemixer
-mode $-mode-audio bindsym --whole-window $-mouse-s exec pactl set-sink-mute @DEFAULT_SINK@ off && $-pulsemixer-volume > $-path-mako-pulsemixer
+mode $-mode-audio bindsym --whole-window       $-mouse-e exec pactl set-sink-mute   @DEFAULT_SINK@ on   && $-pulsemixer-volume > $-path-mako-pulsemixer
+mode $-mode-audio bindsym --whole-window       $-mouse-s exec pactl set-sink-mute   @DEFAULT_SINK@ off  && $-pulsemixer-volume > $-path-mako-pulsemixer
 
-mode $-mode-audio bindsym --whole-window $-mouse-e+shift exec pactl set-source-mute @DEFAULT_SINK@ on  && $-pulsemixer-volume > $-path-mako-pulsemixer
-mode $-mode-audio bindsym --whole-window $-mouse-s+shift exec pactl set-source-mute @DEFAULT_SINK@ off && $-pulsemixer-volume > $-path-mako-pulsemixer
+mode $-mode-audio bindsym --whole-window shift+$-mouse-e exec pactl set-source-mute @DEFAULT_SINK@ on   && $-pulsemixer-volume > $-path-mako-pulsemixer
+mode $-mode-audio bindsym --whole-window shift+$-mouse-s exec pactl set-source-mute @DEFAULT_SINK@ off  && $-pulsemixer-volume > $-path-mako-pulsemixer
 
 mode $-mode-audio bindsym escape mode $-mode-default
 
 ### bluetooth
 
-mode $-mode-bluetooth bindsym --to-code a mode $-mode-default , exec bluetoothctl power on
-mode $-mode-bluetooth bindsym --to-code z mode $-mode-default , exec bluetoothctl power no
+mode $-mode-bluetooth bindsym --to-code       a mode $-mode-default , exec bluetoothctl power on
+mode $-mode-bluetooth bindsym --to-code       z mode $-mode-default , exec bluetoothctl power no
 
-mode $-mode-bluetooth bindsym --to-code a+shift exec bluetoothctl power on
-mode $-mode-bluetooth bindsym --to-code z+shift exec bluetoothctl power no
+mode $-mode-bluetooth bindsym --to-code shift+a                       exec bluetoothctl power on
+mode $-mode-bluetooth bindsym --to-code shift+z                       exec bluetoothctl power no
 
-mode $-mode-bluetooth bindsym --to-code c mode $-mode-default , exec bluetoothctl connect    $-mac-headset
-mode $-mode-bluetooth bindsym --to-code d mode $-mode-default , exec bluetoothctl disconnect $-mac-headset
+mode $-mode-bluetooth bindsym --to-code       c mode $-mode-default , exec bluetoothctl connect    $-mac-headset
+mode $-mode-bluetooth bindsym --to-code       d mode $-mode-default , exec bluetoothctl disconnect $-mac-headset
 
-mode $-mode-bluetooth bindsym --to-code c+shift exec bluetoothctl connect    $-mac-headset
-mode $-mode-bluetooth bindsym --to-code d+shift exec bluetoothctl disconnect $-mac-headset
+mode $-mode-bluetooth bindsym --to-code shift+c                       exec bluetoothctl connect    $-mac-headset
+mode $-mode-bluetooth bindsym --to-code shift+d                       exec bluetoothctl disconnect $-mac-headset
 
 mode $-mode-bluetooth bindsym escape mode $-mode-default
 
 ### cursor
 
-mode $-mode-cursor bindsym $-arrow-u seat - cursor move  $-step-0 -$-step-a
-mode $-mode-cursor bindsym $-arrow-l seat - cursor move -$-step-a  $-step-0
-mode $-mode-cursor bindsym $-arrow-r seat - cursor move  $-step-a  $-step-0
-mode $-mode-cursor bindsym $-arrow-d seat - cursor move  $-step-0  $-step-a
+mode $-mode-cursor bindsym            $-arrow-u seat - cursor move  $-step-0 -$-step-a
+mode $-mode-cursor bindsym            $-arrow-l seat - cursor move -$-step-a  $-step-0
+mode $-mode-cursor bindsym            $-arrow-r seat - cursor move  $-step-a  $-step-0
+mode $-mode-cursor bindsym            $-arrow-d seat - cursor move  $-step-0  $-step-a
 
-mode $-mode-cursor bindsym $-arrow-u+ctrl seat - cursor move  $-step-0 -$-step-b
-mode $-mode-cursor bindsym $-arrow-l+ctrl seat - cursor move -$-step-b  $-step-0
-mode $-mode-cursor bindsym $-arrow-r+ctrl seat - cursor move  $-step-b  $-step-0
-mode $-mode-cursor bindsym $-arrow-d+ctrl seat - cursor move  $-step-0  $-step-b
+mode $-mode-cursor bindsym       ctrl+$-arrow-u seat - cursor move  $-step-0 -$-step-b
+mode $-mode-cursor bindsym       ctrl+$-arrow-l seat - cursor move -$-step-b  $-step-0
+mode $-mode-cursor bindsym       ctrl+$-arrow-r seat - cursor move  $-step-b  $-step-0
+mode $-mode-cursor bindsym       ctrl+$-arrow-d seat - cursor move  $-step-0  $-step-b
 
-mode $-mode-cursor bindsym $-arrow-u+shift seat - cursor move  $-step-0 -$-step-c
-mode $-mode-cursor bindsym $-arrow-l+shift seat - cursor move -$-step-c  $-step-0
-mode $-mode-cursor bindsym $-arrow-r+shift seat - cursor move  $-step-c  $-step-0
-mode $-mode-cursor bindsym $-arrow-d+shift seat - cursor move  $-step-0  $-step-c
+mode $-mode-cursor bindsym      shift+$-arrow-u seat - cursor move  $-step-0 -$-step-c
+mode $-mode-cursor bindsym      shift+$-arrow-l seat - cursor move -$-step-c  $-step-0
+mode $-mode-cursor bindsym      shift+$-arrow-r seat - cursor move  $-step-c  $-step-0
+mode $-mode-cursor bindsym      shift+$-arrow-d seat - cursor move  $-step-0  $-step-c
 
-mode $-mode-cursor bindsym $-arrow-u+shift+ctrl seat - cursor move  $-step-0 -$-step-d
-mode $-mode-cursor bindsym $-arrow-l+shift+ctrl seat - cursor move -$-step-d  $-step-0
-mode $-mode-cursor bindsym $-arrow-r+shift+ctrl seat - cursor move  $-step-d  $-step-0
-mode $-mode-cursor bindsym $-arrow-d+shift+ctrl seat - cursor move  $-step-0  $-step-d
+mode $-mode-cursor bindsym ctrl+shift+$-arrow-u seat - cursor move  $-step-0 -$-step-d
+mode $-mode-cursor bindsym ctrl+shift+$-arrow-l seat - cursor move -$-step-d  $-step-0
+mode $-mode-cursor bindsym ctrl+shift+$-arrow-r seat - cursor move  $-step-d  $-step-0
+mode $-mode-cursor bindsym ctrl+shift+$-arrow-d seat - cursor move  $-step-0  $-step-d
 
 mode $-mode-cursor bindsym $-control-p exec tab seat - cursor press $-mouse-u
 mode $-mode-cursor bindsym $-control-n exec tab seat - cursor press $-mouse-d
@@ -105,25 +105,25 @@ mode $-mode-cursor bindsym escape mode $-mode-default
 
 ### kill
 
-mode $-mode-kill bindsym --to-code c mode $-mode-default , exec killall chromium
-mode $-mode-kill bindsym --to-code f mode $-mode-default , exec killall firefox
-mode $-mode-kill bindsym --to-code j mode $-mode-default , exec killall java
-mode $-mode-kill bindsym --to-code n mode $-mode-default , exec killall nm-applet
-mode $-mode-kill bindsym --to-code s mode $-mode-default , exec killall spotify
-mode $-mode-kill bindsym --to-code t mode $-mode-default , exec killall telegram-desktop
-mode $-mode-kill bindsym --to-code v mode $-mode-default , exec killall vlc
-mode $-mode-kill bindsym --to-code w mode $-mode-default , exec killall wf-recorder
-mode $-mode-kill bindsym --to-code z mode $-mode-default , exec killall zoom
+mode $-mode-kill bindsym --to-code       c mode $-mode-default , exec killall    chromium
+mode $-mode-kill bindsym --to-code       f mode $-mode-default , exec killall    firefox
+mode $-mode-kill bindsym --to-code       j mode $-mode-default , exec killall    java
+mode $-mode-kill bindsym --to-code       n mode $-mode-default , exec killall    nm-applet
+mode $-mode-kill bindsym --to-code       s mode $-mode-default , exec killall    spotify
+mode $-mode-kill bindsym --to-code       t mode $-mode-default , exec killall    telegram-desktop
+mode $-mode-kill bindsym --to-code       v mode $-mode-default , exec killall    vlc
+mode $-mode-kill bindsym --to-code       w mode $-mode-default , exec killall    wf-recorder
+mode $-mode-kill bindsym --to-code       z mode $-mode-default , exec killall    zoom
 
-mode $-mode-kill bindsym --to-code c+shift mode $-mode-default , exec killall -9 chromium
-mode $-mode-kill bindsym --to-code f+shift mode $-mode-default , exec killall -9 firefox
-mode $-mode-kill bindsym --to-code j+shift mode $-mode-default , exec killall -9 java
-mode $-mode-kill bindsym --to-code n+shift mode $-mode-default , exec killall -9 nm-applet
-mode $-mode-kill bindsym --to-code s+shift mode $-mode-default , exec killall -9 swaynsg
-mode $-mode-kill bindsym --to-code t+shift mode $-mode-default , exec killall -9 telegram-desktop
-mode $-mode-kill bindsym --to-code v+shift mode $-mode-default , exec killall -9 vlc
-mode $-mode-kill bindsym --to-code w+shift mode $-mode-default , exec killall -9 wf-recorder
-mode $-mode-kill bindsym --to-code z+shift mode $-mode-default , exec killall -9 zoom
+mode $-mode-kill bindsym --to-code shift+c mode $-mode-default , exec killall -9 chromium
+mode $-mode-kill bindsym --to-code shift+f mode $-mode-default , exec killall -9 firefox
+mode $-mode-kill bindsym --to-code shift+j mode $-mode-default , exec killall -9 java
+mode $-mode-kill bindsym --to-code shift+n mode $-mode-default , exec killall -9 nm-applet
+mode $-mode-kill bindsym --to-code shift+s mode $-mode-default , exec killall -9 spotify
+mode $-mode-kill bindsym --to-code shift+t mode $-mode-default , exec killall -9 telegram-desktop
+mode $-mode-kill bindsym --to-code shift+v mode $-mode-default , exec killall -9 vlc
+mode $-mode-kill bindsym --to-code shift+w mode $-mode-default , exec killall -9 wf-recorder
+mode $-mode-kill bindsym --to-code shift+z mode $-mode-default , exec killall -9 zoom
 
 mode $-mode-kill bindsym escape mode $-mode-default
 
@@ -142,61 +142,122 @@ mode $-mode-lock bindsym escape mode $-mode-default
 
 ### move
 
-mode $-mode-move bindsym $-arrow-u move $-arrow-u $-step-a
-mode $-mode-move bindsym $-arrow-l move $-arrow-l $-step-a
-mode $-mode-move bindsym $-arrow-r move $-arrow-r $-step-a
-mode $-mode-move bindsym $-arrow-d move $-arrow-d $-step-a
+mode $-mode-move bindsym                    $-arrow-u move $-arrow-u $-step-a
+mode $-mode-move bindsym                    $-arrow-l move $-arrow-l $-step-a
+mode $-mode-move bindsym                    $-arrow-r move $-arrow-r $-step-a
+mode $-mode-move bindsym                    $-arrow-d move $-arrow-d $-step-a
 
-mode $-mode-move bindsym $-arrow-u+shift move $-arrow-u $-step-c
-mode $-mode-move bindsym $-arrow-l+shift move $-arrow-l $-step-c
-mode $-mode-move bindsym $-arrow-r+shift move $-arrow-r $-step-c
-mode $-mode-move bindsym $-arrow-d+shift move $-arrow-d $-step-c
+mode $-mode-move bindsym                alt+$-arrow-u move $-arrow-u $-step-b
+mode $-mode-move bindsym                alt+$-arrow-l move $-arrow-l $-step-b
+mode $-mode-move bindsym                alt+$-arrow-r move $-arrow-r $-step-b
+mode $-mode-move bindsym                alt+$-arrow-d move $-arrow-d $-step-b
+
+mode $-mode-move bindsym               ctrl+$-arrow-u move $-arrow-u $-step-c
+mode $-mode-move bindsym               ctrl+$-arrow-l move $-arrow-l $-step-c
+mode $-mode-move bindsym               ctrl+$-arrow-r move $-arrow-r $-step-c
+mode $-mode-move bindsym               ctrl+$-arrow-d move $-arrow-d $-step-c
+
+mode $-mode-move bindsym              shift+$-arrow-u move $-arrow-u $-step-d
+mode $-mode-move bindsym              shift+$-arrow-l move $-arrow-l $-step-d
+mode $-mode-move bindsym              shift+$-arrow-r move $-arrow-r $-step-d
+mode $-mode-move bindsym              shift+$-arrow-d move $-arrow-d $-step-d
+
+mode $-mode-move bindsym         ctrl+shift+$-arrow-u move $-arrow-u $-step-e
+mode $-mode-move bindsym         ctrl+shift+$-arrow-l move $-arrow-l $-step-e
+mode $-mode-move bindsym         ctrl+shift+$-arrow-r move $-arrow-r $-step-e
+mode $-mode-move bindsym         ctrl+shift+$-arrow-d move $-arrow-d $-step-e
+
+mode $-mode-move bindsym          alt+shift+$-arrow-u move $-arrow-u $-step-f
+mode $-mode-move bindsym          alt+shift+$-arrow-l move $-arrow-l $-step-f
+mode $-mode-move bindsym          alt+shift+$-arrow-r move $-arrow-r $-step-f
+mode $-mode-move bindsym          alt+shift+$-arrow-d move $-arrow-d $-step-f
 
 mode $-mode-move bindsym escape mode $-mode-default
 
 ### network
 
-mode $-mode-network bindsym --to-code a mode $-mode-default , exec nmcli connection up   ethernet
-mode $-mode-network bindsym --to-code z mode $-mode-default , exec nmcli connection down ethernet
+mode $-mode-network bindsym --to-code       a mode $-mode-default , exec nmcli connection up   ethernet
+mode $-mode-network bindsym --to-code       z mode $-mode-default , exec nmcli connection down ethernet
 
-mode $-mode-network bindsym --to-code a+shift exec nmcli connection up   ethernet
-mode $-mode-network bindsym --to-code z+shift exec nmcli connection down ethernet
+mode $-mode-network bindsym --to-code shift+a                       exec nmcli connection up   ethernet
+mode $-mode-network bindsym --to-code shift+z                       exec nmcli connection down ethernet
 
-mode $-mode-network bindsym --to-code i       mode $-mode-default , exec $-action nm-applet--restart
-mode $-mode-network bindsym --to-code i+shift mode $-mode-default , exec $-action nm-applet--killall
+mode $-mode-network bindsym --to-code       i mode $-mode-default , exec $-action nm-applet--restart
+mode $-mode-network bindsym --to-code shift+i mode $-mode-default , exec $-action nm-applet--killall
 
 mode $-mode-network bindsym escape mode $-mode-default
 
 ### output
 
-mode $-mode-output bindsym --to-code 0 mode $-mode-default , exec swaymsg -- output $-output-0 enable
-mode $-mode-output bindsym --to-code 1 mode $-mode-default , exec swaymsg -- output $-output-1 enable
-mode $-mode-output bindsym --to-code 2 mode $-mode-default , exec swaymsg -- output $-output-2 enable
+mode $-mode-output bindsym --to-code       0 mode $-mode-default , exec swaymsg -- output $-output-0 enable
+mode $-mode-output bindsym --to-code       1 mode $-mode-default , exec swaymsg -- output $-output-1 enable
+mode $-mode-output bindsym --to-code       2 mode $-mode-default , exec swaymsg -- output $-output-2 enable
 
-mode $-mode-output bindsym --to-code 0+shift mode $-mode-default , exec swaymsg -- output $-output-0 disable
-mode $-mode-output bindsym --to-code 1+shift mode $-mode-default , exec swaymsg -- output $-output-1 disable
-mode $-mode-output bindsym --to-code 2+shift mode $-mode-default , exec swaymsg -- output $-output-2 disable
+mode $-mode-output bindsym --to-code shift+0 mode $-mode-default , exec swaymsg -- output $-output-0 disable
+mode $-mode-output bindsym --to-code shift+1 mode $-mode-default , exec swaymsg -- output $-output-1 disable
+mode $-mode-output bindsym --to-code shift+2 mode $-mode-default , exec swaymsg -- output $-output-2 disable
 
-mode $-mode-output bindsym --to-code a mode $-mode-default , exec swaymsg -- output $-echo-output-focused enable
-mode $-mode-output bindsym --to-code z mode $-mode-default , exec swaymsg -- output $-echo-output-suspend enable
+mode $-mode-output bindsym --to-code       a mode $-mode-default , exec swaymsg -- output $-echo-output-focused enable
+mode $-mode-output bindsym --to-code       z mode $-mode-default , exec swaymsg -- output $-echo-output-suspend enable
 
-mode $-mode-output bindsym --to-code a+shift mode $-mode-default , exec swaymsg -- output $-echo-output-focused disable
-mode $-mode-output bindsym --to-code z+shift mode $-mode-default , exec swaymsg -- output $-echo-output-suspend disable
+mode $-mode-output bindsym --to-code shift+a mode $-mode-default , exec swaymsg -- output $-echo-output-focused disable
+mode $-mode-output bindsym --to-code shift+z mode $-mode-default , exec swaymsg -- output $-echo-output-suspend disable
 
 mode $-mode-output bindsym escape mode $-mode-default
 
 ### resize
 
-mode $-mode-resize bindsym $-arrow-u resize shrink height 16px
-mode $-mode-resize bindsym $-arrow-l resize shrink width  16px
-mode $-mode-resize bindsym $-arrow-r resize grow   width  16px
-mode $-mode-resize bindsym $-arrow-d resize grow   height 16px
+mode $-mode-resize bindsym             $-arrow-u resize shrink height $-size-a
+mode $-mode-resize bindsym             $-arrow-d resize grow   height $-size-a
+mode $-mode-resize bindsym             $-arrow-l resize shrink width  $-size-a
+mode $-mode-resize bindsym             $-arrow-r resize grow   width  $-size-a
 
-mode $-mode-resize bindsym --to-code $-key-0 resize set 1024  768
-mode $-mode-resize bindsym --to-code $-key-1 resize set 1920 1152
-mode $-mode-resize bindsym --to-code $-key-2 resize set  960  612
-mode $-mode-resize bindsym --to-code $-key-3 resize set  480  342
-mode $-mode-resize bindsym --to-code $-key-4 resize set  240  207
+mode $-mode-resize bindsym         alt+$-arrow-u resize shrink height $-size-b
+mode $-mode-resize bindsym         alt+$-arrow-d resize grow   height $-size-b
+mode $-mode-resize bindsym         alt+$-arrow-l resize shrink width  $-size-b
+mode $-mode-resize bindsym         alt+$-arrow-r resize grow   width  $-size-b
+
+mode $-mode-resize bindsym        ctrl+$-arrow-u resize shrink height $-size-c
+mode $-mode-resize bindsym        ctrl+$-arrow-d resize grow   height $-size-c
+mode $-mode-resize bindsym        ctrl+$-arrow-l resize shrink width  $-size-c
+mode $-mode-resize bindsym        ctrl+$-arrow-r resize grow   width  $-size-c
+
+mode $-mode-resize bindsym       shift+$-arrow-u resize shrink height $-size-d
+mode $-mode-resize bindsym       shift+$-arrow-d resize grow   height $-size-d
+mode $-mode-resize bindsym       shift+$-arrow-l resize shrink width  $-size-d
+mode $-mode-resize bindsym       shift+$-arrow-r resize grow   width  $-size-d
+
+mode $-mode-resize bindsym  ctrl+shift+$-arrow-u resize shrink height $-size-e
+mode $-mode-resize bindsym  ctrl+shift+$-arrow-d resize grow   height $-size-e
+mode $-mode-resize bindsym  ctrl+shift+$-arrow-l resize shrink width  $-size-e
+mode $-mode-resize bindsym  ctrl+shift+$-arrow-r resize grow   width  $-size-e
+
+mode $-mode-resize bindsym   alt+shift+$-arrow-u resize shrink height $-size-f
+mode $-mode-resize bindsym   alt+shift+$-arrow-d resize grow   height $-size-f
+mode $-mode-resize bindsym   alt+shift+$-arrow-l resize shrink width  $-size-f
+mode $-mode-resize bindsym   alt+shift+$-arrow-r resize grow   width  $-size-f
+
+mode $-mode-resize bindsym --to-code       $-key-0 resize set width  $-size-x-0
+mode $-mode-resize bindsym --to-code       $-key-1 resize set width  $-size-x-1
+mode $-mode-resize bindsym --to-code       $-key-2 resize set width  $-size-x-2
+mode $-mode-resize bindsym --to-code       $-key-3 resize set width  $-size-x-3
+mode $-mode-resize bindsym --to-code       $-key-4 resize set width  $-size-x-4
+mode $-mode-resize bindsym --to-code       $-key-5 resize set width  $-size-x-5
+mode $-mode-resize bindsym --to-code       $-key-6 resize set width  $-size-x-6
+mode $-mode-resize bindsym --to-code       $-key-7 resize set width  $-size-x-7
+mode $-mode-resize bindsym --to-code       $-key-8 resize set width  $-size-x-8
+mode $-mode-resize bindsym --to-code       $-key-9 resize set width  $-size-x-9
+
+mode $-mode-resize bindsym --to-code shift+$-key-0 resize set height $-size-y-0
+mode $-mode-resize bindsym --to-code shift+$-key-1 resize set height $-size-y-1
+mode $-mode-resize bindsym --to-code shift+$-key-2 resize set height $-size-y-2
+mode $-mode-resize bindsym --to-code shift+$-key-3 resize set height $-size-y-3
+mode $-mode-resize bindsym --to-code shift+$-key-4 resize set height $-size-y-4
+mode $-mode-resize bindsym --to-code shift+$-key-5 resize set height $-size-y-5
+mode $-mode-resize bindsym --to-code shift+$-key-6 resize set height $-size-y-6
+mode $-mode-resize bindsym --to-code shift+$-key-7 resize set height $-size-y-7
+mode $-mode-resize bindsym --to-code shift+$-key-8 resize set height $-size-y-8
+mode $-mode-resize bindsym --to-code shift+$-key-9 resize set height $-size-y-9
 
 mode $-mode-resize bindsym escape mode $-mode-default
 
@@ -214,8 +275,8 @@ mode $-mode-system bindsym escape mode $-mode-default
 
 ### vpn
 
-mode $-mode-vpn bindsym --to-code a mode $-mode-default , exec cat /-/keys/corus-vpn | nmcli connection up corus --ask
-mode $-mode-vpn bindsym --to-code z mode $-mode-default , exec nmcli connection down corus
+mode $-mode-vpn bindsym --to-code a mode $-mode-default , exec cat /-/keys/corus-vpn | nmcli connection up   corus --ask
+mode $-mode-vpn bindsym --to-code z mode $-mode-default , exec                         nmcli connection down corus
 
 mode $-mode-vpn bindsym escape mode $-mode-default
 

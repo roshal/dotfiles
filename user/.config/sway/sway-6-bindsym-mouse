@@ -9,6 +9,7 @@ bindsym $-key+$-mouse-e move $-arrow-u
 bindsym $-key+$-mouse-s move $-arrow-d
 
 bindsym $-mouse-m kill
+
 bindsym $-mouse-r floating toggle
 
 bindsym $-mouse-b move $-arrow-l
@@ -17,8 +18,8 @@ bindsym $-mouse-f move $-arrow-r
 bindsym $-mouse-e move $-arrow-u
 bindsym $-mouse-s move $-arrow-d
 
-bindsym --whole-window $-key+$-mouse-m kill
-bindsym --whole-window $-key+$-mouse-m+shift floating toggle
+bindsym --whole-window       $-key+$-mouse-m kill
+bindsym --whole-window shift+$-key+$-mouse-m floating toggle
 
 bindsym --whole-window $-key+$-mouse-u workspace prev_on_output
 bindsym --whole-window $-key+$-mouse-d workspace next_on_output
@@ -26,32 +27,32 @@ bindsym --whole-window $-key+$-mouse-d workspace next_on_output
 bindsym --whole-window $-key+$-mouse-b workspace prev
 bindsym --whole-window $-key+$-mouse-f workspace next
 
-bindsym --whole-window $-key+ctrl+$-mouse-l exec swaymsg -- focus $-arrow-l
-bindsym --whole-window $-key+ctrl+$-mouse-r exec swaymsg -- focus $-arrow-r
+bindsym --whole-window       ctrl+$-key+$-mouse-u exec swaymsg -- focus prev
+bindsym --whole-window       ctrl+$-key+$-mouse-d exec swaymsg -- focus next
 
-bindsym --whole-window $-key+ctrl+$-mouse-u exec swaymsg -- focus prev
-bindsym --whole-window $-key+ctrl+$-mouse-d exec swaymsg -- focus next
+bindsym --whole-window shift+ctrl+$-key+$-mouse-u exec swaymsg -- focus prev sibling
+bindsym --whole-window shift+ctrl+$-key+$-mouse-d exec swaymsg -- focus next sibling
 
-bindsym --whole-window $-key+ctrl+$-mouse-b exec swaymsg -- focus $-arrow-l
-bindsym --whole-window $-key+ctrl+$-mouse-f exec swaymsg -- focus $-arrow-r
+bindsym --whole-window ctrl+$-key+$-mouse-l exec swaymsg -- focus $-arrow-l
+bindsym --whole-window ctrl+$-key+$-mouse-r exec swaymsg -- focus $-arrow-r
 
-bindsym --whole-window $-key+ctrl+$-mouse-e exec swaymsg -- focus $-arrow-u
-bindsym --whole-window $-key+ctrl+$-mouse-s exec swaymsg -- focus $-arrow-d
+bindsym --whole-window ctrl+$-key+$-mouse-b exec swaymsg -- focus $-arrow-l
+bindsym --whole-window ctrl+$-key+$-mouse-f exec swaymsg -- focus $-arrow-r
 
-bindsym --whole-window $-key+ctrl+shift+$-mouse-u exec swaymsg -- focus prev sibling
-bindsym --whole-window $-key+ctrl+shift+$-mouse-d exec swaymsg -- focus next sibling
+bindsym --whole-window ctrl+$-key+$-mouse-e exec swaymsg -- focus $-arrow-u
+bindsym --whole-window ctrl+$-key+$-mouse-s exec swaymsg -- focus $-arrow-d
 
-bindsym --whole-window $-key+shift+$-mouse-l move $-arrow-l
-bindsym --whole-window $-key+shift+$-mouse-r move $-arrow-r
+bindsym --whole-window shift+$-key+$-mouse-l move $-arrow-l
+bindsym --whole-window shift+$-key+$-mouse-r move $-arrow-r
 
-bindsym --whole-window $-key+shift+$-mouse-u move $-arrow-l
-bindsym --whole-window $-key+shift+$-mouse-d move $-arrow-r
+bindsym --whole-window shift+$-key+$-mouse-u move $-arrow-l
+bindsym --whole-window shift+$-key+$-mouse-d move $-arrow-r
 
-bindsym --whole-window $-key+shift+$-mouse-b move $-arrow-l
-bindsym --whole-window $-key+shift+$-mouse-f move $-arrow-r
+bindsym --whole-window shift+$-key+$-mouse-b move $-arrow-l
+bindsym --whole-window shift+$-key+$-mouse-f move $-arrow-r
 
-bindsym --whole-window $-key+shift+$-mouse-e move $-arrow-u
-bindsym --whole-window $-key+shift+$-mouse-s move $-arrow-d
+bindsym --whole-window shift+$-key+$-mouse-e move $-arrow-u
+bindsym --whole-window shift+$-key+$-mouse-s move $-arrow-d
 
 bindsym --whole-window --exclude-titlebar $-key+$-mouse-b workspace prev
 bindsym --whole-window --exclude-titlebar $-key+$-mouse-f workspace next
