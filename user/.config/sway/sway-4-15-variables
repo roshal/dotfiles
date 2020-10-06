@@ -128,9 +128,8 @@ set $-mouse-e button9
 
 ### outputs
 
-set $-output-0 DP-1
-set $-output-1 HDMI-A-1
-set $-output-2 HDMI-A-2
+set $-output-0 HDMI-A-1
+set $-output-1 DP-1
 
 ### paths
 
