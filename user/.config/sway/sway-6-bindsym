@@ -34,10 +34,10 @@ bindsym --to-code       $-key+o exec $-action swaymsg--switch-output
 ##### 6.2 splitting containers
 # # # https://i3wm.org/docs/userguide.html#_splitting_containers
 
-bindsym --to-code $-key+r split toggle
-
 bindsym --to-code $-key+h splith
 bindsym --to-code $-key+v splitv
+
+bindsym --to-code $-key+r splitt
 
 ##### 6.3 manipulating layout
 # # # https://i3wm.org/docs/userguide.html#manipulating_layout
@@ -45,9 +45,10 @@ bindsym --to-code $-key+v splitv
 ### does incomprehensibly
 # bindsym --to-code $-key+d layout default
 
-bindsym --to-code $-key+e floating toggle
+bindsym --to-code       $-key+f fullscreen
+bindsym --to-code shift+$-key+f floating toggle
 
-bindsym --to-code $-key+f fullscreen
+bindsym --to-code $-key+e layout toggle
 
 bindsym --to-code $-key+s layout stacking
 bindsym --to-code $-key+t layout tabbed
@@ -101,21 +102,21 @@ bindsym ctrl+$-key+$-arrow-d workspace next_on_output
 bindsym ctrl+$-key+$-arrow-l workspace prev
 bindsym ctrl+$-key+$-arrow-r workspace next
 
-bindsym       $-key+$-control-i          workspace $-workspace-6
-bindsym       $-key+$-control-h          workspace $-workspace-7
-bindsym       $-key+$-control-d          workspace $-workspace-8
-bindsym       $-key+$-control-e          workspace $-workspace-9
+bindsym       $-key+$-control-i         workspace $-workspace-6
+bindsym       $-key+$-control-h         workspace $-workspace-7
+bindsym       $-key+$-control-d         workspace $-workspace-8
+bindsym       $-key+$-control-e         workspace $-workspace-9
 
-bindsym shift+$-key+$-control-i  move to workspace $-workspace-6
-bindsym shift+$-key+$-control-h  move to workspace $-workspace-7
-bindsym shift+$-key+$-control-d  move to workspace $-workspace-8
-bindsym shift+$-key+$-control-e  move to workspace $-workspace-9
+bindsym shift+$-key+$-control-i move to workspace $-workspace-6
+bindsym shift+$-key+$-control-h move to workspace $-workspace-7
+bindsym shift+$-key+$-control-d move to workspace $-workspace-8
+bindsym shift+$-key+$-control-e move to workspace $-workspace-9
 
-bindsym       $-key+$-control-p          workspace prev_on_output
-bindsym       $-key+$-control-n          workspace next_on_output
+bindsym       $-key+$-control-p         workspace prev_on_output
+bindsym       $-key+$-control-n         workspace next_on_output
 
-bindsym shift+$-key+$-control-p  move to workspace prev_on_output
-bindsym shift+$-key+$-control-n  move to workspace next_on_output
+bindsym shift+$-key+$-control-p move to workspace prev_on_output
+bindsym shift+$-key+$-control-n move to workspace next_on_output
 
 bindsym       $-key+0              workspace --no-auto-back-and-forth $-workspace-zero
 bindsym       $-key+escape         workspace --no-auto-back-and-forth $-workspace-escape

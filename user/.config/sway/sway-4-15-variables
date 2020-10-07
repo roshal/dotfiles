@@ -54,13 +54,15 @@ set $-idle-resume             resume swaymsg -- output \* dpms on
 ### keys
 
 set $-arrow-u up
-set $-arrow-l left
-set $-arrow-r right
 set $-arrow-d down
 
+set $-arrow-l left
+set $-arrow-r right
+
 set $-control-i insert
-set $-control-h home
 set $-control-d delete
+
+set $-control-h home
 set $-control-e end
 
 set $-control-p prior
