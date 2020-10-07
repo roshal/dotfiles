@@ -7,7 +7,7 @@ configuration files for linux applications
 
 [`stow`](https://www.gnu.org/software/stow/manual/stow)
 
-## bootstrap
+## management
 
 ```shell
 stow --target "${HOME}" --stow user
@@ -17,19 +17,19 @@ stow --target "${HOME}" --stow user
 sudo stow --target / --stow chromium
 ```
 
-## listing
+## find symbolic links
 
 ```shell
 find "${HOME}/.config" -type l
 ```
 
-## checking
+## find broken symbolic links
 
 ```shell
 find "${HOME}/.config" -xtype l
 ```
 
-## cleaning
+## remove broken symbolic links
 
 ```shell
 find "${HOME}/.config" -xtype l -exec rm {} +
