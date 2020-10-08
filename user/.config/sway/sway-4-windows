@@ -7,6 +7,8 @@ for_window [shell=] title_format %title<span alpha="50%"> - %shell</span>
 for_window [shell="^xdg_shell$"] title_format '%title<span alpha="50%"> sway %instance</span>'
 for_window [shell="^xwayland$$"] title_format '%title<span alpha="50%"> xorg %instance</span>'
 
+for_window [floating] border normal 0
+
 for_window [tiling] border normal 0
 
 for_window [window_role="^browser$"] border none

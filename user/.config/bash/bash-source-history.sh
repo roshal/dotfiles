@@ -10,13 +10,13 @@ export HISTCONTROL=ignoreboth
 # export HISTCONTROL=ignorespace
 # export HISTCONTROL=ignorespace:ignoredups
 
-### increase history file size - default is 500
-export HISTFILESIZE=65536
+### default is 500 - increase history file size
+export HISTFILESIZE=16384
 
-### increase history size - default is 500
+### default is 500 - increase history size
 export HISTSIZE=${HISTFILESIZE}
 
-export HISTTIMEFORMAT='%y-%m-%d %T '
+export HISTTIMEFORMAT='%y-%m-%d %T  '
 
 ### get more colors
 export HSTR_CONFIG=hicolor

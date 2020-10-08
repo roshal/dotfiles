@@ -35,6 +35,8 @@ source /usr/share/git/git-prompt.sh
 source /usr/share/nvm/init-nvm.sh
 
 ### environment after vte
+# # https://askubuntu.com/questions/67283
+# # https://unix.stackexchange.com/questions/1288
 
 export PROMPT_COMMAND="${PROMPT_COMMAND:-true}"
 
