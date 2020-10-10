@@ -62,6 +62,8 @@ assign [app_id="^telegramdesktop$"] $-workspace-8
 
 assign [app_id="^transmission-gtk$"] $-workspace-7
 
+assign [app_id="^wireshark$"] $-workspace-9
+
 ### xorg
 
 ### does not work
