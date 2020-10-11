@@ -6,6 +6,8 @@
 ### default
 # bar swaybar_command swaybar
 
+# bar swaybar_command waybar
+
 bar height 24
 
 bar pango_markup no
