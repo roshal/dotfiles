@@ -115,9 +115,6 @@ bindsym shift+$-key+$-control-e move to workspace $-workspace-9
 bindsym       $-key+$-control-p         workspace prev_on_output
 bindsym       $-key+$-control-n         workspace next_on_output
 
-bindsym shift+$-key+$-control-p move to workspace prev_on_output
-bindsym shift+$-key+$-control-n move to workspace next_on_output
-
 bindsym       $-key+0              workspace --no-auto-back-and-forth $-workspace-zero
 bindsym       $-key+escape         workspace --no-auto-back-and-forth $-workspace-escape
 
