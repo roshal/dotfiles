@@ -1,9 +1,6 @@
 
 # # hstr --show-configuration
 
-### append new history items to .bash_history
-shopt -s histappend
-
 ### leading space hides commands from history
 export HISTCONTROL=ignoreboth
 # export HISTCONTROL=ignoredups

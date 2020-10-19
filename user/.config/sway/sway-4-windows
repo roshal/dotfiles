@@ -70,5 +70,4 @@ assign [app_id="^wireshark$"] $-workspace-9
 assign [instance="^spotify$"] $-workspace-7
 
 assign [instance="^telegram-desktop$"] $-workspace-8
-
 assign [instance="^zoom$"] $-workspace-9
