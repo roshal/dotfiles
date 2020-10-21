@@ -142,35 +142,35 @@ mode $-mode-lock bindsym escape mode $-mode-default
 
 ### move
 
-mode $-mode-move bindsym                    $-arrow-u move $-arrow-u $-step-a
-mode $-mode-move bindsym                    $-arrow-l move $-arrow-l $-step-a
-mode $-mode-move bindsym                    $-arrow-r move $-arrow-r $-step-a
-mode $-mode-move bindsym                    $-arrow-d move $-arrow-d $-step-a
+mode $-mode-move bindsym            $-arrow-u move $-arrow-u $-step-a
+mode $-mode-move bindsym            $-arrow-l move $-arrow-l $-step-a
+mode $-mode-move bindsym            $-arrow-r move $-arrow-r $-step-a
+mode $-mode-move bindsym            $-arrow-d move $-arrow-d $-step-a
 
-mode $-mode-move bindsym                alt+$-arrow-u move $-arrow-u $-step-b
-mode $-mode-move bindsym                alt+$-arrow-l move $-arrow-l $-step-b
-mode $-mode-move bindsym                alt+$-arrow-r move $-arrow-r $-step-b
-mode $-mode-move bindsym                alt+$-arrow-d move $-arrow-d $-step-b
+mode $-mode-move bindsym        alt+$-arrow-u move $-arrow-u $-step-b
+mode $-mode-move bindsym        alt+$-arrow-l move $-arrow-l $-step-b
+mode $-mode-move bindsym        alt+$-arrow-r move $-arrow-r $-step-b
+mode $-mode-move bindsym        alt+$-arrow-d move $-arrow-d $-step-b
 
-mode $-mode-move bindsym               ctrl+$-arrow-u move $-arrow-u $-step-c
-mode $-mode-move bindsym               ctrl+$-arrow-l move $-arrow-l $-step-c
-mode $-mode-move bindsym               ctrl+$-arrow-r move $-arrow-r $-step-c
-mode $-mode-move bindsym               ctrl+$-arrow-d move $-arrow-d $-step-c
+mode $-mode-move bindsym       ctrl+$-arrow-u move $-arrow-u $-step-c
+mode $-mode-move bindsym       ctrl+$-arrow-l move $-arrow-l $-step-c
+mode $-mode-move bindsym       ctrl+$-arrow-r move $-arrow-r $-step-c
+mode $-mode-move bindsym       ctrl+$-arrow-d move $-arrow-d $-step-c
 
-mode $-mode-move bindsym              shift+$-arrow-u move $-arrow-u $-step-d
-mode $-mode-move bindsym              shift+$-arrow-l move $-arrow-l $-step-d
-mode $-mode-move bindsym              shift+$-arrow-r move $-arrow-r $-step-d
-mode $-mode-move bindsym              shift+$-arrow-d move $-arrow-d $-step-d
+mode $-mode-move bindsym      shift+$-arrow-u move $-arrow-u $-step-d
+mode $-mode-move bindsym      shift+$-arrow-l move $-arrow-l $-step-d
+mode $-mode-move bindsym      shift+$-arrow-r move $-arrow-r $-step-d
+mode $-mode-move bindsym      shift+$-arrow-d move $-arrow-d $-step-d
 
-mode $-mode-move bindsym         ctrl+shift+$-arrow-u move $-arrow-u $-step-e
-mode $-mode-move bindsym         ctrl+shift+$-arrow-l move $-arrow-l $-step-e
-mode $-mode-move bindsym         ctrl+shift+$-arrow-r move $-arrow-r $-step-e
-mode $-mode-move bindsym         ctrl+shift+$-arrow-d move $-arrow-d $-step-e
+mode $-mode-move bindsym ctrl+shift+$-arrow-u move $-arrow-u $-step-e
+mode $-mode-move bindsym ctrl+shift+$-arrow-l move $-arrow-l $-step-e
+mode $-mode-move bindsym ctrl+shift+$-arrow-r move $-arrow-r $-step-e
+mode $-mode-move bindsym ctrl+shift+$-arrow-d move $-arrow-d $-step-e
 
-mode $-mode-move bindsym          alt+shift+$-arrow-u move $-arrow-u $-step-f
-mode $-mode-move bindsym          alt+shift+$-arrow-l move $-arrow-l $-step-f
-mode $-mode-move bindsym          alt+shift+$-arrow-r move $-arrow-r $-step-f
-mode $-mode-move bindsym          alt+shift+$-arrow-d move $-arrow-d $-step-f
+mode $-mode-move bindsym  alt+shift+$-arrow-u move $-arrow-u $-step-f
+mode $-mode-move bindsym  alt+shift+$-arrow-l move $-arrow-l $-step-f
+mode $-mode-move bindsym  alt+shift+$-arrow-r move $-arrow-r $-step-f
+mode $-mode-move bindsym  alt+shift+$-arrow-d move $-arrow-d $-step-f
 
 mode $-mode-move bindsym escape mode $-mode-default
 
@@ -189,13 +189,13 @@ mode $-mode-network bindsym escape mode $-mode-default
 
 ### output
 
-mode $-mode-output bindsym --to-code       0 mode $-mode-default , exec swaymsg -- output $-output-0 enable
-mode $-mode-output bindsym --to-code       1 mode $-mode-default , exec swaymsg -- output $-output-1 enable
-mode $-mode-output bindsym --to-code       2 mode $-mode-default , exec swaymsg -- output $-output-2 enable
+mode $-mode-output bindsym --to-code       $-key-0 mode $-mode-default , exec swaymsg -- output $-output-0 enable
+mode $-mode-output bindsym --to-code       $-key-1 mode $-mode-default , exec swaymsg -- output $-output-1 enable
+mode $-mode-output bindsym --to-code       $-key-2 mode $-mode-default , exec swaymsg -- output $-output-2 enable
 
-mode $-mode-output bindsym --to-code shift+0 mode $-mode-default , exec swaymsg -- output $-output-0 disable
-mode $-mode-output bindsym --to-code shift+1 mode $-mode-default , exec swaymsg -- output $-output-1 disable
-mode $-mode-output bindsym --to-code shift+2 mode $-mode-default , exec swaymsg -- output $-output-2 disable
+mode $-mode-output bindsym --to-code shift+$-key-0 mode $-mode-default , exec swaymsg -- output $-output-0 disable
+mode $-mode-output bindsym --to-code shift+$-key-1 mode $-mode-default , exec swaymsg -- output $-output-1 disable
+mode $-mode-output bindsym --to-code shift+$-key-2 mode $-mode-default , exec swaymsg -- output $-output-2 disable
 
 mode $-mode-output bindsym --to-code       a mode $-mode-default , exec swaymsg -- output $-echo-output-focused enable
 mode $-mode-output bindsym --to-code       z mode $-mode-default , exec swaymsg -- output $-echo-output-suspend enable
@@ -207,35 +207,35 @@ mode $-mode-output bindsym escape mode $-mode-default
 
 ### resize
 
-mode $-mode-resize bindsym             $-arrow-u resize shrink height $-size-a
-mode $-mode-resize bindsym             $-arrow-d resize grow   height $-size-a
-mode $-mode-resize bindsym             $-arrow-l resize shrink width  $-size-a
-mode $-mode-resize bindsym             $-arrow-r resize grow   width  $-size-a
+mode $-mode-resize bindsym            $-arrow-u resize shrink height $-size-a
+mode $-mode-resize bindsym            $-arrow-d resize grow   height $-size-a
+mode $-mode-resize bindsym            $-arrow-l resize shrink width  $-size-a
+mode $-mode-resize bindsym            $-arrow-r resize grow   width  $-size-a
 
-mode $-mode-resize bindsym         alt+$-arrow-u resize shrink height $-size-b
-mode $-mode-resize bindsym         alt+$-arrow-d resize grow   height $-size-b
-mode $-mode-resize bindsym         alt+$-arrow-l resize shrink width  $-size-b
-mode $-mode-resize bindsym         alt+$-arrow-r resize grow   width  $-size-b
+mode $-mode-resize bindsym        alt+$-arrow-u resize shrink height $-size-b
+mode $-mode-resize bindsym        alt+$-arrow-d resize grow   height $-size-b
+mode $-mode-resize bindsym        alt+$-arrow-l resize shrink width  $-size-b
+mode $-mode-resize bindsym        alt+$-arrow-r resize grow   width  $-size-b
 
-mode $-mode-resize bindsym        ctrl+$-arrow-u resize shrink height $-size-c
-mode $-mode-resize bindsym        ctrl+$-arrow-d resize grow   height $-size-c
-mode $-mode-resize bindsym        ctrl+$-arrow-l resize shrink width  $-size-c
-mode $-mode-resize bindsym        ctrl+$-arrow-r resize grow   width  $-size-c
+mode $-mode-resize bindsym       ctrl+$-arrow-u resize shrink height $-size-c
+mode $-mode-resize bindsym       ctrl+$-arrow-d resize grow   height $-size-c
+mode $-mode-resize bindsym       ctrl+$-arrow-l resize shrink width  $-size-c
+mode $-mode-resize bindsym       ctrl+$-arrow-r resize grow   width  $-size-c
 
-mode $-mode-resize bindsym       shift+$-arrow-u resize shrink height $-size-d
-mode $-mode-resize bindsym       shift+$-arrow-d resize grow   height $-size-d
-mode $-mode-resize bindsym       shift+$-arrow-l resize shrink width  $-size-d
-mode $-mode-resize bindsym       shift+$-arrow-r resize grow   width  $-size-d
+mode $-mode-resize bindsym      shift+$-arrow-u resize shrink height $-size-d
+mode $-mode-resize bindsym      shift+$-arrow-d resize grow   height $-size-d
+mode $-mode-resize bindsym      shift+$-arrow-l resize shrink width  $-size-d
+mode $-mode-resize bindsym      shift+$-arrow-r resize grow   width  $-size-d
 
-mode $-mode-resize bindsym  ctrl+shift+$-arrow-u resize shrink height $-size-e
-mode $-mode-resize bindsym  ctrl+shift+$-arrow-d resize grow   height $-size-e
-mode $-mode-resize bindsym  ctrl+shift+$-arrow-l resize shrink width  $-size-e
-mode $-mode-resize bindsym  ctrl+shift+$-arrow-r resize grow   width  $-size-e
+mode $-mode-resize bindsym ctrl+shift+$-arrow-u resize shrink height $-size-e
+mode $-mode-resize bindsym ctrl+shift+$-arrow-d resize grow   height $-size-e
+mode $-mode-resize bindsym ctrl+shift+$-arrow-l resize shrink width  $-size-e
+mode $-mode-resize bindsym ctrl+shift+$-arrow-r resize grow   width  $-size-e
 
-mode $-mode-resize bindsym   alt+shift+$-arrow-u resize shrink height $-size-f
-mode $-mode-resize bindsym   alt+shift+$-arrow-d resize grow   height $-size-f
-mode $-mode-resize bindsym   alt+shift+$-arrow-l resize shrink width  $-size-f
-mode $-mode-resize bindsym   alt+shift+$-arrow-r resize grow   width  $-size-f
+mode $-mode-resize bindsym  alt+shift+$-arrow-u resize shrink height $-size-f
+mode $-mode-resize bindsym  alt+shift+$-arrow-d resize grow   height $-size-f
+mode $-mode-resize bindsym  alt+shift+$-arrow-l resize shrink width  $-size-f
+mode $-mode-resize bindsym  alt+shift+$-arrow-r resize grow   width  $-size-f
 
 mode $-mode-resize bindsym --to-code       $-key-0 resize set width  $-size-x-0
 mode $-mode-resize bindsym --to-code       $-key-1 resize set width  $-size-x-1
