@@ -108,7 +108,7 @@ mode $-mode-cursor bindsym escape mode $-mode-default
 mode $-mode-kill bindsym --to-code       c mode $-mode-default , exec killall    chromium
 mode $-mode-kill bindsym --to-code       f mode $-mode-default , exec killall    firefox
 mode $-mode-kill bindsym --to-code       j mode $-mode-default , exec killall    java
-mode $-mode-kill bindsym --to-code       n mode $-mode-default , exec killall    nm-applet
+mode $-mode-kill bindsym --to-code       n mode $-mode-default , exec killall    node
 mode $-mode-kill bindsym --to-code       s mode $-mode-default , exec killall    spotify
 mode $-mode-kill bindsym --to-code       t mode $-mode-default , exec killall    telegram-desktop
 mode $-mode-kill bindsym --to-code       v mode $-mode-default , exec killall    vlc
@@ -118,7 +118,7 @@ mode $-mode-kill bindsym --to-code       z mode $-mode-default , exec killall   
 mode $-mode-kill bindsym --to-code shift+c mode $-mode-default , exec killall -9 chromium
 mode $-mode-kill bindsym --to-code shift+f mode $-mode-default , exec killall -9 firefox
 mode $-mode-kill bindsym --to-code shift+j mode $-mode-default , exec killall -9 java
-mode $-mode-kill bindsym --to-code shift+n mode $-mode-default , exec killall -9 nm-applet
+mode $-mode-kill bindsym --to-code shift+n mode $-mode-default , exec killall -9 node
 mode $-mode-kill bindsym --to-code shift+s mode $-mode-default , exec killall -9 spotify
 mode $-mode-kill bindsym --to-code shift+t mode $-mode-default , exec killall -9 telegram-desktop
 mode $-mode-kill bindsym --to-code shift+v mode $-mode-default , exec killall -9 vlc
