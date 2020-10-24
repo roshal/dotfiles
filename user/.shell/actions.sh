@@ -50,6 +50,10 @@ function __nm_applet__restart {
 	nm-applet --indicator
 }
 
+function __pulsemixer__volume {
+	pulsemixer --get-volume | jq -s add/length
+}
+
 function __slurp {
 	slurp -b 00000000 -w 1
 }

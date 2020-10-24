@@ -36,14 +36,6 @@ set $-shift-c 339966
 set $-shift-m 663399
 set $-shift-y 996633
 
-### devices
-
-set $-bluetooth-headset bluez_card.70_26_05_DD_FD_DD
-set $-bluetooth-speaker bluez_card.00_42_79_77_95_54
-
-set $-mac-headset 70:26:05:DD:FD:DD
-set $-mac-speaker 00:42:79:77:95:54
-
 ### idle
 
 set $-idle-before-sleep before-sleep swaylock
@@ -137,9 +129,23 @@ set $-output-1 HDMI-A-1
 
 set $-path-mako-pulsemixer /-/mako/pulsemixer
 
-### pulsemixer
+### pulseaudio
 
-set $-pulsemixer-volume pulsemixer --get-volume | jq -s add/length
+set $-pulseaudio-profile-off     off
+
+set $-pulseaudio-profile-headset headset_head_unit
+set $-pulseaudio-profile-speaker a2dp_sink
+
+set $-pulseaudio-profile-output-analog output:analog-stereo
+set $-pulseaudio-profile-output-hdmi   output:hdmi-stereo
+
+set $-pulseaudio-alsa-card alsa_card.pci-0000_00_1f.3
+
+set $-pulseaudio-bluetooth-headset-card bluez_card.70_26_05_DD_FD_DD
+set $-pulseaudio-bluetooth-headset-mac             70:26:05:DD:FD:DD
+
+set $-pulseaudio-bluetooth-speaker-card bluez_card.00_42_79_77_95_54
+set $-pulseaudio-bluetooth-speaker-mac             00:42:79:77:95:54
 
 ### size
 

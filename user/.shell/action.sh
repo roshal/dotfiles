@@ -16,6 +16,9 @@ then __nm_applet__killall
 elif test "${1}" == 'nm-applet--restart'
 then __nm_applet__restart
 
+elif test "${1}" == 'pulsemixer--volume'
+then __pulsemixer__volume
+
 elif test "${1}" == 'slurp--grim--wl-copy'
 then __slurp | __grim | __wl_copy
 
