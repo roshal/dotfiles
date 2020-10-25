@@ -20,6 +20,7 @@ bindsym shift+$-key+$-special-p exec $-action grim--output-path
 bindsym       $-key+$-special-s exec $-action slurp--notify
 
 bindsym       $-key+return      exec termite
+bindsym shift+$-key+return      exec alacritty --command byobu
 
 bindsym --to-code       $-key+d exec wofi
 bindsym --to-code shift+$-key+d exec wofi --show drun --allow-images --sort-order alphabetical --search -

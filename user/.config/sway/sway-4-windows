@@ -17,6 +17,8 @@ for_window [window_role="^browser$"] border none
 
 ### sway
 
+for_window [app_id="^Alacritty$"] border none
+
 for_window [app_id="^firefox$"] border none
 
 for_window [app_id="^telegramdesktop$"] border none
