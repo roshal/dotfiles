@@ -21,7 +21,7 @@ for_window [app_id="^firefox$"] border none
 
 for_window [app_id="^telegramdesktop$"] border none
 
-# for_window [app_id="^termite$"] border none
+for_window [app_id="^termite$"] border none
 
 for_window [app_id="^thunar$"] border none
 
@@ -72,4 +72,5 @@ assign [app_id="^wireshark$"] $-workspace-9
 assign [instance="^spotify$"] $-workspace-7
 
 assign [instance="^telegram-desktop$"] $-workspace-8
+
 assign [instance="^zoom$"] $-workspace-9

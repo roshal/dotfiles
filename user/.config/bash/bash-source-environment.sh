@@ -20,12 +20,12 @@ export LS_COLORS='di=1;94:'
 ### clipboard paste to chromium does not work
 # # https://github.com/swaywm/sway/wiki/Running-programs-natively-under-wayland#gtk3
 # # https://wiki.archlinux.org/index.php/Firefox#Wayland
-# export MOZ_ENABLE_WAYLAND='1'
+export MOZ_ENABLE_WAYLAND='1'
 
 ### git
 
 # # https://github.com/typicode/husky#skip-all-hooks-rebase
-export HUSKY_SKIP_HOOKS=1
+export HUSKY_SKIP_HOOKS='1'
 
 ### qt
 
