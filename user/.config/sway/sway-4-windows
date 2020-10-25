@@ -19,7 +19,7 @@ for_window [window_role="^browser$"] border none
 
 for_window [app_id="^Alacritty$"] border none
 
-for_window [app_id="^firefox$"] border none
+for_window [app_id="^org.inkscape.Inkscape$"] border none
 
 for_window [app_id="^telegramdesktop$"] border none
 
