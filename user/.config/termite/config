@@ -1,20 +1,41 @@
 
+# # /etc/xdg/termite/config
+
 [options]
 
+# allow_bold = true
+# audible_bell = false
+# browser = xdg-open
+# cell_height_scale = 1.0
+# cell_width_scale = 1.0
+# clickable_url = true
+# cursor_blink = system
+# filter_unmatched_urls = true
+# fullscreen = true
+# icon_name = terminal
+# modify_other_keys = false
+# scroll_on_output = false
+# search_wrap = true
+# size_hints = false
+# urgent_on_bell = true
+
 bold_is_bright = false
-clickable_url = true
+cell_height_scale = 0.875
 cursor_blink = off
 cursor_shape = ibeam
 dynamic_title = false
 font = monospace 9
 hyperlinks = true
-modify_other_keys = false
 mouse_autohide = true
 scroll_on_keystroke = false
 scrollback_lines = 65536
 scrollbar = left
 
 [colors]
+
+# cursor_foreground = #000
+# foreground_bold = #fff
+# highlight = #00f
 
 cursor = #fff
 
