@@ -38,27 +38,27 @@ mode $-binding-mode bindsym escape mode $-mode-default
 
 ### audio
 
-mode $-mode-audio bindsym --to-code       a mode $-mode-default , exec pactl set-card-profile $-pulseaudio-bluetooth-headset-card $-pulseaudio-profile-speaker
-mode $-mode-audio bindsym --to-code       h mode $-mode-default , exec pactl set-card-profile $-pulseaudio-alsa-card $-pulseaudio-output-hdmi
-mode $-mode-audio bindsym --to-code       j mode $-mode-default , exec pactl set-card-profile $-pulseaudio-alsa-card $-pulseaudio-output-analog
-mode $-mode-audio bindsym --to-code       s mode $-mode-default , exec pactl set-card-profile $-pulseaudio-bluetooth-headset-card $-pulseaudio-profile-headset
-mode $-mode-audio bindsym --to-code       z mode $-mode-default , exec pactl set-card-profile $-pulseaudio-bluetooth-headset-card $-pulseaudio-profile-off
+mode $-mode-audio bindsym --to-code       a mode $-mode-default , exec pactl set-card-profile $-audio-blue-headset-card $-audio-profile-speaker
+mode $-mode-audio bindsym --to-code       h mode $-mode-default , exec pactl set-card-profile $-audio-alsa-card $-audio-profile-output-hdmi
+mode $-mode-audio bindsym --to-code       j mode $-mode-default , exec pactl set-card-profile $-audio-alsa-card $-audio-profile-output-analog
+mode $-mode-audio bindsym --to-code       s mode $-mode-default , exec pactl set-card-profile $-audio-blue-headset-card $-audio-profile-headset
+mode $-mode-audio bindsym --to-code       z mode $-mode-default , exec pactl set-card-profile $-audio-blue-headset-card $-audio-profile-off
 
-mode $-mode-audio bindsym --to-code shift+a mode $-mode-default , exec pactl set-card-profile $-pulseaudio-bluetooth-speaker-card $-pulseaudio-profile-speaker
-mode $-mode-audio bindsym --to-code shift+h mode $-mode-default , exec pactl set-card-profile $-pulseaudio-alsa-card $-pulseaudio-output-hdmi
-mode $-mode-audio bindsym --to-code shift+j mode $-mode-default , exec pactl set-card-profile $-pulseaudio-alsa-card $-pulseaudio-output-analog
-mode $-mode-audio bindsym --to-code shift+s mode $-mode-default , exec pactl set-card-profile $-pulseaudio-bluetooth-speaker-card $-pulseaudio-profile-headset
-mode $-mode-audio bindsym --to-code shift+z mode $-mode-default , exec pactl set-card-profile $-pulseaudio-bluetooth-speaker-card $-pulseaudio-profile-off
+mode $-mode-audio bindsym --to-code shift+a mode $-mode-default , exec pactl set-card-profile $-audio-blue-speaker-card $-audio-profile-speaker
+mode $-mode-audio bindsym --to-code shift+h mode $-mode-default , exec pactl set-card-profile $-audio-alsa-card $-audio-profile-output-hdmi
+mode $-mode-audio bindsym --to-code shift+j mode $-mode-default , exec pactl set-card-profile $-audio-alsa-card $-audio-profile-output-analog
+mode $-mode-audio bindsym --to-code shift+s mode $-mode-default , exec pactl set-card-profile $-audio-blue-speaker-card $-audio-profile-headset
+mode $-mode-audio bindsym --to-code shift+z mode $-mode-default , exec pactl set-card-profile $-audio-blue-speaker-card $-audio-profile-off
 
-mode $-mode-audio bindsym --whole-window       $-mouse-u exec pactl set-sink-volume @DEFAULT_SINK@ +1db && $-action pulsemixer--volume > $-path-mako-pulsemixer
-mode $-mode-audio bindsym --whole-window       $-mouse-m exec pactl set-sink-volume @DEFAULT_SINK@  0db && $-action pulsemixer--volume > $-path-mako-pulsemixer
-mode $-mode-audio bindsym --whole-window       $-mouse-d exec pactl set-sink-volume @DEFAULT_SINK@ -1db && $-action pulsemixer--volume > $-path-mako-pulsemixer
+mode $-mode-audio bindsym --whole-window       $-mouse-u exec pactl set-sink-volume @DEFAULT_SINK@ +1db && $-action audio--volume
+mode $-mode-audio bindsym --whole-window       $-mouse-m exec pactl set-sink-volume @DEFAULT_SINK@  0db && $-action audio--volume
+mode $-mode-audio bindsym --whole-window       $-mouse-d exec pactl set-sink-volume @DEFAULT_SINK@ -1db && $-action audio--volume
 
-mode $-mode-audio bindsym --whole-window       $-mouse-e exec pactl set-sink-mute   @DEFAULT_SINK@ on   && $-action pulsemixer--volume > $-path-mako-pulsemixer
-mode $-mode-audio bindsym --whole-window       $-mouse-s exec pactl set-sink-mute   @DEFAULT_SINK@ off  && $-action pulsemixer--volume > $-path-mako-pulsemixer
+mode $-mode-audio bindsym --whole-window       $-mouse-e exec pactl set-sink-mute   @DEFAULT_SINK@ on   && $-action audio--volume
+mode $-mode-audio bindsym --whole-window       $-mouse-s exec pactl set-sink-mute   @DEFAULT_SINK@ off  && $-action audio--volume
 
-mode $-mode-audio bindsym --whole-window shift+$-mouse-e exec pactl set-source-mute @DEFAULT_SINK@ on   && $-action pulsemixer--volume > $-path-mako-pulsemixer
-mode $-mode-audio bindsym --whole-window shift+$-mouse-s exec pactl set-source-mute @DEFAULT_SINK@ off  && $-action pulsemixer--volume > $-path-mako-pulsemixer
+mode $-mode-audio bindsym --whole-window shift+$-mouse-e exec pactl set-source-mute @DEFAULT_SINK@ on   && $-action audio--volume
+mode $-mode-audio bindsym --whole-window shift+$-mouse-s exec pactl set-source-mute @DEFAULT_SINK@ off  && $-action audio--volume
 
 mode $-mode-audio bindsym escape mode $-mode-default
 
@@ -70,11 +70,11 @@ mode $-mode-bluetooth bindsym --to-code       z mode $-mode-default , exec bluet
 mode $-mode-bluetooth bindsym --to-code shift+a                       exec bluetoothctl power on
 mode $-mode-bluetooth bindsym --to-code shift+z                       exec bluetoothctl power no
 
-mode $-mode-bluetooth bindsym --to-code       c mode $-mode-default , exec bluetoothctl connect    $-pulseaudio-bluetooth-headset-mac
-mode $-mode-bluetooth bindsym --to-code       d mode $-mode-default , exec bluetoothctl disconnect $-pulseaudio-bluetooth-headset-mac
+mode $-mode-bluetooth bindsym --to-code       c mode $-mode-default , exec bluetoothctl connect    $-audio-blue-headset-mac
+mode $-mode-bluetooth bindsym --to-code       d mode $-mode-default , exec bluetoothctl disconnect $-audio-blue-headset-mac
 
-mode $-mode-bluetooth bindsym --to-code shift+c                       exec bluetoothctl connect    $-pulseaudio-bluetooth-headset-mac
-mode $-mode-bluetooth bindsym --to-code shift+d                       exec bluetoothctl disconnect $-pulseaudio-bluetooth-headset-mac
+mode $-mode-bluetooth bindsym --to-code shift+c                       exec bluetoothctl connect    $-audio-blue-headset-mac
+mode $-mode-bluetooth bindsym --to-code shift+d                       exec bluetoothctl disconnect $-audio-blue-headset-mac
 
 mode $-mode-bluetooth bindsym escape mode $-mode-default
 

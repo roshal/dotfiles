@@ -25,6 +25,10 @@ function __swaymsg__outputs__suspend {
 
 ### actions
 
+function __audio__volume {
+	pulsemixer --get-volume | jq -s add/length
+}
+
 function __grim {
 	grim -g - -t png -
 }
@@ -48,10 +52,6 @@ function __nm_applet__killall {
 function __nm_applet__restart {
 	__nm_applet__killall
 	nm-applet --indicator
-}
-
-function __pulsemixer__volume {
-	pulsemixer --get-volume | jq -s add/length
 }
 
 function __slurp {

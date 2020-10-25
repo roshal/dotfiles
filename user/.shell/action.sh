@@ -4,6 +4,9 @@ source "${HOME}/.shell/actions.sh"
 if false
 then true
 
+elif test "${1}" == 'audio--volume'
+then __audio__volume > /-/mako/pulsemixer
+
 elif test "${1}" == 'grim--output-path'
 then __grim__output_path
 
@@ -15,9 +18,6 @@ then __nm_applet__killall
 
 elif test "${1}" == 'nm-applet--restart'
 then __nm_applet__restart
-
-elif test "${1}" == 'pulsemixer--volume'
-then __pulsemixer__volume
 
 elif test "${1}" == 'slurp--grim--wl-copy'
 then __slurp | __grim | __wl_copy
