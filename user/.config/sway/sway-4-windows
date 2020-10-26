@@ -64,7 +64,7 @@ for_window [instance="^vlc$"] popup_during_fullscreen ignore
 
 assign [app_id="^telegramdesktop$"] $-workspace-8
 
-assign [app_id="^transmission-gtk$"] $-workspace-7
+assign [app_id="^transmission-gtk$"] $-workspace-6
 
 assign [app_id="^wireshark$"] $-workspace-9
 
