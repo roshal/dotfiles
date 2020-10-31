@@ -65,7 +65,7 @@ function __slurp__print {
 function __swaymsg__switch_output {
 	FOCUSED=$(__swaymsg__outputs__focused)
 	SUSPEND=$(__swaymsg__outputs__suspend)
-	swaymsg -- output ${FOCUSED} disable , output ${SUSPEND} enable
+	swaymsg -- output ${FOCUSED} toggle , output ${SUSPEND} toggle
 }
 
 function __swaymsg__tree__node {
