@@ -140,8 +140,8 @@ set $-mouse-e button9
 
 ### outputs
 
-set $-output-0 DP-2
-set $-output-1 HDMI-A-1
+set $-output-0 'Dell Inc. DELL U2415 7MT0197F2G1S'
+set $-output-1 'Philips Consumer Electronics Company Philips FTV 0x00000101'
 
 ### size
 

@@ -195,19 +195,19 @@ mode $-mode-network bindsym escape mode $-mode-default
 
 ### output
 
-mode $-mode-output bindsym --to-code       $-key-0 mode $-mode-default , exec swaymsg -- output $-output-0 enable
-mode $-mode-output bindsym --to-code       $-key-1 mode $-mode-default , exec swaymsg -- output $-output-1 enable
-mode $-mode-output bindsym --to-code       $-key-2 mode $-mode-default , exec swaymsg -- output $-output-2 enable
+mode $-mode-output bindsym --to-code       $-key-0 mode $-mode-default , output $-output-0 enable
+mode $-mode-output bindsym --to-code       $-key-1 mode $-mode-default , output $-output-1 enable
 
-mode $-mode-output bindsym --to-code shift+$-key-0 mode $-mode-default , exec swaymsg -- output $-output-0 disable
-mode $-mode-output bindsym --to-code shift+$-key-1 mode $-mode-default , exec swaymsg -- output $-output-1 disable
-mode $-mode-output bindsym --to-code shift+$-key-2 mode $-mode-default , exec swaymsg -- output $-output-2 disable
+mode $-mode-output bindsym --to-code shift+$-key-0 mode $-mode-default , output $-output-0 disable
+mode $-mode-output bindsym --to-code shift+$-key-1 mode $-mode-default , output $-output-1 disable
 
-mode $-mode-output bindsym --to-code       a mode $-mode-default , exec swaymsg -- output $-echo-output-focused enable
-mode $-mode-output bindsym --to-code       z mode $-mode-default , exec swaymsg -- output $-echo-output-suspend enable
+mode $-mode-output bindsym --to-code       a mode $-mode-default , output $-output-0 enable
+mode $-mode-output bindsym --to-code       o mode $-mode-default , output $-output-0 toggle
+mode $-mode-output bindsym --to-code       z mode $-mode-default , output $-output-0 disable
 
-mode $-mode-output bindsym --to-code shift+a mode $-mode-default , exec swaymsg -- output $-echo-output-focused disable
-mode $-mode-output bindsym --to-code shift+z mode $-mode-default , exec swaymsg -- output $-echo-output-suspend disable
+mode $-mode-output bindsym --to-code shift+a mode $-mode-default , output * disable
+mode $-mode-output bindsym --to-code shift+o mode $-mode-default , output * disable , output $-output-0 enable
+mode $-mode-output bindsym --to-code shift+z mode $-mode-default , output - disable
 
 mode $-mode-output bindsym escape mode $-mode-default
 
