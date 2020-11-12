@@ -87,9 +87,9 @@ alias wds='npx webpack-dev-server'
 
 alias cleanse='sudo pacman --remove --nosave --recursive $(pacman --query --deps --quiet --unrequired)'
 
-alias update='sudo pacman --sync --refresh --sysupgrade'
+alias up='sudo pacman --sync --refresh --sysupgrade'
 
-alias updates='sudo pacman --sync --refresh && pacman --query --upgrades'
+alias ups='sudo pacman --sync --refresh && pacman --query --upgrades'
 
 ### path
 
