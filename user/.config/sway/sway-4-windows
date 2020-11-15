@@ -21,6 +21,8 @@ for_window [app_id="^Alacritty$"] border none
 
 for_window [app_id="^org.inkscape.Inkscape$"] border none
 
+for_window [app_id="^roxterm$"] border none
+
 for_window [app_id="^telegramdesktop$"] border none
 
 # for_window [app_id="^termite$"] border none
