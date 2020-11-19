@@ -4,7 +4,7 @@
 
 ### binding-modes
 
-bindsym --to-code $-key+z mode $-binding-mode
+bindsym --to-code shift+$-key+x mode $-binding-mode
 
 bindsym --to-code ctrl+$-key+a mode $-mode-audio
 bindsym --to-code ctrl+$-key+b mode $-mode-bluetooth

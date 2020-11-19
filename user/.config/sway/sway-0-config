@@ -69,3 +69,8 @@ output $-output-1 scale 1.5
 ### host relative
 
 include '${HOME}/.config/sway/sway-$(cat /etc/hostname)'
+
+### clipman
+
+bindsym --to-code       $-key+z exec clipman pick  --tool wofi
+bindsym --to-code shift+$-key+z exec clipman clear --tool wofi --all

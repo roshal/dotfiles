@@ -2,7 +2,6 @@
 ### makoctl
 
 bindsym --to-code       $-key+m exec makoctl dismiss --all
-bindsym --to-code       $-key+x exec makoctl dismiss --all
-
 bindsym --to-code shift+$-key+m exec makoctl dismiss
-bindsym --to-code shift+$-key+x exec makoctl dismiss
+
+bindsym --to-code       $-key+x exec makoctl dismiss --all

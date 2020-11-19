@@ -7,6 +7,8 @@
 
 exec $-action nm-applet--restart
 
+exec wl-paste --type text --watch clipman store
+
 ### exec always
 
 # exec_always tail --follow $-path-mako-pulsemixer --lines 1 | $-wob-base
