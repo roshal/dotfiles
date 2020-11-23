@@ -1,5 +1,6 @@
 file:///home/user
 file:///home/user/.config
+file:///home/user/.config/chromium
 file:///mnt
 file:///-
 file:///-/archives
@@ -14,6 +15,7 @@ file:///-/github
 file:///-/github/roshal
 file:///-/github/roshal/chromium-extension
 file:///-/github/roshal/dotfiles
+file:///-/github/roshal/python
 file:///-/github/roshal/roshal-online
 file:///-/grim
 file:///-/nfs
