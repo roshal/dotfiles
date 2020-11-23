@@ -53,7 +53,7 @@ alias leda='cd /-/github/kksng/leda'
 
 ### github python
 
-alias common='cd /-/github/roshal/python/common'
+alias on='cd /-/github/roshal/python'
 
 ### github roshal
 
