@@ -24,7 +24,7 @@ bindsym  ctrl+$-key+return      exec chromium
 bindsym shift+$-key+return      exec alacritty --command byobu
 
 bindsym --to-code       $-key+d exec wofi
-bindsym --to-code shift+$-key+d exec wofi --show drun --allow-images --sort-order alphabetical --search -
+bindsym --to-code shift+$-key+d exec wofi --show drun --allow-images --sort-order alphabetical --search --
 
 bindsym --to-code       $-key+i exec $-action nm-applet--restart
 bindsym --to-code shift+$-key+i exec $-action nm-applet--killall
