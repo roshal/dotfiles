@@ -19,6 +19,8 @@ for_window [window_role="^browser$"] border none
 
 for_window [app_id="^Alacritty$"] border none
 
+for_window [app_id="^Chromium$"] border none
+
 for_window [app_id="^org.inkscape.Inkscape$"] border none
 
 for_window [app_id="^roxterm$"] border none
@@ -35,8 +37,8 @@ for_window [app_id="^transmission-gtk$"] border none
 
 for_window [instance="^atom$"] border none
 
-for_window [instance="^chromium$"] border none
-for_window [instance="^chromium$"] inhibit_idle fullscreen
+#for_window [instance="^chromium$"] border none
+#for_window [instance="^chromium$"] inhibit_idle fullscreen
 
 for_window [instance="^code-oss$"] border none
 
