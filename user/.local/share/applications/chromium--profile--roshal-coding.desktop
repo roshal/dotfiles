@@ -2,6 +2,6 @@
 [Desktop Entry]
 
 Type=Application
-Name=--chromium--roshal-coding
+Name=--chromium--profile--roshal-coding
 Icon=/home/user/.config/chromium/profile--roshal-coding/Google Profile Picture.png
 Exec=/usr/bin/chromium --profile-directory=profile--roshal-coding %U

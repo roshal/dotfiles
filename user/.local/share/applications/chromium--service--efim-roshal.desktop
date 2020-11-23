@@ -1,0 +1,7 @@
+
+[Desktop Entry]
+
+Type=Application
+Name=--chromium--service--efim-roshal
+Icon=/home/user/.config/chromium/profile--efim-roshal/Google Profile Picture.png
+Exec=/usr/bin/chromium --profile-directory=profile--efim-roshal %U

@@ -2,6 +2,6 @@
 [Desktop Entry]
 
 Type=Application
-Name=--chromium--roshal-health
+Name=--chromium--profile--roshal-health
 Icon=/home/user/.config/chromium/profile--roshal-health/Google Profile Picture.png
 Exec=/usr/bin/chromium --profile-directory=profile--roshal-health %U

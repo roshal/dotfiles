@@ -2,6 +2,6 @@
 [Desktop Entry]
 
 Type=Application
-Name=--chromium--roshal-python
+Name=--chromium--profile--roshal-python
 Icon=/home/user/.config/chromium/profile--roshal-python/Google Profile Picture.png
 Exec=/usr/bin/chromium --profile-directory=profile--roshal-python %U
