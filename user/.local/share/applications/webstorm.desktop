@@ -5,5 +5,5 @@
 
 Type=Application
 Name=--webstorm
-Icon=/var/lib/snapd/snap/webstorm/169/bin/webstorm.png
+Icon=/var/lib/snapd/snap/webstorm/current/bin/webstorm.png
 Exec=env STUDIO_JDK=/usr/lib/jvm/java-11-openjdk/ webstorm %f
