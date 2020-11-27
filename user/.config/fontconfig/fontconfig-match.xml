@@ -39,7 +39,7 @@
 			<string>arial</string>
 		</test>
 		<edit name='family' binding='same'>
-			<string>roboto</string>
+			<string>roboto mono</string>
 		</edit>
 	</match>
 
