@@ -3,5 +3,5 @@
 
 Type=Application
 Name=--chromium--service--puppeteer
-Icon=/home/user/.config/chromium/profile--puppeteer/Google Profile Picture.png
+Icon=chromium
 Exec=/usr/bin/chromium --profile-directory=profile--puppeteer %U
