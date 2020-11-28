@@ -4,7 +4,7 @@
 
 ### prompt
 
-PS1='\e[40;90m\n\e[97m#\e[90m \e[92m\t\e[90m \e[94m$(pwd)\e[90m$(__git_ps1 " \e[97m%s\e[90m")\e[K\e[m\n'
+PS1='\e[40;90m\n\e[97m$(tty | sed s-/dev/pts/--)\e[90m \e[92m\t\e[90m \e[94m$(pwd)\e[90m$(__git_ps1 " \e[97m%s\e[90m")\e[K\e[m\n'
 
 ### variables
 
@@ -41,8 +41,11 @@ source /usr/share/nvm/init-nvm.sh
 export PROMPT_COMMAND="${PROMPT_COMMAND:-true}"
 
 export PROMPT_COMMAND="${PROMPT_COMMAND} && history -a"
-export PROMPT_COMMAND="${PROMPT_COMMAND} && history -c"
-export PROMPT_COMMAND="${PROMPT_COMMAND} && history -r"
+export PROMPT_COMMAND="${PROMPT_COMMAND} && history -n"
+
+# export PROMPT_COMMAND="${PROMPT_COMMAND} && history -a"
+# export PROMPT_COMMAND="${PROMPT_COMMAND} && history -c"
+# export PROMPT_COMMAND="${PROMPT_COMMAND} && history -r"
 
 ### origin
 
