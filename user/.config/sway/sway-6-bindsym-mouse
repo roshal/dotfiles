@@ -42,17 +42,17 @@ bindsym --whole-window ctrl+$-key+$-mouse-f exec swaymsg -- focus $-arrow-r
 bindsym --whole-window ctrl+$-key+$-mouse-e exec swaymsg -- focus $-arrow-u
 bindsym --whole-window ctrl+$-key+$-mouse-s exec swaymsg -- focus $-arrow-d
 
-bindsym --whole-window shift+$-key+$-mouse-l move $-arrow-l
-bindsym --whole-window shift+$-key+$-mouse-r move $-arrow-r
+bindsym --whole-window shift+$-key+$-mouse-l exec swaymsg -- move $-arrow-l
+bindsym --whole-window shift+$-key+$-mouse-r exec swaymsg -- move $-arrow-r
 
-bindsym --whole-window shift+$-key+$-mouse-u move $-arrow-l
-bindsym --whole-window shift+$-key+$-mouse-d move $-arrow-r
+bindsym --whole-window shift+$-key+$-mouse-u exec swaymsg -- move $-arrow-l
+bindsym --whole-window shift+$-key+$-mouse-d exec swaymsg -- move $-arrow-r
 
-bindsym --whole-window shift+$-key+$-mouse-b move $-arrow-l
-bindsym --whole-window shift+$-key+$-mouse-f move $-arrow-r
+bindsym --whole-window shift+$-key+$-mouse-b exec swaymsg -- move $-arrow-l
+bindsym --whole-window shift+$-key+$-mouse-f exec swaymsg -- move $-arrow-r
 
-bindsym --whole-window shift+$-key+$-mouse-e move $-arrow-u
-bindsym --whole-window shift+$-key+$-mouse-s move $-arrow-d
+bindsym --whole-window shift+$-key+$-mouse-e exec swaymsg -- move $-arrow-u
+bindsym --whole-window shift+$-key+$-mouse-s exec swaymsg -- move $-arrow-d
 
 bindsym --whole-window --exclude-titlebar $-key+$-mouse-b workspace prev
 bindsym --whole-window --exclude-titlebar $-key+$-mouse-f workspace next
