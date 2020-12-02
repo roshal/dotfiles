@@ -38,15 +38,15 @@ mode $-binding-mode bindsym escape mode $-mode-default
 
 ### audio
 
-mode $-mode-audio bindsym --to-code       a mode $-mode-default , exec pactl set-card-profile $-audio-blue-headset-card $-audio-profile-speaker
-mode $-mode-audio bindsym --to-code       s mode $-mode-default , exec pactl set-card-profile $-audio-blue-headset-card $-audio-profile-headset
+mode $-mode-audio bindsym --to-code       a mode $-mode-default , exec pactl set-card-profile $-audio-blue-headset-card $-audio-profile-headset
+mode $-mode-audio bindsym --to-code       s mode $-mode-default , exec pactl set-card-profile $-audio-blue-headset-card $-audio-profile-speaker
 mode $-mode-audio bindsym --to-code       z mode $-mode-default , exec pactl set-card-profile $-audio-blue-headset-card $-audio-profile-off
 
 mode $-mode-audio bindsym --to-code       h mode $-mode-default , exec pactl set-card-profile $-audio-alsa-card $-audio-profile-output-hdmi
 mode $-mode-audio bindsym --to-code       j mode $-mode-default , exec pactl set-card-profile $-audio-alsa-card $-audio-profile-output-analog
 
-mode $-mode-audio bindsym --to-code shift+a mode $-mode-default , exec pactl set-card-profile $-audio-blue-speaker-card $-audio-profile-speaker
-mode $-mode-audio bindsym --to-code shift+s mode $-mode-default , exec pactl set-card-profile $-audio-blue-speaker-card $-audio-profile-headset
+mode $-mode-audio bindsym --to-code shift+a mode $-mode-default , exec pactl set-card-profile $-audio-blue-speaker-card $-audio-profile-headset
+mode $-mode-audio bindsym --to-code shift+s mode $-mode-default , exec pactl set-card-profile $-audio-blue-speaker-card $-audio-profile-speaker
 mode $-mode-audio bindsym --to-code shift+z mode $-mode-default , exec pactl set-card-profile $-audio-blue-speaker-card $-audio-profile-off
 
 mode $-mode-audio bindsym --to-code shift+h mode $-mode-default , exec pactl set-card-profile $-audio-alsa-card $-audio-profile-output-hdmi
