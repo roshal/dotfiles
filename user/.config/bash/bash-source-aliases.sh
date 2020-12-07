@@ -5,6 +5,11 @@ alias rc='echo -ne \\'\ec\\''
 
 alias re='exec bash'
 
+### cal
+
+alias week='cal --weak'
+alias year='cal --year'
+
 ### cat
 
 alias c='cat'
@@ -121,6 +126,10 @@ alias sysu='systemctl suspend'
 ### tail
 
 alias t='tail'
+
+### thunar
+
+alias th='thunar'
 
 ### time
 
