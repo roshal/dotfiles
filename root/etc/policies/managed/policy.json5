@@ -1,0 +1,5 @@
+{
+	// https://www.chromium.org/administrators/policy-list-3
+	// does not work
+	"EnableMediaRouter": true,
+}

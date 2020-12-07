@@ -1,0 +1,15 @@
+
+# # https://wiki.archlinux.org/index.php/Reflector#pacman_hook
+
+[Trigger]
+
+Operation = Upgrade
+Type = Package
+Target = pacman-mirrorlist
+
+[Action]
+
+Description = updating pacman-mirrorlist with reflector and removing pacnew file
+When = PostTransaction
+Depends = reflector
+Exec = systemctl start reflector.service

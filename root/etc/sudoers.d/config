@@ -1,0 +1,4 @@
+
+Defaults editor=/usr/bin/nano
+
+%wheel ALL=(ALL) ALL
