@@ -42,6 +42,8 @@ for_window [instance="^atom$"] border none
 
 for_window [instance="^code-oss$"] border none
 
+for_window [instance="^insomnia$"] border none
+
 for_window [instance="^jetbrains-" title="^win0$"] floating enable
 
 for_window [instance="^jetbrains-pycharm$"] border none
