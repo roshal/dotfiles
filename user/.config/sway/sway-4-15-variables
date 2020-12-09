@@ -7,24 +7,6 @@ set $-key mod4
 
 set $-action sh "${HOME}/.shell/action.sh"
 
-### audio
-
-set $-audio-profile-off     off
-
-set $-audio-profile-headset headset_head_unit
-set $-audio-profile-speaker a2dp_sink
-
-set $-audio-profile-output-analog output:analog-stereo+input:analog-stereo
-set $-audio-profile-output-hdmi   output:hdmi-stereo
-
-set $-audio-alsa-card alsa_card.pci-0000_00_1f.3
-
-set $-audio-blue-headset-card bluez_card.70_26_05_DD_FD_DD
-set $-audio-blue-headset-mac             70:26:05:DD:FD:DD
-
-set $-audio-blue-speaker-card bluez_card.00_42_79_77_95_54
-set $-audio-blue-speaker-mac             00:42:79:77:95:54
-
 ### binding-mode
 
 set $-binding-mode 'binding-mode'

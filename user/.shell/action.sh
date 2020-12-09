@@ -1,6 +1,7 @@
 
 source "${HOME}/.shell/actions.sh"
 source "${HOME}/.shell/actions/audio.sh"
+source "${HOME}/.shell/actions/bluetooth.sh"
 
 if false
 then true
@@ -12,6 +13,16 @@ then __audio__notify
 
 elif test "${1}" = 'audio--volume'
 then __audio__get__volume > /-/mako/pulsemixer
+
+### audio profile
+
+elif test "${1}" = 'audio--profile--analog'
+then __audio__profile__analog_duplex
+
+elif test "${1}" = 'audio--profile--hdmi'
+then __audio__profile__hdmi
+
+### audio source
 
 elif test "${1}" = 'audio--source--decrease'
 then __audio__source__decrease
@@ -31,6 +42,8 @@ then __audio__source__reset
 elif test "${1}" = 'audio--source--toggle'
 then __audio__source__toggle
 
+### audio volume
+
 elif test "${1}" = 'audio--volume--decrease'
 then __audio__volume__decrease && __audio__notify
 
@@ -48,6 +61,48 @@ then __audio__volume__reset && __audio__notify
 
 elif test "${1}" = 'audio--volume--toggle'
 then __audio__volume__toggle
+
+### bluetooth
+
+elif test "${1}" = 'bluetooth--headset--connect'
+then __bluetooth__headset__connect
+
+elif test "${1}" = 'bluetooth--headset--disconnect'
+then __bluetooth__headset__disconnect
+
+elif test "${1}" = 'bluetooth--speaker--connect'
+then __bluetooth__speaker__connect
+
+elif test "${1}" = 'bluetooth--speaker--disconnect'
+then __bluetooth__speaker__disconnect
+
+elif test "${1}" = 'bluetooth--power--on'
+then __bluetooth__power__on
+
+elif test "${1}" = 'bluetooth--power--no'
+then __bluetooth__power__no
+
+### bluetooth headset
+
+elif test "${1}" = 'bluetooth--profile--headset--disable'
+then __bluetooth__profile__headset__disable
+
+elif test "${1}" = 'bluetooth--profile--headset--headset'
+then __bluetooth__profile__headset__headset
+
+elif test "${1}" = 'bluetooth--profile--headset--speaker'
+then __bluetooth__profile__headset__speaker
+
+### bluetooth speaker
+
+elif test "${1}" = 'bluetooth--profile--speaker--disable'
+then __bluetooth__profile__speaker__disable
+
+elif test "${1}" = 'bluetooth--profile--speaker--headset'
+then __bluetooth__profile__speaker__headset
+
+elif test "${1}" = 'bluetooth--profile--speaker--speaker'
+then __bluetooth__profile__speaker__speaker
 
 ### grim
 
