@@ -28,18 +28,18 @@ bindsym --to-code XF86AudioStop exec notify-send stop
 
 ### audio
 
-bindsym --whole-window            alt+$-key+$-mouse-m exec action audio--volume--reset
-bindsym --whole-window       ctrl+alt+$-key+$-mouse-m exec action audio--volume--toggle
-bindsym --whole-window shift+ctrl+alt+$-key+$-mouse-m exec action audio--source--toggle
+bindsym --whole-window            alt+$-key+$-mouse-m exec $-action audio--volume--reset
+bindsym --whole-window       ctrl+alt+$-key+$-mouse-m exec $-action audio--volume--toggle
+bindsym --whole-window shift+ctrl+alt+$-key+$-mouse-m exec $-action audio--source--toggle
 
-bindsym --whole-window            alt+$-key+$-mouse-u exec action audio--volume--increase
-bindsym --whole-window            alt+$-key+$-mouse-d exec action audio--volume--decrease
+bindsym --whole-window            alt+$-key+$-mouse-u exec $-action audio--volume--increase
+bindsym --whole-window            alt+$-key+$-mouse-d exec $-action audio--volume--decrease
 
-bindsym --whole-window       ctrl+alt+$-key+$-mouse-u exec action audio--volume--play
-bindsym --whole-window       ctrl+alt+$-key+$-mouse-d exec action audio--volume--mute
+bindsym --whole-window       ctrl+alt+$-key+$-mouse-u exec $-action audio--volume--play
+bindsym --whole-window       ctrl+alt+$-key+$-mouse-d exec $-action audio--volume--mute
 
-bindsym --whole-window shift+ctrl+alt+$-key+$-mouse-u exec action audio--source--play
-bindsym --whole-window shift+ctrl+alt+$-key+$-mouse-d exec action audio--source--mute
+bindsym --whole-window shift+ctrl+alt+$-key+$-mouse-u exec $-action audio--source--play
+bindsym --whole-window shift+ctrl+alt+$-key+$-mouse-d exec $-action audio--source--mute
 
 ### playerctl
 

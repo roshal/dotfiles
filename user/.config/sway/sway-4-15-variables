@@ -14,7 +14,7 @@ set $-audio-profile-off     off
 set $-audio-profile-headset headset_head_unit
 set $-audio-profile-speaker a2dp_sink
 
-set $-audio-profile-output-analog output:analog-stereo
+set $-audio-profile-output-analog output:analog-stereo+input:analog-stereo
 set $-audio-profile-output-hdmi   output:hdmi-stereo
 
 set $-audio-alsa-card alsa_card.pci-0000_00_1f.3
