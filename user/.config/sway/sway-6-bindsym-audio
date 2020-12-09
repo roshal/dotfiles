@@ -18,30 +18,28 @@ bindsym --to-code XF86AudioPrev exec notify-send prev
 bindsym --to-code XF86AudioPlay exec notify-send play
 bindsym --to-code XF86AudioStop exec notify-send stop
 
+### alsa
+
 # bindsym XF86AudioLowerVolume exec amixer set Master 1-
 # bindsym XF86AudioRaiseVolume exec amixer set Master 1+
 
 # bindsym XF86AudioMicMute exec amixer set Speaker toggle
 # bindsym XF86AudioMute    exec amixer set Master  toggle
 
-# bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1db && $-pulsemixer-volume > $-path-mako-pulsemixer
-# bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1db && $-pulsemixer-volume > $-path-mako-pulsemixer
+### audio
 
-# bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SINK@ toggle
-# bindsym XF86AudioMute    exec pactl set-sink-mute   @DEFAULT_SINK@ toggle
+bindsym --whole-window            alt+$-key+$-mouse-m exec action audio--volume--reset
+bindsym --whole-window       ctrl+alt+$-key+$-mouse-m exec action audio--volume--toggle
+bindsym --whole-window shift+ctrl+alt+$-key+$-mouse-m exec action audio--source--toggle
 
-### pactl
+bindsym --whole-window            alt+$-key+$-mouse-u exec action audio--volume--increase
+bindsym --whole-window            alt+$-key+$-mouse-d exec action audio--volume--decrease
 
-bindsym --whole-window            alt+$-key+$-mouse-m exec pactl set-sink-volume @DEFAULT_SINK@  0db && $-pulsemixer-volume > $-path-mako-pulsemixer
+bindsym --whole-window       ctrl+alt+$-key+$-mouse-u exec action audio--volume--play
+bindsym --whole-window       ctrl+alt+$-key+$-mouse-d exec action audio--volume--mute
 
-bindsym --whole-window            alt+$-key+$-mouse-u exec pactl set-sink-volume @DEFAULT_SINK@ +1db && $-pulsemixer-volume > $-path-mako-pulsemixer
-bindsym --whole-window            alt+$-key+$-mouse-d exec pactl set-sink-volume @DEFAULT_SINK@ -1db && $-pulsemixer-volume > $-path-mako-pulsemixer
-
-bindsym --whole-window       ctrl+alt+$-key+$-mouse-u exec pactl set-source-mute @DEFAULT_SINK@ off  && $-pulsemixer-volume > $-path-mako-pulsemixer
-bindsym --whole-window       ctrl+alt+$-key+$-mouse-d exec pactl set-source-mute @DEFAULT_SINK@ on   && $-pulsemixer-volume > $-path-mako-pulsemixer
-
-bindsym --whole-window shift+ctrl+alt+$-key+$-mouse-u exec pactl set-sink-mute   @DEFAULT_SINK@ off  && $-pulsemixer-volume > $-path-mako-pulsemixer
-bindsym --whole-window shift+ctrl+alt+$-key+$-mouse-d exec pactl set-sink-mute   @DEFAULT_SINK@ on   && $-pulsemixer-volume > $-path-mako-pulsemixer
+bindsym --whole-window shift+ctrl+alt+$-key+$-mouse-u exec action audio--source--play
+bindsym --whole-window shift+ctrl+alt+$-key+$-mouse-d exec action audio--source--mute
 
 ### playerctl
 

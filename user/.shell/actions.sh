@@ -1,6 +1,18 @@
 
+function __datetime {
+	date +%y-%m-%d--%H-%M-%S
+}
+
 function __path__grim {
-	echo /-/grim/grim--$(date +%y-%m-%d--%H-%M-%S).png
+	echo /-/grim/grim--$(__datetime).png
+}
+
+function __path__tesseract {
+	echo /-/tesseract/destination.asc
+}
+
+function __path__tesseract__grim {
+	echo /-/tesseract/grim/grim--$(__datetime).png
 }
 
 function __swaymsg__inputs__keyboard_layout {
@@ -25,16 +37,8 @@ function __swaymsg__outputs__suspend {
 
 ### actions
 
-function __audio__volume {
-	pulsemixer --get-volume | jq -s add/length
-}
-
 function __grim {
 	grim -g - -t png -
-}
-
-function __grim__path {
-	grim -g - -t png $(__path__grim)
 }
 
 function __grim__output {
@@ -43,6 +47,15 @@ function __grim__output {
 
 function __grim__output_path {
 	grim -o $(__swaymsg__outputs__focused) -t png $(__path__grim)
+}
+
+function __grim__path {
+	grim -g - -t png $(__path__grim)
+}
+
+function __grim__tesseract {
+	DESTINATION=$(__path__tesseract__grim)
+	grim -g - -t png ${DESTINATION} && tesseract --dpi 2400 -l eng+rus --oem 1 ${DESTINATION} -
 }
 
 function __nm_applet__killall {
