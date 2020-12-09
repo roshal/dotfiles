@@ -27,9 +27,11 @@ alias 90='echo 9876543210'
 # # https://wiki.archlinux.org/index.php/Sudo#Passing_aliases
 # # https://wiki.archlinux.org/index.php/Sudo#Reduce_the_number_of_times_you_have_to_type_a_password
 
-alias dosu='sudo --prompt "$(echo -e \> $(tput setaf 3)enter pass for %u$(tput sgr0)\\r)" '
+PROMPT=$(echo -e \> $(tput setaf 3)enter pass for %u$(tput sgr0)\\r)
 
-alias sudo='dosu --validate ; dosu '
+alias dosu='sudo --prompt "${PROMPT}" '
+
+alias sudo='sudo --non-interactive --validate 2>/dev/null ; dosu '
 
 ### termite
 
