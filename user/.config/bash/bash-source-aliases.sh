@@ -1,9 +1,19 @@
 
+### action
+
+alias action='sh /-/github/roshal/dotfiles/user/.shell/action.sh'
+
 ### bash
 
 alias rc='echo -ne \\'\ec\\''
 
 alias re='exec bash'
+
+### bell
+
+# alias bell='echo -e \\a'
+
+alias bell='tput bel'
 
 ### cal
 
