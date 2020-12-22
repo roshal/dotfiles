@@ -17,7 +17,6 @@ alias bell='tput bel'
 
 ### cal
 
-alias week='cal --weak'
 alias year='cal --year'
 
 ### cat
