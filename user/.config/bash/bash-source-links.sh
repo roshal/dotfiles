@@ -74,8 +74,8 @@ alias tokens='cd /-/github/roshal/tokens'
 
 ### home
 
-alias user='cd /home/user'
+alias user='cd "${HOME}"'
 
 ### user
 
-alias .config='cd /home/user/.config'
+alias .config='cd "${HOME}/.config"'

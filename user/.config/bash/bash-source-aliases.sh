@@ -1,7 +1,7 @@
 
 ### action
 
-alias action='sh /-/github/roshal/dotfiles/user/.shell/action.sh'
+alias action='sh "${HOME}/.shell/action.sh"'
 
 ### bash
 
@@ -30,6 +30,10 @@ alias r='code -r'
 ### english
 
 alias english='LC_ALL=C'
+
+### functions
+
+alias so='sh "${HOME}/.shell/functions/sort.sh"'
 
 ### git
 
@@ -77,7 +81,7 @@ alias stop='sysu && swaylock'
 
 alias f='ls -l --almost-all --group-directories-first --human-readable'
 
-alias fd='ls --almost-all --directory --group-directories-first --human-readable'
+alias fd='ls -l --almost-all --directory --group-directories-first --human-readable'
 
 alias ff='ls --almost-all --group-directories-first --human-readable'
 
