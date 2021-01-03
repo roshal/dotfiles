@@ -1,4 +1,5 @@
 {
 	"DefaultGeolocationSetting": 2,
 	"DefaultNotificationsSetting": 2,
+	"ShowAppsShortcutInBookmarkBar": false,
 }
