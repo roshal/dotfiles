@@ -25,6 +25,10 @@ alias c='cat'
 
 ### code
 
+alias code='code-git'
+
+alias e='code'
+
 alias r='code -r'
 
 ### english
