@@ -1,5 +1,10 @@
 
-function AZ {
+alias AZ='echo ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+alias ZA='echo ZYXWVUTSRQPONMLKJIHGFEDCBA'
+alias az='echo abcdefghijklmnopqrstuvwxyz'
+alias za='echo zyxwvutsrqponmlkjihgfedcba'
+
+function _AZ {
 	echo ABCDEFGHIJKLMNOPQRSTUVWXYZ
 	echo BBCDEFGHIJKLMNOPQRSTUVWXYZ
 	echo CCCDEFGHIJKLMNOPQRSTUVWXYZ
@@ -28,7 +33,7 @@ function AZ {
 	echo ZZZZZZZZZZZZZZZZZZZZZZZZZZ
 }
 
-function ZA {
+function _ZA {
 	echo ZYXWVUTSRQPONMLKJIHGFEDCBA
 	echo YYXWVUTSRQPONMLKJIHGFEDCBA
 	echo XXXWVUTSRQPONMLKJIHGFEDCBA
@@ -57,7 +62,7 @@ function ZA {
 	echo AAAAAAAAAAAAAAAAAAAAAAAAAA
 }
 
-function az {
+function _az {
 	echo abcdefghijklmnopqrstuvwxyz
 	echo bbcdefghijklmnopqrstuvwxyz
 	echo cccdefghijklmnopqrstuvwxyz
@@ -86,7 +91,7 @@ function az {
 	echo zzzzzzzzzzzzzzzzzzzzzzzzzz
 }
 
-function za {
+function _za {
 	echo zyxwvutsrqponmlkjihgfedcba
 	echo yyxwvutsrqponmlkjihgfedcba
 	echo xxxwvutsrqponmlkjihgfedcba
