@@ -12,20 +12,20 @@
 # cursor_blink = system
 # filter_unmatched_urls = true
 # fullscreen = true
+# hyperlinks = false
 # icon_name = terminal
 # modify_other_keys = false
 # scroll_on_output = false
 # search_wrap = true
 # size_hints = false
 # urgent_on_bell = true
-
+audible_bell = true
 bold_is_bright = false
 cell_height_scale = 0.875
 cursor_blink = off
 cursor_shape = ibeam
 dynamic_title = false
 font = monospace 9
-hyperlinks = true
 mouse_autohide = true
 scroll_on_keystroke = false
 scrollback_lines = 65536
