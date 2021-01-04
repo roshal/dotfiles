@@ -145,6 +145,11 @@ mode $-mode-lock bindsym --to-code m mode $-mode-default , exec swaylock --color
 mode $-mode-lock bindsym --to-code y mode $-mode-default , exec swaylock --color ffff00
 mode $-mode-lock bindsym --to-code w mode $-mode-default , exec swaylock --color ffffff
 
+mode $-mode-lock bindsym 1 mode $-mode-default , exec swaylock --color 333333
+mode $-mode-lock bindsym 2 mode $-mode-default , exec swaylock --color 666666
+mode $-mode-lock bindsym 3 mode $-mode-default , exec swaylock --color 999999
+mode $-mode-lock bindsym 4 mode $-mode-default , exec swaylock --color cccccc
+
 mode $-mode-lock bindsym escape mode $-mode-default
 
 ### move
