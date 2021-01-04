@@ -6,7 +6,7 @@
 	<alias>
 		<family>monospace</family>
 		<prefer>
-			<family>dmca sans serif</family>
+			<family>consolas</family>
 		</prefer>
 	</alias>
 
@@ -29,14 +29,14 @@
 	<alias>
 		<family>tahoma</family>
 		<prefer>
-			<family>dmca sans serif</family>
+			<family>consolas</family>
 		</prefer>
 	</alias>
 
 	<alias>
 		<family>verdana</family>
 		<prefer>
-			<family>dmca sans serif</family>
+			<family>consolas</family>
 		</prefer>
 	</alias>
 

@@ -41,6 +41,7 @@
 	<alias>
 		<family>monospace</family>
 		<prefer>
+			<family>consolas</family>
 			<family>dmca sans serif</family>
 			<family>roboto mono</family>
 			<family>freemono</family>
