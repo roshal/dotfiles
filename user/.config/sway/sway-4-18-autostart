@@ -7,7 +7,9 @@
 
 exec $-action nm-applet--restart
 
-exec wl-paste --type text --watch clipman store
+# exec wl-paste --type text --watch clipman store
+# exec wl-paste --type text/plain --watch clipman store
+exec wl-paste --type text/plain --watch clipman store --no-persist
 
 ### exec always
 
