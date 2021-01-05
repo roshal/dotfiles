@@ -3,7 +3,7 @@
 
 ### exec
 
-# exec swayidle -w $-idle-before-sleep $-idle-timeout-lock $-idle-timeout-dpms $-idle-resume
+exec swayidle -w $-idle-before-sleep $-idle-timeout-10 $-idle-timeout-11 $-idle-timeout-12
 
 exec $-action nm-applet--restart
 
