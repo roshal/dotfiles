@@ -1,22 +1,26 @@
 
 alias root='cd /'
-
-### root
-
+alias dash='cd /-'
 alias home='cd /home'
+alias user='cd "${HOME}"'
+
+### user
+
+alias .config='cd "${HOME}/.config"'
 
 ### dash
-
-alias dash='cd /-'
-
-### dirs
 
 alias aur='cd /-/aur'
 alias esphere='cd /-/esphere'
 alias freedesktop='cd /-/freedesktop'
 alias github='cd /-/github'
 alias gitlab='cd /-/gitlab'
+alias nfs='cd /-/nfs'
 alias wireguard='cd /-/wireguard'
+
+### nfs
+
+alias transmission='cd /-/nfs/transmission'
 
 ### esphere
 
@@ -71,11 +75,3 @@ alias roshal-online='cd /-/github/roshal/roshal-online'
 alias scrollax='cd /-/github/roshal/scrollax'
 alias test-task-kanban-board='cd /-/github/roshal/test-task-kanban-board'
 alias tokens='cd /-/github/roshal/tokens'
-
-### home
-
-alias user='cd "${HOME}"'
-
-### user
-
-alias .config='cd "${HOME}/.config"'
