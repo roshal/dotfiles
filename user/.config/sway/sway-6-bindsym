@@ -20,7 +20,7 @@ bindsym shift+$-key+$-special-p exec $-action grim--output-path
 bindsym       $-key+$-special-s exec $-action slurp--notify
 
 bindsym       $-key+return exec termite
-bindsym   alt+$-key+return exec code
+bindsym   alt+$-key+return exec code-git
 bindsym  ctrl+$-key+return exec chromium
 bindsym shift+$-key+return exec alacritty --command byobu
 
