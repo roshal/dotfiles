@@ -36,7 +36,7 @@ bindsym --to-code       $-key+o exec $-action swaymsg--switch-output
 
 bindsym --to-code shift+$-key+l exec swaylock
 bindsym --to-code shift+$-key+n exec thunar -q
-bindsym --to-code shift+$-key+o output * disable , output $-output-0 enable
+bindsym --to-code shift+$-key+o output * disable , output - enable
 
 ##### 6.2 splitting containers
 # # # https://i3wm.org/docs/userguide.html#_splitting_containers
