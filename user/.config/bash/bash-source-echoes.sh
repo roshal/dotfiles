@@ -1,4 +1,7 @@
 
+alias 09='echo 0123456789'
+alias 90='echo 9876543210'
+
 alias AZ='echo ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 alias ZA='echo ZYXWVUTSRQPONMLKJIHGFEDCBA'
 alias az='echo abcdefghijklmnopqrstuvwxyz'
