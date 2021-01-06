@@ -4,6 +4,11 @@ alias ZA='echo ZYXWVUTSRQPONMLKJIHGFEDCBA'
 alias az='echo abcdefghijklmnopqrstuvwxyz'
 alias za='echo zyxwvutsrqponmlkjihgfedcba'
 
+alias АЯ='echo АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
+alias ЯА='echo ЯЮЭЬЫЪЩШЧЦХФУТСРПОНМЛКЙИЗЖЁЕДГВБА'
+alias ая='echo абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+alias яа='echo яюэьыъщшчцхфутсрпонмлкйизжёедгвба'
+
 function _AZ {
 	echo ABCDEFGHIJKLMNOPQRSTUVWXYZ
 	echo BBCDEFGHIJKLMNOPQRSTUVWXYZ
