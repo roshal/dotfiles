@@ -9,118 +9,118 @@ alias ЯА='echo ЯЮЭЬЫЪЩШЧЦХФУТСРПОНМЛКЙИЗЖЁЕДГВ�
 alias ая='echo абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
 alias яа='echo яюэьыъщшчцхфутсрпонмлкйизжёедгвба'
 
-function _AZ {
-	echo ABCDEFGHIJKLMNOPQRSTUVWXYZ
-	echo BBCDEFGHIJKLMNOPQRSTUVWXYZ
-	echo CCCDEFGHIJKLMNOPQRSTUVWXYZ
-	echo DDDDEFGHIJKLMNOPQRSTUVWXYZ
-	echo EEEEEFGHIJKLMNOPQRSTUVWXYZ
-	echo FFFFFFGHIJKLMNOPQRSTUVWXYZ
-	echo GGGGGGGHIJKLMNOPQRSTUVWXYZ
-	echo HHHHHHHHIJKLMNOPQRSTUVWXYZ
-	echo IIIIIIIIIJKLMNOPQRSTUVWXYZ
-	echo JJJJJJJJJJKLMNOPQRSTUVWXYZ
-	echo KKKKKKKKKKKLMNOPQRSTUVWXYZ
-	echo LLLLLLLLLLLLMNOPQRSTUVWXYZ
-	echo MMMMMMMMMMMMMNOPQRSTUVWXYZ
-	echo NNNNNNNNNNNNNNOPQRSTUVWXYZ
-	echo OOOOOOOOOOOOOOOPQRSTUVWXYZ
-	echo PPPPPPPPPPPPPPPPQRSTUVWXYZ
-	echo QQQQQQQQQQQQQQQQQRSTUVWXYZ
-	echo RRRRRRRRRRRRRRRRRRSTUVWXYZ
-	echo SSSSSSSSSSSSSSSSSSSTUVWXYZ
-	echo TTTTTTTTTTTTTTTTTTTTUVWXYZ
-	echo UUUUUUUUUUUUUUUUUUUUUVWXYZ
-	echo VVVVVVVVVVVVVVVVVVVVVVWXYZ
-	echo WWWWWWWWWWWWWWWWWWWWWWWXYZ
-	echo XXXXXXXXXXXXXXXXXXXXXXXXYZ
-	echo YYYYYYYYYYYYYYYYYYYYYYYYYZ
-	echo ZZZZZZZZZZZZZZZZZZZZZZZZZZ
+function -AZ {
+	echo 'A                         '
+	echo ' B                        '
+	echo '  C                       '
+	echo '   D                      '
+	echo '    E                     '
+	echo '     F                    '
+	echo '      G                   '
+	echo '       H                  '
+	echo '        I                 '
+	echo '         J                '
+	echo '          K               '
+	echo '           L              '
+	echo '            M             '
+	echo '             N            '
+	echo '              O           '
+	echo '               P          '
+	echo '                Q         '
+	echo '                 R        '
+	echo '                  S       '
+	echo '                   T      '
+	echo '                    U     '
+	echo '                     V    '
+	echo '                      W   '
+	echo '                       X  '
+	echo '                        Y '
+	echo '                         Z'
 }
 
-function _ZA {
-	echo ZYXWVUTSRQPONMLKJIHGFEDCBA
-	echo YYXWVUTSRQPONMLKJIHGFEDCBA
-	echo XXXWVUTSRQPONMLKJIHGFEDCBA
-	echo WWWWVUTSRQPONMLKJIHGFEDCBA
-	echo VVVVVUTSRQPONMLKJIHGFEDCBA
-	echo UUUUUUTSRQPONMLKJIHGFEDCBA
-	echo TTTTTTTSRQPONMLKJIHGFEDCBA
-	echo SSSSSSSSRQPONMLKJIHGFEDCBA
-	echo RRRRRRRRRQPONMLKJIHGFEDCBA
-	echo QQQQQQQQQQPONMLKJIHGFEDCBA
-	echo PPPPPPPPPPPONMLKJIHGFEDCBA
-	echo OOOOOOOOOOOONMLKJIHGFEDCBA
-	echo NNNNNNNNNNNNNMLKJIHGFEDCBA
-	echo MMMMMMMMMMMMMMLKJIHGFEDCBA
-	echo LLLLLLLLLLLLLLLKJIHGFEDCBA
-	echo KKKKKKKKKKKKKKKKJIHGFEDCBA
-	echo JJJJJJJJJJJJJJJJJIHGFEDCBA
-	echo IIIIIIIIIIIIIIIIIIHGFEDCBA
-	echo HHHHHHHHHHHHHHHHHHHGFEDCBA
-	echo GGGGGGGGGGGGGGGGGGGGFEDCBA
-	echo FFFFFFFFFFFFFFFFFFFFFEDCBA
-	echo EEEEEEEEEEEEEEEEEEEEEEDCBA
-	echo DDDDDDDDDDDDDDDDDDDDDDDCBA
-	echo CCCCCCCCCCCCCCCCCCCCCCCCBA
-	echo BBBBBBBBBBBBBBBBBBBBBBBBBA
-	echo AAAAAAAAAAAAAAAAAAAAAAAAAA
+function -ZA {
+	echo 'Z                         '
+	echo ' Y                        '
+	echo '  X                       '
+	echo '   W                      '
+	echo '    V                     '
+	echo '     U                    '
+	echo '      T                   '
+	echo '       S                  '
+	echo '        R                 '
+	echo '         Q                '
+	echo '          P               '
+	echo '           O              '
+	echo '            N             '
+	echo '             M            '
+	echo '              L           '
+	echo '               K          '
+	echo '                J         '
+	echo '                 I        '
+	echo '                  H       '
+	echo '                   G      '
+	echo '                    F     '
+	echo '                     E    '
+	echo '                      D   '
+	echo '                       C  '
+	echo '                        B '
+	echo '                         A'
 }
 
-function _az {
-	echo abcdefghijklmnopqrstuvwxyz
-	echo bbcdefghijklmnopqrstuvwxyz
-	echo cccdefghijklmnopqrstuvwxyz
-	echo ddddefghijklmnopqrstuvwxyz
-	echo eeeeefghijklmnopqrstuvwxyz
-	echo ffffffghijklmnopqrstuvwxyz
-	echo ggggggghijklmnopqrstuvwxyz
-	echo hhhhhhhhijklmnopqrstuvwxyz
-	echo iiiiiiiiijklmnopqrstuvwxyz
-	echo jjjjjjjjjjklmnopqrstuvwxyz
-	echo kkkkkkkkkkklmnopqrstuvwxyz
-	echo llllllllllllmnopqrstuvwxyz
-	echo mmmmmmmmmmmmmnopqrstuvwxyz
-	echo nnnnnnnnnnnnnnopqrstuvwxyz
-	echo ooooooooooooooopqrstuvwxyz
-	echo ppppppppppppppppqrstuvwxyz
-	echo qqqqqqqqqqqqqqqqqrstuvwxyz
-	echo rrrrrrrrrrrrrrrrrrstuvwxyz
-	echo ssssssssssssssssssstuvwxyz
-	echo ttttttttttttttttttttuvwxyz
-	echo uuuuuuuuuuuuuuuuuuuuuvwxyz
-	echo vvvvvvvvvvvvvvvvvvvvvvwxyz
-	echo wwwwwwwwwwwwwwwwwwwwwwwxyz
-	echo xxxxxxxxxxxxxxxxxxxxxxxxyz
-	echo yyyyyyyyyyyyyyyyyyyyyyyyyz
-	echo zzzzzzzzzzzzzzzzzzzzzzzzzz
+function -az {
+	echo 'a                         '
+	echo ' b                        '
+	echo '  c                       '
+	echo '   d                      '
+	echo '    e                     '
+	echo '     f                    '
+	echo '      g                   '
+	echo '       h                  '
+	echo '        i                 '
+	echo '         j                '
+	echo '          k               '
+	echo '           l              '
+	echo '            m             '
+	echo '             n            '
+	echo '              o           '
+	echo '               p          '
+	echo '                q         '
+	echo '                 r        '
+	echo '                  s       '
+	echo '                   t      '
+	echo '                    u     '
+	echo '                     v    '
+	echo '                      w   '
+	echo '                       x  '
+	echo '                        y '
+	echo '                         z'
 }
 
-function _za {
-	echo zyxwvutsrqponmlkjihgfedcba
-	echo yyxwvutsrqponmlkjihgfedcba
-	echo xxxwvutsrqponmlkjihgfedcba
-	echo wwwwvutsrqponmlkjihgfedcba
-	echo vvvvvutsrqponmlkjihgfedcba
-	echo uuuuuutsrqponmlkjihgfedcba
-	echo tttttttsrqponmlkjihgfedcba
-	echo ssssssssrqponmlkjihgfedcba
-	echo rrrrrrrrrqponmlkjihgfedcba
-	echo qqqqqqqqqqponmlkjihgfedcba
-	echo ppppppppppponmlkjihgfedcba
-	echo oooooooooooonmlkjihgfedcba
-	echo nnnnnnnnnnnnnmlkjihgfedcba
-	echo mmmmmmmmmmmmmmlkjihgfedcba
-	echo lllllllllllllllkjihgfedcba
-	echo kkkkkkkkkkkkkkkkjihgfedcba
-	echo jjjjjjjjjjjjjjjjjihgfedcba
-	echo iiiiiiiiiiiiiiiiiihgfedcba
-	echo hhhhhhhhhhhhhhhhhhhgfedcba
-	echo ggggggggggggggggggggfedcba
-	echo fffffffffffffffffffffedcba
-	echo eeeeeeeeeeeeeeeeeeeeeedcba
-	echo dddddddddddddddddddddddcba
-	echo ccccccccccccccccccccccccba
-	echo bbbbbbbbbbbbbbbbbbbbbbbbba
-	echo aaaaaaaaaaaaaaaaaaaaaaaaaa
+function -za {
+	echo 'z                         '
+	echo ' y                        '
+	echo '  x                       '
+	echo '   w                      '
+	echo '    v                     '
+	echo '     u                    '
+	echo '      t                   '
+	echo '       s                  '
+	echo '        r                 '
+	echo '         q                '
+	echo '          p               '
+	echo '           o              '
+	echo '            n             '
+	echo '             m            '
+	echo '              l           '
+	echo '               k          '
+	echo '                j         '
+	echo '                 i        '
+	echo '                  h       '
+	echo '                   g      '
+	echo '                    f     '
+	echo '                     e    '
+	echo '                      d   '
+	echo '                       c  '
+	echo '                        b '
+	echo '                         a'
 }
