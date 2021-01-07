@@ -40,9 +40,9 @@ set $-shift-y 996633
 
 set $-idle-before-sleep before-sleep 'swaylock'
 
-set $-idle-timeout-10 timeout 1024 'swaylock'
-set $-idle-timeout-11 timeout 2048 'swaymsg -- output "*" dpms no' resume 'swaymsg -- output "*" dpms on'
-set $-idle-timeout-12 timeout 4096 'systemctl suspend'
+set $-idle-timeout-11 timeout 2048 'swaylock'
+set $-idle-timeout-12 timeout 4096 'swaymsg -- output "*" dpms no' resume 'swaymsg -- output "*" dpms on'
+set $-idle-timeout-13 timeout 8192 'systemctl suspend'
 
 ### keys
 
