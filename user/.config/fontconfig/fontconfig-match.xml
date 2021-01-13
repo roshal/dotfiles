@@ -1,37 +1,6 @@
 
 <fontconfig>
 
-	<!--github-->
-
-	<match>
-		<test name='family'>
-			<string>sfmono-regular</string>
-		</test>
-		<edit name='family'>
-			<string>consolas</string>
-		</edit>
-	</match>
-
-	<!--gitlab-->
-
-	<match>
-		<test name='family'>
-			<string>blinkmacsystemfont</string>
-		</test>
-		<edit name='family'>
-			<string>consolas</string>
-		</edit>
-	</match>
-
-	<match>
-		<test name='family'>
-			<string>menlo</string>
-		</test>
-		<edit name='family'>
-			<string>consolas</string>
-		</edit>
-	</match>
-
 	<!--google-->
 
 	<match>
@@ -39,6 +8,18 @@
 			<string>arial</string>
 		</test>
 		<edit name='family' binding='same'>
+			<string>roboto mono</string>
+		</edit>
+	</match>
+
+	<!--gitlab-->
+	<!--habr-->
+
+	<match>
+		<test name='family'>
+			<string>blinkmacsystemfont</string>
+		</test>
+		<edit name='family'>
 			<string>roboto mono</string>
 		</edit>
 	</match>
@@ -51,6 +32,28 @@
 		</test>
 		<edit name='family' binding='same'>
 			<string>roboto mono</string>
+		</edit>
+	</match>
+
+	<!--gitlab-->
+
+	<match>
+		<test name='family'>
+			<string>menlo</string>
+		</test>
+		<edit name='family'>
+			<string>consolas</string>
+		</edit>
+	</match>
+
+	<!--github-->
+
+	<match>
+		<test name='family'>
+			<string>sfmono-regular</string>
+		</test>
+		<edit name='family'>
+			<string>consolas</string>
 		</edit>
 	</match>
 
