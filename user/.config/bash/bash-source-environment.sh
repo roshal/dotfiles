@@ -64,6 +64,11 @@ export TDESKTOP_I_KNOW_ABOUT_GTK_INCOMPATIBILITY='1'
 # # https://wiki.archlinux.org/index.php/Hardware_video_acceleration#VA-API_drivers
 export VAAPI_MPEG4_ENABLED='true'
 
+### wayland
+
+# # https://github.com/emersion/mako/issues/258
+export WL_OUTPUT_SUBPIXEL_NONE=none
+
 ### webstorm
 
 ### fix webstorm window draw
