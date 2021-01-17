@@ -31,12 +31,16 @@ bindsym --to-code       $-key+i exec $-action nm-applet--restart
 bindsym --to-code shift+$-key+i exec $-action nm-applet--killall
 
 bindsym --to-code       $-key+l exec swaylock --image /-/pictures/waves.jpg
-bindsym --to-code       $-key+n exec thunar
-bindsym --to-code       $-key+o exec $-action swaymsg--switch-output
-
 bindsym --to-code shift+$-key+l exec swaylock
+
+bindsym --to-code       $-key+n exec thunar
 bindsym --to-code shift+$-key+n exec thunar -q
+
+bindsym --to-code       $-key+o exec $-action swaymsg--switch-output
 bindsym --to-code shift+$-key+o output * disable , output - enable
+
+bindsym --to-code       $-key+p output * dpms on
+bindsym --to-code shift+$-key+p output * dpms no
 
 ##### 6.2 splitting containers
 # # # https://i3wm.org/docs/userguide.html#_splitting_containers
