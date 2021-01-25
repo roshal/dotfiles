@@ -227,35 +227,35 @@ mode $-mode-output bindsym escape mode $-mode-default
 
 ### resize
 
-mode $-mode-resize bindsym            $-arrow-u resize shrink height $-size-1
-mode $-mode-resize bindsym            $-arrow-d resize grow   height $-size-1
-mode $-mode-resize bindsym            $-arrow-l resize shrink width  $-size-1
-mode $-mode-resize bindsym            $-arrow-r resize grow   width  $-size-1
+mode $-mode-resize bindsym            $-arrow-u resize shrink height $-rate-1
+mode $-mode-resize bindsym            $-arrow-d resize grow   height $-rate-1
+mode $-mode-resize bindsym            $-arrow-l resize shrink width  $-rate-1
+mode $-mode-resize bindsym            $-arrow-r resize grow   width  $-rate-1
 
-mode $-mode-resize bindsym        alt+$-arrow-u resize shrink height $-size-2
-mode $-mode-resize bindsym        alt+$-arrow-d resize grow   height $-size-2
-mode $-mode-resize bindsym        alt+$-arrow-l resize shrink width  $-size-2
-mode $-mode-resize bindsym        alt+$-arrow-r resize grow   width  $-size-2
+mode $-mode-resize bindsym        alt+$-arrow-u resize shrink height $-rate-2
+mode $-mode-resize bindsym        alt+$-arrow-d resize grow   height $-rate-2
+mode $-mode-resize bindsym        alt+$-arrow-l resize shrink width  $-rate-2
+mode $-mode-resize bindsym        alt+$-arrow-r resize grow   width  $-rate-2
 
-mode $-mode-resize bindsym       ctrl+$-arrow-u resize shrink height $-size-3
-mode $-mode-resize bindsym       ctrl+$-arrow-d resize grow   height $-size-3
-mode $-mode-resize bindsym       ctrl+$-arrow-l resize shrink width  $-size-3
-mode $-mode-resize bindsym       ctrl+$-arrow-r resize grow   width  $-size-3
+mode $-mode-resize bindsym       ctrl+$-arrow-u resize shrink height $-rate-3
+mode $-mode-resize bindsym       ctrl+$-arrow-d resize grow   height $-rate-3
+mode $-mode-resize bindsym       ctrl+$-arrow-l resize shrink width  $-rate-3
+mode $-mode-resize bindsym       ctrl+$-arrow-r resize grow   width  $-rate-3
 
-mode $-mode-resize bindsym      shift+$-arrow-u resize shrink height $-size-4
-mode $-mode-resize bindsym      shift+$-arrow-d resize grow   height $-size-4
-mode $-mode-resize bindsym      shift+$-arrow-l resize shrink width  $-size-4
-mode $-mode-resize bindsym      shift+$-arrow-r resize grow   width  $-size-4
+mode $-mode-resize bindsym      shift+$-arrow-u resize shrink height $-rate-4
+mode $-mode-resize bindsym      shift+$-arrow-d resize grow   height $-rate-4
+mode $-mode-resize bindsym      shift+$-arrow-l resize shrink width  $-rate-4
+mode $-mode-resize bindsym      shift+$-arrow-r resize grow   width  $-rate-4
 
-mode $-mode-resize bindsym ctrl+shift+$-arrow-u resize shrink height $-size-5
-mode $-mode-resize bindsym ctrl+shift+$-arrow-d resize grow   height $-size-5
-mode $-mode-resize bindsym ctrl+shift+$-arrow-l resize shrink width  $-size-5
-mode $-mode-resize bindsym ctrl+shift+$-arrow-r resize grow   width  $-size-5
+mode $-mode-resize bindsym ctrl+shift+$-arrow-u resize shrink height $-rate-5
+mode $-mode-resize bindsym ctrl+shift+$-arrow-d resize grow   height $-rate-5
+mode $-mode-resize bindsym ctrl+shift+$-arrow-l resize shrink width  $-rate-5
+mode $-mode-resize bindsym ctrl+shift+$-arrow-r resize grow   width  $-rate-5
 
-mode $-mode-resize bindsym  alt+shift+$-arrow-u resize shrink height $-size-6
-mode $-mode-resize bindsym  alt+shift+$-arrow-d resize grow   height $-size-6
-mode $-mode-resize bindsym  alt+shift+$-arrow-l resize shrink width  $-size-6
-mode $-mode-resize bindsym  alt+shift+$-arrow-r resize grow   width  $-size-6
+mode $-mode-resize bindsym  alt+shift+$-arrow-u resize shrink height $-rate-6
+mode $-mode-resize bindsym  alt+shift+$-arrow-d resize grow   height $-rate-6
+mode $-mode-resize bindsym  alt+shift+$-arrow-l resize shrink width  $-rate-6
+mode $-mode-resize bindsym  alt+shift+$-arrow-r resize grow   width  $-rate-6
 
 mode $-mode-resize bindsym --to-code       $-key-0 resize set width  $-size-x-0
 mode $-mode-resize bindsym --to-code       $-key-1 resize set width  $-size-x-1

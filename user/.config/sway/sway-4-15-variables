@@ -127,19 +127,20 @@ set $-output-0 'Unknown PA24A 71LB06600000'
 set $-output-1 'Dell Inc. DELL U2415 7MT0197F2G1S'
 set $-output-2 'Philips Consumer Electronics Company Philips FTV 0x00000101'
 
-### size
+### rate
 
-set $-size-0    1
-set $-size-1    2
-set $-size-2    4
-set $-size-3    8
-set $-size-4   16
-set $-size-5   32
-set $-size-6   64
-set $-size-7  128
-set $-size-8  256
-set $-size-9  512
-set $-size-z 1024
+set $-rate-0   1
+set $-rate-1   2
+set $-rate-2   4
+set $-rate-3   8
+set $-rate-4  16
+set $-rate-5  32
+set $-rate-6  64
+set $-rate-7 128
+set $-rate-8 256
+set $-rate-9 512
+
+### size
 
 set $-size-x-0 1024
 set $-size-x-1 1920
@@ -151,7 +152,6 @@ set $-size-x-6  320
 set $-size-x-7  512
 set $-size-x-8  240
 set $-size-x-9  256
-set $-size-x-z  192
 
 set $-size-y-0 1024
 set $-size-y-1 1200
@@ -163,7 +163,6 @@ set $-size-y-6  200
 set $-size-y-7  512
 set $-size-y-8  150
 set $-size-y-9  256
-set $-size-y-z  120
 
 ### step
 
