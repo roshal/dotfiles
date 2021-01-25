@@ -83,11 +83,11 @@ alias stop='sysu && swaylock'
 
 ### ls
 
-alias f='ls -l --almost-all --group-directories-first --human-readable'
+alias f='ls -l --almost-all --group-directories-first --human-readable --time-style long-iso'
 
-alias fd='ls -l --almost-all --directory --group-directories-first --human-readable'
+alias fd='ls -l --almost-all --directory --group-directories-first --human-readable --time-style long-iso'
 
-alias ff='ls --almost-all --group-directories-first --human-readable'
+alias ff='ls --almost-all --group-directories-first --human-readable --time-style long-iso'
 
 ### npx
 
