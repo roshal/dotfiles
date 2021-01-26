@@ -12,8 +12,10 @@ export EDITOR='nano'
 
 ### colors
 
+export EXA_COLORS='da=92:di=91:gm=91:gu=0:uu=0'
+
 # # https://wiki.archlinux.org/index.php/Color_output_in_console#ls
-export LS_COLORS='di=1;94:'
+export LS_COLORS='di=1;94'
 
 ### firefox
 
