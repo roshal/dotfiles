@@ -35,6 +35,10 @@ alias r='code -r'
 
 alias english='LC_ALL=C'
 
+### exa
+
+alias exa='exa --long --color-scale --all --group-directories-first --bytes --group --time-style long-iso --git'
+
 ### functions
 
 alias so='sh "${HOME}/.shell/functions/sort.sh"'
@@ -83,11 +87,11 @@ alias stop='sysu && swaylock'
 
 ### ls
 
-alias f='ls -l --almost-all --group-directories-first --human-readable --time-style long-iso'
+alias f='ls --almost-all --group-directories-first --human-readable -l --time-style +"%y-%m-%d %T"'
 
-alias fd='ls -l --almost-all --directory --group-directories-first --human-readable --time-style long-iso'
+alias fd='ls --almost-all --directory --group-directories-first --human-readable -l --time-style +"%y-%m-%d %T"'
 
-alias ff='ls --almost-all --group-directories-first --human-readable --time-style long-iso'
+alias ff='ls --almost-all --group-directories-first --human-readable --time-style +"%y-%m-%d %T"'
 
 ### npx
 
