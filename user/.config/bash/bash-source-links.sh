@@ -49,6 +49,7 @@ alias lkkgui='cd /-/esphere/lkk/lkkgui'
 
 ### github
 
+alias dimbit='cd /-/github/dimbit'
 alias roshal='cd /-/github/roshal'
 
 ### github kksng
@@ -68,7 +69,7 @@ alias chromium-extension='cd /-/github/roshal/chromium-extension'
 alias chromium-themes='cd /-/github/roshal/chromium-themes'
 alias dotfiles='cd /-/github/roshal/dotfiles'
 alias javascript='cd /-/github/roshal/javascript'
-alias kanban-board='cd /-/github/roshal/kanban-board'
+alias kanban-demo='cd /-/github/roshal/kanban-demo'
 alias lenteh='cd /-/github/roshal/lenteh'
 alias nohash='cd /-/github/roshal/nohash'
 alias rollup='cd /-/github/roshal/rollup'

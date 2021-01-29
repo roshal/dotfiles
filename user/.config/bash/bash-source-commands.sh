@@ -29,9 +29,9 @@ alias 90='echo 9876543210'
 
 PROMPT=$(echo -e \> $(tput setaf 3)enter pass for %u$(tput sgr0)\\r)
 
-alias dosu='sudo --prompt "${PROMPT}" '
+alias dosu='/usr/bin/sudo --prompt "${PROMPT}" '
 
-alias sudo='sudo --non-interactive --validate 2>/dev/null ; dosu '
+alias sudo='/usr/bin/sudo --non-interactive --validate 2>/dev/null ; dosu '
 
 ### termite
 
