@@ -295,8 +295,8 @@ mode $-mode-system bindsym escape mode $-mode-default
 
 ### vpn
 
-mode $-mode-vpn bindsym --to-code a mode $-mode-default , exec cat /-/keys/corus-vpn | nmcli connection up   corus --ask
-mode $-mode-vpn bindsym --to-code z mode $-mode-default , exec                         nmcli connection down corus
+mode $-mode-vpn bindsym --to-code a mode $-mode-default , exec nmcli connection up   vpn --ask < /-/keys/vpn
+mode $-mode-vpn bindsym --to-code z mode $-mode-default , exec nmcli connection down vpn
 
 mode $-mode-vpn bindsym escape mode $-mode-default
 
