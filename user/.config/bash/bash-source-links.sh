@@ -16,6 +16,7 @@ alias freedesktop='cd /-/freedesktop'
 alias github='cd /-/github'
 alias gitlab='cd /-/gitlab'
 alias nfs='cd /-/nfs'
+alias pictures='cd /-/pictures'
 alias wireguard='cd /-/wireguard'
 
 ### nfs
