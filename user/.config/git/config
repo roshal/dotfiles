@@ -20,6 +20,10 @@ tool = vscode
 
 tool = vscode
 
+[init]
+
+defaultBranch = main
+
 [fetch]
 
 # prune = true
