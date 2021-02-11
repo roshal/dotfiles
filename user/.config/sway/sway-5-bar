@@ -119,7 +119,7 @@ bar colors statusline $-black-c
 bar colors active_workspace    $-black-c $-black-c  $-black-e
 bar colors focused_workspace   $-black-c $-black-c  $-black-e
 bar colors inactive_workspace  $-black-b $-black-b  $-black-d
-bar colors urgent_workspace    $-black-a $-black-a  $-black-c
+bar colors urgent_workspace    $-black-d $-black-d  $-black-f
 
 ### taken from urgent_workspace
 # bar colors binding_mode $-black-d $-black-d  $-black-f

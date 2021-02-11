@@ -80,18 +80,18 @@ set $-special-b pause
 
 set $-mode-default default
 
-set $-mode-audio     'audio       '
-set $-mode-bluetooth 'bluetooth   '
-set $-mode-cursor    'cursor      '
-set $-mode-kill      'kill        '
-set $-mode-lock      'lock        '
-set $-mode-move      'move        '
-set $-mode-network   'network     '
-set $-mode-output    'output      '
-set $-mode-resize    'resize      '
-set $-mode-system    'system      '
-set $-mode-vpn       'vpn         '
-set $-mode-wireguard 'wireguard   '
+set $-mode-audio     'AUDIO       '
+set $-mode-bluetooth 'BLUETOOTH   '
+set $-mode-cursor    'CURSOR      '
+set $-mode-kill      'KILL        '
+set $-mode-lock      'LOCK        '
+set $-mode-move      'MOVE        '
+set $-mode-network   'NETWORK     '
+set $-mode-output    'OUTPUT      '
+set $-mode-resize    'RESIZE      '
+set $-mode-system    'SYSTEM      '
+set $-mode-vpn       'VPN         '
+set $-mode-wireguard 'WIREGUARD   '
 
 ### mouse
 

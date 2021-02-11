@@ -94,7 +94,7 @@ workspace $-workspace-escape output $-output-1
 client.focused           $-black-c $-black-c  $-black-e $-black-e  $-black-c
 client.focused_inactive  $-black-c $-black-c  $-black-e $-black-e  $-black-c
 client.unfocused         $-black-b $-black-b  $-black-d $-black-d  $-black-b
-client.urgent            $-black-a $-black-a  $-black-c $-black-c  $-black-a
+client.urgent            $-black-d $-black-d  $-black-f $-black-f  $-black-d
 
 ##### 4.21 interprocess communication
 # # # https://i3wm.org/docs/userguide.html#_interprocess_communication
