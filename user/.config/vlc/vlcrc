@@ -1,4 +1,4 @@
-﻿###
+###
 ###  vlc 3.0.11.1
 ###
 
@@ -737,10 +737,10 @@ qt-privacy-ask=0
 #sout-x264-stats=x264_2pass.log
 
 # Default preset setting used (string)
-sout-x264-preset=
+#sout-x264-preset=
 
 # Default tune setting used (string)
-sout-x264-tune=
+#sout-x264-tune=
 
 # x264 advanced options (string)
 #sout-x264-options=
@@ -4844,4 +4844,3 @@ hotkeys-y-wheel-mode=3
 
 # Playlist bookmark 10 (string)
 #bookmark10=
-
