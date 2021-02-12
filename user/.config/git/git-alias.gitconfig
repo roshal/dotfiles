@@ -101,6 +101,7 @@ config-roshal-mail = base-config user.email roshal@users.noreply.github.com
 config-roshal-name = base-config user.name 'roshal'
 
 ### diff
+
 # # https://stackoverflow.com/a/1587952/9381882
 
 dc = base-diff --cached
