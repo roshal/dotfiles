@@ -46,7 +46,9 @@ unstage = base-reset @ --
 
 aa = base-add --all
 ad = base-add
-ba = base-branch --all
+ba = base-branch -v --verbose --all
+br = base-branch -v --verbose --remotes
+bl = base-branch -v --verbose
 cl = base-clone
 di = base-diff
 in = base-init
@@ -61,7 +63,7 @@ bvv = base-branch -v --verbose
 
 ### one
 
-b = base-branch
+b = base-branch -v --verbose --all
 
 ### add
 
