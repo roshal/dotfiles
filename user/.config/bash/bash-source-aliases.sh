@@ -29,7 +29,7 @@ alias code='code-git'
 
 alias e='code'
 
-alias r='code -r'
+alias r='code --reuse-window'
 
 ### english
 
@@ -39,10 +39,6 @@ alias english='LC_ALL=C'
 
 alias exa='exa --long --color-scale --all --group-directories-first --bytes --group --time-style long-iso --git'
 
-### functions
-
-alias so='sh "${HOME}/.shell/functions/sort.sh"'
-
 ### git
 
 alias g='git'
@@ -51,8 +47,8 @@ alias a='git add'
 alias d='git diff'
 alias s='git status'
 
-alias l='git l'
-alias ll='git ll'
+alias l='  git l'
+alias ll=' git ll'
 alias lll='git lll'
 
 alias ch='git checkout'
@@ -143,6 +139,11 @@ alias systemctl='systemctl --no-pager'
 alias sypo='systemctl poweroff'
 alias syre='systemctl reboot'
 alias sysu='systemctl suspend'
+
+### shortlog
+
+alias cnse=' git shortlog --committer --numbered --summary --email'
+alias cnsea='git shortlog --committer --numbered --summary --email --all'
 
 ### tail
 

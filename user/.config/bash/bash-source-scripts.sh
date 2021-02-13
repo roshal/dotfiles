@@ -1,4 +1,8 @@
 
+### functions
+
+alias so='sh "${HOME}/.shell/functions/sort.sh"'
+
 ### password
 
 alias pass='python /-/github/roshal/python/source/cli/generation/hex16sequence.py'
