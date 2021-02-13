@@ -4,7 +4,7 @@ function __datetime {
 }
 
 function __path__grim {
-	echo /-/grim/grim--$(__datetime).png
+	echo "-/grim/grim--$(__datetime).png"
 }
 
 function __path__tesseract {
@@ -12,7 +12,7 @@ function __path__tesseract {
 }
 
 function __path__tesseract__grim {
-	echo /-/tesseract/grim/grim--$(__datetime).png
+	echo "/-/tesseract/grim/grim--$(__datetime).png"
 }
 
 function __swaymsg__inputs__keyboard_layout {
@@ -42,20 +42,20 @@ function __grim {
 }
 
 function __grim__output {
-	grim -o $(__swaymsg__outputs__focused) -t png -
+	grim -o "$(__swaymsg__outputs__focused)" -t png -
 }
 
 function __grim__output_path {
-	grim -o $(__swaymsg__outputs__focused) -t png $(__path__grim)
+	grim -o "$(__swaymsg__outputs__focused)" -t png "$(__path__grim)"
 }
 
 function __grim__path {
-	grim -g - -t png $(__path__grim)
+	grim -g - -t png "$(__path__grim)"
 }
 
 function __grim__tesseract {
-	DESTINATION=$(__path__tesseract__grim)
-	grim -g - -t png ${DESTINATION} && tesseract --dpi 2400 -l eng+rus --oem 1 ${DESTINATION} -
+	DESTINATION="$(__path__tesseract__grim)"
+	grim -g - -t png "${DESTINATION}" && tesseract --dpi 2400 -l eng+rus --oem 1 "${DESTINATION}" -
 }
 
 function __nm_applet__killall {
@@ -78,7 +78,7 @@ function __slurp__print {
 function __swaymsg__switch_output {
 	FOCUSED=$(__swaymsg__outputs__focused)
 	SUSPEND=$(__swaymsg__outputs__suspend)
-	swaymsg -- output ${FOCUSED} toggle , output ${SUSPEND} toggle
+	swaymsg -- output "${FOCUSED}" toggle , output "${SUSPEND}" toggle
 }
 
 function __swaymsg__tree__node {

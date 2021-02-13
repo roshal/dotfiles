@@ -170,6 +170,11 @@ undo = base-reset --soft HEAD@{1}
 
 rrc = base-rm -r --cached .
 
+### shortlog
+
+sh  = shortlog --committer --numbered --summary --email
+sha = shortlog --committer --numbered --summary --email --all
+
 ### show
 
 sn = base-show --name-status

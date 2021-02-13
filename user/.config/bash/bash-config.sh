@@ -4,7 +4,34 @@
 
 ### prompt
 
-PS1='\e[40;90m\n\e[97m$(tty | sed s-/dev/pts/--)\e[90m \e[92m\t\e[90m \e[94m$(pwd)\e[90m$(__git_ps1 " \e[97m%s\e[90m")\e[K\e[m\n'
+# PS1='\e[40;90m\n\e[97m$(tty | sed s-/dev/pts/--)\e[90m \e[92m\t\e[90m \e[94m$(pwd)\e[90m$(__git_ps1 " \e[97m%s\e[90m")\e[K\e[m\n'
+
+# PS1='\[\e[40;90m\]\n\[\e[97m\]$(tty | sed s-/dev/pts/--)\[\e[90m\] \[\e[92m\]\t\[\e[90m\] \[\e[94m\]$(pwd)\[\e[90m\]$(__git_ps1 " \[\e[97m\]%s\[\e[90m\]")\[\e[K\[\e[m\]\n'
+
+PS1="
+$(
+	tput setab 0
+	tput setaf 15
+	printf '$''(tty | sed s-/dev/pts/--)'
+	tput setaf 0
+	printf ' '
+	tput setaf 10
+	printf '\\t'
+	tput setaf 0
+	printf ' '
+	tput setaf 12
+	printf '$''(pwd)'
+	tput setaf 0
+	printf '$''(__git_ps1 %s)' "$(
+		printf '\\ '
+		tput setaf 15
+		printf %%s
+		tput setaf 0
+	)"
+	tput el
+	tput sgr0
+)
+"
 
 ### variables
 

@@ -9,6 +9,8 @@
 !/user/
 !/work/
 
+/user/.config/mpv/watch_later/
+
 /user/.config/Thunar/accels.scm
 
 !/.gitignore

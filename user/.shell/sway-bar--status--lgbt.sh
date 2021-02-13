@@ -4,39 +4,39 @@ function span {
 }
 
 function j {
-	span c69 ${1}
+	span c69 "${1}"
 }
 
 function U {
-	span c96 ${1}
+	span c96 "${1}"
 }
 
 function w {
-	span cc3 ${1}
+	span cc3 "${1}"
 }
 
 function y {
-	span 9c6 ${1}
+	span 9c6 "${1}"
 }
 
 function m {
-	span 6c9 ${1}
+	span 6c9 "${1}"
 }
 
 function d {
-	span 3cc ${1}
+	span 3cc "${1}"
 }
 
 function H {
-	span 69c ${1}
+	span 69c "${1}"
 }
 
 function M {
-	span 96c ${1}
+	span 96c "${1}"
 }
 
 function S {
-	span c3c ${1}
+	span c3c "${1}"
 }
 
 function static {

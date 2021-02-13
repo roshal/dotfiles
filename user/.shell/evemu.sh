@@ -1,24 +1,24 @@
 
 DEVICE=/dev/input/event18
 
-functio zero {
-	sudo evemu-event ${DEVICE} --type EV_KEY --code ${1} --value 0 --sync
+function zero {
+	sudo evemu-event "${DEVICE}" --type EV_KEY --code "${1}" --value 0 --sync
 }
 
-functio unit {
-	sudo evemu-event ${DEVICE} --type EV_KEY --code ${1} --value 1 --sync
+function unit {
+	sudo evemu-event "${DEVICE}" --type EV_KEY --code "${1}" --value 1 --sync
 }
 
-functio zero {
-	sudo evemu-event ${DEVICE} --type EV_KEY --code ${1} --value 0 --sync
+function zero {
+	sudo evemu-event "${DEVICE}" --type EV_KEY --code "${1}" --value 0 --sync
 }
 
-functio zerounit {
-	zero ${1}
-	unit ${1}
+function zerounit {
+	zero "${1}"
+	unit "${1}"
 }
 
-functio a {
+function a {
 	unit KEY_LEFTCTRL
 	unit KEY_LEFTSHIFT
 
@@ -28,7 +28,7 @@ functio a {
 	zero KEY_LEFTSHIFT
 }
 
-functio z {
+function z {
 	unit KEY_LEFTCTRL
 
 	zerounit KEY_TAB

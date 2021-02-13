@@ -27,7 +27,7 @@ alias 90='echo 9876543210'
 # # https://wiki.archlinux.org/index.php/Sudo#Passing_aliases
 # # https://wiki.archlinux.org/index.php/Sudo#Reduce_the_number_of_times_you_have_to_type_a_password
 
-PROMPT=$(echo -e \> $(tput setaf 3)enter pass for %u$(tput sgr0)\\r)
+PROMPT="$(echo -e "> $(tput setaf 3)enter pass for %u$(tput sgr0)\r")"
 
 alias dosu='/usr/bin/sudo --prompt "${PROMPT}" '
 

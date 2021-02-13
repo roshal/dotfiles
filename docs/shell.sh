@@ -1,11 +1,11 @@
 
 exit
 
-ln -s --target ${HOME} user/.imwheelrc
+ln -s --target "${HOME}" user/.imwheelrc
 
 ### user
 
-stow --target ${HOME} --stow user
+stow --target "${HOME}" --stow user
 
 ### root
 
@@ -13,7 +13,7 @@ stow --target / --stow root
 
 ### adopt
 
-stow --target ${HOME} --adopt user
+stow --target "${HOME}" --adopt user
 
 stow --target / --adopt root
 
@@ -23,7 +23,7 @@ sudo stow --target / --stow chromium
 
 ### chromium
 
-stow --target ${HOME} --stow firefox
+stow --target "${HOME}" --stow firefox
 
 ### help
 

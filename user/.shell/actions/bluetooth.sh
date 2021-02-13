@@ -38,27 +38,27 @@ function __bluetooth__power__no {
 ### headset
 
 function __bluetooth__profile__headset__disable {
-	set-card-profile ${CARD__BLUE__HEADSET} ${PROFILE__DISABLE}
+	set-card-profile ${CARD__HEADSET} ${PROFILE__DISABLE}
 }
 
 function __bluetooth__profile__headset__headset {
-	set-card-profile ${CARD__BLUE__HEADSET} ${PROFILE__HEADSET}
+	set-card-profile ${CARD__HEADSET} ${PROFILE__HEADSET}
 }
 
 function __bluetooth__profile__headset__speaker {
-	set-card-profile ${CARD__BLUE__HEADSET} ${PROFILE__SPEAKER}
+	set-card-profile ${CARD__HEADSET} ${PROFILE__SPEAKER}
 }
 
 ### speaker
 
 function __bluetooth__profile__speaker__disable {
-	set-card-profile ${CARD__BLUE__SPEAKER} ${PROFILE__DISABLE}
+	set-card-profile ${CARD__SPEAKER} ${PROFILE__DISABLE}
 }
 
 function __bluetooth__profile__speaker__headset {
-	set-card-profile ${CARD__BLUE__SPEAKER} ${PROFILE__HEADSET}
+	set-card-profile ${CARD__SPEAKER} ${PROFILE__HEADSET}
 }
 
 function __bluetooth__profile__speaker__speaker {
-	set-card-profile ${CARD__BLUE__SPEAKER} ${PROFILE__SPEAKER}
+	set-card-profile ${CARD__SPEAKER} ${PROFILE__SPEAKER}
 }

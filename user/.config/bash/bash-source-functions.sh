@@ -1,16 +1,16 @@
 
 function aurgsm () {
-	cd '/-/aur'
+	cd '/-/aur' || return
 	git clone "https://aur.archlinux.org/${1}.git"
-	cd -
-	cd "/-/aur/${1}"
+	cd - || return
+	cd "/-/aur/${1}" || return
 	sudo --validate
 	makepkg --syncdeps --install
-	cd -
+	cd - || return
 }
 
 function environ () {
-	sed 's/\x0/\n/g' /proc/${1}/environ
+	sed 's/\x0/\n/g' "/proc/${1}/environ"
 }
 
 function eslintjq () {
@@ -25,5 +25,5 @@ function man () {
 	LESS_TERMCAP_me=$'\e[0m' \
 	LESS_TERMCAP_se=$'\e[0m' \
 	LESS_TERMCAP_ue=$'\e[0m' \
-	command man $*
+	command man "$@"
 }

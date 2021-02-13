@@ -12,6 +12,7 @@ alias re='exec bash'
 ### bell
 
 # alias bell='echo -e \\a'
+# alias bell='printf \\a'
 
 alias bell='tput bel'
 
@@ -73,7 +74,9 @@ alias h='head'
 
 alias hh='hstr'
 
-alias hi='history'
+alias hi='history 9'
+
+alias hd='history 9 && history -d -1 -d -2'
 
 ### lock and suspend
 
@@ -139,11 +142,6 @@ alias systemctl='systemctl --no-pager'
 alias sypo='systemctl poweroff'
 alias syre='systemctl reboot'
 alias sysu='systemctl suspend'
-
-### shortlog
-
-alias cnse=' git shortlog --committer --numbered --summary --email'
-alias cnsea='git shortlog --committer --numbered --summary --email --all'
 
 ### tail
 

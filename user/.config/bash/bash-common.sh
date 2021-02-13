@@ -1,6 +1,6 @@
 
 ### change directory initially
-cd /-
+cd /- || :
 
 ### variables
 

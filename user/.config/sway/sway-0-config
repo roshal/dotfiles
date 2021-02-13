@@ -70,7 +70,7 @@ output $-output-2 scale 1.5
 
 ### host relative
 
-include '${HOME}/.config/sway/sway-$(cat /etc/hostname)'
+include '${HOME}/.config/sway/sway-$(< /etc/hostname)'
 
 ### clipman
 
