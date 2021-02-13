@@ -22,10 +22,9 @@ $(
 	tput setaf 12
 	printf '$''(pwd)'
 	tput setaf 0
-	printf '$''(__git_ps1 %s)' "$(
-		printf '\\ '
+	printf '$'"(__git_ps1 ' %s')" "$(
 		tput setaf 15
-		printf %%s
+		echo -n '%s'
 		tput setaf 0
 	)"
 	tput el
