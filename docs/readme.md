@@ -34,3 +34,9 @@ find "${HOME}/.config" -xtype l
 ```shell
 find "${HOME}/.config" -xtype l -exec rm {} +
 ```
+
+## check shell scripts
+
+```shell
+find . -name \*.sh | xargs shellcheck
+```
