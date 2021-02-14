@@ -23,7 +23,7 @@ base-stash = stash
 base-status = status
 
 # # https://git-scm.com/docs/pretty-formats
-base-log = log --reverse --color --abbrev=8 --date='format:%y-%m-%d %T' --pretty='%C(auto)%ad %h %<(8,trunc)%ae %<(53,trunc)%s%n%-d%C(reset)'
+base-log = log --color --abbrev=8 --date='format:%y-%m-%d %T' --pretty='%C(auto)%ad %h %<(8,trunc)%ae %<(52,trunc)%s%n%-d%C(reset)'
 
 ### classic
 
@@ -80,6 +80,10 @@ buom = base-branch -u origin/master
 dump = base-cat-file -p
 type = base-cat-file -t
 
+### check-ignore
+
+ignore = check-ignore --verbose
+
 ### checkout
 
 ctod = base-checkout --track origin/dev
@@ -110,12 +114,15 @@ di = base-diff
 
 ### log
 
-l   = base-log -16
-ll  = base-log -32
-lll = base-log -64
+l   = base-log -16 --reverse
+ll  = base-log -32 --reverse
+lll = base-log -64 --reverse
 
-lg = base-log -32 --graph --reverse
-lo = base-log -32 --oneline
+lg = base-log -32 --graph
+lo = base-log -32 --oneline --reverse
+
+lag = base-log -32 --all --graph
+lao = base-log -32 --all --oneline --reverse
 
 ### merge
 
