@@ -11,6 +11,10 @@ alias rs='tput reset'
 
 alias re='exec bash'
 
+### bat
+
+alias b='bat'
+
 ### bell
 
 # alias bell='echo -e \\a'

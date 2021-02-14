@@ -43,10 +43,6 @@ export PROMPT_COMMAND="${PROMPT_COMMAND} && history -n"
 # export PROMPT_COMMAND="${PROMPT_COMMAND} && history -c"
 # export PROMPT_COMMAND="${PROMPT_COMMAND} && history -r"
 
-### prompt
-
-source "${HOME}/.config/bash/bash-prompt.sh"
-
 ### origin
 
 source "${HOME}/.config/bash/bash-origin.sh"

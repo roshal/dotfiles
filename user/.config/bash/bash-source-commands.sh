@@ -3,6 +3,23 @@
 
 alias dismiss='makoctl dismiss --all'
 
+### colors
+
+# # https://wiki.archlinux.org/index.php/Color_output_in_console
+### aliases
+
+# # https://wiki.archlinux.org/index.php/Color_output_in_console#diff
+alias diff='diff --color'
+
+# # https://wiki.archlinux.org/index.php/Color_output_in_console#grep
+alias grep='grep --color'
+
+# # https://wiki.archlinux.org/index.php/Color_output_in_console#ip
+alias ip='ip -color=auto'
+
+# # https://wiki.archlinux.org/index.php/Color_output_in_console#ls
+alias ls='ls --color=auto'
+
 ### commands
 
 alias trim='sed -e "s/^[[:space:]]*//"'
@@ -38,13 +55,6 @@ alias sudo='/usr/bin/sudo --non-interactive --validate 2>/dev/null ; dosu '
 alias termite='termite --directory /-'
 
 ### unix
-
-alias diff='diff --color'
-
-alias grep='grep --color'
-
-# # https://wiki.archlinux.org/index.php/Color_output_in_console#ls
-alias ls='ls --color=auto'
 
 alias man='LANG=ru_RU.UTF-8 "man" --no-hyphenation --no-justification'
 alias men='"man" --no-hyphenation --no-justification'
