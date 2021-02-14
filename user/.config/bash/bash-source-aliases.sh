@@ -5,7 +5,9 @@ alias action='sh "${HOME}/.shell/action.sh"'
 
 ### bash
 
-alias rc='echo -ne \\ec'
+# alias rc='echo -ne \\ec'
+
+alias rs='tput reset'
 
 alias re='exec bash'
 
