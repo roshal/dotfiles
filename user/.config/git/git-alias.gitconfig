@@ -23,7 +23,7 @@ base-stash = stash
 base-status = status
 
 # # https://git-scm.com/docs/pretty-formats
-base-log = log --color --abbrev=8 --date='format:%y-%m-%d %T' --pretty='%C(auto)%ad %h %<(8,trunc)%ae %<(52,trunc)%s%n%-d%C(reset)'
+base-log = log --color --abbrev=8 --date='format:%y-%m-%d %T' --pretty='%C(auto)%ad %h %<(8,trunc)%ae %<(54,trunc)%s%n%-d%C(reset)'
 
 ### classic
 

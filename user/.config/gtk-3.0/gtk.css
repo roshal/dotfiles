@@ -1,4 +1,32 @@
 
+scrollbar {
+	background: #333;
+}
+
+scrollbar trough {
+	background: #666;
+}
+
+scrollbar trough slider {
+	background: #999;
+	border-radius: 0;
+	border-width: 0;
+	margin: 0;
+	min-width: 8px;
+}
+
+scrollbar:backdrop {
+	background: #000;
+}
+
+scrollbar trough:backdrop {
+	background: #333;
+}
+
+scrollbar trough slider:backdrop {
+	background: #666;
+}
+
 /*\
 
 * {

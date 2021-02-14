@@ -7,9 +7,9 @@ alias action='sh "${HOME}/.shell/action.sh"'
 
 # alias rc='echo -ne \\ec'
 
-alias cc='tput reset'
+alias ee='tput reset'
 
-alias re='exec bash'
+alias vv='exec bash'
 
 ### bat
 
