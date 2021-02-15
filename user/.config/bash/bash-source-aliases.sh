@@ -82,8 +82,6 @@ alias hh='hstr'
 
 alias hi='history 9'
 
-alias hd='history 9 && history -d -1 -d -2'
-
 ### lock and suspend
 
 alias lock='swaylock'

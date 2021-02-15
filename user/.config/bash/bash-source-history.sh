@@ -19,3 +19,6 @@ bind '"\C-r": "\C-a hstr -- \C-j"'
 
 ### ctrl-x k
 # bind '"\C-xk": "\C-a hstr --kill-last-command \C-j"'
+
+### ctrl-x ctrl-x
+bind '"\C-x\C-x": "\C-a history 9 | head -n -1 && echo && history 1 && history -d -1 \C-j"'
