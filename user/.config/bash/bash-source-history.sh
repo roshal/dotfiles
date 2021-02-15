@@ -1,11 +1,8 @@
 
 # # hstr --show-configuration
 
-### leading space hides commands from history
-export HISTCONTROL='ignoreboth'
-# export HISTCONTROL=ignoredups
-# export HISTCONTROL=ignorespace
-# export HISTCONTROL=ignorespace:ignoredups
+### erasedups:ignoreboth:ignoredups:ignorespace
+export HISTCONTROL=ignoreboth
 
 ### default is 500 - increase history file size
 export HISTFILESIZE='16384'
@@ -15,8 +12,10 @@ export HISTSIZE="${HISTFILESIZE}"
 
 export HISTTIMEFORMAT='%y-%m-%d %T  '
 
-### get more colors
-export HSTR_CONFIG='hicolor'
+export HSTR_CONFIG='hicolor,prompt-bottom,help-on-opposite-side,no-confirm,raw-history-view'
 
-### bind hstr to ctrl-r - for vi mode check doc
+### ctrl-r
 bind '"\C-r": "\C-a hstr -- \C-j"'
+
+### ctrl-x k
+# bind '"\C-xk": "\C-a hstr --kill-last-command \C-j"'
