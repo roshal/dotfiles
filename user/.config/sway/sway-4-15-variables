@@ -38,7 +38,7 @@ set $-shift-y 996633
 
 ### idle
 
-set $-idle-before-sleep before-sleep 'swaylock'
+set $-idle-before-sleep before-sleep 'swaylock --image /-/pictures/waves.jpg'
 
 set $-idle-timeout-11 timeout 2048 'swaylock --image /-/pictures/waves.jpg'
 set $-idle-timeout-12 timeout 4096 'swaymsg -- output "*" dpms no' resume 'swaymsg -- output "*" dpms on'

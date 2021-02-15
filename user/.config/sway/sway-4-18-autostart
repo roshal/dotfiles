@@ -5,8 +5,7 @@
 
 exec $-action nm-applet--restart
 
-# exec swayidle -w $-idle-before-sleep $-idle-timeout-11 $-idle-timeout-12 $-idle-timeout-13
-exec swayidle $-idle-timeout-11 $-idle-timeout-12 $-idle-timeout-13
+exec swayidle -w $-idle-before-sleep $-idle-timeout-11 $-idle-timeout-12 $-idle-timeout-13
 
 # exec wl-paste --type text --watch clipman store
 # exec wl-paste --type text/plain --watch clipman store
