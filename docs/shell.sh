@@ -28,3 +28,7 @@ stow --target "${HOME}" --stow firefox
 ### help
 
 find . -xtype l
+
+### back links
+
+ln --symbolic /home/user/.config/mimeapps.list user/.config/mimeapps.list
