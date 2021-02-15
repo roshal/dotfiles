@@ -1,8 +1,3 @@
-
-# # /home/user/.config/mimeapps.list
-
-# # ln --symbolic /home/user/.config/mimeapps.list user/.config/mimeapps.list
-
 [Default Applications]
 application/vnd.ms-excel=libreoffice-calc.desktop
 application/x-shellscript=code-oss.desktop
@@ -13,6 +8,11 @@ inode/directory=thunar.desktop
 text/plain=userapp-code-git.desktop
 video/x-matroska=mpv.desktop
 video/x-msvideo=mpv.desktop
+text/html=chromium.desktop
+x-scheme-handler/http=chromium.desktop
+x-scheme-handler/https=chromium.desktop
+x-scheme-handler/about=chromium.desktop
+x-scheme-handler/unknown=chromium.desktop
 
 [Added Associations]
 application/json=code-oss.desktop
