@@ -38,9 +38,9 @@ set $-shift-y 996633
 
 ### idle
 
-set $-idle-before-sleep before-sleep 'swaylock --image /-/pictures/waves.jpg'
+set $-idle-before-sleep before-sleep 'swaylock --image /-/pictures/dark.png'
 
-set $-idle-timeout-11 timeout 2048 'swaylock --image /-/pictures/waves.jpg'
+set $-idle-timeout-11 timeout 2048 'swaylock --image /-/pictures/dark.png'
 set $-idle-timeout-12 timeout 4096 'swaymsg -- output "*" dpms no' resume 'swaymsg -- output "*" dpms on'
 set $-idle-timeout-13 timeout 8192 'systemctl suspend'
 

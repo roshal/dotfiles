@@ -30,7 +30,7 @@ bindsym --to-code shift+$-key+d exec wofi --show drun --allow-images --sort-orde
 bindsym --to-code       $-key+i exec $-action nm-applet--restart
 bindsym --to-code shift+$-key+i exec $-action nm-applet--killall
 
-bindsym --to-code       $-key+l exec swaylock --image /-/pictures/waves.jpg
+bindsym --to-code       $-key+l exec swaylock --image /-/pictures/dark.png
 bindsym --to-code shift+$-key+l exec swaylock
 
 bindsym --to-code       $-key+n exec thunar
