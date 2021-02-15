@@ -4,7 +4,6 @@
 # # ln --symbolic /home/user/.config/mimeapps.list user/.config/mimeapps.list
 
 [Default Applications]
-
 application/vnd.ms-excel=libreoffice-calc.desktop
 application/x-shellscript=code-oss.desktop
 audio/mpeg=vlc.desktop
@@ -16,7 +15,6 @@ video/x-matroska=mpv.desktop
 video/x-msvideo=mpv.desktop
 
 [Added Associations]
-
 application/json=code-oss.desktop
 application/octet-stream=code-oss.desktop
 application/pdf=org.gnome.Evince.desktop
@@ -38,7 +36,7 @@ image/jpeg=gimp.desktop;solaar.desktop;phototonic.desktop;shotwell-viewer.deskto
 image/png=chromium.desktop;gimp.desktop;org.inkscape.Inkscape.desktop;010editor.desktop;sublime-text_subl.desktop;xnviewmp.desktop;shotwell-viewer.desktop;phototonic.desktop;code-oss.desktop;nomacs.desktop;geeqie.desktop
 image/svg+xml=org.inkscape.Inkscape.desktop;code-oss.desktop
 image/x-icns=org.gnome.FileRoller.desktop
-inode/directory=io.github.quodlibet.QuodLibet.desktop;org.musicbrainz.Picard.desktop;io.github.quodlibet.ExFalso.desktop;easytag.desktop;gmp3info.desktop;thunar.desktop;org.kde.kphotoalbum.desktop;org.kde.kphotoalbum-import.desktop;geeqie.desktop;nomacs.desktop;imv.desktop
+inode/directory=io.github.quodlibet.QuodLibet.desktop;org.musicbrainz.Picard.desktop;io.github.quodlibet.ExFalso.desktop;easytag.desktop;gmp3info.desktop;org.kde.kphotoalbum.desktop;org.kde.kphotoalbum-import.desktop;geeqie.desktop;nomacs.desktop;imv.desktop;
 text/html=code-oss.desktop
 text/plain=userapp-code-git.desktop
 text/x-matlab=code-oss.desktop
