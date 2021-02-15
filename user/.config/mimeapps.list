@@ -1,4 +1,8 @@
 
+# # /home/user/.config/mimeapps.list
+
+# # ln --symbolic /home/user/.config/mimeapps.list user/.config/mimeapps.list
+
 [Default Applications]
 
 application/vnd.ms-excel=libreoffice-calc.desktop
