@@ -116,6 +116,7 @@ alias wds='npx webpack-dev-server'
 
 alias cleanse='sudo pacman --remove --nosave --recursive $(pacman --query --deps --quiet --unrequired)'
 
+alias pi='pacman --query --info'
 alias po='pacman --query --owns'
 
 alias up='sudo pacman --sync --refresh --sysupgrade'
