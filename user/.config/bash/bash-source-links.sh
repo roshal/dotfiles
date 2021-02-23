@@ -53,6 +53,11 @@ alias -- --lkkgui='cd /-/esphere/lkk/lkkgui'
 alias -- --dimbit='cd /-/github/dimbit'
 alias -- --roshal='cd /-/github/roshal'
 
+### github dimbit
+
+alias -- --cs-wiki-client='cd /-/github/dimbit/cs-wiki-client'
+alias -- --cs-wiki-server='cd /-/github/dimbit/cs-wiki-server'
+
 ### github kksng
 
 alias -- --leda='cd /-/github/kksng/leda'
