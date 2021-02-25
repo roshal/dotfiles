@@ -24,24 +24,24 @@ export LESS_TERMCAP_ue=$'\e[0m'
 
 ### colors
 
-# declare -A color_chars=(
-# 	[333]=00
-# 	[339]=04
-# 	[369]=12
-# 	[393]=02
-# 	[396]=14
-# 	[399]=06
-# 	[555]=08
-# 	[639]=13
-# 	[693]=10
-# 	[777]=07
-# 	[933]=01
-# 	[936]=09
-# 	[939]=05
-# 	[963]=11
-# 	[993]=03
-# 	[999]=15
-# )
+declare -A color_chars=(
+	[333]=00
+	[339]=04
+	[369]=12
+	[393]=02
+	[396]=14
+	[399]=06
+	[555]=08
+	[639]=13
+	[693]=10
+	[777]=07
+	[933]=01
+	[936]=09
+	[939]=05
+	[963]=11
+	[993]=03
+	[999]=15
+)
 
 declare -A color_codes=(
 	[333]=30
@@ -73,6 +73,10 @@ function fill () {
 	then local value=${color_codes[${2}]} && test -z "${value}" && return
 		test "${1}" = back && echo -ne "\e[$((value+10))m"
 		test "${1}" = fore && echo -ne "\e[$((value+00))m"
+	elif test ${#} = 3 -a "${1}" = tput
+	then local value=${color_chars[${3}]} && test -z "${value}" && return
+		test "${2}" = back && tput setab $((10#$value))
+		test "${2}" = fore && tput setaf $((10#$value))
 	fi
 }
 
