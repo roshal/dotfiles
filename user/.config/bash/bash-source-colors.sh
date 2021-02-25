@@ -44,22 +44,22 @@ export LESS_TERMCAP_ue=$'\e[0m'
 # )
 
 declare -A color_shifts=(
-	[333]=00
-	[339]=04
-	[369]=64
-	[393]=02
-	[396]=66
-	[399]=06
-	[555]=60
-	[639]=65
-	[693]=62
-	[777]=07
-	[933]=01
-	[936]=61
-	[939]=05
-	[963]=63
-	[993]=03
-	[999]=67
+	[333]=30
+	[339]=34
+	[369]=94
+	[393]=32
+	[396]=96
+	[399]=36
+	[555]=90
+	[639]=95
+	[693]=92
+	[777]=37
+	[933]=31
+	[936]=91
+	[939]=35
+	[963]=93
+	[993]=33
+	[999]=97
 )
 
 function fill () {
@@ -71,8 +71,8 @@ function fill () {
 		test "${1}" = zero && tput sgr0
 	elif test ${#} = 2
 	then test ${color_shifts[${2}]+_} || return && ((value=color_shifts[${2}]))
-		test "${1}" = back && echo -n "\e[$((value+40))m"
-		test "${1}" = fore && echo -n "\e[$((value+30))m"
+		test "${1}" = back && echo -n "\e[$((value+10))m"
+		test "${1}" = fore && echo -n "\e[$((value+00))m"
 	fi
 }
 
