@@ -70,7 +70,7 @@ function fill () {
 		test "${1}" = line && tput el
 		test "${1}" = zero && tput sgr0
 	elif test ${#} = 2
-	then test ${color_codes[${2}]+_} || return && ((value=color_codes[${2}]))
+	then test ${color_codes[${2}]++} || return && ((value=color_codes[${2}]))
 		test "${1}" = back && echo -ne "\e[$((value+10))m"
 		test "${1}" = fore && echo -ne "\e[$((value+00))m"
 	fi
