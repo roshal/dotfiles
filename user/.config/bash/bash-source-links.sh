@@ -12,6 +12,7 @@ alias -- --config='cd "${HOME}/.config"'
 
 alias -- --aur='cd /-/aur'
 alias -- --esphere='cd /-/esphere'
+alias -- --ffmpeg='cd /-/ffmpeg'
 alias -- --freedesktop='cd /-/freedesktop'
 alias -- --github='cd /-/github'
 alias -- --gitlab='cd /-/gitlab'
