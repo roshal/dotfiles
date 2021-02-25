@@ -78,9 +78,7 @@ function fill () {
 
 ### term
 
-return
-
-test "${TERM}" = linux || return
+# test "${TERM}" = linux || return
 
 echo -ne '\e]P0333333' # black
 echo -ne '\e]P1ff3333' # darkred
