@@ -1,5 +1,6 @@
 
-### change directory initially
+### login
+
 cd /- || :
 
 ### variables
