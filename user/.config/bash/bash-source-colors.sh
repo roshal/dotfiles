@@ -24,7 +24,7 @@ export LESS_TERMCAP_ue=$'\e[0m'
 
 ### colors
 
-# declare -A color_values=(
+# declare -A color_chars=(
 # 	[333]=00
 # 	[339]=04
 # 	[369]=12
@@ -43,7 +43,7 @@ export LESS_TERMCAP_ue=$'\e[0m'
 # 	[999]=15
 # )
 
-declare -A color_shifts=(
+declare -A color_codes=(
 	[333]=30
 	[339]=34
 	[369]=94
@@ -70,9 +70,9 @@ function fill () {
 		test "${1}" = line && tput el
 		test "${1}" = zero && tput sgr0
 	elif test ${#} = 2
-	then test ${color_shifts[${2}]+_} || return && ((value=color_shifts[${2}]))
-		test "${1}" = back && echo -n "\e[$((value+10))m"
-		test "${1}" = fore && echo -n "\e[$((value+00))m"
+	then test ${color_codes[${2}]+_} || return && ((value=color_codes[${2}]))
+		test "${1}" = back && echo -ne "\e[$((value+10))m"
+		test "${1}" = fore && echo -ne "\e[$((value+00))m"
 	fi
 }
 
