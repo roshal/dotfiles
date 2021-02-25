@@ -22,6 +22,60 @@ export LESS_TERMCAP_se=$'\e[0m'
 # reset underline
 export LESS_TERMCAP_ue=$'\e[0m'
 
+### colors
+
+# declare -A color_values=(
+# 	[333]=00
+# 	[339]=04
+# 	[369]=12
+# 	[393]=02
+# 	[396]=14
+# 	[399]=06
+# 	[555]=08
+# 	[639]=13
+# 	[693]=10
+# 	[777]=07
+# 	[933]=01
+# 	[936]=09
+# 	[939]=05
+# 	[963]=11
+# 	[993]=03
+# 	[999]=15
+# )
+
+declare -A color_shifts=(
+	[333]=00
+	[339]=04
+	[369]=64
+	[393]=02
+	[396]=66
+	[399]=06
+	[555]=60
+	[639]=65
+	[693]=62
+	[777]=07
+	[933]=01
+	[936]=61
+	[939]=05
+	[963]=63
+	[993]=03
+	[999]=67
+)
+
+function fill () {
+	if test ${#} = 0
+	then tput sgr0
+	elif test ${#} = 1
+	then
+		test "${1}" = line && tput el
+		test "${1}" = zero && tput sgr0
+	elif test ${#} = 2
+	then test ${color_shifts[${2}]+_} || return && ((value=color_shifts[${2}]))
+		test "${1}" = back && echo -n "\e[$((value+40))m"
+		test "${1}" = fore && echo -n "\e[$((value+30))m"
+	fi
+}
+
 ### term
 
 return

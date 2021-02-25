@@ -10,25 +10,25 @@
 
 PS1="
 $(
-	tput sgr0
-	tput setab 0
-	tput setaf 15
+	fill zero
+	fill back 333
+	fill fore 999
 	echo -n '$(basename -- "$(tty)")'
-	tput setaf 8
+	fill fore 555
 	echo -n ' '
-	tput setaf 10
+	fill fore 693
 	echo -n '\t'
-	tput setaf 8
+	fill fore 555
 	echo -n ' '
-	tput setaf 12
+	fill fore 369
 	echo -n '$(pwd)'
-	tput setaf 8
+	fill fore 555
 	printf '$(__git_ps1 " %s")' "$(
-		tput setaf 15
+		fill fore 999
 		echo -n '%s'
-		tput setaf 8
+		fill fore 555
 	)"
-	tput el
-	tput sgr0
+	fill line
+	fill zero
 )
 "
