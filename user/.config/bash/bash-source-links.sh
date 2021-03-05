@@ -66,8 +66,8 @@ alias -- --leda='cd /-/github/kksng/leda'
 ### github roshal
 
 alias -- --angular='cd /-/github/roshal/angular'
-alias -- --arch-linux-notes='cd /-/github/roshal/arch-linux-notes'
-alias -- --arch-linux-setup='cd /-/github/roshal/arch-linux-setup'
+alias -- --linux-notes='cd /-/github/roshal/linux-notes'
+alias -- --linux-setup='cd /-/github/roshal/linux-setup'
 alias -- --chromium-extension='cd /-/github/roshal/chromium-extension'
 alias -- --chromium-themes='cd /-/github/roshal/chromium-themes'
 alias -- --docker='cd /-/github/roshal/docker'
