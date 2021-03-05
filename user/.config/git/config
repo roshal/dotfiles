@@ -12,21 +12,25 @@ path = git-color.gitconfig
 
 ### commands
 
-[merge]
+[commit]
 
-tool = vscode
+template = /home/user/.config/git/template
 
 [diff]
 
 tool = vscode
 
+[fetch]
+
+# prune = true
+
 [init]
 
 defaultBranch = main
 
-[fetch]
+[merge]
 
-# prune = true
+tool = vscode
 
 [pager]
 
