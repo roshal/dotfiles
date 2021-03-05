@@ -3,82 +3,82 @@
 
 ### base
 
-base-add = add
-base-branch = branch
-base-cat-file = cat-file
-base-checkout = checkout
-base-clone = clone
-base-commit = commit --no-verify
-base-config = config
-base-diff = diff
-base-init = init
-base-merge = merge
-base-push = push
-base-rebase = rebase
-base-remote = remote
-base-reset = reset
-base-rm = rm
-base-show = show
-base-stash = stash
-base-status = status
+git-add = add
+git-branch = branch
+git-cat-file = cat-file
+git-checkout = checkout
+git-clone = clone
+git-commit = commit --no-verify
+git-config = config
+git-diff = diff
+git-init = init
+git-merge = merge
+git-push = push
+git-rebase = rebase
+git-remote = remote
+git-reset = reset
+git-rm = rm
+git-show = show
+git-stash = stash
+git-status = status
 
 # # https://git-scm.com/docs/pretty-formats
-base-log = log --color --abbrev=8 --date='format:%y-%m-%d %T' --pretty='%C(auto)%ad %h %<(8,trunc)%ae %<(54,trunc)%s%n%-d%C(reset)'
+git-log = log --color --abbrev=8 --date='format:%y-%m-%d %T' --pretty='%C(auto)%ad %h %<(8,trunc)%ae %<(54,trunc)%s%n%-d%C(reset)'
 
 ### classic
 
-co = base-checkout --no-guess
-br = base-branch
-ci = base-commit
-st = base-status
+co = git-checkout --no-guess
+br = git-branch
+ci = git-commit
+st = git-status
 
-last = base-log -1 @
-hist = base-log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-type = base-cat-file -t
-dump = base-cat-file -p
+last = git-log -1 @
+hist = git-log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+type = git-cat-file -t
+dump = git-cat-file -p
 echo = !echo
 
-remove = base-rm --cached
+remove = git-rm --cached
 
-unstage = base-reset @ --
+unstage = git-reset @ --
 
 ### custom
 
-aa = base-add --all
-ad = base-add
-ba = base-branch -v --verbose --all
-br = base-branch -v --verbose --remotes
-bl = base-branch -v --verbose
-cl = base-clone
-di = base-diff
-in = base-init
-me = base-merge
-re = base-reset
+aa = git-add --all
+ad = git-add
+ba = git-branch -v --verbose --all
+br = git-branch -v --verbose --remotes
+bl = git-branch -v --verbose
+cl = git-clone
+di = git-diff
+in = git-init
+me = git-merge
+re = git-reset
 
-un = base-reset @ --
+un = git-reset @ --
 
-reb = base-rebase
+reb = git-rebase
 
-bvv = base-branch -v --verbose
+bvv = git-branch -v --verbose
 
 ### one
 
-b = base-branch -v --verbose --all
+b = git-branch -v --verbose --all
 
 ### add
 
-all = base-add --all
+all = git-add --all
 
-patch = base-add --patch
+patch = git-add --patch
 
 ### branch
 
-buom = base-branch -u origin/master
+buom = git-branch -u origin/master
 
 ### cat-file
 
-dump = base-cat-file -p
-type = base-cat-file -t
+dump = git-cat-file -p
+type = git-cat-file -t
 
 ### check-ignore
 
@@ -86,43 +86,43 @@ ignore = check-ignore --verbose
 
 ### checkout
 
-ctod = base-checkout --track origin/dev
+ctod = git-checkout --track origin/dev
 
 ### commit
 
-amend = base-commit --allow-empty-message --amend
+amend = git-commit --allow-empty --allow-empty-message --amend
 
-cam = base-commit --allow-empty-message --no-edit --amend
-cem = base-commit --allow-empty-message --allow-empty --message ''
+cam = git-commit --allow-empty --allow-empty-message --no-edit --amend
+cem = git-commit --allow-empty --allow-empty-message --no-edit
 
 # # git config --local format.signoff true
 # # git config --local commit.gpgSign true
-sign = base-commit --signoff
+sign = git-commit --signoff
 
 ### config
 
-config-roshal-mail = base-config user.email roshal@users.noreply.github.com
-config-roshal-name = base-config user.name 'roshal'
+config-roshal-mail = git-config user.email roshal@users.noreply.github.com
+config-roshal-name = git-config user.name 'roshal'
 
 ### diff
 
 # # https://stackoverflow.com/a/1587952/9381882
 
-dc = base-diff --cached
-dh = base-diff HEAD
-di = base-diff
+dc = git-diff --cached
+dh = git-diff HEAD
+di = git-diff
 
 ### log
 
-l   = base-log -16 --reverse
-ll  = base-log -32 --reverse
-lll = base-log -64 --reverse
+l   = git-log -16 --reverse
+ll  = git-log -32 --reverse
+lll = git-log -64 --reverse
 
-lg = base-log -32 --graph
-lo = base-log -32 --oneline --reverse
+lg = git-log -32 --graph
+lo = git-log -32 --oneline --reverse
 
-lag = base-log -32 --all --graph
-lao = base-log -32 --all --oneline --reverse
+lag = git-log -32 --all --graph
+lao = git-log -32 --all --oneline --reverse
 
 ### merge
 
@@ -130,52 +130,52 @@ mes = merge --squash
 
 ### push
 
-pg = base-push github HEAD
-ph = base-push heroku HEAD
-po = base-push origin HEAD
+pg = git-push github HEAD
+ph = git-push heroku HEAD
+po = git-push origin HEAD
 
-pgf = base-push --force github HEAD
-phf = base-push --force heroku HEAD
-pof = base-push --force origin HEAD
+pgf = git-push --force github HEAD
+phf = git-push --force heroku HEAD
+pof = git-push --force origin HEAD
 
-png = base-push --no-verify github HEAD
-pnh = base-push --no-verify heroku HEAD
-pno = base-push --no-verify origin HEAD
+png = git-push --no-verify github HEAD
+pnh = git-push --no-verify heroku HEAD
+pno = git-push --no-verify origin HEAD
 
-pfng = base-push --force --no-verify github HEAD
-pfnh = base-push --force --no-verify heroku HEAD
-pfno = base-push --force --no-verify origin HEAD
+pfng = git-push --force --no-verify github HEAD
+pfnh = git-push --force --no-verify heroku HEAD
+pfno = git-push --force --no-verify origin HEAD
 
-puoh = base-push -u github HEAD
-puoh = base-push -u heroku HEAD
-puoh = base-push -u origin HEAD
+puoh = git-push -u github HEAD
+puoh = git-push -u heroku HEAD
+puoh = git-push -u origin HEAD
 
 ### remote
 
-rev = base-remote --verbose
+rev = git-remote --verbose
 
-rag = base-remote add github
-rah = base-remote add heroku
-rao = base-remote add origin
+rag = git-remote add github
+rah = git-remote add heroku
+rao = git-remote add origin
 
-rrg = base-remote remove github
-rrh = base-remote remove heroku
-rro = base-remote remove origin
+rrg = git-remote remove github
+rrh = git-remote remove heroku
+rro = git-remote remove origin
 
-rsg = base-remote set-url github
-rsh = base-remote set-url heroku
-rso = base-remote set-url origin
+rsg = git-remote set-url github
+rsh = git-remote set-url heroku
+rso = git-remote set-url origin
 
 ### reset
 
-reh = base-reset HEAD^
-roh = base-reset origin/HEAD
+reh = git-reset HEAD^
+roh = git-reset origin/HEAD
 
-undo = base-reset --soft HEAD@{1}
+undo = git-reset --soft HEAD@{1}
 
 ### rm
 
-rrc = base-rm -r --cached .
+rrc = git-rm -r --cached .
 
 ### shortlog
 
@@ -184,17 +184,17 @@ sha = shortlog --committer --numbered --summary --email --all
 
 ### show
 
-sn = base-show --name-status
+sn = git-show --name-status
 
 ### stash
 
-sl   = base-stash list
-ss   = base-stash show
-sp   = base-stash push
-pp   = base-stash pop
-sa   = base-stash apply
-sc   = base-stash create
-sd   = base-stash drop
-pop  = base-stash pop
-drop = base-stash drop
-list = base-stash list
+sl   = git-stash list
+ss   = git-stash show
+sp   = git-stash push
+pp   = git-stash pop
+sa   = git-stash apply
+sc   = git-stash create
+sd   = git-stash drop
+pop  = git-stash pop
+drop = git-stash drop
+list = git-stash list
