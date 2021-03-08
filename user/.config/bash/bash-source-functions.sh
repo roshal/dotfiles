@@ -17,6 +17,13 @@ function eslintjq () {
 	jq '.["rules"]["'"${1}"'"]'
 }
 
+function loop () {
+	local index
+	for ((index = 0; index < ${1}; index += 1))
+	do eval "${*:2}"
+	done
+}
+
 ### man
 
 # # https://wiki.archlinux.org/index.php/Color_output_in_console#man
