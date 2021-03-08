@@ -108,6 +108,8 @@ alias jest='npx jest'
 
 alias lint='npx eslint --quiet --color --ext .js,.jsx,.ts,.tsx .'
 
+alias nodemon='npx nodemon'
+
 alias tsc='npx tsc'
 
 alias webpack='npx webpack'
