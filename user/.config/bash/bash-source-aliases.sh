@@ -110,7 +110,9 @@ alias lint='npx eslint --quiet --color --ext .js,.jsx,.ts,.tsx .'
 
 alias tsc='npx tsc'
 
-alias wds='npx webpack-dev-server'
+alias webpack='npx webpack'
+
+alias ws='npx webpack serve'
 
 ### pacman
 
