@@ -59,6 +59,8 @@ for_window [instance="^jetbrains-webstorm$"] border none
 
 for_window [instance="^scrcpy$"] border none
 
+for_window [instance="^slack$"] border none
+
 for_window [instance="^spotify$"] border none
 
 for_window [instance="^sublime_text$"] border none
