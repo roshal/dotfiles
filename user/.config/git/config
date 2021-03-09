@@ -3,7 +3,7 @@
 
 [core]
 
-editor = code-git --wait
+editor = code --wait
 
 [include]
 
@@ -54,8 +54,8 @@ short = true
 
 [mergetool "vscode"]
 
-cmd = code-git --wait $MERGED
+cmd = code --wait $MERGED
 
 [difftool "vscode"]
 
-cmd = code-git --wait --diff $LOCAL $REMOTE
+cmd = code --wait --diff $LOCAL $REMOTE
