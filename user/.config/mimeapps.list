@@ -13,6 +13,7 @@ x-scheme-handler/http=chromium.desktop
 x-scheme-handler/https=chromium.desktop
 x-scheme-handler/about=chromium.desktop
 x-scheme-handler/unknown=chromium.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-VPJJZ0.desktop
 
 [Added Associations]
 application/json=code-oss.desktop
@@ -31,7 +32,7 @@ audio/ac3=mpv.desktop;vlc.desktop
 audio/flac=vlc.desktop
 audio/mpeg=easytag.desktop;io.github.quodlibet.QuodLibet.desktop;org.musicbrainz.Picard.desktop;solaar.desktop;thunar-bulk-rename.desktop;vlc.desktop
 audio/x-wav=vlc.desktop
-image/gif=org.nomacs.ImageLounge.desktop;imv.desktop
+image/gif=phototonic.desktop;xnviewmp.desktop;org.nomacs.ImageLounge.desktop;imv.desktop
 image/jpeg=gimp.desktop;solaar.desktop;phototonic.desktop;shotwell-viewer.desktop;org.nomacs.ImageLounge.desktop;010editor.desktop;nomacs.desktop;imv.desktop;feh.desktop
 image/png=chromium.desktop;gimp.desktop;org.inkscape.Inkscape.desktop;010editor.desktop;sublime-text_subl.desktop;xnviewmp.desktop;shotwell-viewer.desktop;phototonic.desktop;code-oss.desktop;nomacs.desktop;geeqie.desktop
 image/svg+xml=org.inkscape.Inkscape.desktop;code-oss.desktop
@@ -47,4 +48,4 @@ video/mpeg=vlc.desktop;mpv.desktop
 video/quicktime=mpv.desktop;vlc.desktop
 video/x-matroska=io.github.celluloid_player.Celluloid.desktop;vlc.desktop;smplayer.desktop;mpv.desktop;userapp-vlc"-W76FK0.desktop
 video/x-msvideo=vlc.desktop;mpv.desktop;org.gnome.Totem.desktop
-x-scheme-handler/tg=userapp-Telegram Desktop-5VWFW0.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-VPJJZ0.desktop
