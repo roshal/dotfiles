@@ -5,23 +5,32 @@
 
 # allow_bold = true
 # audible_bell = false
+# bold_is_bright = true
 # browser = xdg-open
 # cell_height_scale = 1.0
 # cell_width_scale = 1.0
 # clickable_url = true
 # cursor_blink = system
+# cursor_shape = block
+# dynamic_title = true
 # filter_unmatched_urls = true
+# font = Monospace 9
 # fullscreen = true
 # hyperlinks = false
 # icon_name = terminal
 # modify_other_keys = false
+# mouse_autohide = false
+# scroll_on_keystroke = true
 # scroll_on_output = false
+# scrollback_lines = 10000
+# scrollbar = off
 # search_wrap = true
 # size_hints = false
 # urgent_on_bell = true
+
 audible_bell = true
 bold_is_bright = false
-cell_height_scale = 0.875
+cell_width_scale = 0.875
 cursor_blink = off
 cursor_shape = ibeam
 dynamic_title = false
