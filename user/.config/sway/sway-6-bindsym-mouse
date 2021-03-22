@@ -10,7 +10,7 @@ bindsym $-key+$-mouse-s move $-arrow-d
 
 bindsym $-mouse-m kill
 
-bindsym $-mouse-r floating toggle
+bindsym $-mouse-r move workspace back_and_forth
 
 bindsym $-mouse-b move $-arrow-l
 bindsym $-mouse-f move $-arrow-r
