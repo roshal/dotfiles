@@ -32,8 +32,6 @@ alias c='cat'
 
 ### code
 
-alias code='code-git'
-
 alias e='code'
 
 alias r='code --reuse-window'
@@ -173,7 +171,3 @@ alias z='trans'
 
 alias en='trans -t en'
 alias ru='trans -t ru'
-
-### tty
-
-alias q='tty'
