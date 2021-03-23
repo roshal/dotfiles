@@ -36,6 +36,10 @@ tool = vscode
 
 # log = false
 
+[pull]
+
+ff = only
+
 [rebase]
 
 backend = apply
