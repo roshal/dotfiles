@@ -27,7 +27,7 @@ stow --target "${HOME}" --stow firefox
 
 ### help
 
-find . -xtype l
+find "${HOME}/.config" -xtype l
 
 ### back links
 
