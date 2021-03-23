@@ -10,11 +10,11 @@ bindsym --to-code shift+$-key+q kill
 # # # https://i3wm.org/docs/userguide.html#exec
 
 bindsym             $-special-p exec $-action slurp--grim--wl-copy
-bindsym        ctrl+$-special-p exec $-action swaymsg--node--grim--wl-copy
+bindsym        ctrl+$-special-p exec $-action sway--node--grim--wl-copy
 bindsym       shift+$-special-p exec $-action grim--output--wl-copy
 
 bindsym       $-key+$-special-p exec $-action slurp--grim-path
-bindsym  ctrl+$-key+$-special-p exec $-action swaymsg--node--grim-path
+bindsym  ctrl+$-key+$-special-p exec $-action sway--node--grim-path
 bindsym shift+$-key+$-special-p exec $-action grim--output-path
 
 bindsym       $-key+$-special-s exec $-action slurp--notify
@@ -36,7 +36,7 @@ bindsym --to-code shift+$-key+l exec swaylock
 bindsym --to-code       $-key+n exec thunar
 bindsym --to-code shift+$-key+n exec thunar --quit
 
-bindsym --to-code       $-key+o exec $-action swaymsg--switch-output
+bindsym --to-code       $-key+o exec $-action sway--output--switch
 bindsym --to-code shift+$-key+o output * disable , output - enable
 
 bindsym --to-code       $-key+p output * dpms on
@@ -118,10 +118,10 @@ bindsym       $-key+$-control-h         workspace $-workspace-7
 bindsym       $-key+$-control-d         workspace $-workspace-8
 bindsym       $-key+$-control-e         workspace $-workspace-9
 
-bindsym shift+$-key+$-control-i move container to workspace $-workspace-6
-bindsym shift+$-key+$-control-h move container to workspace $-workspace-7
-bindsym shift+$-key+$-control-d move container to workspace $-workspace-8
-bindsym shift+$-key+$-control-e move container to workspace $-workspace-9
+bindsym shift+$-key+$-control-i move to workspace $-workspace-6
+bindsym shift+$-key+$-control-h move to workspace $-workspace-7
+bindsym shift+$-key+$-control-d move to workspace $-workspace-8
+bindsym shift+$-key+$-control-e move to workspace $-workspace-9
 
 bindsym       $-key+$-control-p         workspace prev_on_output
 bindsym       $-key+$-control-n         workspace next_on_output
@@ -129,11 +129,11 @@ bindsym       $-key+$-control-n         workspace next_on_output
 bindsym       $-key+0              workspace --no-auto-back-and-forth $-workspace-zero
 bindsym       $-key+escape         workspace                          $-workspace-escape
 
-bindsym shift+$-key+0      move container to workspace                          $-workspace-zero
-bindsym shift+$-key+escape move container to workspace                          $-workspace-escape
+bindsym shift+$-key+0      move to workspace                          $-workspace-zero
+bindsym shift+$-key+escape move to workspace                          $-workspace-escape
 
 bindsym       $-key+tab         workspace back_and_forth
-bindsym shift+$-key+tab move container to workspace back_and_forth
+bindsym shift+$-key+tab move to workspace back_and_forth
 
 bindsym --to-code       $-key+$-key-0         workspace $-workspace-0
 bindsym --to-code       $-key+$-key-1         workspace $-workspace-1
@@ -146,19 +146,19 @@ bindsym --to-code       $-key+$-key-7         workspace $-workspace-7
 bindsym --to-code       $-key+$-key-8         workspace $-workspace-8
 bindsym --to-code       $-key+$-key-9         workspace $-workspace-9
 
-bindsym --to-code shift+$-key+$-key-0 move container to workspace $-workspace-0
-bindsym --to-code shift+$-key+$-key-1 move container to workspace $-workspace-1
-bindsym --to-code shift+$-key+$-key-2 move container to workspace $-workspace-2
-bindsym --to-code shift+$-key+$-key-3 move container to workspace $-workspace-3
-bindsym --to-code shift+$-key+$-key-4 move container to workspace $-workspace-4
-bindsym --to-code shift+$-key+$-key-5 move container to workspace $-workspace-5
-bindsym --to-code shift+$-key+$-key-6 move container to workspace $-workspace-6
-bindsym --to-code shift+$-key+$-key-7 move container to workspace $-workspace-7
-bindsym --to-code shift+$-key+$-key-8 move container to workspace $-workspace-8
-bindsym --to-code shift+$-key+$-key-9 move container to workspace $-workspace-9
+bindsym --to-code shift+$-key+$-key-0 move to workspace $-workspace-0
+bindsym --to-code shift+$-key+$-key-1 move to workspace $-workspace-1
+bindsym --to-code shift+$-key+$-key-2 move to workspace $-workspace-2
+bindsym --to-code shift+$-key+$-key-3 move to workspace $-workspace-3
+bindsym --to-code shift+$-key+$-key-4 move to workspace $-workspace-4
+bindsym --to-code shift+$-key+$-key-5 move to workspace $-workspace-5
+bindsym --to-code shift+$-key+$-key-6 move to workspace $-workspace-6
+bindsym --to-code shift+$-key+$-key-7 move to workspace $-workspace-7
+bindsym --to-code shift+$-key+$-key-8 move to workspace $-workspace-8
+bindsym --to-code shift+$-key+$-key-9 move to workspace $-workspace-9
 
 #bindsym --to-code       $-key+caps_lock         workspace back_and_forth
-#bindsym --to-code shift+$-key+caps_lock move container to workspace back_and_forth
+#bindsym --to-code shift+$-key+caps_lock move to workspace back_and_forth
 
 ##### 6.9 moving workspaces to a different screen
 # # # https://i3wm.org/docs/userguide.html#_moving_workspaces_to_a_different_screen

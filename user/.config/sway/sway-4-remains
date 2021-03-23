@@ -83,8 +83,6 @@ hide_edge_borders --i3 both
 ##### 4.19 automatically putting workspaces on specific screens
 # # # https://i3wm.org/docs/userguide.html#workspace_screen
 
-workspace $-workspace-0 output $-output-0
-
 workspace $-workspace-escape output $-output-1
 
 ##### 4.20 changing colors

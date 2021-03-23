@@ -131,19 +131,25 @@ then __slurp | __grim__tesseract
 elif test "${1}" = 'slurp--notify'
 then __slurp__print | __xargs__notify
 
-### swaymsg
+### sway
 
-elif test "${1}" = 'swaymsg--keyboard-layout'
-then __swaymsg__keyboard_layout
+elif test "${1}" = 'sway--keyboard-layout'
+then __sway__keyboard_layout
 
-elif test "${1}" = 'swaymsg--node--grim--wl-copy'
-then __swaymsg__tree__node | __grim | __wl_copy
+elif test "${1}" = 'sway--node--grim--wl-copy'
+then __sway__tree__node | __grim | __wl_copy
 
-elif test "${1}" = 'swaymsg--node--grim-path'
-then __swaymsg__tree__node | __grim__path
+elif test "${1}" = 'sway--node--grim-path'
+then __sway__tree__node | __grim__path
 
-elif test "${1}" = 'swaymsg--switch-output'
-then __swaymsg__switch_output
+elif test "${1}" = 'sway--output--apply'
+then __sway__output__apply
+
+elif test "${1}" = 'sway--output--focus'
+then __sway__output__focus
+
+elif test "${1}" = 'sway--output--switch'
+then __sway__output__switch
 
 ### tray
 

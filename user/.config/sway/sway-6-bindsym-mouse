@@ -10,13 +10,13 @@ bindsym $-key+$-mouse-s move $-arrow-d
 
 bindsym $-mouse-m kill
 
-bindsym $-mouse-r move workspace back_and_forth
+bindsym $-mouse-r move to workspace back_and_forth
 
 bindsym $-mouse-b move $-arrow-l
 bindsym $-mouse-f move $-arrow-r
 
-bindsym $-mouse-e move workspace prev
-bindsym $-mouse-s move workspace next
+bindsym $-mouse-e exec $-action sway--output--focus
+bindsym $-mouse-s exec $-action sway--output--apply
 
 bindsym --whole-window       $-key+$-mouse-m kill
 bindsym --whole-window shift+$-key+$-mouse-m floating toggle

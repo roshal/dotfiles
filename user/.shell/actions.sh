@@ -15,20 +15,20 @@ function __path__tesseract__grim {
 	echo "/-/tesseract/grim/grim--$(__datetime).png"
 }
 
-function __swaymsg__inputs__keyboard_layout {
+function __sway__input__keyboard_layout {
 	JQ='max_by(.xkb_active_layout_index).xkb_active_layout_name[0:2]'
 	JQ+=' | try ascii_upcase // "--"'
 	swaymsg -t get_inputs | jq -r "${JQ}"
 }
 
-function __swaymsg__outputs__focused {
+function __sway__output__focused {
 	JQ='.[]'
 	JQ+=' | select(.focused)'
 	JQ+=' | .name'
 	swaymsg -t get_outputs | jq -r "${JQ}"
 }
 
-function __swaymsg__outputs__suspend {
+function __sway__output__suspend {
 	JQ='.[]'
 	JQ+=' | select(.focused != true)'
 	JQ+=' | .name'
@@ -42,11 +42,11 @@ function __grim {
 }
 
 function __grim__output {
-	grim -o "$(__swaymsg__outputs__focused)" -t png -
+	grim -o "$(__sway__output__focused)" -t png -
 }
 
 function __grim__output_path {
-	grim -o "$(__swaymsg__outputs__focused)" -t png "$(__path__grim)"
+	grim -o "$(__sway__output__focused)" -t png "$(__path__grim)"
 }
 
 function __grim__path {
@@ -75,13 +75,23 @@ function __slurp__print {
 	slurp -b 00000000 -w 1 -f "$(echo -e 'x %x\ny %y\nw %w\nh %h')"
 }
 
-function __swaymsg__switch_output {
-	FOCUSED=$(__swaymsg__outputs__focused)
-	SUSPEND=$(__swaymsg__outputs__suspend)
+function __sway__output__apply {
+	OUTPUT=$(__sway__output__suspend)
+	swaymsg -- move workspace to "${OUTPUT}"
+}
+
+function __sway__output__focus {
+	OUTPUT=$(__sway__output__suspend)
+	swaymsg -- focus output "${OUTPUT}"
+}
+
+function __sway__output__switch {
+	FOCUSED=$(__sway__output__focused)
+	SUSPEND=$(__sway__output__suspend)
 	swaymsg -- output "${FOCUSED}" toggle , output "${SUSPEND}" toggle
 }
 
-function __swaymsg__tree__node {
+function __sway__tree__node {
 	JQ='..'
 	JQ+=' | .nodes? // empty'
 	JQ+=' | .[]'
