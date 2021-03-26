@@ -16,7 +16,7 @@ bindsym $-mouse-b move $-arrow-l
 bindsym $-mouse-f move $-arrow-r
 
 bindsym $-mouse-e exec $-action sway--output--focus
-bindsym $-mouse-s exec $-action sway--output--apply
+bindsym $-mouse-s exec $-action sway--output--carry
 
 bindsym --whole-window       $-key+$-mouse-m kill
 bindsym --whole-window shift+$-key+$-mouse-m floating toggle

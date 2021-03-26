@@ -75,7 +75,7 @@ function __slurp__print {
 	slurp -b 00000000 -w 1 -f "$(echo -e 'x %x\ny %y\nw %w\nh %h')"
 }
 
-function __sway__output__apply {
+function __sway__output__carry {
 	OUTPUT=$(__sway__output__suspend)
 	swaymsg -- move workspace to "${OUTPUT}"
 }

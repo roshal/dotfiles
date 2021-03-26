@@ -142,8 +142,8 @@ then __sway__tree__node | __grim | __wl_copy
 elif test "${1}" = 'sway--node--grim-path'
 then __sway__tree__node | __grim__path
 
-elif test "${1}" = 'sway--output--apply'
-then __sway__output__apply
+elif test "${1}" = 'sway--output--carry'
+then __sway__output__carry
 
 elif test "${1}" = 'sway--output--focus'
 then __sway__output__focus
