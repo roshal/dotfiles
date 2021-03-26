@@ -2,8 +2,9 @@
 /* man 7 wofi */
 
 window#window {
-	background-color: #666;
+	background-color: #333;
 	border-radius: 8px;
+	color: #ccc;
 	font: 16px monospace;
 }
 
@@ -16,6 +17,7 @@ entry#input {
 	border-radius: 0;
 	border: none;
 	box-shadow: none;
+	color: #ccc;
 	margin: 4px 8px;
 }
 
@@ -24,7 +26,7 @@ scrolledwindow#scroll {
 }
 
 flowbox#inner-box {
-	background-color: #333;
+	/* background-color: #333; */
 }
 
 flowboxchild#entry {
@@ -37,6 +39,8 @@ flowboxchild#entry {
 }
 
 .entry#selected {
+	background-color: #666;
+	color: #fff;
 }
 
 scrollbar {
