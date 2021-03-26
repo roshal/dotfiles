@@ -2,14 +2,14 @@
 /* man 7 wofi */
 
 window#window {
-	background-color: #333;
+	background-color: #666;
 	border-radius: 8px;
 	color: #ccc;
 	font: 16px monospace;
 }
 
 box#outer-box {
-	margin: 4px 0;
+	margin: 4px;
 }
 
 entry#input {
@@ -18,27 +18,34 @@ entry#input {
 	border: none;
 	box-shadow: none;
 	color: #ccc;
-	margin: 4px 8px;
+	margin: 4px;
 }
 
 scrolledwindow#scroll {
-	margin: 4px 8px;
+	margin: 4px;
 }
 
 flowbox#inner-box {
-	/* background-color: #333; */
+	background-color: #333;
+	padding: 8px 0;
 }
+
+#img {}
+
+#text {}
 
 flowboxchild#entry {
 	outline: none;
 	padding: 0;
 }
 
+/* #unselected */
 .entry {
 	padding: 4px 8px;
 }
 
-.entry#selected {
+/* #selected */
+#entry:selected {
 	background-color: #666;
 	color: #fff;
 }
