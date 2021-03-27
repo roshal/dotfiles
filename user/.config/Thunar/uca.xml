@@ -4,7 +4,7 @@
 	<icon>code-oss</icon>
 	<name>- open code</name>
 	<unique-id>1580924883387982-1</unique-id>
-	<command>swaymsg -- exec code-git -- %F</command>
+	<command>swaymsg -- exec code -- %F</command>
 	<description></description>
 	<patterns>*</patterns>
 	<directories/>
