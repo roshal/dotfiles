@@ -1,5 +1,5 @@
 ﻿###
-###  vlc 3.0.11.1
+###  vlc 3.0.12
 ###
 
 ###
@@ -427,6 +427,23 @@ qt-privacy-ask=0
 
 # When to raise the interface (integer)
 #qt-auto-raise=1
+
+[access_output_rist] # RIST stream output
+
+# RIST target packet size (bytes) (integer)
+#sout-rist-packet-size=1328
+
+# RIST data output caching size (ms) (integer)
+#sout-rist-caching=50
+
+# RIST retry-buffer queue size (ms) (integer)
+#sout-rist-buffer-size=0
+
+# SSRC used in RTP output (default is random, i.e. 0) (integer)
+#sout-rist-ssrc=0
+
+# Stream name (string)
+#sout-rist-stream-name=
 
 [file] # File stream output
 
@@ -1702,6 +1719,35 @@ qt-privacy-ask=0
 # Continuous 22kHz tone (integer)
 #dvb-tone=-1
 
+[rist] # RIST input
+
+# RIST maximum packet size (bytes) (integer)
+#packet-size=1472
+
+# RIST demux/decode maximum jitter (default is 5ms) (integer)
+#maximum-jitter=5
+
+# RIST latency (ms) (integer)
+#latency=1000
+
+# RIST nack retry interval (ms) (integer)
+#retry-interval=132
+
+# RIST reorder buffer (ms) (integer)
+#reorder-buffer=70
+
+# RIST maximum retry count (integer)
+#max-retries=10
+
+# RIST nack type, 0 = range, 1 = bitmask. Default is range (integer)
+#nack-type=0
+
+# Disable NACK output packets (boolean)
+#disable-nacks=0
+
+# Do not check for a valid rtcp message from the encoder (boolean)
+#mcast-blind-nacks=0
+
 [smb] # SMB input
 
 # Username (string)
@@ -1979,7 +2025,7 @@ qt-privacy-ask=0
 #sout-avi-subject=
 
 # Encoder (string)
-#sout-avi-encoder=VLC Media Player - 3.0.11.1 Vetinari
+#sout-avi-encoder=VLC Media Player - 3.0.12 Vetinari
 
 # Keywords (string)
 #sout-avi-keywords=
@@ -3128,7 +3174,7 @@ freetype-font=Roboto
 #sout-rtp-mux=
 
 # SAP announcing (boolean)
-#sout-rtp-sap=0
+sout-rtp-sap=1
 
 # Session name (string)
 #sout-rtp-name=
@@ -3221,7 +3267,7 @@ freetype-font=Roboto
 #sout-chromecast-audio-passthrough=0
 
 # Conversion quality (integer)
-#sout-chromecast-conversion-quality=1
+sout-chromecast-conversion-quality=0
 
 [stream_out_standard] # Standard stream output
 
@@ -3241,7 +3287,7 @@ freetype-font=Roboto
 #sout-standard-path=
 
 # SAP announcing (boolean)
-#sout-standard-sap=0
+sout-standard-sap=1
 
 # Session name (string)
 #sout-standard-name=
@@ -3274,7 +3320,7 @@ freetype-font=Roboto
 [stream_out_transcode] # Transcode stream output
 
 # Video encoder (string)
-#sout-transcode-venc=
+sout-transcode-venc=any
 
 # Destination video codec (string)
 #sout-transcode-vcodec=
@@ -3310,7 +3356,7 @@ freetype-font=Roboto
 #sout-transcode-vfilter=
 
 # Audio encoder (string)
-#sout-transcode-aenc=
+sout-transcode-aenc=any
 
 # Destination audio codec (string)
 #sout-transcode-acodec=
@@ -3331,7 +3377,7 @@ freetype-font=Roboto
 #sout-transcode-afilter=
 
 # Subtitle encoder (string)
-#sout-transcode-senc=
+sout-transcode-senc=any
 
 # Destination subtitle codec (string)
 #sout-transcode-scodec=
@@ -4021,7 +4067,7 @@ vout=any
 #packetizer=
 
 # VoD server module (string)
-#vod-server=
+vod-server=any
 
 # Use a plugins cache (boolean)
 #plugins-cache=1
@@ -4042,7 +4088,7 @@ vout=any
 #random=0
 
 # Repeat all (boolean)
-#loop=0
+loop=1
 
 # Repeat current item (boolean)
 #repeat=0
@@ -4844,3 +4890,4 @@ hotkeys-y-wheel-mode=3
 
 # Playlist bookmark 10 (string)
 #bookmark10=
+
