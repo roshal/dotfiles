@@ -1,2 +1,2 @@
 
-echo "$@" | tr ' ' \\n | sort | tr \\n ' '
+echo "${@}" | tr ' ' \\n | sort | tr \\n ' '
