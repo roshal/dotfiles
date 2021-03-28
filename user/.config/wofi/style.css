@@ -1,55 +1,63 @@
 
+/* man 5 wofi */
 /* man 7 wofi */
 
 window#window {
-	background-color: #666;
+	background-color: #333;
 	border-radius: 8px;
-	color: #ccc;
+	border: 8px solid #666;
 	font: 16px monospace;
 }
 
-box#outer-box {
-	margin: 4px;
+	box#outer-box {
+		margin: 8px;
+	}
+
+		entry#input {
+			background-color: #333;
+			border-radius: 0;
+			border: none;
+			box-shadow: none;
+			color: #ccc;
+		}
+
+		scrolledwindow#scroll {
+			color: #ccc;
+		}
+
+			flowbox#inner-box {
+				size: none;
+			}
+
+				/* #entry */
+				flowboxchild {
+					outline: none;
+					padding: 0;
+				}
+
+					/* #unselected */
+					.entry {
+						padding: 4px 8px;
+					}
+
+					/* #selected */
+					#entry:selected {
+						background-color: #666;
+					}
+
+					#entry:selected label {
+						color: #fff;
+					}
+
+			scrollbar {
+				border: none;
+				opacity: 0.8;
+			}
+
+#img {
+	size: none;
 }
 
-entry#input {
-	background-color: #333;
-	border-radius: 0;
-	border: none;
-	box-shadow: none;
-	color: #ccc;
-	margin: 4px;
-}
-
-scrolledwindow#scroll {
-	margin: 4px;
-}
-
-flowbox#inner-box {
-	background-color: #333;
-	padding: 8px 0;
-}
-
-#img {}
-
-#text {}
-
-flowboxchild#entry {
-	outline: none;
-	padding: 0;
-}
-
-/* #unselected */
-.entry {
-	padding: 4px 8px;
-}
-
-/* #selected */
-#entry:selected {
-	background-color: #666;
-	color: #fff;
-}
-
-scrollbar {
-	opacity: 1;
+#text {
+	size: none;
 }
