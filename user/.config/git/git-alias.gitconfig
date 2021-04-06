@@ -15,6 +15,7 @@ git-init = init
 git-merge = merge
 git-push = push
 git-rebase = rebase
+git-reflog = reflog
 git-remote = remote
 git-reset = reset
 git-rm = rm
