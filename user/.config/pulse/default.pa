@@ -11,11 +11,14 @@
 
 # # pacmd list-cards | grep active
 
-### 0
 ### alsa_card.pci-0000_00_1f.3
+### alsa_card.usb-046d_Logitech_StreamCam_10D02925-02
+
+# output:analog-stereo+input:analog-stereo
+# output:hdmi-stereo-extra2+input:analog-stereo
 
 .nofail
-set-card-profile 0 output:analog-stereo+input:analog-stereo
+set-card-profile alsa_card.pci-0000_00_1f.3 output:hdmi-stereo-extra2+input:analog-stereo
 .fail
 
 ##### 4
