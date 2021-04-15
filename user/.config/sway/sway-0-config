@@ -81,6 +81,7 @@ output $-output-2 scale 1.25
 include '${HOME}/.config/sway/sway-$(< /etc/hostname)'
 
 ### clipman
+# # https://github.com/yory8/clipman
 
 bindsym --to-code       $-key+z exec clipman pick  --tool wofi
 bindsym --to-code shift+$-key+z exec clipman clear --tool wofi --all
