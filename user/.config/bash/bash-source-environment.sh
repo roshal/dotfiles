@@ -24,6 +24,11 @@ export LS_COLORS='di=1;94'
 # # https://wiki.archlinux.org/index.php/Firefox#Wayland
 export MOZ_ENABLE_WAYLAND='1'
 
+### python
+
+# # https://docs.python.org/3/using/cmdline.html#envvar-PYTHONDONTWRITEBYTECODE
+export PYTHONDONTWRITEBYTECODE=1
+
 ### git
 
 # # https://github.com/typicode/husky#skip-all-hooks-rebase
