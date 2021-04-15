@@ -1,39 +1,42 @@
 
 # # man pulse-default.pa
 
-### 2.1.2
-# # https://wiki.archlinux.org/index.php/PulseAudio#default.pa
+##### 2.1.2
+### # https://wiki.archlinux.org/index.php/PulseAudio#default.pa
 
 .include /etc/pulse/default.pa
 
-### 2.2
-# # https://wiki.archlinux.org/index.php/PulseAudio#Configuration_command
+##### 2.2
+### # https://wiki.archlinux.org/index.php/PulseAudio#Configuration_command
 
 # # pacmd list-cards | grep active
 
 ### 0
 ### alsa_card.pci-0000_00_1f.3
-set-card-profile 0 output:analog-stereo+input:analog-stereo
 
-### 4
-# # https://wiki.archlinux.org/index.php/Bluetooth_headset#Switch_between_HSP/HFP_and_A2DP_setting
+.nofail
+set-card-profile 0 output:analog-stereo+input:analog-stereo
+.fail
+
+##### 4
+### # https://wiki.archlinux.org/index.php/Bluetooth_headset#Switch_between_HSP/HFP_and_A2DP_setting
 
 # # pulseaudio --dump-modules | grep module-bluetooth-policy
 
-load-module module-bluetooth-policy auto_switch=2
+# load-module module-bluetooth-policy auto_switch=2
 
-### 4.3
-# # https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting#Glitches,_skips_or_crackling
+##### 4.3
+### # https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting#Glitches,_skips_or_crackling
 
-### 4.5
-# # https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting#Setting_the_default_fragment_number_and_buffer_size_in_PulseAudio
+##### 4.5
+### # https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting#Setting_the_default_fragment_number_and_buffer_size_in_PulseAudio
 
 # # pulseaudio --dump-modules | grep module-udev-detect
 
 # load-module module-udev-detect tsched=0
 
-### 6.3
-# # https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting#Automatically_switch_to_Bluetooth_or_USB_headset
+##### 6.3
+### # https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting#Automatically_switch_to_Bluetooth_or_USB_headset
 
 # # pulseaudio --dump-modules | grep module-switch-on-connect
 
