@@ -48,15 +48,21 @@ alias exa='exa --long --color-scale --all --group-directories-first --bytes --gr
 
 alias g='git'
 
-alias a='git add'
-alias d='git diff'
-alias s='git status'
+alias a='git a'
+alias b='git b'
+alias c='git c'
+alias d='git d'
+alias l='git l'
+alias s='git s'
 
-alias l='  git l'
-alias ll=' git ll'
+alias bb='git bb'
+alias br='git br'
+alias co='git co'
+alias ll='git ll'
+
 alias lll='git lll'
 
-alias ch='git checkout'
+alias main='git checkout main'
 
 ### grep
 

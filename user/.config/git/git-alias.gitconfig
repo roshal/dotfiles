@@ -7,6 +7,7 @@ git-add = add
 git-branch = branch
 git-cat-file = cat-file
 git-checkout = checkout
+git-cherry-pick = cherry-pick
 git-clone = clone
 git-commit = commit --no-verify
 git-config = config
@@ -28,7 +29,6 @@ git-log = log --color --abbrev=8 --date='format:%y-%m-%d %T' --pretty='%C(auto)%
 
 ### classic
 
-co = git-checkout --no-guess
 br = git-branch
 ci = git-commit
 st = git-status
@@ -43,28 +43,33 @@ remove = git-rm --cached
 
 unstage = git-reset @ --
 
-### custom
+### customs
 
-aa = git-add --all
-ad = git-add
-ba = git-branch -v --verbose --all
-br = git-branch -v --verbose --remotes
-bl = git-branch -v --verbose
 cl = git-clone
+cp = git-cherry-pick
 di = git-diff
 in = git-init
 me = git-merge
-re = git-reset
 
 un = git-reset @ --
 
 reb = git-rebase
 
-bvv = git-branch -v --verbose
+### aliases
 
-### one
+a = git-add
+b = git-branch -v --verbose
+c = git-checkout --no-guess
+d = git-diff
+l = git-log -16 --reverse
+s = git-status
 
-b = git-branch -v --verbose --all
+aa = git-add --all
+ba = git-branch -v --verbose --all
+bb = git-branch -v --verbose --all
+br = git-branch -v --verbose --remotes
+co = git-checkout --no-guess
+re = git-reset
 
 ### add
 
@@ -112,10 +117,10 @@ config-roshal-name = git-config user.name 'roshal'
 dc = git-diff --cached
 dh = git-diff HEAD
 di = git-diff
+dl = git-diff --name-only
 
 ### log
 
-l   = git-log -16 --reverse
 ll  = git-log -32 --reverse
 lll = git-log -64 --reverse
 
@@ -124,6 +129,8 @@ lo = git-log -32 --oneline --reverse
 
 lag = git-log -32 --all --graph
 lao = git-log -32 --all --oneline --reverse
+
+lno = git-log --name-status --oneline
 
 ### merge
 
