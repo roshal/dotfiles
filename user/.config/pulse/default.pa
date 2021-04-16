@@ -9,6 +9,8 @@
 ##### 2.2
 ### # https://wiki.archlinux.org/index.php/PulseAudio#Configuration_command
 
+.nofail
+
 # # pacmd list-cards | grep index -1
 # # pacmd list-cards | grep active
 
@@ -18,8 +20,8 @@
 # output:analog-stereo+input:analog-stereo
 # output:hdmi-stereo-extra2+input:analog-stereo
 
-.nofail
 set-card-profile alsa_card.pci-0000_00_1f.3 output:hdmi-stereo-extra2+input:analog-stereo
+
 .fail
 
 ##### 4
