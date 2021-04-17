@@ -176,10 +176,10 @@ rso = git-remote set-url origin
 
 ### reset
 
-reh = git-reset HEAD^
-roh = git-reset origin/HEAD
-
-undo = git-reset --soft HEAD@{1}
+red = git-reset HEAD^
+reo = git-reset origin/HEAD
+rer = git-reset --soft HEAD@{1}
+res = git-reset --soft HEAD^
 
 ### rm
 
