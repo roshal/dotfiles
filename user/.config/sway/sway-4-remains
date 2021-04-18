@@ -90,11 +90,11 @@ workspace $-workspace-escape output $-output-1
 ##### 4.20 changing colors
 # # # https://i3wm.org/docs/userguide.html#_changing_colors
 
-###                      border    background text      indicator  child border
-client.focused           $-black-c $-black-c  $-black-e $-black-e  $-black-c
-client.focused_inactive  $-black-c $-black-c  $-black-e $-black-e  $-black-c
-client.unfocused         $-black-b $-black-b  $-black-d $-black-d  $-black-b
-client.urgent            $-black-d $-black-d  $-black-f $-black-f  $-black-d
+###                     border   background text      indicator child border
+client.focused          $-white-6 $-white-6 $-white-c $-white-c $-white-6
+client.focused_inactive $-white-5 $-white-5 $-white-b $-white-b $-white-5
+client.unfocused        $-white-3 $-white-3 $-white-9 $-white-9 $-white-3
+client.urgent           $-white-9 $-white-9 $-white-f $-white-f $-white-9
 
 ##### 4.21 interprocess communication
 # # # https://i3wm.org/docs/userguide.html#_interprocess_communication

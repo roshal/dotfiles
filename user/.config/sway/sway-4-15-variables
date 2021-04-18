@@ -36,6 +36,23 @@ set $-shift-c 339966
 set $-shift-m 663399
 set $-shift-y 996633
 
+set $-white-0 000000
+set $-white-1 111111
+set $-white-2 222222
+set $-white-3 333333
+set $-white-4 444444
+set $-white-5 555555
+set $-white-6 666666
+set $-white-7 777777
+set $-white-8 888888
+set $-white-9 999999
+set $-white-a aaaaaa
+set $-white-b bbbbbb
+set $-white-c cccccc
+set $-white-d dddddd
+set $-white-e eeeeee
+set $-white-f ffffff
+
 ### idle
 
 set $-idle-before-sleep before-sleep 'swaylock --image /-/pictures/dark.png'
