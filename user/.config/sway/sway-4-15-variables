@@ -7,10 +7,6 @@ set $-key mod4
 
 set $-action sh "${HOME}/.shell/action.sh"
 
-### binding-mode
-
-set $-binding-mode 'binding-mode'
-
 ### colors
 
 set $-black-a 000000
@@ -102,6 +98,7 @@ set $-mode-bluetooth 'BLUETOOTH   '
 set $-mode-cursor    'CURSOR      '
 set $-mode-kill      'KILL        '
 set $-mode-lock      'LOCK        '
+set $-mode-mode      'MODE        '
 set $-mode-move      'MOVE        '
 set $-mode-network   'NETWORK     '
 set $-mode-output    'OUTPUT      '

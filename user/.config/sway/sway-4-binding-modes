@@ -2,39 +2,20 @@
 ##### 4.5 binding modes
 # # # https://i3wm.org/docs/userguide.html#binding_modes
 
-### binding-modes
+mode $-mode-mode bindsym --to-code a mode $-mode-audio
+mode $-mode-mode bindsym --to-code b mode $-mode-bluetooth
+mode $-mode-mode bindsym --to-code c mode $-mode-cursor
+mode $-mode-mode bindsym --to-code k mode $-mode-kill
+mode $-mode-mode bindsym --to-code l mode $-mode-lock
+mode $-mode-mode bindsym --to-code m mode $-mode-move
+mode $-mode-mode bindsym --to-code n mode $-mode-network
+mode $-mode-mode bindsym --to-code o mode $-mode-output
+mode $-mode-mode bindsym --to-code r mode $-mode-resizeww
+mode $-mode-mode bindsym --to-code s mode $-mode-system
+mode $-mode-mode bindsym --to-code v mode $-mode-vpn
+mode $-mode-mode bindsym --to-code w mode $-mode-wireguard
 
-bindsym --to-code shift+$-key+x mode $-binding-mode
-
-bindsym --to-code ctrl+$-key+a mode $-mode-audio
-bindsym --to-code ctrl+$-key+b mode $-mode-bluetooth
-bindsym --to-code ctrl+$-key+c mode $-mode-cursor
-bindsym --to-code ctrl+$-key+k mode $-mode-kill
-bindsym --to-code ctrl+$-key+l mode $-mode-lock
-bindsym --to-code ctrl+$-key+m mode $-mode-move
-bindsym --to-code ctrl+$-key+n mode $-mode-network
-bindsym --to-code ctrl+$-key+o mode $-mode-output
-bindsym --to-code ctrl+$-key+r mode $-mode-resize
-bindsym --to-code ctrl+$-key+s mode $-mode-system
-bindsym --to-code ctrl+$-key+v mode $-mode-vpn
-bindsym --to-code ctrl+$-key+w mode $-mode-wireguard
-
-##### modes
-
-mode $-binding-mode bindsym --to-code a mode $-mode-audio
-mode $-binding-mode bindsym --to-code b mode $-mode-bluetooth
-mode $-binding-mode bindsym --to-code c mode $-mode-cursor
-mode $-binding-mode bindsym --to-code k mode $-mode-kill
-mode $-binding-mode bindsym --to-code l mode $-mode-lock
-mode $-binding-mode bindsym --to-code m mode $-mode-move
-mode $-binding-mode bindsym --to-code n mode $-mode-network
-mode $-binding-mode bindsym --to-code o mode $-mode-output
-mode $-binding-mode bindsym --to-code r mode $-mode-resize
-mode $-binding-mode bindsym --to-code s mode $-mode-system
-mode $-binding-mode bindsym --to-code v mode $-mode-vpn
-mode $-binding-mode bindsym --to-code w mode $-mode-wireguard
-
-mode $-binding-mode bindsym escape mode $-mode-default
+mode $-mode-mode bindsym escape mode $-mode-default
 
 ### audio
 

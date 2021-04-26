@@ -85,11 +85,11 @@ bindsym shift+$-key+$-arrow-l move $-arrow-l $-step-b
 bindsym shift+$-key+$-arrow-r move $-arrow-r $-step-b
 bindsym shift+$-key+$-arrow-u move $-arrow-u $-step-b
 
-bindsym --to-code       alt+$-key+c move          position center
-bindsym --to-code       alt+$-key+m move          position mouse
+bindsym --to-code          shift+$-key+space move          position mouse
+bindsym --to-code     ctrl+shift+$-key+space move          position center
 
-bindsym --to-code shift+alt+$-key+c move absolute position center
-bindsym --to-code shift+alt+$-key+m move absolute position mouse
+bindsym --to-code      alt+shift+$-key+space move absolute position mouse
+bindsym --to-code ctrl+alt+shift+$-key+space move absolute position center
 
 ##### 6.6 swapping containers
 # # # https://i3wm.org/docs/userguide.html#_swapping_containers

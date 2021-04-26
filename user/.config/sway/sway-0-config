@@ -30,6 +30,7 @@ include '${HOME}/.config/sway/sway-5-bar'
 
 include '${HOME}/.config/sway/sway-6-bindsym'
 include '${HOME}/.config/sway/sway-6-bindsym-audio'
+include '${HOME}/.config/sway/sway-6-bindsym-modes'
 include '${HOME}/.config/sway/sway-6-bindsym-mouse'
 include '${HOME}/.config/sway/sway-6-bindsym-other'
 
