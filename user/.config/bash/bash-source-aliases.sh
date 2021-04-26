@@ -13,7 +13,7 @@ alias vv='exec bash'
 
 ### bat
 
-alias b='bat'
+alias ba='bat'
 
 ### bell
 
@@ -141,7 +141,7 @@ alias p='pulsemixer'
 
 ### python
 
-alias py='python'
+alias py='bpython'
 
 ### rm
 
