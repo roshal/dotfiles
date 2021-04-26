@@ -1,10 +1,11 @@
 
 #####################  directory  type  options  dump  pass
 
+/dev/volume/swap       none       swap  discard  0     0
+
 /dev/volume/root       /          ext4  discard  0     1
+
+/dev/volume/data       /-         ext4  discard  0     2
 /dev/volume/root-boot  /boot      ext4  discard  0     2
 /dev/volume/root-home  /home      ext4  discard  0     2
 /dev/volume/root-var   /var       ext4  discard  0     2
-
-/dev/volume/data       /-         ext4  discard  0     2
-/dev/volume/swap       none       swap  discard  0     0
