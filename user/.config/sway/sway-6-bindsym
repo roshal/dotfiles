@@ -19,6 +19,9 @@ bindsym shift+$-key+$-special-p exec $-action grim--output-path
 
 bindsym       $-key+$-special-s exec $-action slurp--notify
 
+bindsym       $-key+escape      exec $-action sway--output--focus
+bindsym shift+$-key+escape      exec $-action sway--output--carry
+
 bindsym       $-key+return exec termite
 bindsym   alt+$-key+return exec code
 bindsym  ctrl+$-key+return exec chromium
@@ -60,9 +63,10 @@ bindsym --to-code       $-key+f fullscreen
 bindsym --to-code shift+$-key+f floating toggle
 
 bindsym --to-code $-key+e layout toggle
+bindsym --to-code $-key+g layout toggle tabbed stacking
 
-bindsym --to-code $-key+s layout stacking
 bindsym --to-code $-key+t layout tabbed
+bindsym --to-code $-key+y layout stacking
 
 ##### 6.4 focusing containers
 # # # https://i3wm.org/docs/userguide.html#_focusing_moving_containers
@@ -110,11 +114,14 @@ bindsym  alt+$-key+$-arrow-l move workspace to output $-arrow-l
 bindsym  alt+$-key+$-arrow-r move workspace to output $-arrow-r
 bindsym  alt+$-key+$-arrow-u move workspace to output $-arrow-u
 
-bindsym ctrl+$-key+$-arrow-u workspace prev_on_output
-bindsym ctrl+$-key+$-arrow-d workspace next_on_output
+bindsym      $-key+$-control-n workspace next_on_output
+bindsym      $-key+$-control-p workspace prev_on_output
 
-bindsym ctrl+$-key+$-arrow-l workspace prev
-bindsym ctrl+$-key+$-arrow-r workspace next
+bindsym ctrl+$-key+$-arrow-d   workspace next_on_output
+bindsym ctrl+$-key+$-arrow-u   workspace prev_on_output
+
+bindsym ctrl+$-key+$-arrow-l   workspace prev
+bindsym ctrl+$-key+$-arrow-r   workspace next
 
 bindsym       $-key+$-control-i         workspace $-workspace-6
 bindsym       $-key+$-control-h         workspace $-workspace-7
@@ -126,14 +133,8 @@ bindsym shift+$-key+$-control-h move to workspace $-workspace-7
 bindsym shift+$-key+$-control-d move to workspace $-workspace-8
 bindsym shift+$-key+$-control-e move to workspace $-workspace-9
 
-bindsym       $-key+$-control-p         workspace prev_on_output
-bindsym       $-key+$-control-n         workspace next_on_output
-
-bindsym       $-key+0         workspace --no-auto-back-and-forth $-workspace-zero
-bindsym shift+$-key+0 move to workspace                          $-workspace-zero
-
-bindsym       $-key+escape exec $-action sway--output--focus
-bindsym shift+$-key+escape exec $-action sway--output--carry
+bindsym       $-key+0           workspace --no-auto-back-and-forth $-workspace-zero
+bindsym shift+$-key+0   move to workspace                          $-workspace-zero
 
 bindsym       $-key+tab         workspace back_and_forth
 bindsym shift+$-key+tab move to workspace back_and_forth
@@ -204,10 +205,10 @@ bindsym shift+$-key+$-special-b reload
 # # # https://i3wm.org/docs/userguide.html#_scratchpad
 
 bindsym       $-key+equal scratchpad show
-bindsym       $-key+minus move scratchpad
-
-bindsym shift+$-key+equal move scratchpad
 bindsym shift+$-key+minus scratchpad show
+
+bindsym       $-key+minus move scratchpad
+bindsym shift+$-key+equal move scratchpad
 
 ##### 6.21 nop
 # # # https://i3wm.org/docs/userguide.html#_nop
