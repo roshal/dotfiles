@@ -5,6 +5,9 @@
 
 exec $-action nm-applet--restart
 
+# # https://github.com/emersion/mako#running
+exec mako
+
 exec swayidle -w $-idle-before-sleep $-idle-timeout-11 $-idle-timeout-12 $-idle-timeout-13
 
 # exec wl-paste --type text --watch clipman store
