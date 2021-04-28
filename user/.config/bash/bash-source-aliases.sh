@@ -28,7 +28,7 @@ alias year='cal --year'
 
 ### cat
 
-alias c='cat'
+alias ca='cat'
 
 ### code
 
