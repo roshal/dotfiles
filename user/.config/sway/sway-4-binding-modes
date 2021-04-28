@@ -184,17 +184,17 @@ mode $-mode-network bindsym escape mode $-mode-default
 
 ### output
 
-mode $-mode-output bindsym --to-code            $-key-0 mode $-mode-default , output $-output-0 enable
-mode $-mode-output bindsym --to-code            $-key-1 mode $-mode-default , output $-output-1 enable
-mode $-mode-output bindsym --to-code            $-key-2 mode $-mode-default , output $-output-2 enable
+mode $-mode-output bindsym --to-code            $-key-0 mode $-mode-default , output $-output-0 toggle
+mode $-mode-output bindsym --to-code            $-key-1 mode $-mode-default , output $-output-1 toggle
+mode $-mode-output bindsym --to-code            $-key-2 mode $-mode-default , output $-output-2 toggle
 
 mode $-mode-output bindsym --to-code        alt+$-key-0 mode $-mode-default , output $-output-0 disable
 mode $-mode-output bindsym --to-code        alt+$-key-1 mode $-mode-default , output $-output-1 disable
 mode $-mode-output bindsym --to-code        alt+$-key-2 mode $-mode-default , output $-output-2 disable
 
-mode $-mode-output bindsym --to-code       ctrl+$-key-0 mode $-mode-default , output $-output-0 toggle
-mode $-mode-output bindsym --to-code       ctrl+$-key-1 mode $-mode-default , output $-output-1 toggle
-mode $-mode-output bindsym --to-code       ctrl+$-key-2 mode $-mode-default , output $-output-2 toggle
+mode $-mode-output bindsym --to-code       ctrl+$-key-0 mode $-mode-default , output $-output-0 enable
+mode $-mode-output bindsym --to-code       ctrl+$-key-1 mode $-mode-default , output $-output-1 enable
+mode $-mode-output bindsym --to-code       ctrl+$-key-2 mode $-mode-default , output $-output-2 enable
 
 mode $-mode-output bindsym --to-code      shift+$-key-0 mode $-mode-default , output $-output-0 dpms on
 mode $-mode-output bindsym --to-code      shift+$-key-1 mode $-mode-default , output $-output-1 dpms on
@@ -204,9 +204,9 @@ mode $-mode-output bindsym --to-code ctrl+shift+$-key-0 mode $-mode-default , ou
 mode $-mode-output bindsym --to-code ctrl+shift+$-key-1 mode $-mode-default , output $-output-1 dpms no
 mode $-mode-output bindsym --to-code ctrl+shift+$-key-2 mode $-mode-default , output $-output-2 dpms no
 
-mode $-mode-output bindsym --to-code       space mode $-mode-default , output * disable
-mode $-mode-output bindsym --to-code   alt+space mode $-mode-default , output * enable
-mode $-mode-output bindsym --to-code shift+space mode $-mode-default , output * toggle
+mode $-mode-output bindsym --to-code       space mode $-mode-default , output * toggle
+mode $-mode-output bindsym --to-code   alt+space mode $-mode-default , output * disable
+mode $-mode-output bindsym --to-code shift+space mode $-mode-default , output * enable
 
 mode $-mode-output bindsym --to-code a mode $-mode-default , output * dpms on
 mode $-mode-output bindsym --to-code z mode $-mode-default , output * dpms no
