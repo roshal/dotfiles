@@ -9,16 +9,16 @@ alias dismiss='makoctl dismiss --all'
 ### aliases
 
 # # https://wiki.archlinux.org/index.php/Color_output_in_console#diff
-alias diff='diff --color'
+alias diff='diff --color=always'
 
 # # https://wiki.archlinux.org/index.php/Color_output_in_console#grep
-alias grep='grep --color'
+alias grep='grep --color=always'
 
 # # https://wiki.archlinux.org/index.php/Color_output_in_console#ip
-alias ip='ip -color=auto'
+alias ip='ip --color'
 
 # # https://wiki.archlinux.org/index.php/Color_output_in_console#ls
-alias ls='ls --color=auto'
+alias ls='ls --color'
 
 ### commands
 
