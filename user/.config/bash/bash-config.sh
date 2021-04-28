@@ -19,7 +19,7 @@ test -e "${HOME}/.yarn/bin/nps" && eval "$(nps completion)"
 ### sources
 
 # # https://wiki.archlinux.org/index.php/Termite#Ctrl+Shift+t
-# source /etc/profile.d/vte.sh
+source /etc/profile.d/vte.sh
 
 # # https://wiki.archlinux.org/index.php/Bash#Command_not_found
 source /usr/share/doc/pkgfile/command-not-found.bash
