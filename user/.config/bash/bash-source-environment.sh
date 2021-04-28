@@ -30,7 +30,7 @@ export MOZ_ENABLE_WAYLAND='1'
 ### python
 
 # # https://docs.python.org/3/using/cmdline.html#envvar-PYTHONDONTWRITEBYTECODE
-export PYTHONDONTWRITEBYTECODE=1
+export PYTHONDONTWRITEBYTECODE='non-empty'
 
 ### git
 
@@ -77,7 +77,7 @@ export VAAPI_MPEG4_ENABLED='true'
 ### wayland
 
 # # https://github.com/emersion/mako/issues/258
-export WL_OUTPUT_SUBPIXEL_NONE=none
+export WL_OUTPUT_SUBPIXEL_NONE='none'
 
 ### webstorm
 
