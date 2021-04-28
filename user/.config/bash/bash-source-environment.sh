@@ -12,6 +12,9 @@ export EDITOR='nano'
 
 ### colors
 
+# # https://askubuntu.com/questions/466198/how-do-i-change-the-color-for-directories-with-ls-in-the-console
+# # dircolors --print-database
+
 export EXA_COLORS='da=92:di=91:gm=91:gu=0:uu=0'
 
 # # https://wiki.archlinux.org/index.php/Color_output_in_console#ls
