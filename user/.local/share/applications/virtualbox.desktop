@@ -6,4 +6,4 @@
 Type=Application
 Name=--virtualbox
 Icon=virtualbox
-Exec=env QT_QPA_PLATFORM= virtualbox %U
+Exec=env virtualbox %U
