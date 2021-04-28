@@ -4,6 +4,7 @@
 [core]
 
 editor = code --wait
+pager = diff-so-fancy
 
 [include]
 
