@@ -5,7 +5,8 @@ configuration files for linux applications
 
 ## prerequisites
 
-[`stow`](https://www.gnu.org/software/stow/manual/stow)
+|stow|https://www.gnu.org/software/stow/manual/stow|
+|-|-|
 
 ## management
 
