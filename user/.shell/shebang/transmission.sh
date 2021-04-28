@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # # https://github.com/transmission/transmission/wiki/Scripts#On_Torrent_Completion
 
