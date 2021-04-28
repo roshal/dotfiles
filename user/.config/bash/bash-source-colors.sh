@@ -82,21 +82,21 @@ function fill () {
 
 ### term
 
-# test "${TERM}" = linux || return
+test "${TERM}" = linux || return
 
-echo -ne '\e]P0333333' # black
-echo -ne '\e]P1ff3333' # darkred
-echo -ne '\e]P233ff33' # darkgreen
-echo -ne '\e]P3ffff33' # brown
-echo -ne '\e]P43333ff' # darkblue
-echo -ne '\e]P5ff33ff' # darkmagenta
-echo -ne '\e]P633ffff' # darkcyan
-echo -ne '\e]P7cccccc' # lightgrey
-echo -ne '\e]P8666666' # darkgrey
-echo -ne '\e]P9ff3399' # red
-echo -ne '\e]PA99ff33' # green
-echo -ne '\e]PBff9933' # yellow
-echo -ne '\e]PC3399ff' # blue
-echo -ne '\e]PD9933ff' # magenta
-echo -ne '\e]PE33ff99' # cyan
-echo -ne '\e]PFffffff' # white
+echo -ne '\e]P0000000' # black
+echo -ne '\e]P1CC0000' # darkred
+echo -ne '\e]P200CC00' # darkgreen
+echo -ne '\e]P3CCCC00' # brown
+echo -ne '\e]P40000CC' # darkblue
+echo -ne '\e]P5CC00CC' # darkmagenta
+echo -ne '\e]P600CCCC' # darkcyan
+echo -ne '\e]P7999999' # lightgrey
+echo -ne '\e]P8333333' # darkgrey
+echo -ne '\e]P9CC0066' # red
+echo -ne '\e]PA66CC00' # green
+echo -ne '\e]PBCC6600' # yellow
+echo -ne '\e]PC0066CC' # blue
+echo -ne '\e]PD6600CC' # magenta
+echo -ne '\e]PE00CC66' # cyan
+echo -ne '\e]PFCCCCCC' # white
