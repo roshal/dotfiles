@@ -1,9 +1,9 @@
 
-function __audio__get__volume {
+function action--audio--get--volume {
 	pulsemixer --get-volume | jq -s add/length
 }
 
-function __audio__notify {
+function action--audio--notify {
 	paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
 }
 
@@ -11,62 +11,62 @@ function __audio__notify {
 
 CARD='alsa_card.pci-0000_00_1f.3'
 
-function __audio__profile__analog_duplex {
+function action--audio--profile--analog-duplex {
 	pactl set-card-profile ${CARD} output:analog-stereo+input:analog-stereo
 }
 
-function __audio__profile__hdmi {
+function action--audio--profile--hdmi {
 	pactl set-card-profile ${CARD} output:hdmi-stereo
 }
 
 ### source
 
-function __audio__source__decrease {
+function action--audio--source--decrease {
 	pactl set-source-mute @DEFAULT_SINK@ -1db
 }
 
-function __audio__source__increase {
+function action--audio--source--increase {
 	pactl set-source-mute @DEFAULT_SINK@ +1db
 }
 
-function __audio__source__mute {
+function action--audio--source--mute {
 	pactl set-source-mute @DEFAULT_SINK@ on
 }
 
-function __audio__source__play {
+function action--audio--source--play {
 	pactl set-source-mute @DEFAULT_SINK@ off
 }
 
-function __audio__source__reset {
+function action--audio--source--reset {
 	pactl set-source-mute @DEFAULT_SINK@ 0db
 }
 
-function __audio__source__toggle {
+function action--audio--source--toggle {
 	pactl set-source-mute @DEFAULT_SINK@ toggle
 }
 
 ### volume
 
-function __audio__volume__decrease {
+function action--audio--volume--decrease {
 	pactl set-volume-mute @DEFAULT_SINK@ -1db
 }
 
-function __audio__volume__increase {
+function action--audio--volume--increase {
 	pactl set-volume-mute @DEFAULT_SINK@ +1db
 }
 
-function __audio__volume__mute {
+function action--audio--volume--mute {
 	pactl set-volume-mute @DEFAULT_SINK@ on
 }
 
-function __audio__volume__play {
+function action--audio--volume--play {
 	pactl set-volume-mute @DEFAULT_SINK@ off
 }
 
-function __audio__volume__reset {
+function action--audio--volume--reset {
 	pactl set-volume-mute @DEFAULT_SINK@ 0db
 }
 
-function __audio__volume__toggle {
+function action--audio--volume--toggle {
 	pactl set-volume-mute @DEFAULT_SINK@ toggle
 }

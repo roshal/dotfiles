@@ -1,34 +1,34 @@
 
-function __datetime {
+function action--datetime {
 	date +%y-%m-%d--%H-%M-%S
 }
 
-function __path__grim {
-	echo "-/grim/grim--$(__datetime).png"
+function action--path--grim {
+	echo "-/grim/grim--$(action--datetime).png"
 }
 
-function __path__tesseract {
+function action--path--tesseract {
 	echo /-/tesseract/destination.asc
 }
 
-function __path__tesseract__grim {
-	echo "/-/tesseract/grim/grim--$(__datetime).png"
+function action--path--tesseract--grim {
+	echo "/-/tesseract/grim/grim--$(action--datetime).png"
 }
 
-function __sway__input__keyboard_layout {
+function action--sway--input--keyboard-layout {
 	JQ='max_by(.xkb_active_layout_index).xkb_active_layout_name[0:2]'
 	JQ+=' | try ascii_upcase // "--"'
 	swaymsg -t get_inputs | jq -r "${JQ}"
 }
 
-function __sway__output__focused {
+function action--sway--output--focused {
 	JQ='.[]'
 	JQ+=' | select(.focused)'
 	JQ+=' | .name'
 	swaymsg -t get_outputs | jq -r "${JQ}"
 }
 
-function __sway__output__suspend {
+function action--sway--output--suspend {
 	JQ='.[]'
 	JQ+=' | select(.focused != true)'
 	JQ+=' | .name'
@@ -37,61 +37,61 @@ function __sway__output__suspend {
 
 ### actions
 
-function __grim {
+function action--grim {
 	grim -g - -t png -
 }
 
-function __grim__output {
-	grim -o "$(__sway__output__focused)" -t png -
+function action--grim--output {
+	grim -o "$(action--sway--output--focused)" -t png -
 }
 
-function __grim__output_path {
-	grim -o "$(__sway__output__focused)" -t png "$(__path__grim)"
+function action--grim--output-path {
+	grim -o "$(action--sway--output--focused)" -t png "$(action--path--grim)"
 }
 
-function __grim__path {
-	grim -g - -t png "$(__path__grim)"
+function action--grim--path {
+	grim -g - -t png "$(action--path--grim)"
 }
 
-function __grim__tesseract {
-	DESTINATION="$(__path__tesseract__grim)"
+function action--grim--tesseract {
+	DESTINATION="$(action--path--tesseract--grim)"
 	grim -g - -t png "${DESTINATION}" && tesseract --dpi 2400 -l eng+rus --oem 1 "${DESTINATION}" -
 }
 
-function __nm_applet__killall {
+function action--nm-applet--killall {
 	killall --quiet nm-applet
 }
 
-function __nm_applet__restart {
-	__nm_applet__killall
+function action--nm-applet--restart {
+	action--nm-applet--killall
 	nm-applet --indicator
 }
 
-function __slurp {
+function action--slurp {
 	slurp -b 00000000 -w 1
 }
 
-function __slurp__print {
+function action--slurp--print {
 	slurp -b 00000000 -w 1 -f "$(echo -e 'x %x\ny %y\nw %w\nh %h')"
 }
 
-function __sway__output__carry {
-	OUTPUT=$(__sway__output__suspend)
+function action--sway--output--carry {
+	OUTPUT=$(action--sway--output--suspend)
 	swaymsg -- move workspace to "${OUTPUT}"
 }
 
-function __sway__output__focus {
-	OUTPUT=$(__sway__output__suspend)
+function action--sway--output--focus {
+	OUTPUT=$(action--sway--output--suspend)
 	swaymsg -- focus output "${OUTPUT}"
 }
 
-function __sway__output__switch {
-	FOCUSED=$(__sway__output__focused)
-	SUSPEND=$(__sway__output__suspend)
+function action--sway--output--switch {
+	FOCUSED=$(action--sway--output--focused)
+	SUSPEND=$(action--sway--output--suspend)
 	swaymsg -- output "${FOCUSED}" toggle , output "${SUSPEND}" toggle
 }
 
-function __sway__tree__node {
+function action--sway--tree--node {
 	JQ='..'
 	JQ+=' | .nodes? // empty'
 	JQ+=' | .[]'
@@ -102,14 +102,14 @@ function __sway__tree__node {
 	swaymsg -t get_tree | jq -r "${JQ}"
 }
 
-function __wf_recorder {
+function action--wf-recorder {
 	wf-recorder --muxer=v4l2 --codec=rawvideo --file=/dev/video0 --pixel-format yuv420p
 }
 
-function __wl_copy {
+function action--wl-copy {
 	wl-copy --type image/png
 }
 
-function __xargs__notify {
+function action--xargs--notify {
 	xargs -0 notify-send
 }

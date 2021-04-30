@@ -3,160 +3,164 @@ source "${HOME}/.shell/actions.sh"
 source "${HOME}/.shell/actions/audio.sh"
 source "${HOME}/.shell/actions/bluetooth.sh"
 
+function call () {
+	"action--${1}"
+}
+
 if false
 then true
 
 ### audio
 
 elif test "${1}" = 'audio--notify'
-then __audio__notify
+then call "${1}"
 
 elif test "${1}" = 'audio--volume'
-then __audio__get__volume > /-/mako/pulsemixer
+then call audio--get--volume > /-/mako/pulsemixer
 
 ### audio profile
 
 elif test "${1}" = 'audio--profile--analog'
-then __audio__profile__analog_duplex
+then call "${1}"
 
 elif test "${1}" = 'audio--profile--hdmi'
-then __audio__profile__hdmi
+then call "${1}"
 
 ### audio source
 
 elif test "${1}" = 'audio--source--decrease'
-then __audio__source__decrease
+then call "${1}"
 
 elif test "${1}" = 'audio--source--increase'
-then __audio__source__increase
+then call "${1}"
 
 elif test "${1}" = 'audio--source--mute'
-then __audio__source__mute
+then call "${1}"
 
 elif test "${1}" = 'audio--source--play'
-then __audio__source__play
+then call "${1}"
 
 elif test "${1}" = 'audio--source--reset'
-then __audio__source__reset
+then call "${1}"
 
 elif test "${1}" = 'audio--source--toggle'
-then __audio__source__toggle
+then call "${1}"
 
 ### audio volume
 
 elif test "${1}" = 'audio--volume--decrease'
-then __audio__volume__decrease && __audio__notify
+then call "${1}" && call audio--notify
 
 elif test "${1}" = 'audio--volume--increase'
-then __audio__volume__increase && __audio__notify
+then call "${1}" && call audio--notify
 
 elif test "${1}" = 'audio--volume--mute'
-then __audio__volume__mute
+then call "${1}"
 
 elif test "${1}" = 'audio--volume--play'
-then __audio__volume__play
+then call "${1}"
 
 elif test "${1}" = 'audio--volume--reset'
-then __audio__volume__reset && __audio__notify
+then call "${1}" && call audio--notify
 
 elif test "${1}" = 'audio--volume--toggle'
-then __audio__volume__toggle
+then call "${1}"
 
 ### bluetooth
 
 elif test "${1}" = 'bluetooth--headset--connect'
-then __bluetooth__headset__connect
+then call "${1}"
 
 elif test "${1}" = 'bluetooth--headset--disconnect'
-then __bluetooth__headset__disconnect
+then call "${1}"
 
 elif test "${1}" = 'bluetooth--speaker--connect'
-then __bluetooth__speaker__connect
+then call "${1}"
 
 elif test "${1}" = 'bluetooth--speaker--disconnect'
-then __bluetooth__speaker__disconnect
+then call "${1}"
 
 elif test "${1}" = 'bluetooth--power--on'
-then __bluetooth__power__on
+then call "${1}"
 
 elif test "${1}" = 'bluetooth--power--no'
-then __bluetooth__power__no
+then call "${1}"
 
 ### bluetooth headset
 
 elif test "${1}" = 'bluetooth--profile--headset--disable'
-then __bluetooth__profile__headset__disable
+then call "${1}"
 
 elif test "${1}" = 'bluetooth--profile--headset--headset'
-then __bluetooth__profile__headset__headset
+then call "${1}"
 
 elif test "${1}" = 'bluetooth--profile--headset--speaker'
-then __bluetooth__profile__headset__speaker
+then call "${1}"
 
 ### bluetooth speaker
 
 elif test "${1}" = 'bluetooth--profile--speaker--disable'
-then __bluetooth__profile__speaker__disable
+then call "${1}"
 
 elif test "${1}" = 'bluetooth--profile--speaker--headset'
-then __bluetooth__profile__speaker__headset
+then call "${1}"
 
 elif test "${1}" = 'bluetooth--profile--speaker--speaker'
-then __bluetooth__profile__speaker__speaker
+then call "${1}"
 
 ### grim
 
 elif test "${1}" = 'grim--output-path'
-then __grim__output_path
+then call "${1}"
 
 elif test "${1}" = 'grim--output--wl-copy'
-then __grim__output | __wl_copy
+then call grim--output | call wl-copy
 
 ### screen capture
 
 elif test "${1}" = 'wf-recorder'
-then __wf_recorder
+then call "${1}"
 
 ### screen shotting
 
 elif test "${1}" = 'slurp--grim--wl-copy'
-then __slurp | __grim | __wl_copy
+then call slurp | call grim | call wl-copy
 
 elif test "${1}" = 'slurp--grim-path'
-then __slurp | __grim__path
+then call slurp | call "${1}"
 
 elif test "${1}" = 'slurp--grim-tesseract'
-then __slurp | __grim__tesseract
+then call slurp | call "${1}"
 
 elif test "${1}" = 'slurp--notify'
-then __slurp__print | __xargs__notify
+then call slurp--print | call xargs--notify
 
 ### sway
 
 elif test "${1}" = 'sway--keyboard-layout'
-then __sway__keyboard_layout
+then call "${1}"
 
 elif test "${1}" = 'sway--node--grim--wl-copy'
-then __sway__tree__node | __grim | __wl_copy
+then call sway--tree--node | call grim | call wl-copy
 
 elif test "${1}" = 'sway--node--grim-path'
-then __sway__tree__node | __grim__path
+then call sway--tree--node | call grim--path
 
 elif test "${1}" = 'sway--output--carry'
-then __sway__output__carry
+then call "${1}"
 
 elif test "${1}" = 'sway--output--focus'
-then __sway__output__focus
+then call "${1}"
 
 elif test "${1}" = 'sway--output--switch'
-then __sway__output__switch
+then call "${1}"
 
 ### tray
 
 elif test "${1}" = 'nm-applet--killall'
-then __nm_applet__killall
+then call "${1}"
 
 elif test "${1}" = 'nm-applet--restart'
-then __nm_applet__restart
+then call "${1}"
 
 fi

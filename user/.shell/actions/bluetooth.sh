@@ -11,54 +11,54 @@ PROFILE__SPEAKER='a2dp_sink'
 
 ### control
 
-function __bluetooth__connect__headset {
+function action--bluetooth--connect--headset {
 	bluetoothctl connect ${MAC__HEADSET}
 }
 
-function __bluetooth__connect__speaker {
+function action--bluetooth--connect--speaker {
 	bluetoothctl connect ${MAC__SPEAKER}
 }
 
-function __bluetooth__disconnect__headset {
+function action--bluetooth--disconnect--headset {
 	bluetoothctl disconnect ${MAC__HEADSET}
 }
 
-function __bluetooth__disconnect__speaker {
+function action--bluetooth--disconnect--speaker {
 	bluetoothctl disconnect ${MAC__SPEAKER}
 }
 
-function __bluetooth__power__on {
+function action--bluetooth--power--on {
 	bluetoothctl power on
 }
 
-function __bluetooth__power__no {
+function action--bluetooth--power--no {
 	bluetoothctl power no
 }
 
 ### headset
 
-function __bluetooth__profile__headset__disable {
+function action--bluetooth--profile--headset--disable {
 	set-card-profile ${CARD__HEADSET} ${PROFILE__DISABLE}
 }
 
-function __bluetooth__profile__headset__headset {
+function action--bluetooth--profile--headset--headset {
 	set-card-profile ${CARD__HEADSET} ${PROFILE__HEADSET}
 }
 
-function __bluetooth__profile__headset__speaker {
+function action--bluetooth--profile--headset--speaker {
 	set-card-profile ${CARD__HEADSET} ${PROFILE__SPEAKER}
 }
 
 ### speaker
 
-function __bluetooth__profile__speaker__disable {
+function action--bluetooth--profile--speaker--disable {
 	set-card-profile ${CARD__SPEAKER} ${PROFILE__DISABLE}
 }
 
-function __bluetooth__profile__speaker__headset {
+function action--bluetooth--profile--speaker--headset {
 	set-card-profile ${CARD__SPEAKER} ${PROFILE__HEADSET}
 }
 
-function __bluetooth__profile__speaker__speaker {
+function action--bluetooth--profile--speaker--speaker {
 	set-card-profile ${CARD__SPEAKER} ${PROFILE__SPEAKER}
 }
