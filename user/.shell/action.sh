@@ -3,164 +3,85 @@ source "${HOME}/.shell/actions.sh"
 source "${HOME}/.shell/actions/audio.sh"
 source "${HOME}/.shell/actions/bluetooth.sh"
 
-function call () {
-	"action--${1}"
+function __ () {
+	'action--'"${1}"
 }
-
-if false
-then true
 
 ### audio
 
-elif test "${1}" = 'audio--notify'
-then call "${@}"
-
-elif test "${1}" = 'audio--volume'
-then call audio--get--volume > /-/mako/pulsemixer
+test "${1}" = 'audio--notify' && __ "${@}"
+test "${1}" = 'audio--volume' && __ audio--get--volume > /-/mako/pulsemixer
 
 ### audio profile
 
-elif test "${1}" = 'audio--profile--analog'
-then call "${@}"
-
-elif test "${1}" = 'audio--profile--hdmi'
-then call "${@}"
+test "${1}" = 'audio--profile--analog' && __ "${@}"
+test "${1}" = 'audio--profile--hdmi' && __ "${@}"
 
 ### audio source
 
-elif test "${1}" = 'audio--source--decrease'
-then call "${@}"
-
-elif test "${1}" = 'audio--source--increase'
-then call "${@}"
-
-elif test "${1}" = 'audio--source--mute'
-then call "${@}"
-
-elif test "${1}" = 'audio--source--play'
-then call "${@}"
-
-elif test "${1}" = 'audio--source--reset'
-then call "${@}"
-
-elif test "${1}" = 'audio--source--toggle'
-then call "${@}"
+test "${1}" = 'audio--source--decrease' && __ "${@}"
+test "${1}" = 'audio--source--increase' && __ "${@}"
+test "${1}" = 'audio--source--mute' && __ "${@}"
+test "${1}" = 'audio--source--play' && __ "${@}"
+test "${1}" = 'audio--source--reset' && __ "${@}"
+test "${1}" = 'audio--source--toggle' && __ "${@}"
 
 ### audio volume
 
-elif test "${1}" = 'audio--volume--decrease'
-then call "${@}" && call audio--notify
-
-elif test "${1}" = 'audio--volume--increase'
-then call "${@}" && call audio--notify
-
-elif test "${1}" = 'audio--volume--mute'
-then call "${@}"
-
-elif test "${1}" = 'audio--volume--play'
-then call "${@}"
-
-elif test "${1}" = 'audio--volume--reset'
-then call "${@}" && call audio--notify
-
-elif test "${1}" = 'audio--volume--toggle'
-then call "${@}"
+test "${1}" = 'audio--volume--decrease' && __ "${@}" && __ audio--notify
+test "${1}" = 'audio--volume--increase' && __ "${@}" && __ audio--notify
+test "${1}" = 'audio--volume--mute' && __ "${@}"
+test "${1}" = 'audio--volume--play' && __ "${@}"
+test "${1}" = 'audio--volume--reset' && __ "${@}" && __ audio--notify
+test "${1}" = 'audio--volume--toggle' && __ "${@}"
 
 ### bluetooth
 
-elif test "${1}" = 'bluetooth--headset--connect'
-then call "${@}"
-
-elif test "${1}" = 'bluetooth--headset--disconnect'
-then call "${@}"
-
-elif test "${1}" = 'bluetooth--speaker--connect'
-then call "${@}"
-
-elif test "${1}" = 'bluetooth--speaker--disconnect'
-then call "${@}"
-
-elif test "${1}" = 'bluetooth--power--on'
-then call "${@}"
-
-elif test "${1}" = 'bluetooth--power--no'
-then call "${@}"
+test "${1}" = 'bluetooth--headset--connect' && __ "${@}"
+test "${1}" = 'bluetooth--headset--disconnect' && __ "${@}"
+test "${1}" = 'bluetooth--speaker--connect' && __ "${@}"
+test "${1}" = 'bluetooth--speaker--disconnect' && __ "${@}"
+test "${1}" = 'bluetooth--power--on' && __ "${@}"
+test "${1}" = 'bluetooth--power--no' && __ "${@}"
 
 ### bluetooth headset
 
-elif test "${1}" = 'bluetooth--profile--headset--disable'
-then call "${@}"
-
-elif test "${1}" = 'bluetooth--profile--headset--headset'
-then call "${@}"
-
-elif test "${1}" = 'bluetooth--profile--headset--speaker'
-then call "${@}"
+test "${1}" = 'bluetooth--profile--headset--disable' && __ "${@}"
+test "${1}" = 'bluetooth--profile--headset--headset' && __ "${@}"
+test "${1}" = 'bluetooth--profile--headset--speaker' && __ "${@}"
 
 ### bluetooth speaker
 
-elif test "${1}" = 'bluetooth--profile--speaker--disable'
-then call "${@}"
-
-elif test "${1}" = 'bluetooth--profile--speaker--headset'
-then call "${@}"
-
-elif test "${1}" = 'bluetooth--profile--speaker--speaker'
-then call "${@}"
+test "${1}" = 'bluetooth--profile--speaker--disable' && __ "${@}"
+test "${1}" = 'bluetooth--profile--speaker--headset' && __ "${@}"
+test "${1}" = 'bluetooth--profile--speaker--speaker' && __ "${@}"
 
 ### grim
 
-elif test "${1}" = 'grim--output-path'
-then call "${@}"
-
-elif test "${1}" = 'grim--output--wl-copy'
-then call grim--output | call wl-copy
+test "${1}" = 'grim--output-path' && __ "${@}"
+test "${1}" = 'grim--output--wl-copy' && __ grim--output | __ wl-copy
 
 ### screen capture
 
-elif test "${1}" = 'wf-recorder'
-then call "${@}"
+test "${1}" = 'wf-recorder' && __ "${@}"
 
 ### screen shotting
 
-elif test "${1}" = 'slurp--grim--wl-copy'
-then call slurp | call grim | call wl-copy
-
-elif test "${1}" = 'slurp--grim-path'
-then call slurp | call "${@}"
-
-elif test "${1}" = 'slurp--grim-tesseract'
-then call slurp | call "${@}"
-
-elif test "${1}" = 'slurp--notify'
-then call slurp--print | call xargs--notify
+test "${1}" = 'slurp--grim--wl-copy' && __ slurp | __ grim | __ wl-copy
+test "${1}" = 'slurp--grim-path' && __ slurp | __ "${@}"
+test "${1}" = 'slurp--grim-tesseract' && __ slurp | __ "${@}"
+test "${1}" = 'slurp--notify' && __ slurp--print | __ xargs--notify
 
 ### sway
 
-elif test "${1}" = 'sway--keyboard-layout'
-then call "${@}"
-
-elif test "${1}" = 'sway--node--grim--wl-copy'
-then call sway--tree--node | call grim | call wl-copy
-
-elif test "${1}" = 'sway--node--grim-path'
-then call sway--tree--node | call grim--path
-
-elif test "${1}" = 'sway--output--carry'
-then call "${@}"
-
-elif test "${1}" = 'sway--output--focus'
-then call "${@}"
-
-elif test "${1}" = 'sway--output--switch'
-then call "${@}"
+test "${1}" = 'sway--keyboard-layout' && __ "${@}"
+test "${1}" = 'sway--node--grim--wl-copy' && __ sway--tree--node | __ grim | __ wl-copy
+test "${1}" = 'sway--node--grim-path' && __ sway--tree--node | __ grim--path
+test "${1}" = 'sway--output--carry' && __ "${@}"
+test "${1}" = 'sway--output--focus' && __ "${@}"
+test "${1}" = 'sway--output--switch' && __ "${@}"
 
 ### tray
 
-elif test "${1}" = 'nm-applet--killall'
-then call "${@}"
-
-elif test "${1}" = 'nm-applet--restart'
-then call "${@}"
-
-fi
+test "${1}" = 'nm-applet--killall' && __ "${@}"
+test "${1}" = 'nm-applet--restart' && __ "${@}"
