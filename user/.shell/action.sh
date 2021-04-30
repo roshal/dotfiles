@@ -3,85 +3,91 @@ source "${HOME}/.shell/actions.sh"
 source "${HOME}/.shell/actions/audio.sh"
 source "${HOME}/.shell/actions/bluetooth.sh"
 
-function __ () {
-	'action--'"${1}"
+SEQUENCE=("${@}")
+
+function is () {
+	test "${1}" = "${SEQUENCE[0]}"
+}
+
+function ok () {
+	'action--'"${1-SEQUENCE}"
 }
 
 ### audio
 
-test "${1}" = 'audio--notify' && __ "${@}"
-test "${1}" = 'audio--volume' && __ audio--get--volume > /-/mako/pulsemixer
+is 'audio--notify' && ok
+is 'audio--volume' && ok audio--get--volume > /-/mako/pulsemixer
 
 ### audio profile
 
-test "${1}" = 'audio--profile--analog' && __ "${@}"
-test "${1}" = 'audio--profile--hdmi' && __ "${@}"
+is 'audio--profile--analog' && ok
+is 'audio--profile--hdmi' && ok
 
 ### audio source
 
-test "${1}" = 'audio--source--decrease' && __ "${@}"
-test "${1}" = 'audio--source--increase' && __ "${@}"
-test "${1}" = 'audio--source--mute' && __ "${@}"
-test "${1}" = 'audio--source--play' && __ "${@}"
-test "${1}" = 'audio--source--reset' && __ "${@}"
-test "${1}" = 'audio--source--toggle' && __ "${@}"
+is 'audio--source--decrease' && ok
+is 'audio--source--increase' && ok
+is 'audio--source--mute' && ok
+is 'audio--source--play' && ok
+is 'audio--source--reset' && ok
+is 'audio--source--toggle' && ok
 
 ### audio volume
 
-test "${1}" = 'audio--volume--decrease' && __ "${@}" && __ audio--notify
-test "${1}" = 'audio--volume--increase' && __ "${@}" && __ audio--notify
-test "${1}" = 'audio--volume--mute' && __ "${@}"
-test "${1}" = 'audio--volume--play' && __ "${@}"
-test "${1}" = 'audio--volume--reset' && __ "${@}" && __ audio--notify
-test "${1}" = 'audio--volume--toggle' && __ "${@}"
+is 'audio--volume--decrease' && ok && ok audio--notify
+is 'audio--volume--increase' && ok && ok audio--notify
+is 'audio--volume--mute' && ok
+is 'audio--volume--play' && ok
+is 'audio--volume--reset' && ok && ok audio--notify
+is 'audio--volume--toggle' && ok
 
 ### bluetooth
 
-test "${1}" = 'bluetooth--headset--connect' && __ "${@}"
-test "${1}" = 'bluetooth--headset--disconnect' && __ "${@}"
-test "${1}" = 'bluetooth--speaker--connect' && __ "${@}"
-test "${1}" = 'bluetooth--speaker--disconnect' && __ "${@}"
-test "${1}" = 'bluetooth--power--on' && __ "${@}"
-test "${1}" = 'bluetooth--power--no' && __ "${@}"
+is 'bluetooth--headset--connect' && ok
+is 'bluetooth--headset--disconnect' && ok
+is 'bluetooth--speaker--connect' && ok
+is 'bluetooth--speaker--disconnect' && ok
+is 'bluetooth--power--on' && ok
+is 'bluetooth--power--no' && ok
 
 ### bluetooth headset
 
-test "${1}" = 'bluetooth--profile--headset--disable' && __ "${@}"
-test "${1}" = 'bluetooth--profile--headset--headset' && __ "${@}"
-test "${1}" = 'bluetooth--profile--headset--speaker' && __ "${@}"
+is 'bluetooth--profile--headset--disable' && ok
+is 'bluetooth--profile--headset--headset' && ok
+is 'bluetooth--profile--headset--speaker' && ok
 
 ### bluetooth speaker
 
-test "${1}" = 'bluetooth--profile--speaker--disable' && __ "${@}"
-test "${1}" = 'bluetooth--profile--speaker--headset' && __ "${@}"
-test "${1}" = 'bluetooth--profile--speaker--speaker' && __ "${@}"
+is 'bluetooth--profile--speaker--disable' && ok
+is 'bluetooth--profile--speaker--headset' && ok
+is 'bluetooth--profile--speaker--speaker' && ok
 
 ### grim
 
-test "${1}" = 'grim--output-path' && __ "${@}"
-test "${1}" = 'grim--output--wl-copy' && __ grim--output | __ wl-copy
+is 'grim--output-path' && ok
+is 'grim--output--wl-copy' && ok grim--output | ok wl-copy
 
 ### screen capture
 
-test "${1}" = 'wf-recorder' && __ "${@}"
+is 'wf-recorder' && ok
 
 ### screen shotting
 
-test "${1}" = 'slurp--grim--wl-copy' && __ slurp | __ grim | __ wl-copy
-test "${1}" = 'slurp--grim-path' && __ slurp | __ "${@}"
-test "${1}" = 'slurp--grim-tesseract' && __ slurp | __ "${@}"
-test "${1}" = 'slurp--notify' && __ slurp--print | __ xargs--notify
+is 'slurp--grim--wl-copy' && ok slurp | ok grim | ok wl-copy
+is 'slurp--grim-path' && ok slurp | ok
+is 'slurp--grim-tesseract' && ok slurp | ok
+is 'slurp--notify' && ok slurp--print | ok xargs--notify
 
 ### sway
 
-test "${1}" = 'sway--keyboard-layout' && __ "${@}"
-test "${1}" = 'sway--node--grim--wl-copy' && __ sway--tree--node | __ grim | __ wl-copy
-test "${1}" = 'sway--node--grim-path' && __ sway--tree--node | __ grim--path
-test "${1}" = 'sway--output--carry' && __ "${@}"
-test "${1}" = 'sway--output--focus' && __ "${@}"
-test "${1}" = 'sway--output--switch' && __ "${@}"
+is 'sway--keyboard-layout' && ok
+is 'sway--node--grim--wl-copy' && ok sway--tree--node | ok grim | ok wl-copy
+is 'sway--node--grim-path' && ok sway--tree--node | ok grim--path
+is 'sway--output--carry' && ok
+is 'sway--output--focus' && ok
+is 'sway--output--switch' && ok
 
 ### tray
 
-test "${1}" = 'nm-applet--killall' && __ "${@}"
-test "${1}" = 'nm-applet--restart' && __ "${@}"
+is 'nm-applet--killall' && ok
+is 'nm-applet--restart' && ok
