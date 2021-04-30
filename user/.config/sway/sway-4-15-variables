@@ -5,7 +5,7 @@ set $-key mod4
 
 ### actions
 
-set $-action sh "${HOME}/.shell/action.sh"
+set $-action bash "${HOME}/.shell/action.sh"
 
 ### colors
 
