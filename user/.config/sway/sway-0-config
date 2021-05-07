@@ -72,8 +72,12 @@ output * subpixel none
 # output $-output-2 mode 1920 1080 position 0000 0000
 
 output $-output-0 mode 1920 1200 position 0000 1280
-output $-output-1 mode 1920 1200 position 2048 0000
-output $-output-2 mode 1920 1080 position 0000 0000
+output $-output-1 mode 1920 1200 position 0000 0000
+output $-output-2 mode 1920 1080 position 2048 0000
+
+# output $-output-0 mode 1920 1200 position 0000 1280
+# output $-output-1 mode 1920 1200 position 2048 0000
+# output $-output-2 mode 1920 1080 position 0000 0000
 
 output $-output-2 scale 1.25
 
@@ -86,3 +90,5 @@ include '${HOME}/.config/sway/sway-$(< /etc/hostname)'
 
 bindsym --to-code       $-key+z exec clipman pick  --tool wofi
 bindsym --to-code shift+$-key+z exec clipman clear --tool wofi --all
+
+bindsym --to-code shift+$-key+v exec wl-paste
