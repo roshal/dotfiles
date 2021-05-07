@@ -1,7 +1,8 @@
 
 ### binding-modes
 
-bindsym --to-code     $-key+a mode $-mode-mode
+bindsym --to-code $-key+a mode $-mode-mode
+bindsym --to-code $-key+o mode $-mode-output
 
 bindsym --to-code alt+$-key+a mode $-mode-audio
 bindsym --to-code alt+$-key+b mode $-mode-bluetooth

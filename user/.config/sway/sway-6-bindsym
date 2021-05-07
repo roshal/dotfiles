@@ -36,11 +36,11 @@ bindsym --to-code shift+$-key+i exec $-action nm-applet--killall
 bindsym --to-code       $-key+l exec swaylock --image /-/pictures/dark.png
 bindsym --to-code shift+$-key+l exec swaylock
 
+bindsym --to-code       $-key+k exec $-action sway--output--switch
+bindsym --to-code shift+$-key+k output * disable , output - enable
+
 bindsym --to-code       $-key+n exec thunar
 bindsym --to-code shift+$-key+n exec thunar --quit
-
-bindsym --to-code       $-key+o exec $-action sway--output--switch
-bindsym --to-code shift+$-key+o output * disable , output - enable
 
 bindsym --to-code       $-key+p output * dpms on
 bindsym --to-code shift+$-key+p output * dpms no
