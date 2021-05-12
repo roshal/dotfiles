@@ -78,11 +78,8 @@ bindsym $-key+$-arrow-u focus $-arrow-u
 
 bindsym $-key+space focus mode_toggle
 
-bindsym --to-code       $-key+w           focus parent
-bindsym --to-code shift+$-key+w           focus child
-
-bindsym --to-code       $-key+$-control-h focus parent
-bindsym --to-code       $-key+$-control-e focus child
+bindsym --to-code       $-key+w focus parent
+bindsym --to-code shift+$-key+w focus child
 
 ##### 6.5 moving containers
 # # # https://i3wm.org/docs/userguide.html#_moving_containers
@@ -92,11 +89,11 @@ bindsym shift+$-key+$-arrow-l move $-arrow-l $-step-b
 bindsym shift+$-key+$-arrow-r move $-arrow-r $-step-b
 bindsym shift+$-key+$-arrow-u move $-arrow-u $-step-b
 
-bindsym --to-code          shift+$-key+space move          position mouse
-bindsym --to-code     ctrl+shift+$-key+space move          position center
+bindsym          shift+$-key+space move          position mouse
+bindsym     ctrl+shift+$-key+space move          position center
 
-bindsym --to-code      alt+shift+$-key+space move absolute position mouse
-bindsym --to-code ctrl+alt+shift+$-key+space move absolute position center
+bindsym      alt+shift+$-key+space move absolute position mouse
+bindsym ctrl+alt+shift+$-key+space move absolute position center
 
 ##### 6.6 swapping containers
 # # # https://i3wm.org/docs/userguide.html#_swapping_containers
