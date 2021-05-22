@@ -23,9 +23,12 @@ bindsym       $-key+escape      exec $-action sway--output--focus
 bindsym shift+$-key+escape      exec $-action sway--output--carry
 
 bindsym       $-key+return exec termite
-bindsym   alt+$-key+return exec code
+bindsym   alt+$-key+return exec code --enable-features=UseOzonePlatform --ozone-platform=wayland
 bindsym  ctrl+$-key+return exec chromium
 bindsym shift+$-key+return exec alacritty --command byobu
+
+bindsym       ctrl+$-key+$-control-d exec         telegram-desktop
+bindsym shift+ctrl+$-key+$-control-d exec killall telegram-desktop
 
 bindsym --to-code       $-key+d exec wofi
 bindsym --to-code shift+$-key+d exec wofi --show drun --allow-images --sort-order alphabetical --search --

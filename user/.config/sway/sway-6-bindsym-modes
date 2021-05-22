@@ -4,15 +4,15 @@
 bindsym --to-code $-key+a mode $-mode-mode
 bindsym --to-code $-key+o mode $-mode-output
 
-bindsym --to-code alt+$-key+a mode $-mode-audio
-bindsym --to-code alt+$-key+b mode $-mode-bluetooth
-bindsym --to-code alt+$-key+c mode $-mode-cursor
-bindsym --to-code alt+$-key+k mode $-mode-kill
-bindsym --to-code alt+$-key+l mode $-mode-lock
-bindsym --to-code alt+$-key+m mode $-mode-move
-bindsym --to-code alt+$-key+n mode $-mode-network
-bindsym --to-code alt+$-key+o mode $-mode-output
-bindsym --to-code alt+$-key+r mode $-mode-resize
-bindsym --to-code alt+$-key+s mode $-mode-system
-bindsym --to-code alt+$-key+v mode $-mode-vpn
-bindsym --to-code alt+$-key+w mode $-mode-wireguard
+bindsym --to-code ctrl+$-key+a mode $-mode-audio
+bindsym --to-code ctrl+$-key+b mode $-mode-bluetooth
+bindsym --to-code ctrl+$-key+c mode $-mode-cursor
+bindsym --to-code ctrl+$-key+k mode $-mode-kill
+bindsym --to-code ctrl+$-key+l mode $-mode-lock
+bindsym --to-code ctrl+$-key+m mode $-mode-move
+bindsym --to-code ctrl+$-key+n mode $-mode-network
+bindsym --to-code ctrl+$-key+o mode $-mode-output
+bindsym --to-code ctrl+$-key+r mode $-mode-resize
+bindsym --to-code ctrl+$-key+s mode $-mode-system
+bindsym --to-code ctrl+$-key+v mode $-mode-vpn
+bindsym --to-code ctrl+$-key+w mode $-mode-wireguard

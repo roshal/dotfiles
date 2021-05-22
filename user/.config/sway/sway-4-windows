@@ -34,6 +34,8 @@ for_window [app_id="^roxterm$"] border none
 
 for_window [app_id="^telegramdesktop$"] border none
 
+for_window [app_id="^telegramdesktop$" title="^TelegramDesktop$"] floating enable
+
 # for_window [app_id="^termite$"] border none
 
 for_window [app_id="^thunar$"] border none

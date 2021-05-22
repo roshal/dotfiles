@@ -3,7 +3,7 @@
 
 ### exec
 
-exec $-action nm-applet--restart
+# exec $-action nm-applet--restart
 
 # # https://github.com/emersion/mako#running
 exec mako
