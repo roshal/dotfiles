@@ -53,6 +53,8 @@ for_window [instance="^chromium$"] inhibit_idle fullscreen
 
 for_window [instance="^code-oss$"] border none
 
+for_window [instance="^figma-linux$"] border none
+
 for_window [instance="^insomnia$"] border none
 
 for_window [instance="^jetbrains-" title="^win0$"] floating enable
