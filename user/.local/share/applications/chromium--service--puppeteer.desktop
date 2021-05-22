@@ -4,4 +4,4 @@
 Type=Application
 Name=--chromium--service--puppeteer
 Icon=chromium
-Exec=/usr/bin/chromium --profile-directory=profile--puppeteer %U
+Exec=/usr/bin/chromium --profile-directory=profile--puppeteer -- %U

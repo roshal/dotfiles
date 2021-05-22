@@ -4,4 +4,4 @@
 Type=Application
 Name=--chromium--profile--roshal-browse
 Icon=/home/user/.config/chromium/profile--roshal-browse/Google Profile Picture.png
-Exec=/usr/bin/chromium --profile-directory=profile--roshal-browse %U
+Exec=/usr/bin/chromium --profile-directory=profile--roshal-browse -- %U

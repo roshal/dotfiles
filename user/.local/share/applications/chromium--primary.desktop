@@ -4,4 +4,4 @@
 Type=Application
 Name=--chromium--primary
 Icon=chromium
-Exec=/usr/bin/chromium %U
+Exec=/usr/bin/chromium -- %U
