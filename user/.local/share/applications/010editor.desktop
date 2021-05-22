@@ -4,6 +4,6 @@
 [Desktop Entry]
 
 Type=Application
-Name=--010editor
+Name=-010editor
 Icon=010editor
 Exec=010editor -platform xcb
