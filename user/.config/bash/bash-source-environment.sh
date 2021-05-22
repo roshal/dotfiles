@@ -25,7 +25,7 @@ export LS_COLORS='di=1;94'
 ### clipboard paste to chromium does not work
 # # https://github.com/swaywm/sway/wiki/Running-programs-natively-under-wayland#gtk3
 # # https://wiki.archlinux.org/index.php/Firefox#Wayland
-export MOZ_ENABLE_WAYLAND='1'
+# export MOZ_ENABLE_WAYLAND='1'
 
 ### python
 
