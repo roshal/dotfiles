@@ -1,9 +1,9 @@
 
-[Desktop Entry]
-
 # # /usr/share/applications/virtualbox.desktop
+
+[Desktop Entry]
 
 Type=Application
 Name=--virtualbox
 Icon=virtualbox
-Exec=env virtualbox %U
+Exec=virtualbox -- %U

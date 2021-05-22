@@ -1,10 +1,13 @@
 
-[Desktop Entry]
-
 # # /usr/share/applications/Zoom.desktop
+
+[Desktop Entry]
 
 Type=Application
 Name=--zoom
 Icon=Zoom
-Exec=env QT_QPA_PLATFORM=xcb /usr/bin/zoom %U
+Exec=zoom -- %U
+
+# Exec=env QT_QPA_PLATFORM=XCB zoom %U
+
 MimeType=x-scheme-handler/zoommtg;x-scheme-handler/zoomus;x-scheme-handler/tel;x-scheme-handler/callto;x-scheme-handler/zoomphonecall;application/x-zoom
