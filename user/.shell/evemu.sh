@@ -1,19 +1,19 @@
 
 DEVICE=/dev/input/event18
 
-function zero {
+function zero () {
 	sudo evemu-event "${DEVICE}" --type EV_KEY --code "${1}" --value 0 --sync
 }
 
-function unit {
+function unit () {
 	sudo evemu-event "${DEVICE}" --type EV_KEY --code "${1}" --value 1 --sync
 }
 
-function zero {
+function zero () {
 	sudo evemu-event "${DEVICE}" --type EV_KEY --code "${1}" --value 0 --sync
 }
 
-function zerounit {
+function zerounit () {
 	zero "${1}"
 	unit "${1}"
 }

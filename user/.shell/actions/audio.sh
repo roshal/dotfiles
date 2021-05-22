@@ -9,14 +9,53 @@ function action--audio--notify {
 
 ### profile
 
-CARD='alsa_card.pci-0000_00_1f.3'
+ALSA='alsa_card.pci-0000_00_1f.3'
 
-function action--audio--profile--analog-duplex {
-	pactl set-card-profile ${CARD} output:analog-stereo+input:analog-stereo
+BLUETOOTH__HEADSET='bluez_card.70_26_05_DD_FD_DD'
+BLUETOOTH__SPEAKER='bluez_card.00_42_79_77_95_54'
+
+function action--audio--profile--alsa--analog {
+	pactl set-card-profile ${ALSA} output:analog-stereo
 }
 
-function action--audio--profile--hdmi {
-	pactl set-card-profile ${CARD} output:hdmi-stereo
+function action--audio--profile--alsa--analog--duplex {
+	pactl set-card-profile ${ALSA} output:analog-stereo+input:analog-stereo
+}
+
+function action--audio--profile--alsa--hdmi {
+	pactl set-card-profile ${ALSA} output:hdmi-stereo-extra2
+}
+
+function action--audio--profile--alsa--hdmi--duplex {
+	pactl set-card-profile ${ALSA} output:hdmi-stereo-extra2+input:analog-stereo
+}
+
+function action--audio--profile--alsa--off {
+	pactl set-card-profile ${ALSA} off
+}
+
+function action--audio--profile--bluetooth--headset--a2dp {
+	pactl set-card-profile ${BLUETOOTH__HEADSET} a2dp_sink
+}
+
+function action--audio--profile--bluetooth--headset--headset {
+	pactl set-card-profile ${BLUETOOTH__HEADSET} headset_head_unit
+}
+
+function action--audio--profile--bluetooth--headset--off {
+	pactl set-card-profile ${BLUETOOTH__HEADSET} off
+}
+
+function action--audio--profile--bluetooth--speaker--a2dp {
+	pactl set-card-profile ${BLUETOOTH__SPEAKER} a2dp_sink
+}
+
+function action--audio--profile--bluetooth--speaker--headset {
+	pactl set-card-profile ${BLUETOOTH__SPEAKER} headset_head_unit
+}
+
+function action--audio--profile--bluetooth--speaker--off {
+	pactl set-card-profile ${BLUETOOTH__SPEAKER} off
 }
 
 ### source

@@ -1,41 +1,41 @@
 
-function span {
+function span () {
 	echo -n "<span color='#${1}'>${2}</span>"
 }
 
-function j {
+function j () {
 	span c69 "${1}"
 }
 
-function U {
+function U () {
 	span c96 "${1}"
 }
 
-function w {
+function w () {
 	span cc3 "${1}"
 }
 
-function y {
+function y () {
 	span 9c6 "${1}"
 }
 
-function m {
+function m () {
 	span 6c9 "${1}"
 }
 
-function d {
+function d () {
 	span 3cc "${1}"
 }
 
-function H {
+function H () {
 	span 69c "${1}"
 }
 
-function M {
+function M () {
 	span 96c "${1}"
 }
 
-function S {
+function S () {
 	span c3c "${1}"
 }
 

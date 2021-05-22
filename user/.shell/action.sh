@@ -3,14 +3,14 @@ source "${HOME}/.shell/actions.sh"
 source "${HOME}/.shell/actions/audio.sh"
 source "${HOME}/.shell/actions/bluetooth.sh"
 
-SEQUENCE=("${@}")
+ARGUMENTS=("${@}")
 
 function is () {
-	test "${1}" = "${SEQUENCE[0]}"
+	test -n "${STOP}" && exit || test "${1}" = "${ARGUMENTS[0]}" && STOP=TRUE
 }
 
 function ok () {
-	'action--'"${1-SEQUENCE}"
+	"action--${1-${ARGUMENTS[0]}}"
 }
 
 ### audio
@@ -20,8 +20,17 @@ is 'audio--volume' && ok audio--get--volume > /-/mako/pulsemixer
 
 ### audio profile
 
-is 'audio--profile--analog' && ok
-is 'audio--profile--hdmi' && ok
+is 'audio--profile--alsa--analog' && ok
+is 'audio--profile--alsa--analog--duplex' && ok
+is 'audio--profile--alsa--hdmi' && ok
+is 'audio--profile--alsa--hdmi--duplex' && ok
+is 'audio--profile--alsa--off' && ok
+is 'audio--profile--bluetooth--headset--a2dp' && ok
+is 'audio--profile--bluetooth--headset--headset' && ok
+is 'audio--profile--bluetooth--headset--off' && ok
+is 'audio--profile--bluetooth--speaker--a2dp' && ok
+is 'audio--profile--bluetooth--speaker--headset' && ok
+is 'audio--profile--bluetooth--speaker--off' && ok
 
 ### audio source
 
