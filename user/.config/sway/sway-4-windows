@@ -26,6 +26,8 @@ for_window [app_id="^firefox$"] border none
 
 for_window [app_id="^io.elementary.files$"] border none
 
+for_window [app_id="^org.getmonero.monero-wallet-gui$"] border none
+
 for_window [app_id="^org.gnome.Nautilus$"] border none
 
 for_window [app_id="^org.inkscape.Inkscape$"] border none
