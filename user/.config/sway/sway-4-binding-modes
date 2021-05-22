@@ -19,19 +19,21 @@ mode $-mode-mode bindsym escape mode $-mode-default
 
 ### audio
 
-mode $-mode-audio bindsym --to-code       a mode $-mode-default , exec $-action bluetooth--profile--headset--headset
-mode $-mode-audio bindsym --to-code       s mode $-mode-default , exec $-action bluetooth--profile--headset--speaker
-mode $-mode-audio bindsym --to-code       z mode $-mode-default , exec $-action bluetooth--profile--headset--disable
+mode $-mode-audio bindsym --to-code       a mode $-mode-default , exec $-action audio--profile--alsa--analog
+mode $-mode-audio bindsym --to-code shift+a mode $-mode-default , exec $-action audio--profile--alsa--analog--duplex
 
-mode $-mode-audio bindsym --to-code       h mode $-mode-default , exec $-action audio--profile--hdmi
-mode $-mode-audio bindsym --to-code       j mode $-mode-default , exec $-action audio--profile--analog
+mode $-mode-audio bindsym --to-code       h mode $-mode-default , exec $-action audio--profile--alsa--hdmi
+mode $-mode-audio bindsym --to-code shift+h mode $-mode-default , exec $-action audio--profile--alsa--hdmi--duplex
 
-mode $-mode-audio bindsym --to-code shift+a mode $-mode-default , exec $-action bluetooth--profile--speaker--headset
-mode $-mode-audio bindsym --to-code shift+s mode $-mode-default , exec $-action bluetooth--profile--speaker--speaker
-mode $-mode-audio bindsym --to-code shift+z mode $-mode-default , exec $-action bluetooth--profile--speaker--disable
+mode $-mode-audio bindsym --to-code       z mode $-mode-default , exec $-action audio--profile--alsa--off
 
-mode $-mode-audio bindsym --to-code shift+h mode $-mode-default , exec $-action audio--profile--hdmi
-mode $-mode-audio bindsym --to-code shift+j mode $-mode-default , exec $-action audio--profile--analog
+mode $-mode-audio bindsym shift+$-key-0 mode $-mode-default , exec $-action audio--profile--bluetooth--headset--off
+mode $-mode-audio bindsym shift+$-key-1 mode $-mode-default , exec $-action audio--profile--bluetooth--headset--a2dp
+mode $-mode-audio bindsym shift+$-key-2 mode $-mode-default , exec $-action audio--profile--bluetooth--headset--headset
+
+mode $-mode-audio bindsym       $-key-0 mode $-mode-default , exec $-action audio--profile--bluetooth--speaker--off
+mode $-mode-audio bindsym       $-key-1 mode $-mode-default , exec $-action audio--profile--bluetooth--speaker--a2dp
+mode $-mode-audio bindsym       $-key-2 mode $-mode-default , exec $-action audio--profile--bluetooth--speaker--headset
 
 mode $-mode-audio bindsym --whole-window       $-mouse-m exec $-action audio--volume--reset
 
@@ -48,17 +50,17 @@ mode $-mode-audio bindsym escape mode $-mode-default
 
 ### bluetooth
 
-mode $-mode-bluetooth bindsym --to-code       a mode $-mode-default , exec bluetoothctl bluetooth--power--on
-mode $-mode-bluetooth bindsym --to-code       z mode $-mode-default , exec bluetoothctl bluetooth--power--no
+mode $-mode-bluetooth bindsym --to-code       a mode $-mode-default , exec $-action bluetooth--power--on
+mode $-mode-bluetooth bindsym --to-code shift+a mode $-mode-default , exec $-action bluetooth--power--no
 
-mode $-mode-bluetooth bindsym --to-code shift+a                       exec bluetoothctl bluetooth--power--on
-mode $-mode-bluetooth bindsym --to-code shift+z                       exec bluetoothctl bluetooth--power--no
+mode $-mode-bluetooth bindsym --to-code       z mode $-mode-default , exec $-action bluetooth--power--on
+mode $-mode-bluetooth bindsym --to-code shift+z mode $-mode-default , exec $-action bluetooth--power--no
 
-mode $-mode-bluetooth bindsym --to-code       c mode $-mode-default , exec bluetoothctl bluetooth--headset--connect
-mode $-mode-bluetooth bindsym --to-code       d mode $-mode-default , exec bluetoothctl bluetooth--headset--disconnect
+mode $-mode-bluetooth bindsym --to-code       h mode $-mode-default , exec $-action bluetooth--headset--connect
+mode $-mode-bluetooth bindsym --to-code shift+h mode $-mode-default , exec $-action bluetooth--headset--disconnect
 
-mode $-mode-bluetooth bindsym --to-code shift+c                       exec bluetoothctl bluetooth--headset--connect
-mode $-mode-bluetooth bindsym --to-code shift+d                       exec bluetoothctl bluetooth--headset--disconnect
+mode $-mode-bluetooth bindsym --to-code       s mode $-mode-default , exec $-action bluetooth--speaker--connect
+mode $-mode-bluetooth bindsym --to-code shift+s mode $-mode-default , exec $-action bluetooth--speaker--disconnect
 
 mode $-mode-bluetooth bindsym escape mode $-mode-default
 
