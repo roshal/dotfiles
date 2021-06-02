@@ -161,8 +161,8 @@ bindsym --to-code shift+$-key+$-key-7 move to workspace $-workspace-7
 bindsym --to-code shift+$-key+$-key-8 move to workspace $-workspace-8
 bindsym --to-code shift+$-key+$-key-9 move to workspace $-workspace-9
 
-#bindsym --to-code       $-key+caps_lock         workspace back_and_forth
-#bindsym --to-code shift+$-key+caps_lock move to workspace back_and_forth
+bindsym --to-code       $-key+caps_lock         workspace back_and_forth
+bindsym --to-code shift+$-key+caps_lock move to workspace back_and_forth
 
 ##### 6.9 moving workspaces to a different screen
 # # # https://i3wm.org/docs/userguide.html#_moving_workspaces_to_a_different_screen

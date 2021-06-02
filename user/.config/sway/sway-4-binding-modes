@@ -53,8 +53,8 @@ mode $-mode-audio bindsym escape mode $-mode-default
 mode $-mode-bluetooth bindsym --to-code       a mode $-mode-default , exec $-action bluetooth--power--on
 mode $-mode-bluetooth bindsym --to-code shift+a mode $-mode-default , exec $-action bluetooth--power--no
 
-mode $-mode-bluetooth bindsym --to-code       z mode $-mode-default , exec $-action bluetooth--power--on
-mode $-mode-bluetooth bindsym --to-code shift+z mode $-mode-default , exec $-action bluetooth--power--no
+mode $-mode-bluetooth bindsym --to-code       z mode $-mode-default , exec $-action bluetooth--power--no
+mode $-mode-bluetooth bindsym --to-code shift+z mode $-mode-default , exec $-action bluetooth--power--on
 
 mode $-mode-bluetooth bindsym --to-code       h mode $-mode-default , exec $-action bluetooth--headset--connect
 mode $-mode-bluetooth bindsym --to-code shift+h mode $-mode-default , exec $-action bluetooth--headset--disconnect
