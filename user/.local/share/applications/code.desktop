@@ -1,0 +1,9 @@
+
+# # /usr/share/applications/code-oss.desktop
+
+[Desktop Entry]
+
+Type=Application
+Name=--code
+Icon=com.visualstudio.code.oss
+Exec=code --no-sandbox --unity-launch --enable-features=UseOzonePlatform --ozone-platform=wayland %F
