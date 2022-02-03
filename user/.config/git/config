@@ -2,65 +2,52 @@
 # # https://git-scm.com/docs/git-config
 
 [core]
-
-editor = code --wait
-pager = diff-so-fancy
+	editor = code --wait
+	pager = diff-so-fancy
 
 [include]
-
-path = git-alias.gitconfig
-path = git-color.gitconfig
+	path = git-alias.gitconfig
+	path = git-color.gitconfig
 
 ### commands
 
 [commit]
-
-template = /home/user/.config/git/template
+	template = /home/user/.config/git/template
 
 [diff]
-
-tool = vscode
+	tool = vscode
 
 [fetch]
-
-# prune = true
+	# prune = true
 
 [init]
-
-defaultBranch = main
+	defaultBranch = main
 
 [merge]
-
-tool = vscode
+	tool = vscode
 
 [pager]
-
-# log = false
+	# log = false
 
 [pull]
-
-ff = only
+	ff = only
 
 [rebase]
-
-backend = apply
+	autoSquash = false
+	backend = apply
 
 [remote "origin"]
-
-prune = true
+	fetch = +refs/pull/*/head:refs/tags/pull/*
+	prune = true
 
 [status]
-
-branch = true
-
-short = true
+	branch = true
+	short = true
 
 ### tools
 
-[mergetool "vscode"]
-
-cmd = code --wait $MERGED
-
 [difftool "vscode"]
+	cmd = code --wait --diff ${LOCAL} ${REMOTE}
 
-cmd = code --wait --diff $LOCAL $REMOTE
+[mergetool "vscode"]
+	cmd = code --wait ${MERGED}

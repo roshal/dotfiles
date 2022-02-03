@@ -4,16 +4,18 @@
 ### base
 
 git-add = add
-git-branch = branch
+git-branch = branch --color=always --format '%(committerdate:format:%y-%m-%d %H-%M-%S) %(color:yellow)%(objectname:short)%(color:reset) %(align:16)%(refname:short)%(end) %(color:yellow)%(contents:subject)%(color:reset) %(if)%(upstream)%(then)%(color:cyan)\n%(upstream:short)%(color:reset)​%(end) '
 git-cat-file = cat-file
 git-checkout = checkout
 git-cherry-pick = cherry-pick
 git-clone = clone
 git-commit = commit --no-verify
 git-config = config
-git-diff = diff
+git-diff = diff --color-moved
+git-fetch = fetch
 git-init = init
 git-merge = merge
+git-pull = pull
 git-push = push
 git-rebase = rebase
 git-reflog = reflog
@@ -25,7 +27,8 @@ git-stash = stash
 git-status = status
 
 # # https://git-scm.com/docs/pretty-formats
-git-log = log --color --abbrev=8 --date='format:%y-%m-%d %T' --pretty='%C(auto)%ad %h %<(8,trunc)%ae %<(54,trunc)%s%n%-d%C(reset)'
+git-log = log --color --abbrev=7 --date='format:%y-%m-%d %T' --pretty='%C(auto)%ad %h %<(8,trunc)%ae %<(54,trunc)%s%n%-d%C(reset)'
+git-log = log --color --abbrev=7 --date='format:%y-%m-%d %T' --pretty='%C(auto)%ad %h %<(8,trunc)%ae %<(53,trunc)%s%n%-d%C(reset)'
 
 ### classic
 
@@ -61,15 +64,27 @@ a = git-add
 b = git-branch -v --verbose
 c = git-checkout --no-guess
 d = git-diff
+f = git-fetch
 l = git-log -16 --reverse
+n = git-add --intent-to-add
+p = git-pull
+r = git-rebase
 s = git-status
+u = git-reset @ --
 
 aa = git-add --all
+af = git-add --force
+
 ba = git-branch -v --verbose --all
 bb = git-branch -v --verbose --all
 br = git-branch -v --verbose --remotes
 co = git-checkout --no-guess
 re = git-reset
+sh = git-show
+ss = git-show --stat
+
+az = git-commit --all --message az
+za = git-commit --all --message za
 
 ### add
 
@@ -144,6 +159,7 @@ po = git-push origin HEAD
 
 pgf = git-push --force github HEAD
 phf = git-push --force heroku HEAD
+pod = git-push --delete origin
 pof = git-push --force origin HEAD
 
 png = git-push --no-verify github HEAD
@@ -187,8 +203,8 @@ rrc = git-rm -r --cached .
 
 ### shortlog
 
-sh  = shortlog --committer --numbered --summary --email
 sha = shortlog --committer --numbered --summary --email --all
+sho = shortlog --committer --numbered --summary --email
 
 ### show
 
@@ -197,7 +213,6 @@ sn = git-show --name-status
 ### stash
 
 sl   = git-stash list
-ss   = git-stash show
 sp   = git-stash push
 pp   = git-stash pop
 sa   = git-stash apply
