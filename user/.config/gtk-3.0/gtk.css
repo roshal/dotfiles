@@ -1,10 +1,6 @@
 
-.thunar {
-	font-family: monospace;
-	font-size: 9pt;
-}
-
 /*\
+
 * {
 	font-family: monospace;
 }
@@ -16,4 +12,10 @@
 .termite {
 	padding: 8px;
 }
+
+.thunar {
+	font-family: monospace;
+	font-size: 9pt;
+}
+
 \*/

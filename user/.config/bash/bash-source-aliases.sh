@@ -31,12 +31,14 @@ alias lll='git lll'
 
 ### grep
 
-alias gv='grep --ignore-case -v'
 alias gg='grep --ignore-case'
+alias gr='grep --ignore-case -r'
+alias gv='grep --ignore-case -v'
 alias gz='grep --ignore-case -z'
 
+alias g9g='grep -9 --ignore-case'
+alias g9r='grep -9 --ignore-case -r'
 alias g9v='grep -9 --ignore-case -v'
-alias g9x='grep -9 --ignore-case'
 alias g9z='grep -9 --ignore-case -z'
 
 ### head
