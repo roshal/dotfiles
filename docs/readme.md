@@ -23,11 +23,13 @@ sudo stow --target / --stow chromium
 find "${HOME}/.config" -type l
 ```
 
-## cleaning
+## checking
 
 ```shell
 find "${HOME}/.config" -xtype l
 ```
+
+## cleaning
 
 ```shell
 find "${HOME}/.config" -xtype l -exec rm {} +

@@ -29,7 +29,11 @@ export LS_COLORS='di=1;94:'
 # # https://github.com/swaywm/sway/wiki#disabling-client-side-qt-decorations
 # # https://wiki.archlinux.org/index.php/Wayland#Qt_5
 # # https://wiki.qt.io/QtWayland#Run_Qt_applications_as_Wayland_clients
-# export QT_QPA_PLATFORM='wayland'
+export QT_QPA_PLATFORM='wayland'
+
+# # https://wiki.archlinux.org/index.php/Qt#Configuration_of_Qt5_apps_under_environments_other_than_KDE_Plasma
+# # https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications#Adwaita
+export QT_QPA_PLATFORMTHEME='qt5ct'
 
 ### remmina
 
@@ -42,6 +46,8 @@ export WLR_RDP_TLS_KEY_PATH='/-/remmina/tls.key'
 # WLR_RDP_ADDRESS='0.0.0.0'
 
 ### telegram
+
+# # https://github.com/telegramdesktop/tdesktop/wiki/Environment-variables
 
 ### ignore telegram warning message
 # # https://wiki.archlinux.org/index.php/Telegram#GTK_dialogs_in_Telegram_Desktop

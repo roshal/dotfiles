@@ -8,10 +8,12 @@ PS1='\e[40;90m\n\e[97m#\e[90m \e[92m\t\e[90m \e[94m$(pwd)\e[90m$(__git_ps1 " \e[
 
 ### variables
 
-# # https://classic.yarnpkg.com/en/docs/cli/global#adding-the-install-location-to-your-path
-PATH="${HOME}/.yarn/bin:${REST}"
+PATH="${BASE}"
 
-PATH="${HOME}/.local/bin:${REST}"
+# # https://classic.yarnpkg.com/en/docs/cli/global#adding-the-install-location-to-your-path
+PATH="${HOME}/.yarn/bin:${PATH}"
+
+PATH="${HOME}/.local/bin:${PATH}"
 
 ### heterogeneous
 

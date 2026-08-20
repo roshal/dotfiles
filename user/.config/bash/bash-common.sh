@@ -4,7 +4,7 @@ cd /-
 
 ### variables
 
-REST="${PATH}"
+export BASE="${PATH}"
 
 ### config
 
